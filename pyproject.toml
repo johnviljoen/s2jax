@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=42", "wheel"]
-build-backend = "setuptools.build_meta"
+# build-backend = "setuptools.build_meta"
 
 [project]
 name = "s2jax"
@@ -21,7 +21,7 @@ dependencies = [
 ]
 
 [tool.setuptools.packages.find]
-# where = [
-#     "src", "problems"
-# ]  # list of folders that contain the packages (["."] by default)
+where = [
+    "src", "python_problems", "python_problems_old"
+]  # list of folders that contain the packages (["."] by default)
 
