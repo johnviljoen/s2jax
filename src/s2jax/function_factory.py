@@ -20,7 +20,7 @@ if __name__ == "__main__":
     import jax
     jax.config.update("jax_enable_x64", True)
     jax.config.update("jax_debug_nans", True)
-    jax.config.update("jax_log_compiles", True) # will print out recompilations
+    # jax.config.update("jax_log_compiles", True) # will print out recompilations
     jax.config.update('jax_default_matmul_precision', "default")
     jax.config.update("jax_compilation_cache_dir", "/tmp/jax_cache")
     jax.config.update("jax_persistent_cache_min_entry_size_bytes", -1)
@@ -40,7 +40,8 @@ if __name__ == "__main__":
     import s2jax.sparse_utils as spu
     # from python_problems.DIAMON2D import DIAMON2D as PROBLEM
     # from python_problems.ACOPP14 import ACOPP14 as PROBLEM
-    from python_problems.test_ACOPP14_jax import ACOPP14 as PROBLEM
+    # from python_problems.test_ACOPP14_jax import ACOPP14 as PROBLEM
+    from conversion_testing.HS107 import HS107 as PROBLEM
 
     problem = PROBLEM()
 
@@ -61,7 +62,7 @@ if __name__ == "__main__":
             # conditionals
             c = {
                 "isobj": True,
-                "nargout": 1,
+                "nargout": 2,
                 "has_conderlvl": hasattr(p, "conderlvl"), # constraint derivative level
                 "has_objderlvl": hasattr(p, "objderlvl"), # objective derivative level
                 "has_A": hasattr(p, "A"), # check presence of linear term
@@ -72,7 +73,12 @@ if __name__ == "__main__":
                 "has_gconst": hasattr(p, "gconst"), # check presence of linear term
                 "has_grelt": hasattr(p, "grelt"), #
                 "has_grelw": hasattr(p, "grelw"), #
-                "has_grftype": hasattr(p,"grftype"), #                 
+                "has_grftype": hasattr(p,"grftype"), #      
+
+                # efnames
+                "name2efunc": {
+                    name: getattr(p, name) for name in np.unique(p.elftype)
+                }   
             }
 
             # do some preprocessing on the groups to evaluate things that do not depend on runtime variable parameters
@@ -140,11 +146,11 @@ if __name__ == "__main__":
         if c["has_A"]: sA1, sA2 = p.A.shape
 
         # Evaluate the quadratic term if any
-        # if c["isobj"] and c["has_H"]:
-        Htimesx = p.H @ x
-        gx += Htimesx
-        fx += 0.5 * x.T @ (Htimesx)
-        Hx = BCSR.from_bcoo(spu.bcoo_add(Hx.to_bcoo(), p.H.to_bcoo())) # += p.H
+        if c["isobj"] and c["has_H"]:
+            Htimesx = p.H @ x
+            gx += Htimesx
+            fx += 0.5 * x.T @ (Htimesx)
+            Hx = BCSR.from_bcoo(spu.bcoo_add(Hx.to_bcoo(), p.H.to_bcoo())) # += p.H
 
         # loop on the groups list
         for ig, nout, gsc, derlvl in zip(glist, c["nouts"], c["gscs"], c["derlvls"]):
@@ -167,10 +173,59 @@ if __name__ == "__main__":
                     irange = [iv for iv in p.elvar[ iel ]] #  the elemental variable's indeces 
                     xiel   = x[ np.array(irange) ]            #  the elemental variable's values
 
-                    raise NotImplementedError()
-                    pass
+                    if  c['has_grelw'] and ig <= len( p.grelw ) and not p.grelw[ig] is None :
+                        has_weights = True
+                        wiel        = p.grelw[ ig ][ iiel ]
+                    else:
+                        has_weights = False
 
-                pass
+                    # Only the value is requested.
+                    if nout == 1:
+                        fiel = c["name2efunc"][efname](p, 1, xiel, iel) # eval('self.'+efname +'( self, 1, xiel, iel )')
+                        if ( has_weights ):
+                            fin += wiel * fiel
+                        else:
+                            fin += fiel
+
+                    elif nout == 2:
+                        print(" NOT VALIDATED ")
+                        fiel, giel = c["name2efunc"][efname](p, 2, xiel, iel) # eval('self.'+efname +'( self, 2, xiel, iel)')
+                        if  has_weights:
+                            fin += wiel * fiel
+                            for ir in range(len(irange)):
+                                ii = irange[ ir ]
+                                gin = gin.at[ ii ].add(wiel * giel[ ir ])
+                        else:
+                            raise NotImplementedError("nargout == 2 not implemented yet")
+                            fin = fin + fiel;
+                            for ir in range(len(irange)):
+                                ii = irange[ ir ]
+                                gin[ ii ] += giel[ ir ]
+
+                    elif nout == 3:
+                        print(" NOT VALIDATED ")
+                        fiel, giel, Hiel = c["name2efunc"][efname](p, 3, xiel, iel) # eval('self.'+efname +'( self, 3, xiel, iel )')
+                        if has_weights:
+                            fin += wiel * fiel
+                            for ir in range(len(irange)):
+                                ii = irange[ ir ]
+                                gin[ ii ] += wiel * giel[ ir ]
+                                for jr in range(len( irange )):
+                                    jj  = irange[ jr ]
+                                    Hin[ ii, jj ] += wiel * Hiel[ ir, jr ]
+                        else:
+                            fin = fin + fiel;
+                            for ir in range(len(irange)):
+                                ii = irange[ ir ]
+                                gin[ ii ] += giel[ ir ]
+                                for jr in range(len( irange )):
+                                    jj  = irange[ jr ]
+                                    Hin[ ii, jj ] += Hiel[ ir, jr ]
+
+                    # raise NotImplementedError()
+                    # pass
+
+                # pass
 
             #  Evaluate the group function.
             #  1) the non-TRIVIAL case
@@ -193,21 +248,21 @@ if __name__ == "__main__":
                             gx += gin / gsc
                         else:
                             gx = jnp.nan * jnp.ones(( n, 1 ))
-                    if c["nargout"] == 3:
-                        fx += fin / gsc
-                        if derlvl >= 1:
-                            gx += gin / gsc
-                        else:
-                            gx = jnp.zeros(( n, 1 ))
-                            gx[0] = jnp.nan
-                        if derlvl >= 2:
-                            Hx += Hin / gsc
-                        else:
-                            Hx = BCSR.from_bcoo(spu.bcoo_zeros([n, n])) # np.zeros(( n, n )) # Sparse normally
-                            Hx[0,0] = jnp.nan
-                pass
+                    # if c["nargout"] == 3:
+                    #     fx += fin / gsc
+                    #     if derlvl >= 1:
+                    #         gx += gin / gsc
+                    #     else:
+                    #         gx = jnp.zeros(( n, 1 ))
+                    #         gx[0] = jnp.nan
+                    #     if derlvl >= 2:
+                    #         Hx += Hin / gsc
+                    #     else:
+                    #         Hx = BCSR.from_bcoo(spu.bcoo_zeros([n, n])) # np.zeros(( n, n )) # Sparse normally
+                    #         Hx[0,0] = jnp.nan
+                # pass
 
-            pass
+            # pass
             
         if c["isobj"]:
             if c["nargout"] == 1:
@@ -228,13 +283,13 @@ if __name__ == "__main__":
 
 
     _fx = make_fx(problem)
-    fx = lambda x: _fx(x).reshape(-1)  # ensure output is a 1-D array
+    fx = lambda x: _fx(x)[0].flatten() # reshape(-1)  # ensure output is a 1-D array
     x = jnp.array(problem.x0)
     objective_value = fx(x)
 
     objective_grad = jax.jacobian(fx)(x)
 
-    objective_value = jax.jit(fx)(x)
+    # objective_value = jax.jit(fx)(x)
 
 
     pass

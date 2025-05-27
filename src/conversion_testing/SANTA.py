@@ -1,0 +1,695 @@
+from jax.experimental.sparse import BCOO, BCSR
+import s2jax.jax_utils as jtu
+from s2jax.utils import *
+class SANTA:
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# 
+# 
+#    Problem : SANTA
+#    --------
+# 
+#    The Santa problem as suggested in a Christmas competition
+#    by Jens Jensen (Scientific Computing, STFC). To quote Jens,
+# 
+#    Santa and His Elves
+# 
+#    SCD Christmas programming challenge 2016
+# 
+#    Christmas has come to the Santa Claus Department – or rather, the SCD
+#    is coming to Christmas. Santa is flying around the world, presently
+#    presenting presents. Ho, ho, ho! No striking air crew on Santa’s sleigh!
+#    No airport strikes on the North Pole.
+# 
+#    For the purpose of this exercise, the Earth is round as a perfect ball,
+#    with radius precisely 6,371,000 metres. However, everything is at the
+#    same longitude and latitude as the “real” Earth. So for example, the
+#    Greenwich observatory is at 51°28'40"N 0°00'04"W both on the “real”
+#    Earth and on Santa’s Earth. (Also ignore rotation of the Earth and
+#    anything practical like that.)
+# 
+#    Santa sets off from the North Pole along 2°6'57.6" E bearing south
+#    (obviously), and also bearing presents (obviously). Whenever Santa
+#    leaves a location, he leaves an elf behind, in order to help unwrapping
+#    presents; the elf does this and then flies out independently to meet up
+#    with Santa at the next location - this means that Santa only needs two
+#    Elves. Here’s how:
+# 
+#    1. Santa leaves the North Pole, setting out for location A. Elf 1 is
+#    left behind (in this particular case, not to unwrap presents, but to
+#    turn the lights off, and ensure the oven is off – it's elf'n'safety,
+#    you know.)
+# 
+#    2. Santa arrives in location A and hands them their present. Now Elf 2
+#    is with Santa; Elf 1 is still at the NP.
+# 
+#    3. Santa leaves location A, leaving behind Elf 2. Santa flies on to
+#    location B; Elf 1, who remained at the North Pole, also flies to B and
+#    meets Santa there; Elf 2 is left behind at A.
+# 
+#    4. Santa arrives at location B along with Elf 1, and hands out
+#    presents. Santa then leaves location B to fly to C, leaving behind Elf 1
+#    at location B. Meanwhile Elf 2, having finished helping at location A,
+#    leaves location A to fly on to C, to meet Santa there.
+# 
+#    5. Santa arrives from B at location C; Elf 2 also arrives into C from
+#    location A. Elf 1 remains at B until Santa flies onward to location D.
+# 
+#    6. At the last hop, Santa needs a rest and flies to 31°46'42.4" S
+#    144°46'12.9" W.  The Elves also fly to this location - maps show no land
+#    here but it is hidden. Either that or we got the coordinates wrong.
+#    In either case Santa and elves do fly to this location.
+# 
+#    The following table shows the distance of Santa's hops, as well as those
+#    of the elves, with the distance given in metres:
+# 
+#    Who     Hop  Distance travelled
+#    Santa   1    5405238
+#            2    623852
+#            3    1005461
+#            4    7470967
+#            5    3632559
+#            6    10206818
+#            7    7967212
+#            8    5896361
+#            9    8337266
+#            10   13019505
+#            11   8690818
+#            12   8971302
+#    Elf1    1    4866724
+#            2    6833740
+#            3    13489586
+#            4    9195575
+#            5    9704793
+#            6    12498127
+#    Elf2    1    1375828
+#            2    4917407
+#            3    10617953
+#            4    10996150
+#            5    7901038
+#            6    8971302
+# 
+#    What is Santa’s route?  What sort of presents is he carrying?
+# 
+#    Bonus question: did you really need to know the starting direction?
+# 
+#    Added by Nick: the problem has many local minimizers of the sum of squares
+#    of infeasibility, but it is only the solution with zero residuals
+#    that is of interest.
+# 
+#    SIF input: Nick Gould, Dec 2016.
+# 
+#    classification = "C-CNOR2-AN-21-23"
+# 
+#    Number of stops on Santa's path (path goes from index 0 to 12)
+# 
+# 
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   Translated to Python by S2MPJ version 25 XI 2024
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    name = 'SANTA'
+
+    def __init__(self, *args): 
+        import jax.numpy as jnp
+        from scipy.sparse import csr_matrix
+        nargin   = len(args)
+
+        #%%%%%%%%%%%%%%%%%%%  PREAMBLE %%%%%%%%%%%%%%%%%%%%
+        v_  = {}
+        ix_ = {}
+        ig_ = {}
+        v_['S'] = 12
+        v_['1'] = 1
+        v_['2'] = 2
+        v_['3'] = 3
+        v_['4'] = 4
+        v_['180.0'] = 180.0
+        v_['S-1'] = -1+v_['S']
+        v_['RS'] = float(v_['S'])
+        v_['PI/4'] = jnp.arctan(1.0)
+        v_['PI'] = 4.0*v_['PI/4']
+        v_['PI/180'] = v_['PI']/v_['180.0']
+        v_['PHI0'] = 90.0
+        v_['LAM0'] = 0.0
+        v_['PHI12'] = -31.77844444
+        v_['LAM12'] = -144.77025
+        v_['LAM1'] = 2.116
+        v_['PHI0'] = v_['PHI0']*v_['PI/180']
+        v_['LAM0'] = v_['LAM0']*v_['PI/180']
+        v_['PHI12'] = v_['PHI12']*v_['PI/180']
+        v_['LAM12'] = v_['LAM12']*v_['PI/180']
+        v_['LAM1'] = v_['LAM1']*v_['PI/180']
+        v_['DPHI'] = v_['PHI12']-v_['PHI0']
+        v_['DLAM'] = v_['LAM12']-v_['LAM0']
+        v_['DPHI/S'] = v_['DPHI']/v_['RS']
+        v_['DLAM/S'] = v_['DLAM']/v_['RS']
+        v_['RADIUS'] = 6371000.0
+        v_['D0,1'] = 5405238.0
+        v_['D0,2'] = 4866724.0
+        v_['D1,2'] = 623852.0
+        v_['D1,3'] = 1375828.0
+        v_['D2,3'] = 1005461.0
+        v_['D2,4'] = 6833740.0
+        v_['D3,4'] = 7470967.0
+        v_['D3,5'] = 4917407.0
+        v_['D4,5'] = 3632559.0
+        v_['D4,6'] = 13489586.0
+        v_['D5,6'] = 10206818.0
+        v_['D5,7'] = 10617953.0
+        v_['D6,7'] = 7967212.0
+        v_['D6,8'] = 9195575.0
+        v_['D7,8'] = 5896361.0
+        v_['D7,9'] = 10996150.0
+        v_['D8,9'] = 8337266.0
+        v_['D8,10'] = 9704793.0
+        v_['D9,10'] = 13019505.0
+        v_['D9,11'] = 7901038.0
+        v_['D10,11'] = 8690818.0
+        v_['D10,12'] = 12498127.0
+        v_['D11,12'] = 8971302.0
+        #%%%%%%%%%%%%%%%%%%%  VARIABLES %%%%%%%%%%%%%%%%%%%%
+        self.xnames = jnp.array([])
+        self.xscale = jnp.array([])
+        intvars   = jnp.array([])
+        binvars   = jnp.array([])
+        irA          = jnp.array([],dtype=int)
+        icA          = jnp.array([],dtype=int)
+        valA         = jnp.array([],dtype=float)
+        [iv,ix_,_] = jtu.s2mpj_ii('PHI1',ix_)
+        self.xnames=jtu.arrset(self.xnames,iv,'PHI1')
+        for I in range(int(v_['2']),int(v_['S-1'])+1):
+            [iv,ix_,_] = jtu.s2mpj_ii('PHI'+str(I),ix_)
+            self.xnames=jtu.arrset(self.xnames,iv,'PHI'+str(I))
+            [iv,ix_,_] = jtu.s2mpj_ii('LAM'+str(I),ix_)
+            self.xnames=jtu.arrset(self.xnames,iv,'LAM'+str(I))
+        #%%%%%%%%%%%%%%%%%%  DATA GROUPS %%%%%%%%%%%%%%%%%%%
+        self.gscale  = jnp.array([])
+        self.grnames = jnp.array([])
+        cnames       = jnp.array([])
+        self.cnames  = jnp.array([])
+        gtype        = jnp.array([])
+        [ig,ig_,_] = jtu.s2mpj_ii('R0,1',ig_)
+        gtype = jtu.arrset(gtype,ig,'==')
+        cnames = jtu.arrset(cnames,ig,'R0,1')
+        for I in range(int(v_['2']),int(v_['S'])+1):
+            v_['I1'] = -1+I
+            v_['I2'] = -2+I
+            [ig,ig_,_] = jtu.s2mpj_ii('R'+str(int(v_['I2']))+','+str(I),ig_)
+            gtype = jtu.arrset(gtype,ig,'==')
+            cnames = jtu.arrset(cnames,ig,'R'+str(int(v_['I2']))+','+str(I))
+            [ig,ig_,_] = jtu.s2mpj_ii('R'+str(int(v_['I1']))+','+str(I),ig_)
+            gtype = jtu.arrset(gtype,ig,'==')
+            cnames = jtu.arrset(cnames,ig,'R'+str(int(v_['I1']))+','+str(I))
+        #%%%%%%%%%%%%%% GLOBAL DIMENSIONS %%%%%%%%%%%%%%%%%
+        self.n   = len(ix_)
+        ngrp   = len(ig_)
+        legrps = jnp.where(gtype=='<=')[0]
+        eqgrps = jnp.where(gtype=='==')[0]
+        gegrps = jnp.where(gtype=='>=')[0]
+        self.nle = len(legrps)
+        self.neq = len(eqgrps)
+        self.nge = len(gegrps)
+        self.m   = self.nle+self.neq+self.nge
+        self.congrps = jnp.concatenate((legrps,eqgrps,gegrps))
+        self.cnames = cnames[self.congrps]
+        self.nob = ngrp-self.m
+        self.objgrps = jnp.where(gtype=='<>')[0]
+        #%%%%%%%%%%%%%%%%%% CONSTANTS %%%%%%%%%%%%%%%%%%%%%
+        self.gconst = jnp.zeros((ngrp,1))
+        v_['D/RAD'] = v_['D0,1']/v_['RADIUS']
+        v_['CD/RAD'] = jnp.cos(v_['D/RAD'])
+        self.gconst = jtu.arrset(self.gconst,ig_['R0,1'],float(v_['CD/RAD']))
+        for I in range(int(v_['2']),int(v_['S'])+1):
+            v_['I2'] = -2+I
+            v_['D/RAD'] = v_['D'+str(int(v_['I2']))+','+str(I)]/v_['RADIUS']
+            v_['CD/RAD'] = jnp.cos(v_['D/RAD'])
+            self.gconst  = (
+                  jtu.arrset(self.gconst,ig_['R'+str(int(v_['I2']))+','+str(I)],float(v_['CD/RAD'])))
+            v_['I1'] = -1+I
+            v_['D/RAD'] = v_['D'+str(int(v_['I1']))+','+str(I)]/v_['RADIUS']
+            v_['CD/RAD'] = jnp.cos(v_['D/RAD'])
+            self.gconst  = (
+                  jtu.arrset(self.gconst,ig_['R'+str(int(v_['I1']))+','+str(I)],float(v_['CD/RAD'])))
+        #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
+        self.xlower = jnp.full((self.n,1),-1000.0)
+        self.xupper = jnp.full((self.n,1),1000.0)
+        #%%%%%%%%%%%%%%%%%%% START POINT %%%%%%%%%%%%%%%%%%
+        self.x0 = jnp.zeros((self.n,1))
+        self.y0 = jnp.zeros((self.m,1))
+        self.x0 = jtu.np_like_set(self.x0, ix_['PHI1'], float(0.7223835215))
+        self.x0 = jtu.np_like_set(self.x0, ix_['PHI2'], float(0.8069093428))
+        self.x0 = jtu.np_like_set(self.x0, ix_['LAM2'], float(-0.031657133))
+        self.x0 = jtu.np_like_set(self.x0, ix_['PHI3'], float(0.9310164154))
+        self.x0 = jtu.np_like_set(self.x0, ix_['LAM3'], float(0.1199353230))
+        self.x0 = jtu.np_like_set(self.x0, ix_['PHI4'], float(6.6067392710))
+        self.x0 = jtu.np_like_set(self.x0, ix_['LAM4'], float(-1.214314477))
+        self.x0 = jtu.np_like_set(self.x0, ix_['PHI5'], float(-3.530946794))
+        self.x0 = jtu.np_like_set(self.x0, ix_['LAM5'], float(2.5329493980))
+        self.x0 = jtu.np_like_set(self.x0, ix_['PHI6'], float(-9.798251905))
+        self.x0 = jtu.np_like_set(self.x0, ix_['LAM6'], float(4.3021328700))
+        self.x0 = jtu.np_like_set(self.x0, ix_['PHI7'], float(14.632267534))
+        self.x0 = jtu.np_like_set(self.x0, ix_['LAM7'], float(-12.96253311))
+        self.x0 = jtu.np_like_set(self.x0, ix_['PHI8'], float(2.0349445303))
+        self.x0 = jtu.np_like_set(self.x0, ix_['LAM8'], float(-4.050000443))
+        self.x0 = jtu.np_like_set(self.x0, ix_['PHI9'], float(-28.45607804))
+        self.x0 = jtu.np_like_set(self.x0, ix_['LAM9'], float(22.430117198))
+        self.x0 = jtu.np_like_set(self.x0, ix_['PHI10'], float(16.034035489))
+        self.x0 = jtu.np_like_set(self.x0, ix_['LAM10'], float(-17.28050167))
+        self.x0 = jtu.np_like_set(self.x0, ix_['PHI11'], float(0.8717052037))
+        self.x0 = jtu.np_like_set(self.x0, ix_['LAM11'], float(-0.833052840))
+        v_['PHIS'] = v_['DPHI/S']
+        v_['START'] = v_['PHI0']+v_['PHIS']
+        pass
+        for I in range(int(v_['2']),int(v_['S-1'])+1):
+            v_['RI'] = float(I)
+            v_['PHIS'] = v_['DPHI/S']*v_['RI']
+            v_['START'] = v_['PHI0']+v_['PHIS']
+            pass
+            v_['LAMS'] = v_['DLAM/S']*v_['RI']
+            v_['START'] = v_['LAM0']+v_['LAMS']
+        #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
+        iet_  = {}
+        elftv = []
+        [it,iet_,_] = jtu.s2mpj_ii( 'eE', iet_)
+        elftv = jtu.loaset(elftv,it,0,'PHI1')
+        elftv = jtu.loaset(elftv,it,1,'PHI2')
+        elftv = jtu.loaset(elftv,it,2,'LAM1')
+        elftv = jtu.loaset(elftv,it,3,'LAM2')
+        [it,iet_,_] = jtu.s2mpj_ii( 'eE3', iet_)
+        elftv = jtu.loaset(elftv,it,0,'PHI1')
+        elftv = jtu.loaset(elftv,it,1,'PHI2')
+        elftv = jtu.loaset(elftv,it,2,'LAM1')
+        elftp = []
+        elftp = jtu.loaset(elftp,it,0,'LAMF')
+        [it,iet_,_] = jtu.s2mpj_ii( 'eE2', iet_)
+        elftv = jtu.loaset(elftv,it,0,'PHI1')
+        elftv = jtu.loaset(elftv,it,1,'LAM1')
+        elftp = jtu.loaset(elftp,it,0,'PHIF')
+        elftp = jtu.loaset(elftp,it,1,'LAMF')
+        [it,iet_,_] = jtu.s2mpj_ii( 'eE1', iet_)
+        elftv = jtu.loaset(elftv,it,0,'PHI1')
+        elftp = jtu.loaset(elftp,it,0,'PHIF')
+        elftp = jtu.loaset(elftp,it,1,'LAMF')
+        elftp = jtu.loaset(elftp,it,2,'LAMS')
+        #%%%%%%%%%%%%%%%%%% ELEMENT USES %%%%%%%%%%%%%%%%%%
+        ie_ = {}
+        self.elftype = jnp.array([])
+        ielftype     = jnp.array([])
+        self.elvar   = []
+        self.elpar   = []
+        ename = 'E0,1'
+        [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+        self.elftype = jtu.arrset(self.elftype,ie,'eE1')
+        ielftype = jtu.arrset(ielftype,ie,iet_["eE1"])
+        vname = 'PHI1'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='PHI1')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        posep = jnp.where(elftp[ielftype[ie]]=='PHIF')[0]
+        self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['PHI0']))
+        posep = jnp.where(elftp[ielftype[ie]]=='LAMF')[0]
+        self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['LAM0']))
+        posep = jnp.where(elftp[ielftype[ie]]=='LAMS')[0]
+        self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['LAM1']))
+        ename = 'E0,2'
+        [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+        self.elftype = jtu.arrset(self.elftype,ie,'eE2')
+        ielftype = jtu.arrset(ielftype,ie,iet_["eE2"])
+        vname = 'PHI2'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='PHI1')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        vname = 'LAM2'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='LAM1')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        posep = jnp.where(elftp[ielftype[ie]]=='PHIF')[0]
+        self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['PHI0']))
+        posep = jnp.where(elftp[ielftype[ie]]=='LAMF')[0]
+        self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['LAM0']))
+        ename = 'E1,2'
+        [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+        self.elftype = jtu.arrset(self.elftype,ie,'eE3')
+        ielftype = jtu.arrset(ielftype,ie,iet_["eE3"])
+        vname = 'PHI1'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='PHI1')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        vname = 'PHI2'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='PHI2')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        vname = 'LAM2'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='LAM1')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        posep = jnp.where(elftp[ielftype[ie]]=='LAMF')[0]
+        self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['LAM1']))
+        ename = 'E1,3'
+        [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+        self.elftype = jtu.arrset(self.elftype,ie,'eE3')
+        ielftype = jtu.arrset(ielftype,ie,iet_["eE3"])
+        vname = 'PHI1'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='PHI1')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        vname = 'PHI3'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='PHI2')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        vname = 'LAM3'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='LAM1')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        posep = jnp.where(elftp[ielftype[ie]]=='LAMF')[0]
+        self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['LAM1']))
+        ename = 'E2,3'
+        [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+        self.elftype = jtu.arrset(self.elftype,ie,'eE')
+        ielftype = jtu.arrset(ielftype,ie,iet_["eE"])
+        vname = 'PHI2'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='PHI1')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        vname = 'PHI3'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='PHI2')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        vname = 'LAM2'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='LAM1')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        vname = 'LAM3'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='LAM2')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        for I in range(int(v_['4']),int(v_['S-1'])+1):
+            v_['I2'] = -2+I
+            ename = 'E'+str(int(v_['I2']))+','+str(I)
+            [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+            self.elftype = jtu.arrset(self.elftype,ie,'eE')
+            ielftype = jtu.arrset(ielftype,ie,iet_["eE"])
+            ename = 'E'+str(int(v_['I2']))+','+str(I)
+            [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+            vname = 'PHI'+str(int(v_['I2']))
+            [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+            posev = jnp.where(elftv[ielftype[ie]]=='PHI1')[0]
+            self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+            ename = 'E'+str(int(v_['I2']))+','+str(I)
+            [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+            vname = 'PHI'+str(I)
+            [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+            posev = jnp.where(elftv[ielftype[ie]]=='PHI2')[0]
+            self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+            ename = 'E'+str(int(v_['I2']))+','+str(I)
+            [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+            vname = 'LAM'+str(int(v_['I2']))
+            [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+            posev = jnp.where(elftv[ielftype[ie]]=='LAM1')[0]
+            self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+            ename = 'E'+str(int(v_['I2']))+','+str(I)
+            [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+            vname = 'LAM'+str(I)
+            [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+            posev = jnp.where(elftv[ielftype[ie]]=='LAM2')[0]
+            self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+            v_['I1'] = -1+I
+            ename = 'E'+str(int(v_['I1']))+','+str(I)
+            [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+            self.elftype = jtu.arrset(self.elftype,ie,'eE')
+            ielftype = jtu.arrset(ielftype,ie,iet_["eE"])
+            ename = 'E'+str(int(v_['I1']))+','+str(I)
+            [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+            vname = 'PHI'+str(int(v_['I1']))
+            [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+            posev = jnp.where(elftv[ielftype[ie]]=='PHI1')[0]
+            self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+            ename = 'E'+str(int(v_['I1']))+','+str(I)
+            [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+            vname = 'PHI'+str(I)
+            [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+            posev = jnp.where(elftv[ielftype[ie]]=='PHI2')[0]
+            self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+            ename = 'E'+str(int(v_['I1']))+','+str(I)
+            [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+            vname = 'LAM'+str(int(v_['I1']))
+            [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+            posev = jnp.where(elftv[ielftype[ie]]=='LAM1')[0]
+            self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+            ename = 'E'+str(int(v_['I1']))+','+str(I)
+            [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+            vname = 'LAM'+str(I)
+            [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+            posev = jnp.where(elftv[ielftype[ie]]=='LAM2')[0]
+            self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        ename = 'E10,12'
+        [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+        self.elftype = jtu.arrset(self.elftype,ie,'eE2')
+        ielftype = jtu.arrset(ielftype,ie,iet_["eE2"])
+        vname = 'PHI10'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='PHI1')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        vname = 'LAM10'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='LAM1')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        posep = jnp.where(elftp[ielftype[ie]]=='PHIF')[0]
+        self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['PHI12']))
+        posep = jnp.where(elftp[ielftype[ie]]=='LAMF')[0]
+        self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['LAM12']))
+        ename = 'E11,12'
+        [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
+        self.elftype = jtu.arrset(self.elftype,ie,'eE2')
+        ielftype = jtu.arrset(ielftype,ie,iet_["eE2"])
+        vname = 'PHI11'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='PHI1')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        vname = 'LAM11'
+        [iv,ix_] = jtu.s2mpj_nlx(self,vname,ix_,1,float(-1000.0),float(1000.0),None)
+        posev = jnp.where(elftv[ielftype[ie]]=='LAM1')[0]
+        self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
+        posep = jnp.where(elftp[ielftype[ie]]=='PHIF')[0]
+        self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['PHI12']))
+        posep = jnp.where(elftp[ielftype[ie]]=='LAMF')[0]
+        self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['LAM12']))
+        #%%%%%%%%%%%%%%%%%%% GROUP USES %%%%%%%%%%%%%%%%%%%
+        self.grelt   = []
+        for ig in jnp.arange(0,ngrp):
+            self.grelt.append(jnp.array([]))
+        self.grftype = jnp.array([])
+        self.grelw   = []
+        nlc         = jnp.array([])
+        ig = ig_['R0,1']
+        posel = len(self.grelt[ig])
+        self.grelt = jtu.loaset(self.grelt,ig,posel,ie_['E0,1'])
+        nlc = jnp.union1d(nlc,jnp.array([ig]))
+        self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
+        for I in range(int(v_['2']),int(v_['S'])+1):
+            v_['I2'] = -2+I
+            ig = ig_['R'+str(int(v_['I2']))+','+str(I)]
+            posel = len(self.grelt[ig])
+            self.grelt  = (
+                  jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['I2']))+','+str(I)]))
+            nlc = jnp.union1d(nlc,jnp.array([ig]))
+            self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
+            v_['I1'] = -1+I
+            ig = ig_['R'+str(int(v_['I1']))+','+str(I)]
+            posel = len(self.grelt[ig])
+            self.grelt  = (
+                  jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['I1']))+','+str(I)]))
+            nlc = jnp.union1d(nlc,jnp.array([ig]))
+            self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
+        #%%%%%%%%%%%%%%%%%% OBJECT BOUNDS %%%%%%%%%%%%%%%%%
+#    Solution
+# LO SANTA               0.0
+        #%%%%%%%% DEFAULT FOR MISSING SECTION(S) %%%%%%%%%%
+        #%%%%%%%%%%%%% FORM clower AND cupper %%%%%%%%%%%%%
+        self.clower = jnp.full((self.m,1),-float('Inf'))
+        self.cupper = jnp.full((self.m,1),+float('Inf'))
+        self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
+        self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
+        #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
+        self.lincons  = (
+              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.pbclass   = "C-CNOR2-AN-21-23"
+        self.objderlvl = 2
+        self.conderlvl = [2]
+
+# **********************
+#  SET UP THE FUNCTION *
+#  AND RANGE ROUTINES  *
+# **********************
+
+    #%%%%%%%%%%%%%%% NONLINEAR ELEMENTS %%%%%%%%%%%%%%%
+
+    @staticmethod
+    def eE(self, nargout,*args):
+
+        import jax.numpy as jnp
+        EV_  = args[0]
+        iel_ = args[1]
+        S1 = jnp.sin(EV_[0])
+        S2 = jnp.sin(EV_[1])
+        C1 = jnp.cos(EV_[0])
+        C2 = jnp.cos(EV_[1])
+        C = jnp.cos(EV_[2]-EV_[3])
+        S = jnp.sin(EV_[2]-EV_[3])
+        C1C2S = C1*C2*S
+        C1C2C = C1*C2*C
+        C1S2S = C1*S2*S
+        S1C2S = S1*C2*S
+        f_   = S1*S2+C1*C2*C
+        if not isinstance( f_, float ):
+            f_   = f_.item();
+        if nargout>1:
+            try:
+                dim = len(IV_)
+            except:
+                dim = len(EV_)
+            g_ = jnp.zeros(dim)
+            g_ = jtu.np_like_set(g_, 0, C1*S2-S1*C2*C)
+            g_ = jtu.np_like_set(g_, 1, S1*C2-C1*S2*C)
+            g_ = jtu.np_like_set(g_, 2, -C1C2S)
+            g_ = jtu.np_like_set(g_, 3, C1C2S)
+            if nargout>2:
+                H_ = jnp.zeros((4,4))
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), -S1*S2-C1*C2*C)
+                H_ = jtu.np_like_set(H_, jnp.array([1,0]), C1*C2+S1*S2*C)
+                H_ = jtu.np_like_set(H_, jnp.array([0,1]), H_[1,0])
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), -S1*S2-C1*C2*C)
+                H_ = jtu.np_like_set(H_, jnp.array([2,0]), S1C2S)
+                H_ = jtu.np_like_set(H_, jnp.array([0,2]), H_[2,0])
+                H_ = jtu.np_like_set(H_, jnp.array([2,1]), C1S2S)
+                H_ = jtu.np_like_set(H_, jnp.array([1,2]), H_[2,1])
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), -C1C2C)
+                H_ = jtu.np_like_set(H_, jnp.array([0,3]), -S1C2S)
+                H_ = jtu.np_like_set(H_, jnp.array([3,0]), H_[0,3])
+                H_ = jtu.np_like_set(H_, jnp.array([1,3]), -C1S2S)
+                H_ = jtu.np_like_set(H_, jnp.array([3,1]), H_[1,3])
+                H_ = jtu.np_like_set(H_, jnp.array([2,3]), C1C2C)
+                H_ = jtu.np_like_set(H_, jnp.array([3,2]), H_[2,3])
+                H_ = jtu.np_like_set(H_, jnp.array([3,3]), -C1C2C)
+        if nargout == 1:
+            return f_
+        elif nargout == 2:
+            return f_,g_
+        elif nargout == 3:
+            return f_,g_,H_
+
+    @staticmethod
+    def eE3(self, nargout,*args):
+
+        import jax.numpy as jnp
+        EV_  = args[0]
+        iel_ = args[1]
+        S1 = jnp.sin(EV_[0])
+        S2 = jnp.sin(EV_[1])
+        C1 = jnp.cos(EV_[0])
+        C2 = jnp.cos(EV_[1])
+        C = jnp.cos(EV_[2]-self.elpar[iel_][0])
+        S = jnp.sin(EV_[2]-self.elpar[iel_][0])
+        f_   = S1*S2+C1*C2*C
+        if not isinstance( f_, float ):
+            f_   = f_.item();
+        if nargout>1:
+            try:
+                dim = len(IV_)
+            except:
+                dim = len(EV_)
+            g_ = jnp.zeros(dim)
+            g_ = jtu.np_like_set(g_, 0, C1*S2-S1*C2*C)
+            g_ = jtu.np_like_set(g_, 1, S1*C2-C1*S2*C)
+            g_ = jtu.np_like_set(g_, 2, -C1*C2*S)
+            if nargout>2:
+                H_ = jnp.zeros((3,3))
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), -S1*S2-C1*C2*C)
+                H_ = jtu.np_like_set(H_, jnp.array([1,0]), C1*C2+S1*S2*C)
+                H_ = jtu.np_like_set(H_, jnp.array([0,1]), H_[1,0])
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), -S1*S2-C1*C2*C)
+                H_ = jtu.np_like_set(H_, jnp.array([2,0]), S1*C2*S)
+                H_ = jtu.np_like_set(H_, jnp.array([0,2]), H_[2,0])
+                H_ = jtu.np_like_set(H_, jnp.array([2,1]), C1*S2*S)
+                H_ = jtu.np_like_set(H_, jnp.array([1,2]), H_[2,1])
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), -C1*C2*C)
+        if nargout == 1:
+            return f_
+        elif nargout == 2:
+            return f_,g_
+        elif nargout == 3:
+            return f_,g_,H_
+
+    @staticmethod
+    def eE2(self, nargout,*args):
+
+        import jax.numpy as jnp
+        EV_  = args[0]
+        iel_ = args[1]
+        S1 = jnp.sin(EV_[0])
+        SF = jnp.sin(self.elpar[iel_][0])
+        C1 = jnp.cos(EV_[0])
+        CF = jnp.cos(self.elpar[iel_][0])
+        C = jnp.cos(EV_[1]-self.elpar[iel_][1])
+        S = jnp.sin(EV_[1]-self.elpar[iel_][1])
+        f_   = S1*SF+C1*CF*C
+        if not isinstance( f_, float ):
+            f_   = f_.item();
+        if nargout>1:
+            try:
+                dim = len(IV_)
+            except:
+                dim = len(EV_)
+            g_ = jnp.zeros(dim)
+            g_ = jtu.np_like_set(g_, 0, C1*SF-S1*CF*C)
+            g_ = jtu.np_like_set(g_, 1, -C1*CF*S)
+            if nargout>2:
+                H_ = jnp.zeros((2,2))
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), -S1*SF-C1*CF*C)
+                H_ = jtu.np_like_set(H_, jnp.array([1,0]), S1*CF*S)
+                H_ = jtu.np_like_set(H_, jnp.array([0,1]), H_[1,0])
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), -C1*CF*C)
+        if nargout == 1:
+            return f_
+        elif nargout == 2:
+            return f_,g_
+        elif nargout == 3:
+            return f_,g_,H_
+
+    @staticmethod
+    def eE1(self, nargout,*args):
+
+        import jax.numpy as jnp
+        EV_  = args[0]
+        iel_ = args[1]
+        S1 = jnp.sin(EV_[0])
+        SF = jnp.sin(self.elpar[iel_][0])
+        C1 = jnp.cos(EV_[0])
+        CF = jnp.cos(self.elpar[iel_][0])
+        C = jnp.cos(self.elpar[iel_][2]-self.elpar[iel_][1])
+        S = jnp.sin(self.elpar[iel_][2]-self.elpar[iel_][1])
+        f_   = S1*SF+C1*CF*C
+        if not isinstance( f_, float ):
+            f_   = f_.item();
+        if nargout>1:
+            try:
+                dim = len(IV_)
+            except:
+                dim = len(EV_)
+            g_ = jnp.zeros(dim)
+            g_ = jtu.np_like_set(g_, 0, C1*SF-S1*CF*C)
+            if nargout>2:
+                H_ = jnp.zeros((1,1))
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), -S1*SF-C1*CF*C)
+        if nargout == 1:
+            return f_
+        elif nargout == 2:
+            return f_,g_
+        elif nargout == 3:
+            return f_,g_,H_
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

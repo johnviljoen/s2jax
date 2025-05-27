@@ -22,6 +22,6 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 where = [
-    "src", "python_problems", "python_problems_old"
+    "src", "python_problems", "python_problems_old", "conversion_testing"
 ]  # list of folders that contain the packages (["."] by default)
 

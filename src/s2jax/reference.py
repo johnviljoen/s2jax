@@ -446,7 +446,8 @@ class CUTEst_problem:
                         has_weights = False
 
                     # Only the value is requested.
-                    
+                    # TESTING
+                    # has_weights = False
                     if nout == 1:
                         fiel = eval('self.'+efname +'( self, 1, xiel, iel )')
                         if ( has_weights ):
@@ -1201,7 +1202,8 @@ def s2mpjlib_select( classif, *args ):
 
 if __name__ == "__main__":
 
-    from python_problems.ACOPP14 import ACOPP14 as PROBLEM
+    # from python_problems.ACOPP14 import ACOPP14 as PROBLEM
+    from python_problems.HS107 import HS107 as PROBLEM
 
     p = PROBLEM()
     p.fx(p.x0)
