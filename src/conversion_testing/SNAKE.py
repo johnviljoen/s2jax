@@ -103,13 +103,11 @@ class SNAKE:
         if('X' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X']),float(1.0)))
         if('Y' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Y'], float(5.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Y']),float(5.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Y']),float(5.0)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -158,8 +156,7 @@ class SNAKE:
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nle), jnp.zeros((self.nle,1)))
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLOR2-AN-2-2"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -180,7 +177,7 @@ class SNAKE:
         SV = jnp.sin(EV_[0])
         f_   = SV
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

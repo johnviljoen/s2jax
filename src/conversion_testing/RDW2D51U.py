@@ -161,39 +161,23 @@ class RDW2D51U:
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-float('Inf'))
         self.xupper = jnp.full((self.n,1),+float('Inf'))
-        self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(int(v_['0']))+','+str(int(v_['0']))]]), (v_['V'+)
-             str(int(v_['0']))+','+str(int(v_['0']))])
-        self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(int(v_['0']))+','+str(int(v_['0']))]]), (v_['V'+)
-             str(int(v_['0']))+','+str(int(v_['0']))])
-        self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(int(v_['N']))+','+str(int(v_['0']))]]), (v_['V'+)
-             str(int(v_['N']))+','+str(int(v_['0']))])
-        self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(int(v_['N']))+','+str(int(v_['0']))]]), (v_['V'+)
-             str(int(v_['N']))+','+str(int(v_['0']))])
-        self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(int(v_['0']))+','+str(int(v_['N']))]]), (v_['V'+)
-             str(int(v_['0']))+','+str(int(v_['N']))])
-        self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(int(v_['0']))+','+str(int(v_['N']))]]), (v_['V'+)
-             str(int(v_['0']))+','+str(int(v_['N']))])
-        self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(int(v_['N']))+','+str(int(v_['N']))]]), (v_['V'+)
-             str(int(v_['N']))+','+str(int(v_['N']))])
-        self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(int(v_['N']))+','+str(int(v_['N']))]]), (v_['V'+)
-             str(int(v_['N']))+','+str(int(v_['N']))])
+        self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(int(v_['0']))+','+str(int(v_['0']))]]), (v_['V'+              str(int(v_['0']))+','+str(int(v_['0']))]))
+        self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(int(v_['0']))+','+str(int(v_['0']))]]), (v_['V'+              str(int(v_['0']))+','+str(int(v_['0']))]))
+        self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(int(v_['N']))+','+str(int(v_['0']))]]), (v_['V'+              str(int(v_['N']))+','+str(int(v_['0']))]))
+        self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(int(v_['N']))+','+str(int(v_['0']))]]), (v_['V'+              str(int(v_['N']))+','+str(int(v_['0']))]))
+        self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(int(v_['0']))+','+str(int(v_['N']))]]), (v_['V'+              str(int(v_['0']))+','+str(int(v_['N']))]))
+        self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(int(v_['0']))+','+str(int(v_['N']))]]), (v_['V'+              str(int(v_['0']))+','+str(int(v_['N']))]))
+        self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(int(v_['N']))+','+str(int(v_['N']))]]), (v_['V'+              str(int(v_['N']))+','+str(int(v_['N']))]))
+        self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(int(v_['N']))+','+str(int(v_['N']))]]), (v_['V'+              str(int(v_['N']))+','+str(int(v_['N']))]))
         for I in range(int(v_['1']),int(v_['N-1'])+1):
-            self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(int(v_['0']))+','+str(I)]]), (v_['V'+str(int(v_['0']))+)
-                 ','+str(I)])
-            self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(int(v_['0']))+','+str(I)]]), (v_['V'+str(int(v_['0']))+)
-                 ','+str(I)])
-            self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(int(v_['N']))+','+str(I)]]), (v_['V'+str(int(v_['N']))+)
-                 ','+str(I)])
-            self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(int(v_['N']))+','+str(I)]]), (v_['V'+str(int(v_['N']))+)
-                 ','+str(I)])
-            self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(I)+','+str(int(v_['0']))]]), (v_['V'+str(I)+)
-                 ','+str(int(v_['0']))])
-            self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(I)+','+str(int(v_['0']))]]), (v_['V'+str(I)+)
-                 ','+str(int(v_['0']))])
-            self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(I)+','+str(int(v_['N']))]]), (v_['V'+str(I)+)
-                 ','+str(int(v_['N']))])
-            self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(I)+','+str(int(v_['N']))]]), (v_['V'+str(I)+)
-                 ','+str(int(v_['N']))])
+            self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(int(v_['0']))+','+str(I)]]), (v_['V'+str(int(v_['0']))+                  ','+str(I)]))
+            self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(int(v_['0']))+','+str(I)]]), (v_['V'+str(int(v_['0']))+                  ','+str(I)]))
+            self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(int(v_['N']))+','+str(I)]]), (v_['V'+str(int(v_['N']))+                  ','+str(I)]))
+            self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(int(v_['N']))+','+str(I)]]), (v_['V'+str(int(v_['N']))+                  ','+str(I)]))
+            self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(I)+','+str(int(v_['0']))]]), (v_['V'+str(I)+                  ','+str(int(v_['0']))]))
+            self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(I)+','+str(int(v_['0']))]]), (v_['V'+str(I)+                  ','+str(int(v_['0']))]))
+            self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['U'+str(I)+','+str(int(v_['N']))]]), (v_['V'+str(I)+                  ','+str(int(v_['N']))]))
+            self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['U'+str(I)+','+str(int(v_['N']))]]), (v_['V'+str(I)+                  ','+str(int(v_['N']))]))
         self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['F'+str(int(v_['0']))+','+str(int(v_['0']))]]), 0.0)
         self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['F'+str(int(v_['0']))+','+str(int(v_['0']))]]), 0.0)
         self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['F'+str(int(v_['N']))+','+str(int(v_['0']))]]), 0.0)
@@ -310,14 +294,11 @@ class RDW2D51U:
                 posep = jnp.where(elftp[ielftype[ie]]=='V1')[0]
                 self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['V'+str(I)+','+str(J)]))
                 posep = jnp.where(elftp[ielftype[ie]]=='V2')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['V'+str(I)+','+str(int(v_['J+']))])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['V'+str(I)+','+str(int(v_['J+']))])))
                 posep = jnp.where(elftp[ielftype[ie]]=='V3')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['V'+str(int(v_['I+']))+','+str(J)])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['V'+str(int(v_['I+']))+','+str(J)])))
                 posep = jnp.where(elftp[ielftype[ie]]=='V4')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['V'+str(int(v_['I+']))+','+str(int(v_['J+']))])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['V'+str(int(v_['I+']))+','+str(int(v_['J+']))])))
         for I in range(int(v_['0']),int(v_['N-1'])+1):
             v_['I+'] = I+v_['1']
             for J in range(int(v_['0']),int(v_['N-1'])+1):
@@ -576,148 +557,124 @@ class RDW2D51U:
             v_['I+'] = I+v_['1']
             ig = ig_['L'+str(I)+','+str(int(v_['N-']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['A'+str(I)+','+str(int(v_['N-']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['A'+str(I)+','+str(int(v_['N-']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/6']))
             ig = ig_['L'+str(I)+','+str(int(v_['1']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['B'+str(I)+','+str(int(v_['0']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['B'+str(I)+','+str(int(v_['0']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/6']))
             ig = ig_['L'+str(int(v_['I+']))+','+str(int(v_['N-']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['C'+str(I)+','+str(int(v_['N-']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['C'+str(I)+','+str(int(v_['N-']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/6']))
             ig = ig_['L'+str(int(v_['I+']))+','+str(int(v_['1']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['D'+str(I)+','+str(int(v_['0']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['D'+str(I)+','+str(int(v_['0']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/6']))
             ig = ig_['L'+str(I)+','+str(int(v_['N-']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['P'+str(I)+','+str(int(v_['N-']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['P'+str(I)+','+str(int(v_['N-']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-H**2/36']))
             ig = ig_['L'+str(I)+','+str(int(v_['1']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['Q'+str(I)+','+str(int(v_['0']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['Q'+str(I)+','+str(int(v_['0']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-H**2/36']))
             ig = ig_['L'+str(int(v_['I+']))+','+str(int(v_['N-']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['R'+str(I)+','+str(int(v_['N-']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['R'+str(I)+','+str(int(v_['N-']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-H**2/36']))
             ig = ig_['L'+str(int(v_['I+']))+','+str(int(v_['1']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['S'+str(I)+','+str(int(v_['0']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['S'+str(I)+','+str(int(v_['0']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-H**2/36']))
         for J in range(int(v_['1']),int(v_['N-2'])+1):
             v_['J+'] = J+v_['1']
             ig = ig_['L'+str(int(v_['N-']))+','+str(J)]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['A'+str(int(v_['N-']))+','+str(J)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['A'+str(int(v_['N-']))+','+str(J)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/6']))
             ig = ig_['L'+str(int(v_['N-']))+','+str(int(v_['J+']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['B'+str(int(v_['N-']))+','+str(J)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['B'+str(int(v_['N-']))+','+str(J)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/6']))
             ig = ig_['L'+str(int(v_['1']))+','+str(J)]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['C'+str(int(v_['0']))+','+str(J)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['C'+str(int(v_['0']))+','+str(J)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/6']))
             ig = ig_['L'+str(int(v_['1']))+','+str(int(v_['J+']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['D'+str(int(v_['0']))+','+str(J)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['D'+str(int(v_['0']))+','+str(J)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/6']))
             ig = ig_['L'+str(int(v_['N-']))+','+str(J)]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['P'+str(int(v_['N-']))+','+str(J)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['P'+str(int(v_['N-']))+','+str(J)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-H**2/36']))
             ig = ig_['L'+str(int(v_['N-']))+','+str(int(v_['J+']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['Q'+str(int(v_['N-']))+','+str(J)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['Q'+str(int(v_['N-']))+','+str(J)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-H**2/36']))
             ig = ig_['L'+str(int(v_['1']))+','+str(J)]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['R'+str(int(v_['0']))+','+str(J)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['R'+str(int(v_['0']))+','+str(J)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-H**2/36']))
             ig = ig_['L'+str(int(v_['1']))+','+str(int(v_['J+']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['0']))+','+str(J)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['0']))+','+str(J)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-H**2/36']))
         ig = ig_['L'+str(int(v_['N-']))+','+str(int(v_['N-']))]
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['A'+str(int(v_['N-']))+','+str(int(v_['N-']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['A'+str(int(v_['N-']))+','+str(int(v_['N-']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
         self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/6']))
         ig = ig_['L'+str(int(v_['N-']))+','+str(int(v_['1']))]
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['B'+str(int(v_['N-']))+','+str(int(v_['0']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['B'+str(int(v_['N-']))+','+str(int(v_['0']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
         self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/6']))
         ig = ig_['L'+str(int(v_['1']))+','+str(int(v_['N-']))]
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['C'+str(int(v_['0']))+','+str(int(v_['N-']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['C'+str(int(v_['0']))+','+str(int(v_['N-']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
         self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/6']))
         ig = ig_['L'+str(int(v_['1']))+','+str(int(v_['1']))]
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['D'+str(int(v_['0']))+','+str(int(v_['0']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['D'+str(int(v_['0']))+','+str(int(v_['0']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
         self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/6']))
         ig = ig_['L'+str(int(v_['N-']))+','+str(int(v_['N-']))]
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['P'+str(int(v_['N-']))+','+str(int(v_['N-']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['P'+str(int(v_['N-']))+','+str(int(v_['N-']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
         self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-H**2/36']))
         ig = ig_['L'+str(int(v_['N-']))+','+str(int(v_['1']))]
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['Q'+str(int(v_['N-']))+','+str(int(v_['0']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['Q'+str(int(v_['N-']))+','+str(int(v_['0']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
         self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-H**2/36']))
         ig = ig_['L'+str(int(v_['1']))+','+str(int(v_['N-']))]
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['R'+str(int(v_['0']))+','+str(int(v_['N-']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['R'+str(int(v_['0']))+','+str(int(v_['N-']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
         self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-H**2/36']))
         ig = ig_['L'+str(int(v_['1']))+','+str(int(v_['1']))]
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['0']))+','+str(int(v_['0']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['0']))+','+str(int(v_['0']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
         self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-H**2/36']))
         #%%%%%%%% DEFAULT FOR MISSING SECTION(S) %%%%%%%%%%
@@ -727,8 +684,7 @@ class RDW2D51U:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CQLR2-AN-V-V"
         self.x0        = jnp.zeros((self.n,1))
         self.objderlvl = 2
@@ -747,10 +703,9 @@ class RDW2D51U:
         UV2 = EV_[1]-self.elpar[iel_][1]
         UV3 = EV_[2]-self.elpar[iel_][2]
         UV4 = EV_[3]-self.elpar[iel_][3]
-        f_   = (2.0*UV1**2+2.0*UV2**2+2.0*UV3**2+2.0*UV4**2+2.0*UV1*UV2+2.0*UV1*UV3+
-             UV1*UV4+UV2*UV3+2.0*UV2*UV4+2.0*UV3*UV4)
+        f_   = (2.0*UV1**2+2.0*UV2**2+2.0*UV3**2+2.0*UV4**2+2.0*UV1*UV2+2.0*UV1*UV3+              UV1*UV4+UV2*UV3+2.0*UV2*UV4+2.0*UV3*UV4)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -792,10 +747,9 @@ class RDW2D51U:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        f_    = (
-              2.0*EV_[0]**2+2.0*EV_[1]**2+2.0*EV_[2]**2+2.0*EV_[3]**2+2.0*EV_[0]*EV_[1]+2.0*EV_[0]*EV_[2]+EV_[0]*EV_[3]+EV_[1]*EV_[2]+2.0*EV_[1]*EV_[3]+2.0*EV_[2]*EV_[3])
+        f_    = (               2.0*EV_[0]**2+2.0*EV_[1]**2+2.0*EV_[2]**2+2.0*EV_[3]**2+2.0*EV_[0]*EV_[1]+2.0*EV_[0]*EV_[2]+EV_[0]*EV_[3]+EV_[1]*EV_[2]+2.0*EV_[1]*EV_[3]+2.0*EV_[2]*EV_[3])
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -843,7 +797,7 @@ class RDW2D51U:
         C4 = -2.0
         f_   = C1*EV_[0]+C2*EV_[1]+C3*EV_[2]+C4*EV_[3]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -876,7 +830,7 @@ class RDW2D51U:
         C4 = -1.0
         f_   = C1*EV_[0]+C2*EV_[1]+C3*EV_[2]+C4*EV_[3]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -909,7 +863,7 @@ class RDW2D51U:
         C4 = -1.0
         f_   = C1*EV_[0]+C2*EV_[1]+C3*EV_[2]+C4*EV_[3]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -942,7 +896,7 @@ class RDW2D51U:
         C4 = 4.0
         f_   = C1*EV_[0]+C2*EV_[1]+C3*EV_[2]+C4*EV_[3]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -975,7 +929,7 @@ class RDW2D51U:
         C4 = 1.0
         f_   = C1*EV_[0]+C2*EV_[1]+C3*EV_[2]+C4*EV_[3]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1008,7 +962,7 @@ class RDW2D51U:
         C4 = 2.0
         f_   = C1*EV_[0]+C2*EV_[1]+C3*EV_[2]+C4*EV_[3]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1041,7 +995,7 @@ class RDW2D51U:
         C4 = 2.0
         f_   = C1*EV_[0]+C2*EV_[1]+C3*EV_[2]+C4*EV_[3]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1074,7 +1028,7 @@ class RDW2D51U:
         C4 = 4.0
         f_   = C1*EV_[0]+C2*EV_[1]+C3*EV_[2]+C4*EV_[3]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

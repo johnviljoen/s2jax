@@ -9410,333 +9410,267 @@ class DMN15102:
         if('WEIGHT1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT1'], float(1.0215400678))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT1']),float(1.0215400678)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT1']),float(1.0215400678)))
         if('WEIGHT2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT2'], float(0.0128719128))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT2']),float(0.0128719128)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT2']),float(0.0128719128)))
         if('WEIGHT3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT3'], float(0.4292206739))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT3']),float(0.4292206739)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT3']),float(0.4292206739)))
         if('WEIGHT4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT4'], float(0.8009548574))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT4']),float(0.8009548574)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT4']),float(0.8009548574)))
         if('WEIGHT5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT5'], float(0.2202801749))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT5']),float(0.2202801749)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT5']),float(0.2202801749)))
         if('WEIGHT6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT6'], float(2.6915110182))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT6']),float(2.6915110182)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT6']),float(2.6915110182)))
         if('WEIGHT7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT7'], float(0.8064571417))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT7']),float(0.8064571417)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT7']),float(0.8064571417)))
         if('WEIGHT8' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT8'], float(2.2686398843))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT8']),float(2.2686398843)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT8']),float(2.2686398843)))
         if('WEIGHT9' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT9'], float(14.352901162))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT9']),float(14.352901162)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT9']),float(14.352901162)))
         if('WEIGHT10' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT10'], float(12.161699758))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT10']),float(12.161699758)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT10']),float(12.161699758)))
         if('WEIGHT11' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT11'], float(0.2766766620))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT11']),float(0.2766766620)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT11']),float(0.2766766620)))
         if('WEIGHT12' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT12'], float(0.2434602195))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT12']),float(0.2434602195)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT12']),float(0.2434602195)))
         if('WEIGHT13' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT13'], float(1.1650863975))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT13']),float(1.1650863975)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT13']),float(1.1650863975)))
         if('WEIGHT14' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT14'], float(0.1774572413))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT14']),float(0.1774572413)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT14']),float(0.1774572413)))
         if('WEIGHT15' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT15'], float(0.1153950601))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT15']),float(0.1153950601)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT15']),float(0.1153950601)))
         if('WEIGHT16' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT16'], float(3.7470242328))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT16']),float(3.7470242328)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT16']),float(3.7470242328)))
         if('WEIGHT17' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT17'], float(0.8335010620))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT17']),float(0.8335010620)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT17']),float(0.8335010620)))
         if('WEIGHT18' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT18'], float(0.1588345259))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT18']),float(0.1588345259)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT18']),float(0.1588345259)))
         if('WEIGHT19' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT19'], float(0.3867741611))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT19']),float(0.3867741611)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT19']),float(0.3867741611)))
         if('WEIGHT20' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT20'], float(0.9231772721))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT20']),float(0.9231772721)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT20']),float(0.9231772721)))
         if('WEIGHT21' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT21'], float(0.2596415821))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT21']),float(0.2596415821)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT21']),float(0.2596415821)))
         if('WEIGHT22' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT22'], float(2.0709635713))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT22']),float(2.0709635713)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT22']),float(2.0709635713)))
         if('WEIGHT23' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT23'], float(1.9449508030))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT23']),float(1.9449508030)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT23']),float(1.9449508030)))
         if('WEIGHT24' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT24'], float(1.4841998492))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT24']),float(1.4841998492)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT24']),float(1.4841998492)))
         if('WEIGHT25' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT25'], float(0.4816362663))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT25']),float(0.4816362663)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT25']),float(0.4816362663)))
         if('WEIGHT26' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT26'], float(0.4934043524))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT26']),float(0.4934043524)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT26']),float(0.4934043524)))
         if('WEIGHT27' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT27'], float(0.3289805969))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT27']),float(0.3289805969)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT27']),float(0.3289805969)))
         if('WEIGHT28' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT28'], float(0.8399929759))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT28']),float(0.8399929759)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT28']),float(0.8399929759)))
         if('WEIGHT29' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT29'], float(0.4600450055))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT29']),float(0.4600450055)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT29']),float(0.4600450055)))
         if('WEIGHT30' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT30'], float(0.4909424311))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT30']),float(0.4909424311)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT30']),float(0.4909424311)))
         if('WEIGHT31' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT31'], float(0.9861479337))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT31']),float(0.9861479337)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT31']),float(0.9861479337)))
         if('WEIGHT32' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT32'], float(-0.017883084))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT32']),float(-0.017883084)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT32']),float(-0.017883084)))
         if('WEIGHT33' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WEIGHT33'], float(0.2654081509))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT33']),float(0.2654081509)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WEIGHT33']),float(0.2654081509)))
         if('WIDTH1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH1'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH1']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH1']),float(0.02)))
         if('WIDTH2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH2'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH2']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH2']),float(0.02)))
         if('WIDTH3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH3'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH3']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH3']),float(0.02)))
         if('WIDTH4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH4'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH4']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH4']),float(0.02)))
         if('WIDTH5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH5'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH5']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH5']),float(0.02)))
         if('WIDTH6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH6'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH6']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH6']),float(0.02)))
         if('WIDTH7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH7'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH7']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH7']),float(0.02)))
         if('WIDTH8' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH8'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH8']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH8']),float(0.02)))
         if('WIDTH9' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH9'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH9']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH9']),float(0.02)))
         if('WIDTH10' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH10'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH10']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH10']),float(0.02)))
         if('WIDTH11' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH11'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH11']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH11']),float(0.02)))
         if('WIDTH12' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH12'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH12']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH12']),float(0.02)))
         if('WIDTH13' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH13'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH13']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH13']),float(0.02)))
         if('WIDTH14' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH14'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH14']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH14']),float(0.02)))
         if('WIDTH15' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH15'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH15']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH15']),float(0.02)))
         if('WIDTH16' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH16'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH16']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH16']),float(0.02)))
         if('WIDTH17' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH17'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH17']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH17']),float(0.02)))
         if('WIDTH18' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH18'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH18']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH18']),float(0.02)))
         if('WIDTH19' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH19'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH19']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH19']),float(0.02)))
         if('WIDTH20' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH20'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH20']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH20']),float(0.02)))
         if('WIDTH21' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH21'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH21']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH21']),float(0.02)))
         if('WIDTH22' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH22'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH22']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH22']),float(0.02)))
         if('WIDTH23' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH23'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH23']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH23']),float(0.02)))
         if('WIDTH24' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH24'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH24']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH24']),float(0.02)))
         if('WIDTH25' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH25'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH25']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH25']),float(0.02)))
         if('WIDTH26' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH26'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH26']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH26']),float(0.02)))
         if('WIDTH27' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH27'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH27']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH27']),float(0.02)))
         if('WIDTH28' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH28'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH28']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH28']),float(0.02)))
         if('WIDTH29' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH29'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH29']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH29']),float(0.02)))
         if('WIDTH30' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH30'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH30']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH30']),float(0.02)))
         if('WIDTH31' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH31'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH31']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH31']),float(0.02)))
         if('WIDTH32' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH32'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH32']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH32']),float(0.02)))
         if('WIDTH33' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['WIDTH33'], float(0.02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH33']),float(0.02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['WIDTH33']),float(0.02)))
         pass
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
@@ -9797,8 +9731,7 @@ class DMN15102:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-MN-66-4643"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -9814,7 +9747,7 @@ class DMN15102:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,0.25e0/jnp.arctan(1.0e0))
         return pbm
 
@@ -9829,7 +9762,7 @@ class DMN15102:
         WOPI = self.efpar[0]*EV_[0]
         f_   = WOPI*RATIO
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

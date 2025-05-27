@@ -187,7 +187,7 @@ class BEALE:
         W = -self.elpar[iel_][0]*EV_[1]**POWM1
         f_   = EV_[0]*T
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -201,8 +201,7 @@ class BEALE:
                 H_ = jtu.np_like_set(H_, jnp.array([0,0]), 0.0)
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), W)
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
-                H_ = jtu.np_like_set(H_, jnp.array([1,1]), ()
-                      -EV_[0]*self.elpar[iel_][0]*POWM1*EV_[1]**(self.elpar[iel_][0]-2.0))
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (                       -EV_[0]*self.elpar[iel_][0]*POWM1*EV_[1]**(self.elpar[iel_][0]-2.0)))
         if nargout == 1:
             return f_
         elif nargout == 2:

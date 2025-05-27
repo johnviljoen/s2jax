@@ -110,13 +110,11 @@ class POLAK4:
         if('X1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X1'], float(0.9))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(0.9)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(0.9)))
         if('X2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X2'], float(0.1))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X2']),float(0.1)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X2']),float(0.1)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -202,8 +200,7 @@ class POLAK4:
         self.cupper = jnp.full((self.m,1),+float('Inf'))
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nle), jnp.zeros((self.nle,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLQR2-AN-3-3"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -223,7 +220,7 @@ class POLAK4:
         iel_ = args[1]
         f_   = (EV_[0]-self.elpar[iel_][0])**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

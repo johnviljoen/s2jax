@@ -114,33 +114,27 @@ class BIGGS6NE:
         if('X1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X1'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(1.0)))
         if('X2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X2'], float(2.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X2']),float(2.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X2']),float(2.0)))
         if('X3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X3'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3']),float(1.0)))
         if('X4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X4'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X4']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X4']),float(1.0)))
         if('X5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X5'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5']),float(1.0)))
         if('X6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X6'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X6']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X6']),float(1.0)))
         pass
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
@@ -235,8 +229,7 @@ class BIGGS6NE:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-AN-6-13"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -258,7 +251,7 @@ class BIGGS6NE:
         V1EXPA = EV_[0]*EXPA
         f_   = V1EXPA
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

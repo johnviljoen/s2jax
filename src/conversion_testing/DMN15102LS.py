@@ -9537,7 +9537,7 @@ class DMN15102LS:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,0.25e0/jnp.arctan(1.0e0))
         return pbm
 
@@ -9552,7 +9552,7 @@ class DMN15102LS:
         WOPI = self.efpar[0]*EV_[0]
         f_   = WOPI*RATIO
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

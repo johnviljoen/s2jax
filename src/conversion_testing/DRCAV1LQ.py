@@ -353,7 +353,7 @@ class DRCAV1LQ:
         IV_ = jtu.np_like_set(IV_, 1, U_[1:2,:].dot(EV_))
         f_   = IV_[0]*IV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

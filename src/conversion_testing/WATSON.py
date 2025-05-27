@@ -300,7 +300,7 @@ class WATSON:
         iel_ = args[1]
         f_   = -EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -324,8 +324,7 @@ class WATSON:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        U  = (
-              self.elpar[iel_][0]*EV_[0]+self.elpar[iel_][1]*EV_[1]+self.elpar[iel_][2]*EV_[2]+self.elpar[iel_][3]*EV_[3]+self.elpar[iel_][4]*EV_[4]+self.elpar[iel_][5]*EV_[5]+self.elpar[iel_][6]*EV_[6]+self.elpar[iel_][7]*EV_[7]+self.elpar[iel_][8]*EV_[8]+self.elpar[iel_][9]*EV_[9]+self.elpar[iel_][10]*EV_[10]+self.elpar[iel_][11]*EV_[11])
+        U  = (               self.elpar[iel_][0]*EV_[0]+self.elpar[iel_][1]*EV_[1]+self.elpar[iel_][2]*EV_[2]+self.elpar[iel_][3]*EV_[3]+self.elpar[iel_][4]*EV_[4]+self.elpar[iel_][5]*EV_[5]+self.elpar[iel_][6]*EV_[6]+self.elpar[iel_][7]*EV_[7]+self.elpar[iel_][8]*EV_[8]+self.elpar[iel_][9]*EV_[9]+self.elpar[iel_][10]*EV_[10]+self.elpar[iel_][11]*EV_[11])
         TWOT1 = self.elpar[iel_][0]+self.elpar[iel_][0]
         TWOT2 = self.elpar[iel_][1]+self.elpar[iel_][1]
         TWOT3 = self.elpar[iel_][2]+self.elpar[iel_][2]
@@ -340,7 +339,7 @@ class WATSON:
         TWOT12 = self.elpar[iel_][11]+self.elpar[iel_][11]
         f_   = -U*U
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

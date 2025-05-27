@@ -223,7 +223,7 @@ class FLETBV3M:
         iel_ = args[1]
         f_   = self.elpar[iel_][0]*jnp.cos(EV_[0])
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -249,7 +249,7 @@ class FLETBV3M:
         iel_ = args[1]
         f_   = 100.0*jnp.sin(0.01*EV_[0])
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

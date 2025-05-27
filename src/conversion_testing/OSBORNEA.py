@@ -220,7 +220,7 @@ class OSBORNEA:
         V1EXPA = EV_[0]*EXPA
         f_   = V1EXPA
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

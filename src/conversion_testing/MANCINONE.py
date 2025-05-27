@@ -188,8 +188,7 @@ class MANCINONE:
             if('X'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['X'+str(I)], float(v_['XI0']))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(v_['XI0'])))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(v_['XI0'])))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -277,8 +276,7 @@ class MANCINONE:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-AN-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -320,7 +318,7 @@ class MANCINONE:
         DBDX = DSUMAL+self.elpar[iel_][2]*(DSCIJ*SAL+SCIJ*DSAL)
         f_   = VIJ*SUMAL
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -104,8 +104,7 @@ class INTEGREQ:
         if('X'+str(int(v_['0'])) in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X'+str(int(v_['0']))], float(0.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(int(v_['0']))]),float(0.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(int(v_['0']))]),float(0.0)))
         for I in range(int(v_['1']),int(v_['N'])+1):
             v_['REALI'] = float(I)
             v_['IH'] = v_['REALI']*v_['H']
@@ -114,13 +113,11 @@ class INTEGREQ:
             if('X'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['X'+str(I)], float(v_['TI']))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(v_['TI'])))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(v_['TI'])))
         if('X'+str(int(v_['N+1'])) in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X'+str(int(v_['N+1']))], float(0.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(int(v_['N+1']))]),float(0.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(int(v_['N+1']))]),float(0.0)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -192,8 +189,7 @@ class INTEGREQ:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-AN-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -210,7 +206,7 @@ class INTEGREQ:
         VPLUSB = EV_[0]+self.elpar[iel_][0]
         f_   = VPLUSB**3
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

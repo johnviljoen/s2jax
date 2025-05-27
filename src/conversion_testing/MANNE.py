@@ -175,8 +175,7 @@ class MANNE:
         if('K1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['K1'], float(3.05))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['K1']),float(3.05)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['K1']),float(3.05)))
         for I in range(int(v_['2']),int(v_['T'])+1):
             v_['I-1'] = -1+I
             v_['RI-1'] = float(v_['I-1'])
@@ -185,19 +184,16 @@ class MANNE:
             if('K'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['K'+str(I)], float(v_['VAL']))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['K'+str(I)]),float(v_['VAL'])))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['K'+str(I)]),float(v_['VAL'])))
         for I in range(int(v_['1']),int(v_['T'])+1):
             if('C'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['C'+str(I)], float(0.95))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['C'+str(I)]),float(0.95)))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['C'+str(I)]),float(0.95)))
             if('I'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['I'+str(I)], float(0.05))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['I'+str(I)]),float(0.05)))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['I'+str(I)]),float(0.05)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -262,8 +258,7 @@ class MANNE:
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nle), jnp.zeros((self.nle,1)))
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COOR2-MN-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -283,7 +278,7 @@ class MANNE:
         iel_ = args[1]
         f_   = jnp.log(EV_[0])
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -309,7 +304,7 @@ class MANNE:
         iel_ = args[1]
         f_   = EV_[0]**self.elpar[iel_][0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -319,8 +314,7 @@ class MANNE:
             g_ = jtu.np_like_set(g_, 0, self.elpar[iel_][0]*EV_[0]**(self.elpar[iel_][0]-1.0))
             if nargout>2:
                 H_ = jnp.zeros((1,1))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), ()
-                      self.elpar[iel_][0]*(self.elpar[iel_][0]-1.0)*EV_[0]**(self.elpar[iel_][0]-2.0))
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (                       self.elpar[iel_][0]*(self.elpar[iel_][0]-1.0)*EV_[0]**(self.elpar[iel_][0]-2.0)))
         if nargout == 1:
             return f_
         elif nargout == 2:

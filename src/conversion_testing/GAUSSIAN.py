@@ -175,7 +175,7 @@ class GAUSSIAN:
         V2TMV3 = EV_[1]*TMV3
         f_   = FVAL
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

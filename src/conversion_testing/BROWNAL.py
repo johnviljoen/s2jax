@@ -220,7 +220,7 @@ class BROWNAL:
         V910 = EV_[8]*EV_[9]
         f_   = V12*V34*V56*V78*V910
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

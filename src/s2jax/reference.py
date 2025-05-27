@@ -1203,7 +1203,7 @@ def s2mpjlib_select( classif, *args ):
 if __name__ == "__main__":
 
     # from python_problems.ACOPP14 import ACOPP14 as PROBLEM
-    from python_problems.HS107 import HS107 as PROBLEM
+    from python_problems_for_reference.HS107 import HS107 as PROBLEM
 
     p = PROBLEM()
     p.fx(p.x0)

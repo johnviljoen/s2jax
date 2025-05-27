@@ -230,7 +230,7 @@ class LANCZOS1LS:
         V1E = EV_[0]*E
         f_   = V1E
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

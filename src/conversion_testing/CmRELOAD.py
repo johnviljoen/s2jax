@@ -360,8 +360,7 @@ class CmRELOAD:
         v_['TEMP'] = v_['FLIM']/v_['TEMP']
         for I in range(int(v_['1']),int(v_['N'])+1):
             for S in range(int(v_['1']),int(v_['T'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['PEAK'+str(I)+','+str(S)],float(v_['TEMP'])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['PEAK'+str(I)+','+str(S)],float(v_['TEMP'])))
         #%%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.zeros((self.n,1))
         self.xupper = jnp.full((self.n,1),float('inf'))
@@ -390,28 +389,24 @@ class CmRELOAD:
             if('KEFF'+str(S) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['KEFF'+str(S)], float(v_['KEFFuINI']))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['KEFF'+str(S)]),float(v_['KEFFuINI'])))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['KEFF'+str(S)]),float(v_['KEFFuINI'])))
         for I in range(int(v_['1']),int(v_['N'])+1):
             for S in range(int(v_['1']),int(v_['T'])+1):
                 if('KINF'+str(I)+','+str(S) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['KINF'+str(I)+','+str(S)]]), float(v_['KFRESH']))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['KINF'+str(I)+','+str(S)]),float(v_['KFRESH'])))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['KINF'+str(I)+','+str(S)]),float(v_['KFRESH'])))
                 if('PHI'+str(I)+','+str(S) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['PHI'+str(I)+','+str(S)]]), float(v_['TEMP']))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['PHI'+str(I)+','+str(S)]),float(v_['TEMP'])))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['PHI'+str(I)+','+str(S)]),float(v_['TEMP'])))
         for I in range(int(v_['1']),int(v_['N'])+1):
             for K in range(int(v_['1']),int(v_['L'])+1):
                 for J in range(int(v_['1']),int(v_['M'])+1):
                     if('X'+str(I)+','+str(K)+','+str(J) in ix_):
                         self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X'+str(I)+','+str(K)+','+str(J)]]), float(0.5))
                     else:
-                        self.y0  = (
-                              jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)+','+str(K)+','+str(J)]),float(0.5)))
+                        self.y0  = (                               jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)+','+str(K)+','+str(J)]),float(0.5)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -530,18 +525,15 @@ class CmRELOAD:
                 for II in range(int(v_['1']),int(v_['N'])+1):
                     ig = ig_['PLAC'+str(I)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['Au'+str(I)+','+str(II)+','+str(J)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['Au'+str(I)+','+str(II)+','+str(J)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['V'+str(II)]))
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['Bu'+str(I)+','+str(II)+','+str(J)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['Bu'+str(I)+','+str(II)+','+str(J)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['V'+str(II)]))
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['Cu'+str(I)+','+str(II)+','+str(J)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['Cu'+str(I)+','+str(II)+','+str(J)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['V'+str(II)]))
         for S in range(int(v_['1']),int(v_['T'])+1):
@@ -558,11 +550,9 @@ class CmRELOAD:
                     v_['III'] = int(jnp.fix(v_['TEMP']))
                     ig = ig_['KERN'+str(I)+','+str(S)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['P'+str(int(v_['III']))+','+str(S)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['P'+str(int(v_['III']))+','+str(S)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
-                    self.grelw  = (
-                          jtu.loaset(self.grelw,ig,posel,float(v_['G'+str(I)+','+str(int(v_['III']))])))
+                    self.grelw  = (                           jtu.loaset(self.grelw,ig,posel,float(v_['G'+str(I)+','+str(int(v_['III']))])))
         for I in range(int(v_['1']),int(v_['N'])+1):
             for S in range(int(v_['1']),int(v_['T-1'])+1):
                 ig = ig_['KINFF'+str(I)+','+str(S)]
@@ -596,8 +586,7 @@ class CmRELOAD:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLOR2-MN-342-284"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -617,7 +606,7 @@ class CmRELOAD:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -645,7 +634,7 @@ class CmRELOAD:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]*EV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

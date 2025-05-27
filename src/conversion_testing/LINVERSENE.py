@@ -577,153 +577,107 @@ class LINVERSENE:
         nlc         = jnp.array([])
         ig = ig_['O'+str(int(v_['1']))+','+str(int(v_['1']))]
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['1']))+','+str(int(v_['1']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['1']))+','+str(int(v_['1']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['1']))+','+str(int(v_['1']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['1']))+','+str(int(v_['1']))])))
         ig = ig_['O'+str(int(v_['2']))+','+str(int(v_['1']))]
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['2']))+','+str(int(v_['1']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['2']))+','+str(int(v_['1']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['1']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['1']))])))
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['V'+str(int(v_['2']))+','+str(int(v_['1']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['V'+str(int(v_['2']))+','+str(int(v_['1']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['1']))+','+str(int(v_['1']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['1']))+','+str(int(v_['1']))])))
         ig = ig_['O'+str(int(v_['3']))+','+str(int(v_['1']))]
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['3']))+','+str(int(v_['1']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['3']))+','+str(int(v_['1']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['3']))+','+str(int(v_['1']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['3']))+','+str(int(v_['1']))])))
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['V'+str(int(v_['3']))+','+str(int(v_['1']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['V'+str(int(v_['3']))+','+str(int(v_['1']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['1']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['1']))])))
         ig = ig_['O'+str(int(v_['2']))+','+str(int(v_['2']))]
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['2']))+','+str(int(v_['2']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['2']))+','+str(int(v_['2']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['2']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['2']))])))
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['U'+str(int(v_['2']))+','+str(int(v_['2']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['U'+str(int(v_['2']))+','+str(int(v_['2']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['1']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['1']))])))
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['V'+str(int(v_['2']))+','+str(int(v_['2']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['V'+str(int(v_['2']))+','+str(int(v_['2']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['1']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['1']))])))
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['W'+str(int(v_['2']))+','+str(int(v_['2']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['W'+str(int(v_['2']))+','+str(int(v_['2']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['1']))+','+str(int(v_['1']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['1']))+','+str(int(v_['1']))])))
         ig = ig_['O'+str(int(v_['3']))+','+str(int(v_['2']))]
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['3']))+','+str(int(v_['2']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['3']))+','+str(int(v_['2']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['3']))+','+str(int(v_['2']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['3']))+','+str(int(v_['2']))])))
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['U'+str(int(v_['3']))+','+str(int(v_['2']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['U'+str(int(v_['3']))+','+str(int(v_['2']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['3']))+','+str(int(v_['1']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['3']))+','+str(int(v_['1']))])))
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['V'+str(int(v_['3']))+','+str(int(v_['2']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['V'+str(int(v_['3']))+','+str(int(v_['2']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['2']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['2']))])))
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['W'+str(int(v_['3']))+','+str(int(v_['2']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['W'+str(int(v_['3']))+','+str(int(v_['2']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['1']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['1']))])))
         ig = ig_['O'+str(int(v_['3']))+','+str(int(v_['3']))]
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['3']))+','+str(int(v_['3']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['S'+str(int(v_['3']))+','+str(int(v_['3']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['3']))+','+str(int(v_['3']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['3']))+','+str(int(v_['3']))])))
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['U'+str(int(v_['3']))+','+str(int(v_['3']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['U'+str(int(v_['3']))+','+str(int(v_['3']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['3']))+','+str(int(v_['2']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['3']))+','+str(int(v_['2']))])))
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['V'+str(int(v_['3']))+','+str(int(v_['3']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['V'+str(int(v_['3']))+','+str(int(v_['3']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['3']))+','+str(int(v_['2']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['3']))+','+str(int(v_['2']))])))
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['W'+str(int(v_['3']))+','+str(int(v_['3']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['W'+str(int(v_['3']))+','+str(int(v_['3']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
-        self.grelw  = (
-              jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['2']))])))
+        self.grelw  = (               jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['2']))+','+str(int(v_['2']))])))
         for I in range(int(v_['4']),int(v_['N'])+1):
             v_['I-1'] = -1+I
             v_['I-2'] = -2+I
             ig = ig_['O'+str(I)+','+str(int(v_['I-2']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['S'+str(I)+','+str(int(v_['I-2']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['S'+str(I)+','+str(int(v_['I-2']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
-            self.grelw  = (
-                  jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(I)+','+str(int(v_['I-2']))])))
+            self.grelw  = (                   jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(I)+','+str(int(v_['I-2']))])))
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['V'+str(I)+','+str(int(v_['I-2']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['V'+str(I)+','+str(int(v_['I-2']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
-            self.grelw  = (
-                  jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['I-1']))+','+str(int(v_['I-2']))])))
+            self.grelw  = (                   jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['I-1']))+','+str(int(v_['I-2']))])))
             ig = ig_['O'+str(I)+','+str(int(v_['I-1']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['S'+str(I)+','+str(int(v_['I-1']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['S'+str(I)+','+str(int(v_['I-1']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
-            self.grelw  = (
-                  jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(I)+','+str(int(v_['I-1']))])))
+            self.grelw  = (                   jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(I)+','+str(int(v_['I-1']))])))
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['U'+str(I)+','+str(int(v_['I-1']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['U'+str(I)+','+str(int(v_['I-1']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
-            self.grelw  = (
-                  jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(I)+','+str(int(v_['I-2']))])))
+            self.grelw  = (                   jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(I)+','+str(int(v_['I-2']))])))
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['V'+str(I)+','+str(int(v_['I-1']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['V'+str(I)+','+str(int(v_['I-1']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
-            self.grelw  = (
-                  jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['I-1']))+','+str(int(v_['I-1']))])))
+            self.grelw  = (                   jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['I-1']))+','+str(int(v_['I-1']))])))
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['W'+str(I)+','+str(int(v_['I-1']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['W'+str(I)+','+str(int(v_['I-1']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
-            self.grelw  = (
-                  jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['I-1']))+','+str(int(v_['I-2']))])))
+            self.grelw  = (                   jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['I-1']))+','+str(int(v_['I-2']))])))
             ig = ig_['O'+str(I)+','+str(I)]
             posel = len(self.grelt[ig])
             self.grelt = jtu.loaset(self.grelt,ig,posel,ie_['S'+str(I)+','+str(I)])
@@ -732,18 +686,15 @@ class LINVERSENE:
             posel = len(self.grelt[ig])
             self.grelt = jtu.loaset(self.grelt,ig,posel,ie_['U'+str(I)+','+str(I)])
             nlc = jnp.union1d(nlc,jnp.array([ig]))
-            self.grelw  = (
-                  jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(I)+','+str(int(v_['I-1']))])))
+            self.grelw  = (                   jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(I)+','+str(int(v_['I-1']))])))
             posel = len(self.grelt[ig])
             self.grelt = jtu.loaset(self.grelt,ig,posel,ie_['V'+str(I)+','+str(I)])
             nlc = jnp.union1d(nlc,jnp.array([ig]))
-            self.grelw  = (
-                  jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(I)+','+str(int(v_['I-1']))])))
+            self.grelw  = (                   jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(I)+','+str(int(v_['I-1']))])))
             posel = len(self.grelt[ig])
             self.grelt = jtu.loaset(self.grelt,ig,posel,ie_['W'+str(I)+','+str(I)])
             nlc = jnp.union1d(nlc,jnp.array([ig]))
-            self.grelw  = (
-                  jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['I-1']))+','+str(int(v_['I-1']))])))
+            self.grelw  = (                   jtu.loaset(self.grelw,ig,posel,float(v_['T'+str(int(v_['I-1']))+','+str(int(v_['I-1']))])))
         #%%%%%%%%%%%%%%%%%% OBJECT BOUNDS %%%%%%%%%%%%%%%%%
 #    Solution
 # LO SOLTN(10)           6.00000000
@@ -757,8 +708,7 @@ class LINVERSENE:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-AN-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -778,7 +728,7 @@ class LINVERSENE:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

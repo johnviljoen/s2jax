@@ -110,8 +110,7 @@ class LEWISPOL:
         #%%%%%%%%%%%%%%%%%% CONSTANTS %%%%%%%%%%%%%%%%%%%%%
         self.gconst = jnp.zeros((ngrp,1))
         v_['CT'+str(int(v_['0']))] = -1.0
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['D0'],float(v_['CT'+str(int(v_['0']))])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['D0'],float(v_['CT'+str(int(v_['0']))])))
         for I in range(int(v_['1']),int(v_['DEG-1'])+1):
             v_['I-1'] = -1+I
             v_['-I'] = -1*I
@@ -128,33 +127,27 @@ class LEWISPOL:
         if('A0' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['A0'], float(-1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A0']),float(-1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A0']),float(-1.0)))
         if('A1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['A1'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A1']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A1']),float(1.0)))
         if('A2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['A2'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A2']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A2']),float(1.0)))
         if('A3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['A3'], float(0.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A3']),float(0.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A3']),float(0.0)))
         if('A4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['A4'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A4']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A4']),float(1.0)))
         if('A5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['A5'], float(-1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A5']),float(-1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A5']),float(-1.0)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -215,8 +208,7 @@ class LEWISPOL:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CQOR2-AN-6-9"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -236,7 +228,7 @@ class LEWISPOL:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -262,7 +254,7 @@ class LEWISPOL:
         iel_ = args[1]
         f_   = EV_[0]**3
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -190,7 +190,7 @@ class RAYBENDL:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,0.01)
         return pbm
 
@@ -230,7 +230,7 @@ class RAYBENDL:
         RDZ0Z1 = -RDZ1Z1
         f_   = V*R
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

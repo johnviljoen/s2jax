@@ -118,10 +118,8 @@ class VARDIMNE:
         self.gconst = jnp.zeros((ngrp,1))
         for I in range(int(v_['1']),int(v_['N'])+1):
             self.gconst = jtu.arrset(self.gconst,ig_['G'+str(I)],float(1.0))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['N+1']))],float(v_['SUMJ'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['N+2']))],float(v_['SUMJ'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['N+1']))],float(v_['SUMJ'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['N+2']))],float(v_['SUMJ'])))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-float('Inf'))
         self.xupper = jnp.full((self.n,1),+float('Inf'))
@@ -136,8 +134,7 @@ class VARDIMNE:
             if('X'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['X'+str(I)], float(v_['XI']))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(v_['XI'])))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(v_['XI'])))
         #%%%%%%%%%%%%%%%%%%%%% GRFTYPE %%%%%%%%%%%%%%%%%%%%
         igt_ = {}
         [it,igt_,_] = jtu.s2mpj_ii('gL2',igt_)

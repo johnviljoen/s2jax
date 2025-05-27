@@ -173,8 +173,7 @@ class HADAMALS:
                 for K in range(int(v_['1']),int(v_['N'])+1):
                     ig = ig_['O'+str(I)+','+str(J)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['O'+str(I)+','+str(J)+','+str(K)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['O'+str(I)+','+str(J)+','+str(K)]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
         for J in range(int(v_['1']),int(v_['N'])+1):
             for I in range(int(v_['2']),int(v_['N'])+1):
@@ -199,7 +198,7 @@ class HADAMALS:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -225,7 +224,7 @@ class HADAMALS:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -250,7 +249,7 @@ class HADAMALS:
     @staticmethod
     def g_globs(self):
 
-        self.gfpar = jnp.array([]);
+        self.gfpar = jnp.array([])
         self.gfpar = jtu.arrset(self.gfpar,0,1.0e+0)     # this is FACTOR
         return pbm
 

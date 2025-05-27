@@ -171,7 +171,7 @@ class DANWOODLS:
         V1XV21 = V1X**(EV_[1]-1.0)
         f_   = V1XV2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

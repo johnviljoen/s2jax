@@ -1216,8 +1216,7 @@ class TWIRIMD1:
             self.gconst = jtu.arrset(self.gconst,ig_['Norm'+str(t)],float(1.0))
         for i in range(int(v_['1']),int(v_['Nnod'])+1):
             for t in range(int(v_['1']),int(v_['Ntim'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['Peak'+str(i)+','+str(t)],float(v_['FluNred'])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['Peak'+str(i)+','+str(t)],float(v_['FluNred'])))
         #%%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.zeros((self.n,1))
         self.xupper = jnp.full((self.n,1),float('inf'))
@@ -1239,6238 +1238,4991 @@ class TWIRIMD1:
         if('phi1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi1,1']]), float(0.0283))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi1,1']),float(0.0283)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi1,1']),float(0.0283)))
         if('phi1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi1,2']]), float(0.0302))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi1,2']),float(0.0302)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi1,2']),float(0.0302)))
         if('phi1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi1,3']]), float(0.0320))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi1,3']),float(0.0320)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi1,3']),float(0.0320)))
         if('phi1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi1,4']]), float(0.0338))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi1,4']),float(0.0338)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi1,4']),float(0.0338)))
         if('phi1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi1,5']]), float(0.0355))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi1,5']),float(0.0355)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi1,5']),float(0.0355)))
         if('phi1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi1,6']]), float(0.0370))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi1,6']),float(0.0370)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi1,6']),float(0.0370)))
         if('phi2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi2,1']]), float(0.0308))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi2,1']),float(0.0308)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi2,1']),float(0.0308)))
         if('phi2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi2,2']]), float(0.0325))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi2,2']),float(0.0325)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi2,2']),float(0.0325)))
         if('phi2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi2,3']]), float(0.0341))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi2,3']),float(0.0341)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi2,3']),float(0.0341)))
         if('phi2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi2,4']]), float(0.0356))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi2,4']),float(0.0356)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi2,4']),float(0.0356)))
         if('phi2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi2,5']]), float(0.0371))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi2,5']),float(0.0371)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi2,5']),float(0.0371)))
         if('phi2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi2,6']]), float(0.0384))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi2,6']),float(0.0384)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi2,6']),float(0.0384)))
         if('phi3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi3,1']]), float(0.0339))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi3,1']),float(0.0339)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi3,1']),float(0.0339)))
         if('phi3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi3,2']]), float(0.0350))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi3,2']),float(0.0350)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi3,2']),float(0.0350)))
         if('phi3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi3,3']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi3,3']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi3,3']),float(0.0361)))
         if('phi3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi3,4']]), float(0.0371))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi3,4']),float(0.0371)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi3,4']),float(0.0371)))
         if('phi3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi3,5']]), float(0.0381))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi3,5']),float(0.0381)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi3,5']),float(0.0381)))
         if('phi3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi3,6']]), float(0.0390))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi3,6']),float(0.0390)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi3,6']),float(0.0390)))
         if('phi4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi4,1']]), float(0.0407))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi4,1']),float(0.0407)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi4,1']),float(0.0407)))
         if('phi4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi4,2']]), float(0.0411))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi4,2']),float(0.0411)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi4,2']),float(0.0411)))
         if('phi4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi4,3']]), float(0.0415))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi4,3']),float(0.0415)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi4,3']),float(0.0415)))
         if('phi4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi4,4']]), float(0.0419))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi4,4']),float(0.0419)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi4,4']),float(0.0419)))
         if('phi4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi4,5']]), float(0.0423))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi4,5']),float(0.0423)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi4,5']),float(0.0423)))
         if('phi4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi4,6']]), float(0.0427))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi4,6']),float(0.0427)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi4,6']),float(0.0427)))
         if('phi5,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi5,1']]), float(0.0548))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi5,1']),float(0.0548)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi5,1']),float(0.0548)))
         if('phi5,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi5,2']]), float(0.0545))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi5,2']),float(0.0545)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi5,2']),float(0.0545)))
         if('phi5,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi5,3']]), float(0.0542))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi5,3']),float(0.0542)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi5,3']),float(0.0542)))
         if('phi5,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi5,4']]), float(0.0540))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi5,4']),float(0.0540)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi5,4']),float(0.0540)))
         if('phi5,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi5,5']]), float(0.0538))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi5,5']),float(0.0538)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi5,5']),float(0.0538)))
         if('phi5,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi5,6']]), float(0.0537))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi5,6']),float(0.0537)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi5,6']),float(0.0537)))
         if('phi6,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi6,1']]), float(0.0458))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi6,1']),float(0.0458)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi6,1']),float(0.0458)))
         if('phi6,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi6,2']]), float(0.0459))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi6,2']),float(0.0459)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi6,2']),float(0.0459)))
         if('phi6,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi6,3']]), float(0.0461))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi6,3']),float(0.0461)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi6,3']),float(0.0461)))
         if('phi6,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi6,4']]), float(0.0463))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi6,4']),float(0.0463)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi6,4']),float(0.0463)))
         if('phi6,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi6,5']]), float(0.0466))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi6,5']),float(0.0466)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi6,5']),float(0.0466)))
         if('phi6,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi6,6']]), float(0.0469))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi6,6']),float(0.0469)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi6,6']),float(0.0469)))
         if('phi7,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi7,1']]), float(0.0454))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi7,1']),float(0.0454)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi7,1']),float(0.0454)))
         if('phi7,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi7,2']]), float(0.0462))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi7,2']),float(0.0462)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi7,2']),float(0.0462)))
         if('phi7,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi7,3']]), float(0.0469))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi7,3']),float(0.0469)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi7,3']),float(0.0469)))
         if('phi7,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi7,4']]), float(0.0477))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi7,4']),float(0.0477)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi7,4']),float(0.0477)))
         if('phi7,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi7,5']]), float(0.0485))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi7,5']),float(0.0485)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi7,5']),float(0.0485)))
         if('phi7,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi7,6']]), float(0.0493))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi7,6']),float(0.0493)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi7,6']),float(0.0493)))
         if('phi8,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi8,1']]), float(0.0269))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi8,1']),float(0.0269)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi8,1']),float(0.0269)))
         if('phi8,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi8,2']]), float(0.0280))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi8,2']),float(0.0280)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi8,2']),float(0.0280)))
         if('phi8,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi8,3']]), float(0.0292))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi8,3']),float(0.0292)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi8,3']),float(0.0292)))
         if('phi8,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi8,4']]), float(0.0304))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi8,4']),float(0.0304)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi8,4']),float(0.0304)))
         if('phi8,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi8,5']]), float(0.0317))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi8,5']),float(0.0317)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi8,5']),float(0.0317)))
         if('phi8,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi8,6']]), float(0.0330))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi8,6']),float(0.0330)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi8,6']),float(0.0330)))
         if('phi9,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi9,1']]), float(0.0107))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi9,1']),float(0.0107)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi9,1']),float(0.0107)))
         if('phi9,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi9,2']]), float(0.0114))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi9,2']),float(0.0114)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi9,2']),float(0.0114)))
         if('phi9,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi9,3']]), float(0.0122))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi9,3']),float(0.0122)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi9,3']),float(0.0122)))
         if('phi9,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi9,4']]), float(0.0130))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi9,4']),float(0.0130)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi9,4']),float(0.0130)))
         if('phi9,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi9,5']]), float(0.0139))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi9,5']),float(0.0139)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi9,5']),float(0.0139)))
         if('phi9,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi9,6']]), float(0.0148))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi9,6']),float(0.0148)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi9,6']),float(0.0148)))
         if('phi10,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi10,1']]), float(0.0321))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi10,1']),float(0.0321)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi10,1']),float(0.0321)))
         if('phi10,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi10,2']]), float(0.0335))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi10,2']),float(0.0335)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi10,2']),float(0.0335)))
         if('phi10,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi10,3']]), float(0.0348))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi10,3']),float(0.0348)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi10,3']),float(0.0348)))
         if('phi10,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi10,4']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi10,4']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi10,4']),float(0.0361)))
         if('phi10,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi10,5']]), float(0.0373))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi10,5']),float(0.0373)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi10,5']),float(0.0373)))
         if('phi10,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi10,6']]), float(0.0384))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi10,6']),float(0.0384)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi10,6']),float(0.0384)))
         if('phi11,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi11,1']]), float(0.0366))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi11,1']),float(0.0366)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi11,1']),float(0.0366)))
         if('phi11,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi11,2']]), float(0.0375))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi11,2']),float(0.0375)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi11,2']),float(0.0375)))
         if('phi11,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi11,3']]), float(0.0385))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi11,3']),float(0.0385)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi11,3']),float(0.0385)))
         if('phi11,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi11,4']]), float(0.0393))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi11,4']),float(0.0393)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi11,4']),float(0.0393)))
         if('phi11,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi11,5']]), float(0.0402))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi11,5']),float(0.0402)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi11,5']),float(0.0402)))
         if('phi11,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi11,6']]), float(0.0409))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi11,6']),float(0.0409)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi11,6']),float(0.0409)))
         if('phi12,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi12,1']]), float(0.0401))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi12,1']),float(0.0401)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi12,1']),float(0.0401)))
         if('phi12,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi12,2']]), float(0.0405))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi12,2']),float(0.0405)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi12,2']),float(0.0405)))
         if('phi12,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi12,3']]), float(0.0409))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi12,3']),float(0.0409)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi12,3']),float(0.0409)))
         if('phi12,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi12,4']]), float(0.0413))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi12,4']),float(0.0413)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi12,4']),float(0.0413)))
         if('phi12,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi12,5']]), float(0.0417))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi12,5']),float(0.0417)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi12,5']),float(0.0417)))
         if('phi12,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi12,6']]), float(0.0421))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi12,6']),float(0.0421)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi12,6']),float(0.0421)))
         if('phi13,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi13,1']]), float(0.0448))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi13,1']),float(0.0448)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi13,1']),float(0.0448)))
         if('phi13,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi13,2']]), float(0.0449))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi13,2']),float(0.0449)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi13,2']),float(0.0449)))
         if('phi13,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi13,3']]), float(0.0451))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi13,3']),float(0.0451)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi13,3']),float(0.0451)))
         if('phi13,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi13,4']]), float(0.0452))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi13,4']),float(0.0452)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi13,4']),float(0.0452)))
         if('phi13,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi13,5']]), float(0.0454))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi13,5']),float(0.0454)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi13,5']),float(0.0454)))
         if('phi13,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi13,6']]), float(0.0457))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi13,6']),float(0.0457)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi13,6']),float(0.0457)))
         if('phi14,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi14,1']]), float(0.0450))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi14,1']),float(0.0450)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi14,1']),float(0.0450)))
         if('phi14,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi14,2']]), float(0.0454))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi14,2']),float(0.0454)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi14,2']),float(0.0454)))
         if('phi14,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi14,3']]), float(0.0458))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi14,3']),float(0.0458)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi14,3']),float(0.0458)))
         if('phi14,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi14,4']]), float(0.0462))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi14,4']),float(0.0462)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi14,4']),float(0.0462)))
         if('phi14,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi14,5']]), float(0.0466))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi14,5']),float(0.0466)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi14,5']),float(0.0466)))
         if('phi14,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi14,6']]), float(0.0471))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi14,6']),float(0.0471)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi14,6']),float(0.0471)))
         if('phi15,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi15,1']]), float(0.0366))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi15,1']),float(0.0366)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi15,1']),float(0.0366)))
         if('phi15,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi15,2']]), float(0.0374))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi15,2']),float(0.0374)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi15,2']),float(0.0374)))
         if('phi15,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi15,3']]), float(0.0383))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi15,3']),float(0.0383)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi15,3']),float(0.0383)))
         if('phi15,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi15,4']]), float(0.0393))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi15,4']),float(0.0393)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi15,4']),float(0.0393)))
         if('phi15,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi15,5']]), float(0.0403))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi15,5']),float(0.0403)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi15,5']),float(0.0403)))
         if('phi15,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi15,6']]), float(0.0413))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi15,6']),float(0.0413)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi15,6']),float(0.0413)))
         if('phi16,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi16,1']]), float(0.0190))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi16,1']),float(0.0190)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi16,1']),float(0.0190)))
         if('phi16,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi16,2']]), float(0.0199))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi16,2']),float(0.0199)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi16,2']),float(0.0199)))
         if('phi16,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi16,3']]), float(0.0208))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi16,3']),float(0.0208)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi16,3']),float(0.0208)))
         if('phi16,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi16,4']]), float(0.0218))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi16,4']),float(0.0218)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi16,4']),float(0.0218)))
         if('phi16,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi16,5']]), float(0.0229))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi16,5']),float(0.0229)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi16,5']),float(0.0229)))
         if('phi16,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi16,6']]), float(0.0240))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi16,6']),float(0.0240)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi16,6']),float(0.0240)))
         if('phi17,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi17,1']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi17,1']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi17,1']),float(0.0079)))
         if('phi17,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi17,2']]), float(0.0084))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi17,2']),float(0.0084)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi17,2']),float(0.0084)))
         if('phi17,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi17,3']]), float(0.0090))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi17,3']),float(0.0090)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi17,3']),float(0.0090)))
         if('phi17,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi17,4']]), float(0.0096))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi17,4']),float(0.0096)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi17,4']),float(0.0096)))
         if('phi17,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi17,5']]), float(0.0103))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi17,5']),float(0.0103)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi17,5']),float(0.0103)))
         if('phi17,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi17,6']]), float(0.0111))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi17,6']),float(0.0111)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi17,6']),float(0.0111)))
         if('phi18,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi18,1']]), float(0.0398))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi18,1']),float(0.0398)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi18,1']),float(0.0398)))
         if('phi18,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi18,2']]), float(0.0405))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi18,2']),float(0.0405)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi18,2']),float(0.0405)))
         if('phi18,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi18,3']]), float(0.0411))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi18,3']),float(0.0411)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi18,3']),float(0.0411)))
         if('phi18,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi18,4']]), float(0.0416))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi18,4']),float(0.0416)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi18,4']),float(0.0416)))
         if('phi18,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi18,5']]), float(0.0422))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi18,5']),float(0.0422)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi18,5']),float(0.0422)))
         if('phi18,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi18,6']]), float(0.0427))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi18,6']),float(0.0427)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi18,6']),float(0.0427)))
         if('phi19,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi19,1']]), float(0.0481))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi19,1']),float(0.0481)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi19,1']),float(0.0481)))
         if('phi19,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi19,2']]), float(0.0484))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi19,2']),float(0.0484)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi19,2']),float(0.0484)))
         if('phi19,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi19,3']]), float(0.0486))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi19,3']),float(0.0486)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi19,3']),float(0.0486)))
         if('phi19,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi19,4']]), float(0.0489))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi19,4']),float(0.0489)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi19,4']),float(0.0489)))
         if('phi19,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi19,5']]), float(0.0492))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi19,5']),float(0.0492)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi19,5']),float(0.0492)))
         if('phi19,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi19,6']]), float(0.0494))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi19,6']),float(0.0494)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi19,6']),float(0.0494)))
         if('phi20,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi20,1']]), float(0.0486))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi20,1']),float(0.0486)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi20,1']),float(0.0486)))
         if('phi20,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi20,2']]), float(0.0489))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi20,2']),float(0.0489)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi20,2']),float(0.0489)))
         if('phi20,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi20,3']]), float(0.0492))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi20,3']),float(0.0492)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi20,3']),float(0.0492)))
         if('phi20,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi20,4']]), float(0.0495))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi20,4']),float(0.0495)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi20,4']),float(0.0495)))
         if('phi20,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi20,5']]), float(0.0498))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi20,5']),float(0.0498)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi20,5']),float(0.0498)))
         if('phi20,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi20,6']]), float(0.0501))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi20,6']),float(0.0501)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi20,6']),float(0.0501)))
         if('phi21,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi21,1']]), float(0.0408))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi21,1']),float(0.0408)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi21,1']),float(0.0408)))
         if('phi21,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi21,2']]), float(0.0415))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi21,2']),float(0.0415)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi21,2']),float(0.0415)))
         if('phi21,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi21,3']]), float(0.0422))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi21,3']),float(0.0422)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi21,3']),float(0.0422)))
         if('phi21,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi21,4']]), float(0.0429))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi21,4']),float(0.0429)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi21,4']),float(0.0429)))
         if('phi21,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi21,5']]), float(0.0437))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi21,5']),float(0.0437)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi21,5']),float(0.0437)))
         if('phi21,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi21,6']]), float(0.0444))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi21,6']),float(0.0444)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi21,6']),float(0.0444)))
         if('phi22,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi22,1']]), float(0.0238))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi22,1']),float(0.0238)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi22,1']),float(0.0238)))
         if('phi22,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi22,2']]), float(0.0247))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi22,2']),float(0.0247)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi22,2']),float(0.0247)))
         if('phi22,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi22,3']]), float(0.0255))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi22,3']),float(0.0255)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi22,3']),float(0.0255)))
         if('phi22,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi22,4']]), float(0.0265))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi22,4']),float(0.0265)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi22,4']),float(0.0265)))
         if('phi22,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi22,5']]), float(0.0274))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi22,5']),float(0.0274)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi22,5']),float(0.0274)))
         if('phi22,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi22,6']]), float(0.0285))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi22,6']),float(0.0285)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi22,6']),float(0.0285)))
         if('phi23,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi23,1']]), float(0.0116))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi23,1']),float(0.0116)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi23,1']),float(0.0116)))
         if('phi23,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi23,2']]), float(0.0122))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi23,2']),float(0.0122)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi23,2']),float(0.0122)))
         if('phi23,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi23,3']]), float(0.0129))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi23,3']),float(0.0129)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi23,3']),float(0.0129)))
         if('phi23,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi23,4']]), float(0.0136))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi23,4']),float(0.0136)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi23,4']),float(0.0136)))
         if('phi23,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi23,5']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi23,5']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi23,5']),float(0.0143)))
         if('phi23,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi23,6']]), float(0.0152))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi23,6']),float(0.0152)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi23,6']),float(0.0152)))
         if('phi24,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi24,1']]), float(0.0443))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi24,1']),float(0.0443)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi24,1']),float(0.0443)))
         if('phi24,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi24,2']]), float(0.0447))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi24,2']),float(0.0447)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi24,2']),float(0.0447)))
         if('phi24,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi24,3']]), float(0.0450))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi24,3']),float(0.0450)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi24,3']),float(0.0450)))
         if('phi24,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi24,4']]), float(0.0454))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi24,4']),float(0.0454)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi24,4']),float(0.0454)))
         if('phi24,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi24,5']]), float(0.0457))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi24,5']),float(0.0457)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi24,5']),float(0.0457)))
         if('phi24,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi24,6']]), float(0.0461))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi24,6']),float(0.0461)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi24,6']),float(0.0461)))
         if('phi25,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi25,1']]), float(0.0462))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi25,1']),float(0.0462)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi25,1']),float(0.0462)))
         if('phi25,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi25,2']]), float(0.0468))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi25,2']),float(0.0468)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi25,2']),float(0.0468)))
         if('phi25,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi25,3']]), float(0.0473))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi25,3']),float(0.0473)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi25,3']),float(0.0473)))
         if('phi25,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi25,4']]), float(0.0479))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi25,4']),float(0.0479)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi25,4']),float(0.0479)))
         if('phi25,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi25,5']]), float(0.0485))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi25,5']),float(0.0485)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi25,5']),float(0.0485)))
         if('phi25,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi25,6']]), float(0.0491))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi25,6']),float(0.0491)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi25,6']),float(0.0491)))
         if('phi26,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi26,1']]), float(0.0308))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi26,1']),float(0.0308)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi26,1']),float(0.0308)))
         if('phi26,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi26,2']]), float(0.0317))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi26,2']),float(0.0317)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi26,2']),float(0.0317)))
         if('phi26,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi26,3']]), float(0.0326))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi26,3']),float(0.0326)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi26,3']),float(0.0326)))
         if('phi26,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi26,4']]), float(0.0336))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi26,4']),float(0.0336)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi26,4']),float(0.0336)))
         if('phi26,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi26,5']]), float(0.0346))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi26,5']),float(0.0346)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi26,5']),float(0.0346)))
         if('phi26,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi26,6']]), float(0.0356))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi26,6']),float(0.0356)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi26,6']),float(0.0356)))
         if('phi27,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi27,1']]), float(0.0151))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi27,1']),float(0.0151)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi27,1']),float(0.0151)))
         if('phi27,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi27,2']]), float(0.0159))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi27,2']),float(0.0159)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi27,2']),float(0.0159)))
         if('phi27,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi27,3']]), float(0.0166))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi27,3']),float(0.0166)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi27,3']),float(0.0166)))
         if('phi27,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi27,4']]), float(0.0174))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi27,4']),float(0.0174)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi27,4']),float(0.0174)))
         if('phi27,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi27,5']]), float(0.0183))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi27,5']),float(0.0183)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi27,5']),float(0.0183)))
         if('phi27,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi27,6']]), float(0.0192))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi27,6']),float(0.0192)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi27,6']),float(0.0192)))
         if('phi28,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi28,1']]), float(0.0287))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi28,1']),float(0.0287)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi28,1']),float(0.0287)))
         if('phi28,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi28,2']]), float(0.0295))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi28,2']),float(0.0295)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi28,2']),float(0.0295)))
         if('phi28,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi28,3']]), float(0.0303))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi28,3']),float(0.0303)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi28,3']),float(0.0303)))
         if('phi28,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi28,4']]), float(0.0312))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi28,4']),float(0.0312)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi28,4']),float(0.0312)))
         if('phi28,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi28,5']]), float(0.0321))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi28,5']),float(0.0321)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi28,5']),float(0.0321)))
         if('phi28,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi28,6']]), float(0.0330))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi28,6']),float(0.0330)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi28,6']),float(0.0330)))
         if('phi29,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi29,1']]), float(0.0175))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi29,1']),float(0.0175)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi29,1']),float(0.0175)))
         if('phi29,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi29,2']]), float(0.0183))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi29,2']),float(0.0183)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi29,2']),float(0.0183)))
         if('phi29,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi29,3']]), float(0.0191))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi29,3']),float(0.0191)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi29,3']),float(0.0191)))
         if('phi29,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi29,4']]), float(0.0200))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi29,4']),float(0.0200)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi29,4']),float(0.0200)))
         if('phi29,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi29,5']]), float(0.0209))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi29,5']),float(0.0209)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi29,5']),float(0.0209)))
         if('phi29,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi29,6']]), float(0.0219))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi29,6']),float(0.0219)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi29,6']),float(0.0219)))
         if('phi30,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi30,1']]), float(0.0085))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi30,1']),float(0.0085)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi30,1']),float(0.0085)))
         if('phi30,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi30,2']]), float(0.0090))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi30,2']),float(0.0090)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi30,2']),float(0.0090)))
         if('phi30,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi30,3']]), float(0.0095))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi30,3']),float(0.0095)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi30,3']),float(0.0095)))
         if('phi30,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi30,4']]), float(0.0101))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi30,4']),float(0.0101)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi30,4']),float(0.0101)))
         if('phi30,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi30,5']]), float(0.0108))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi30,5']),float(0.0108)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi30,5']),float(0.0108)))
         if('phi30,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi30,6']]), float(0.0115))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi30,6']),float(0.0115)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi30,6']),float(0.0115)))
         if('phi31,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi31,1']]), float(0.0092))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi31,1']),float(0.0092)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi31,1']),float(0.0092)))
         if('phi31,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi31,2']]), float(0.0098))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi31,2']),float(0.0098)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi31,2']),float(0.0098)))
         if('phi31,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi31,3']]), float(0.0104))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi31,3']),float(0.0104)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi31,3']),float(0.0104)))
         if('phi31,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi31,4']]), float(0.0110))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi31,4']),float(0.0110)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi31,4']),float(0.0110)))
         if('phi31,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi31,5']]), float(0.0117))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi31,5']),float(0.0117)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi31,5']),float(0.0117)))
         if('phi31,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['phi31,6']]), float(0.0125))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi31,6']),float(0.0125)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['phi31,6']),float(0.0125)))
         if('k1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k1,1']]), float(1.0392))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k1,1']),float(1.0392)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k1,1']),float(1.0392)))
         if('k1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k1,2']]), float(1.0244))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k1,2']),float(1.0244)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k1,2']),float(1.0244)))
         if('k1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k1,3']]), float(1.0088))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k1,3']),float(1.0088)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k1,3']),float(1.0088)))
         if('k1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k1,4']]), float(0.9925))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k1,4']),float(0.9925)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k1,4']),float(0.9925)))
         if('k1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k1,5']]), float(0.9756))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k1,5']),float(0.9756)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k1,5']),float(0.9756)))
         if('k1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k1,6']]), float(0.9582))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k1,6']),float(0.9582)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k1,6']),float(0.9582)))
         if('k2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k2,1']]), float(1.0723))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k2,1']),float(1.0723)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k2,1']),float(1.0723)))
         if('k2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k2,2']]), float(1.0557))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k2,2']),float(1.0557)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k2,2']),float(1.0557)))
         if('k2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k2,3']]), float(1.0384))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k2,3']),float(1.0384)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k2,3']),float(1.0384)))
         if('k2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k2,4']]), float(1.0206))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k2,4']),float(1.0206)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k2,4']),float(1.0206)))
         if('k2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k2,5']]), float(1.0023))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k2,5']),float(1.0023)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k2,5']),float(1.0023)))
         if('k2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k2,6']]), float(0.9835))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k2,6']),float(0.9835)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k2,6']),float(0.9835)))
         if('k3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k3,1']]), float(1.0392))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k3,1']),float(1.0392)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k3,1']),float(1.0392)))
         if('k3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k3,2']]), float(1.0215))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k3,2']),float(1.0215)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k3,2']),float(1.0215)))
         if('k3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k3,3']]), float(1.0034))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k3,3']),float(1.0034)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k3,3']),float(1.0034)))
         if('k3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k3,4']]), float(0.9852))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k3,4']),float(0.9852)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k3,4']),float(0.9852)))
         if('k3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k3,5']]), float(0.9667))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k3,5']),float(0.9667)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k3,5']),float(0.9667)))
         if('k3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k3,6']]), float(0.9482))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k3,6']),float(0.9482)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k3,6']),float(0.9482)))
         if('k4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k4,1']]), float(1.0392))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k4,1']),float(1.0392)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k4,1']),float(1.0392)))
         if('k4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k4,2']]), float(1.0179))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k4,2']),float(1.0179)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k4,2']),float(1.0179)))
         if('k4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k4,3']]), float(0.9968))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k4,3']),float(0.9968)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k4,3']),float(0.9968)))
         if('k4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k4,4']]), float(0.9760))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k4,4']),float(0.9760)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k4,4']),float(0.9760)))
         if('k4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k4,5']]), float(0.9554))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k4,5']),float(0.9554)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k4,5']),float(0.9554)))
         if('k4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k4,6']]), float(0.9350))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k4,6']),float(0.9350)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k4,6']),float(0.9350)))
         if('k5,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k5,1']]), float(1.2727))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k5,1']),float(1.2727)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k5,1']),float(1.2727)))
         if('k5,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k5,2']]), float(1.2375))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k5,2']),float(1.2375)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k5,2']),float(1.2375)))
         if('k5,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k5,3']]), float(1.2035))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k5,3']),float(1.2035)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k5,3']),float(1.2035)))
         if('k5,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k5,4']]), float(1.1707))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k5,4']),float(1.1707)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k5,4']),float(1.1707)))
         if('k5,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k5,5']]), float(1.1388))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k5,5']),float(1.1388)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k5,5']),float(1.1388)))
         if('k5,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k5,6']]), float(1.1079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k5,6']),float(1.1079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k5,6']),float(1.1079)))
         if('k6,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k6,1']]), float(1.0392))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k6,1']),float(1.0392)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k6,1']),float(1.0392)))
         if('k6,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k6,2']]), float(1.0152))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k6,2']),float(1.0152)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k6,2']),float(1.0152)))
         if('k6,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k6,3']]), float(0.9917))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k6,3']),float(0.9917)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k6,3']),float(0.9917)))
         if('k6,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k6,4']]), float(0.9687))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k6,4']),float(0.9687)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k6,4']),float(0.9687)))
         if('k6,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k6,5']]), float(0.9460))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k6,5']),float(0.9460)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k6,5']),float(0.9460)))
         if('k6,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k6,6']]), float(0.9238))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k6,6']),float(0.9238)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k6,6']),float(0.9238)))
         if('k7,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k7,1']]), float(1.2727))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k7,1']),float(1.2727)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k7,1']),float(1.2727)))
         if('k7,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k7,2']]), float(1.2436))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k7,2']),float(1.2436)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k7,2']),float(1.2436)))
         if('k7,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k7,3']]), float(1.2146))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k7,3']),float(1.2146)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k7,3']),float(1.2146)))
         if('k7,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k7,4']]), float(1.1859))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k7,4']),float(1.1859)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k7,4']),float(1.1859)))
         if('k7,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k7,5']]), float(1.1574))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k7,5']),float(1.1574)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k7,5']),float(1.1574)))
         if('k7,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k7,6']]), float(1.1292))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k7,6']),float(1.1292)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k7,6']),float(1.1292)))
         if('k8,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k8,1']]), float(1.1384))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k8,1']),float(1.1384)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k8,1']),float(1.1384)))
         if('k8,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k8,2']]), float(1.1230))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k8,2']),float(1.1230)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k8,2']),float(1.1230)))
         if('k8,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k8,3']]), float(1.1071))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k8,3']),float(1.1071)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k8,3']),float(1.1071)))
         if('k8,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k8,4']]), float(1.0909))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k8,4']),float(1.0909)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k8,4']),float(1.0909)))
         if('k8,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k8,5']]), float(1.0742))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k8,5']),float(1.0742)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k8,5']),float(1.0742)))
         if('k8,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k8,6']]), float(1.0570))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k8,6']),float(1.0570)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k8,6']),float(1.0570)))
         if('k9,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k9,1']]), float(0.9658))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k9,1']),float(0.9658)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k9,1']),float(0.9658)))
         if('k9,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k9,2']]), float(0.9606))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k9,2']),float(0.9606)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k9,2']),float(0.9606)))
         if('k9,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k9,3']]), float(0.9550))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k9,3']),float(0.9550)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k9,3']),float(0.9550)))
         if('k9,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k9,4']]), float(0.9492))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k9,4']),float(0.9492)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k9,4']),float(0.9492)))
         if('k9,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k9,5']]), float(0.9430))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k9,5']),float(0.9430)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k9,5']),float(0.9430)))
         if('k9,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k9,6']]), float(0.9364))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k9,6']),float(0.9364)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k9,6']),float(0.9364)))
         if('k10,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k10,1']]), float(1.0392))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k10,1']),float(1.0392)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k10,1']),float(1.0392)))
         if('k10,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k10,2']]), float(1.0224))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k10,2']),float(1.0224)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k10,2']),float(1.0224)))
         if('k10,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k10,3']]), float(1.0052))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k10,3']),float(1.0052)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k10,3']),float(1.0052)))
         if('k10,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k10,4']]), float(0.9876))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k10,4']),float(0.9876)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k10,4']),float(0.9876)))
         if('k10,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k10,5']]), float(0.9696))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k10,5']),float(0.9696)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k10,5']),float(0.9696)))
         if('k10,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k10,6']]), float(0.9514))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k10,6']),float(0.9514)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k10,6']),float(0.9514)))
         if('k11,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k11,1']]), float(1.0723))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k11,1']),float(1.0723)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k11,1']),float(1.0723)))
         if('k11,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k11,2']]), float(1.0526))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k11,2']),float(1.0526)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k11,2']),float(1.0526)))
         if('k11,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k11,3']]), float(1.0327))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k11,3']),float(1.0327)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k11,3']),float(1.0327)))
         if('k11,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k11,4']]), float(1.0126))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k11,4']),float(1.0126)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k11,4']),float(1.0126)))
         if('k11,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k11,5']]), float(0.9926))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k11,5']),float(0.9926)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k11,5']),float(0.9926)))
         if('k11,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k11,6']]), float(0.9725))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k11,6']),float(0.9725)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k11,6']),float(0.9725)))
         if('k12,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k12,1']]), float(0.9996))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k12,1']),float(0.9996)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k12,1']),float(0.9996)))
         if('k12,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k12,2']]), float(0.9794))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k12,2']),float(0.9794)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k12,2']),float(0.9794)))
         if('k12,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k12,3']]), float(0.9594))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k12,3']),float(0.9594)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k12,3']),float(0.9594)))
         if('k12,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k12,4']]), float(0.9396))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k12,4']),float(0.9396)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k12,4']),float(0.9396)))
         if('k12,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k12,5']]), float(0.9200))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k12,5']),float(0.9200)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k12,5']),float(0.9200)))
         if('k12,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k12,6']]), float(0.9007))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k12,6']),float(0.9007)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k12,6']),float(0.9007)))
         if('k13,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k13,1']]), float(1.0392))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k13,1']),float(1.0392)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k13,1']),float(1.0392)))
         if('k13,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k13,2']]), float(1.0158))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k13,2']),float(1.0158)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k13,2']),float(1.0158)))
         if('k13,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k13,3']]), float(0.9928))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k13,3']),float(0.9928)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k13,3']),float(0.9928)))
         if('k13,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k13,4']]), float(0.9703))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k13,4']),float(0.9703)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k13,4']),float(0.9703)))
         if('k13,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k13,5']]), float(0.9481))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k13,5']),float(0.9481)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k13,5']),float(0.9481)))
         if('k13,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k13,6']]), float(0.9264))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k13,6']),float(0.9264)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k13,6']),float(0.9264)))
         if('k14,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k14,1']]), float(1.1384))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k14,1']),float(1.1384)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k14,1']),float(1.1384)))
         if('k14,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k14,2']]), float(1.1126))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k14,2']),float(1.1126)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k14,2']),float(1.1126)))
         if('k14,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k14,3']]), float(1.0872))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k14,3']),float(1.0872)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k14,3']),float(1.0872)))
         if('k14,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k14,4']]), float(1.0621))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k14,4']),float(1.0621)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k14,4']),float(1.0621)))
         if('k14,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k14,5']]), float(1.0374))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k14,5']),float(1.0374)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k14,5']),float(1.0374)))
         if('k14,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k14,6']]), float(1.0130))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k14,6']),float(1.0130)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k14,6']),float(1.0130)))
         if('k15,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k15,1']]), float(1.1912))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k15,1']),float(1.1912)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k15,1']),float(1.1912)))
         if('k15,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k15,2']]), float(1.1693))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k15,2']),float(1.1693)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k15,2']),float(1.1693)))
         if('k15,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k15,3']]), float(1.1472))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k15,3']),float(1.1472)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k15,3']),float(1.1472)))
         if('k15,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k15,4']]), float(1.1251))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k15,4']),float(1.1251)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k15,4']),float(1.1251)))
         if('k15,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k15,5']]), float(1.1028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k15,5']),float(1.1028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k15,5']),float(1.1028)))
         if('k15,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k15,6']]), float(1.0804))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k15,6']),float(1.0804)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k15,6']),float(1.0804)))
         if('k16,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k16,1']]), float(0.9861))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k16,1']),float(0.9861)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k16,1']),float(0.9861)))
         if('k16,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k16,2']]), float(0.9766))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k16,2']),float(0.9766)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k16,2']),float(0.9766)))
         if('k16,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k16,3']]), float(0.9668))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k16,3']),float(0.9668)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k16,3']),float(0.9668)))
         if('k16,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k16,4']]), float(0.9566))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k16,4']),float(0.9566)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k16,4']),float(0.9566)))
         if('k16,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k16,5']]), float(0.9461))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k16,5']),float(0.9461)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k16,5']),float(0.9461)))
         if('k16,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k16,6']]), float(0.9352))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k16,6']),float(0.9352)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k16,6']),float(0.9352)))
         if('k17,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k17,1']]), float(0.9658))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k17,1']),float(0.9658)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k17,1']),float(0.9658)))
         if('k17,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k17,2']]), float(0.9620))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k17,2']),float(0.9620)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k17,2']),float(0.9620)))
         if('k17,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k17,3']]), float(0.9579))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k17,3']),float(0.9579)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k17,3']),float(0.9579)))
         if('k17,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k17,4']]), float(0.9535))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k17,4']),float(0.9535)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k17,4']),float(0.9535)))
         if('k17,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k17,5']]), float(0.9489))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k17,5']),float(0.9489)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k17,5']),float(0.9489)))
         if('k17,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k17,6']]), float(0.9440))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k17,6']),float(0.9440)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k17,6']),float(0.9440)))
         if('k18,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k18,1']]), float(1.0392))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k18,1']),float(1.0392)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k18,1']),float(1.0392)))
         if('k18,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k18,2']]), float(1.0184))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k18,2']),float(1.0184)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k18,2']),float(1.0184)))
         if('k18,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k18,3']]), float(0.9976))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k18,3']),float(0.9976)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k18,3']),float(0.9976)))
         if('k18,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k18,4']]), float(0.9769))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k18,4']),float(0.9769)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k18,4']),float(0.9769)))
         if('k18,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k18,5']]), float(0.9564))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k18,5']),float(0.9564)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k18,5']),float(0.9564)))
         if('k18,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k18,6']]), float(0.9361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k18,6']),float(0.9361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k18,6']),float(0.9361)))
         if('k19,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k19,1']]), float(1.1912))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k19,1']),float(1.1912)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k19,1']),float(1.1912)))
         if('k19,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k19,2']]), float(1.1624))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k19,2']),float(1.1624)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k19,2']),float(1.1624)))
         if('k19,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k19,3']]), float(1.1340))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k19,3']),float(1.1340)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k19,3']),float(1.1340)))
         if('k19,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k19,4']]), float(1.1062))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k19,4']),float(1.1062)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k19,4']),float(1.1062)))
         if('k19,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k19,5']]), float(1.0789))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k19,5']),float(1.0789)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k19,5']),float(1.0789)))
         if('k19,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k19,6']]), float(1.0522))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k19,6']),float(1.0522)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k19,6']),float(1.0522)))
         if('k20,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k20,1']]), float(1.1912))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k20,1']),float(1.1912)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k20,1']),float(1.1912)))
         if('k20,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k20,2']]), float(1.1620))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k20,2']),float(1.1620)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k20,2']),float(1.1620)))
         if('k20,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k20,3']]), float(1.1334))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k20,3']),float(1.1334)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k20,3']),float(1.1334)))
         if('k20,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k20,4']]), float(1.1053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k20,4']),float(1.1053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k20,4']),float(1.1053)))
         if('k20,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k20,5']]), float(1.0777))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k20,5']),float(1.0777)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k20,5']),float(1.0777)))
         if('k20,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k20,6']]), float(1.0507))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k20,6']),float(1.0507)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k20,6']),float(1.0507)))
         if('k21,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k21,1']]), float(1.1912))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k21,1']),float(1.1912)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k21,1']),float(1.1912)))
         if('k21,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k21,2']]), float(1.1667))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k21,2']),float(1.1667)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k21,2']),float(1.1667)))
         if('k21,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k21,3']]), float(1.1423))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k21,3']),float(1.1423)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k21,3']),float(1.1423)))
         if('k21,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k21,4']]), float(1.1180))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k21,4']),float(1.1180)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k21,4']),float(1.1180)))
         if('k21,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k21,5']]), float(1.0938))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k21,5']),float(1.0938)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k21,5']),float(1.0938)))
         if('k21,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k21,6']]), float(1.0697))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k21,6']),float(1.0697)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k21,6']),float(1.0697)))
         if('k22,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k22,1']]), float(0.9996))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k22,1']),float(0.9996)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k22,1']),float(0.9996)))
         if('k22,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k22,2']]), float(0.9876))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k22,2']),float(0.9876)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k22,2']),float(0.9876)))
         if('k22,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k22,3']]), float(0.9753))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k22,3']),float(0.9753)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k22,3']),float(0.9753)))
         if('k22,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k22,4']]), float(0.9627))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k22,4']),float(0.9627)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k22,4']),float(0.9627)))
         if('k22,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k22,5']]), float(0.9499))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k22,5']),float(0.9499)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k22,5']),float(0.9499)))
         if('k22,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k22,6']]), float(0.9368))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k22,6']),float(0.9368)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k22,6']),float(0.9368)))
         if('k23,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k23,1']]), float(0.9658))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k23,1']),float(0.9658)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k23,1']),float(0.9658)))
         if('k23,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k23,2']]), float(0.9602))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k23,2']),float(0.9602)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k23,2']),float(0.9602)))
         if('k23,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k23,3']]), float(0.9543))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k23,3']),float(0.9543)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k23,3']),float(0.9543)))
         if('k23,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k23,4']]), float(0.9481))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k23,4']),float(0.9481)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k23,4']),float(0.9481)))
         if('k23,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k23,5']]), float(0.9416))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k23,5']),float(0.9416)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k23,5']),float(0.9416)))
         if('k23,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k23,6']]), float(0.9348))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k23,6']),float(0.9348)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k23,6']),float(0.9348)))
         if('k24,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k24,1']]), float(1.0392))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k24,1']),float(1.0392)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k24,1']),float(1.0392)))
         if('k24,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k24,2']]), float(1.0160))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k24,2']),float(1.0160)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k24,2']),float(1.0160)))
         if('k24,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k24,3']]), float(0.9932))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k24,3']),float(0.9932)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k24,3']),float(0.9932)))
         if('k24,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k24,4']]), float(0.9706))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k24,4']),float(0.9706)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k24,4']),float(0.9706)))
         if('k24,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k24,5']]), float(0.9484))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k24,5']),float(0.9484)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k24,5']),float(0.9484)))
         if('k24,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k24,6']]), float(0.9266))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k24,6']),float(0.9266)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k24,6']),float(0.9266)))
         if('k25,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k25,1']]), float(1.2727))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k25,1']),float(1.2727)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k25,1']),float(1.2727)))
         if('k25,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k25,2']]), float(1.2431))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k25,2']),float(1.2431)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k25,2']),float(1.2431)))
         if('k25,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k25,3']]), float(1.2138))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k25,3']),float(1.2138)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k25,3']),float(1.2138)))
         if('k25,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k25,4']]), float(1.1848))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k25,4']),float(1.1848)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k25,4']),float(1.1848)))
         if('k25,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k25,5']]), float(1.1562))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k25,5']),float(1.1562)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k25,5']),float(1.1562)))
         if('k25,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k25,6']]), float(1.1280))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k25,6']),float(1.1280)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k25,6']),float(1.1280)))
         if('k26,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k26,1']]), float(1.1384))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k26,1']),float(1.1384)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k26,1']),float(1.1384)))
         if('k26,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k26,2']]), float(1.1208))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k26,2']),float(1.1208)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k26,2']),float(1.1208)))
         if('k26,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k26,3']]), float(1.1029))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k26,3']),float(1.1029)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k26,3']),float(1.1029)))
         if('k26,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k26,4']]), float(1.0847))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k26,4']),float(1.0847)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k26,4']),float(1.0847)))
         if('k26,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k26,5']]), float(1.0664))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k26,5']),float(1.0664)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k26,5']),float(1.0664)))
         if('k26,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k26,6']]), float(1.0478))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k26,6']),float(1.0478)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k26,6']),float(1.0478)))
         if('k27,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k27,1']]), float(0.9658))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k27,1']),float(0.9658)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k27,1']),float(0.9658)))
         if('k27,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k27,2']]), float(0.9584))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k27,2']),float(0.9584)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k27,2']),float(0.9584)))
         if('k27,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k27,3']]), float(0.9508))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k27,3']),float(0.9508)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k27,3']),float(0.9508)))
         if('k27,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k27,4']]), float(0.9428))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k27,4']),float(0.9428)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k27,4']),float(0.9428)))
         if('k27,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k27,5']]), float(0.9345))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k27,5']),float(0.9345)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k27,5']),float(0.9345)))
         if('k27,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k27,6']]), float(0.9259))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k27,6']),float(0.9259)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k27,6']),float(0.9259)))
         if('k28,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k28,1']]), float(0.9861))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k28,1']),float(0.9861)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k28,1']),float(0.9861)))
         if('k28,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k28,2']]), float(0.9718))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k28,2']),float(0.9718)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k28,2']),float(0.9718)))
         if('k28,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k28,3']]), float(0.9573))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k28,3']),float(0.9573)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k28,3']),float(0.9573)))
         if('k28,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k28,4']]), float(0.9427))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k28,4']),float(0.9427)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k28,4']),float(0.9427)))
         if('k28,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k28,5']]), float(0.9279))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k28,5']),float(0.9279)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k28,5']),float(0.9279)))
         if('k28,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k28,6']]), float(0.9129))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k28,6']),float(0.9129)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k28,6']),float(0.9129)))
         if('k29,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k29,1']]), float(0.9658))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k29,1']),float(0.9658)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k29,1']),float(0.9658)))
         if('k29,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k29,2']]), float(0.9573))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k29,2']),float(0.9573)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k29,2']),float(0.9573)))
         if('k29,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k29,3']]), float(0.9484))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k29,3']),float(0.9484)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k29,3']),float(0.9484)))
         if('k29,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k29,4']]), float(0.9393))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k29,4']),float(0.9393)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k29,4']),float(0.9393)))
         if('k29,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k29,5']]), float(0.9298))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k29,5']),float(0.9298)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k29,5']),float(0.9298)))
         if('k29,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k29,6']]), float(0.9200))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k29,6']),float(0.9200)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k29,6']),float(0.9200)))
         if('k30,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k30,1']]), float(0.9658))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k30,1']),float(0.9658)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k30,1']),float(0.9658)))
         if('k30,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k30,2']]), float(0.9617))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k30,2']),float(0.9617)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k30,2']),float(0.9617)))
         if('k30,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k30,3']]), float(0.9573))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k30,3']),float(0.9573)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k30,3']),float(0.9573)))
         if('k30,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k30,4']]), float(0.9527))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k30,4']),float(0.9527)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k30,4']),float(0.9527)))
         if('k30,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k30,5']]), float(0.9478))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k30,5']),float(0.9478)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k30,5']),float(0.9478)))
         if('k30,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k30,6']]), float(0.9427))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k30,6']),float(0.9427)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k30,6']),float(0.9427)))
         if('k31,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k31,1']]), float(0.9861))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k31,1']),float(0.9861)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k31,1']),float(0.9861)))
         if('k31,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k31,2']]), float(0.9815))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k31,2']),float(0.9815)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k31,2']),float(0.9815)))
         if('k31,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k31,3']]), float(0.9766))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k31,3']),float(0.9766)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k31,3']),float(0.9766)))
         if('k31,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k31,4']]), float(0.9715))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k31,4']),float(0.9715)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k31,4']),float(0.9715)))
         if('k31,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k31,5']]), float(0.9661))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k31,5']),float(0.9661)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k31,5']),float(0.9661)))
         if('k31,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['k31,6']]), float(0.9604))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k31,6']),float(0.9604)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['k31,6']),float(0.9604)))
         if('keff1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['keff1'], float(1.0886))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['keff1']),float(1.0886)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['keff1']),float(1.0886)))
         if('keff2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['keff2'], float(1.0657))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['keff2']),float(1.0657)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['keff2']),float(1.0657)))
         if('keff3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['keff3'], float(1.0431))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['keff3']),float(1.0431)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['keff3']),float(1.0431)))
         if('keff4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['keff4'], float(1.0209))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['keff4']),float(1.0209)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['keff4']),float(1.0209)))
         if('keff5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['keff5'], float(0.9990))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['keff5']),float(0.9990)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['keff5']),float(0.9990)))
         if('keff6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['keff6'], float(0.9773))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['keff6']),float(0.9773)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['keff6']),float(0.9773)))
         if('x2,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,1,1']]), float(0.0053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,1,1']),float(0.0053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,1,1']),float(0.0053)))
         if('x2,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,1,2']]), float(0.0053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,1,2']),float(0.0053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,1,2']),float(0.0053)))
         if('x2,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,1,3']]), float(0.0053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,1,3']),float(0.0053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,1,3']),float(0.0053)))
         if('x2,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,1,4']]), float(0.0053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,1,4']),float(0.0053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,1,4']),float(0.0053)))
         if('x2,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,1,5']]), float(0.0053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,1,5']),float(0.0053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,1,5']),float(0.0053)))
         if('x2,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,1,6']]), float(0.0053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,1,6']),float(0.0053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,1,6']),float(0.0053)))
         if('x2,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,1,7']]), float(0.0053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,1,7']),float(0.0053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,1,7']),float(0.0053)))
         if('x2,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,2,1']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,2,1']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,2,1']),float(0.1286)))
         if('x2,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,2,2']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,2,2']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,2,2']),float(0.1286)))
         if('x2,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,2,3']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,2,3']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,2,3']),float(0.1286)))
         if('x2,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,2,4']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,2,4']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,2,4']),float(0.1286)))
         if('x2,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,2,5']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,2,5']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,2,5']),float(0.1286)))
         if('x2,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,2,6']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,2,6']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,2,6']),float(0.1286)))
         if('x2,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,2,7']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,2,7']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,2,7']),float(0.1286)))
         if('x2,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,3,1']]), float(0.0072))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,3,1']),float(0.0072)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,3,1']),float(0.0072)))
         if('x2,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,3,2']]), float(0.0072))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,3,2']),float(0.0072)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,3,2']),float(0.0072)))
         if('x2,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,3,3']]), float(0.0072))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,3,3']),float(0.0072)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,3,3']),float(0.0072)))
         if('x2,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,3,4']]), float(0.0072))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,3,4']),float(0.0072)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,3,4']),float(0.0072)))
         if('x2,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,3,5']]), float(0.0072))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,3,5']),float(0.0072)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,3,5']),float(0.0072)))
         if('x2,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,3,6']]), float(0.0072))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,3,6']),float(0.0072)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,3,6']),float(0.0072)))
         if('x2,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,3,7']]), float(0.0072))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,3,7']),float(0.0072)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,3,7']),float(0.0072)))
         if('x2,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,4,1']]), float(0.0018))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,4,1']),float(0.0018)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,4,1']),float(0.0018)))
         if('x2,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,4,2']]), float(0.0018))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,4,2']),float(0.0018)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,4,2']),float(0.0018)))
         if('x2,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,4,3']]), float(0.0018))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,4,3']),float(0.0018)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,4,3']),float(0.0018)))
         if('x2,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,4,4']]), float(0.0018))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,4,4']),float(0.0018)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,4,4']),float(0.0018)))
         if('x2,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,4,5']]), float(0.0018))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,4,5']),float(0.0018)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,4,5']),float(0.0018)))
         if('x2,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,4,6']]), float(0.0018))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,4,6']),float(0.0018)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,4,6']),float(0.0018)))
         if('x2,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x2,4,7']]), float(0.0018))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,4,7']),float(0.0018)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x2,4,7']),float(0.0018)))
         if('x3,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,1,1']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,1,1']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,1,1']),float(0.0089)))
         if('x3,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,1,2']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,1,2']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,1,2']),float(0.0089)))
         if('x3,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,1,3']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,1,3']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,1,3']),float(0.0089)))
         if('x3,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,1,4']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,1,4']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,1,4']),float(0.0089)))
         if('x3,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,1,5']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,1,5']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,1,5']),float(0.0089)))
         if('x3,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,1,6']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,1,6']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,1,6']),float(0.0089)))
         if('x3,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,1,7']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,1,7']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,1,7']),float(0.0089)))
         if('x3,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,2,1']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,2,1']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,2,1']),float(0.0609)))
         if('x3,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,2,2']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,2,2']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,2,2']),float(0.0609)))
         if('x3,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,2,3']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,2,3']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,2,3']),float(0.0609)))
         if('x3,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,2,4']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,2,4']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,2,4']),float(0.0609)))
         if('x3,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,2,5']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,2,5']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,2,5']),float(0.0609)))
         if('x3,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,2,6']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,2,6']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,2,6']),float(0.0609)))
         if('x3,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,2,7']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,2,7']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,2,7']),float(0.0609)))
         if('x3,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,3,1']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,3,1']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,3,1']),float(0.0677)))
         if('x3,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,3,2']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,3,2']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,3,2']),float(0.0677)))
         if('x3,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,3,3']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,3,3']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,3,3']),float(0.0677)))
         if('x3,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,3,4']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,3,4']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,3,4']),float(0.0677)))
         if('x3,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,3,5']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,3,5']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,3,5']),float(0.0677)))
         if('x3,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,3,6']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,3,6']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,3,6']),float(0.0677)))
         if('x3,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,3,7']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,3,7']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,3,7']),float(0.0677)))
         if('x3,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,4,1']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,4,1']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,4,1']),float(0.0054)))
         if('x3,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,4,2']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,4,2']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,4,2']),float(0.0054)))
         if('x3,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,4,3']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,4,3']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,4,3']),float(0.0054)))
         if('x3,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,4,4']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,4,4']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,4,4']),float(0.0054)))
         if('x3,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,4,5']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,4,5']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,4,5']),float(0.0054)))
         if('x3,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,4,6']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,4,6']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,4,6']),float(0.0054)))
         if('x3,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x3,4,7']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,4,7']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x3,4,7']),float(0.0054)))
         if('x4,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,1,1']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,1,1']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,1,1']),float(0.0089)))
         if('x4,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,1,2']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,1,2']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,1,2']),float(0.0089)))
         if('x4,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,1,3']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,1,3']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,1,3']),float(0.0089)))
         if('x4,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,1,4']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,1,4']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,1,4']),float(0.0089)))
         if('x4,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,1,5']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,1,5']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,1,5']),float(0.0089)))
         if('x4,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,1,6']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,1,6']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,1,6']),float(0.0089)))
         if('x4,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,1,7']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,1,7']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,1,7']),float(0.0089)))
         if('x4,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,2,1']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,2,1']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,2,1']),float(0.0609)))
         if('x4,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,2,2']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,2,2']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,2,2']),float(0.0609)))
         if('x4,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,2,3']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,2,3']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,2,3']),float(0.0609)))
         if('x4,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,2,4']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,2,4']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,2,4']),float(0.0609)))
         if('x4,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,2,5']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,2,5']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,2,5']),float(0.0609)))
         if('x4,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,2,6']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,2,6']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,2,6']),float(0.0609)))
         if('x4,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,2,7']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,2,7']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,2,7']),float(0.0609)))
         if('x4,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,3,1']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,3,1']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,3,1']),float(0.0677)))
         if('x4,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,3,2']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,3,2']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,3,2']),float(0.0677)))
         if('x4,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,3,3']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,3,3']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,3,3']),float(0.0677)))
         if('x4,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,3,4']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,3,4']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,3,4']),float(0.0677)))
         if('x4,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,3,5']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,3,5']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,3,5']),float(0.0677)))
         if('x4,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,3,6']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,3,6']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,3,6']),float(0.0677)))
         if('x4,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,3,7']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,3,7']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,3,7']),float(0.0677)))
         if('x4,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,4,1']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,4,1']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,4,1']),float(0.0054)))
         if('x4,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,4,2']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,4,2']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,4,2']),float(0.0054)))
         if('x4,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,4,3']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,4,3']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,4,3']),float(0.0054)))
         if('x4,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,4,4']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,4,4']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,4,4']),float(0.0054)))
         if('x4,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,4,5']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,4,5']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,4,5']),float(0.0054)))
         if('x4,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,4,6']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,4,6']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,4,6']),float(0.0054)))
         if('x4,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x4,4,7']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,4,7']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x4,4,7']),float(0.0054)))
         if('x5,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,1,1']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,1,1']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,1,1']),float(0.1286)))
         if('x5,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,1,2']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,1,2']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,1,2']),float(0.1286)))
         if('x5,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,1,3']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,1,3']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,1,3']),float(0.1286)))
         if('x5,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,1,4']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,1,4']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,1,4']),float(0.1286)))
         if('x5,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,1,5']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,1,5']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,1,5']),float(0.1286)))
         if('x5,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,1,6']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,1,6']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,1,6']),float(0.1286)))
         if('x5,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,1,7']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,1,7']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,1,7']),float(0.1286)))
         if('x5,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,2,1']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,2,1']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,2,1']),float(0.0079)))
         if('x5,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,2,2']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,2,2']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,2,2']),float(0.0079)))
         if('x5,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,2,3']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,2,3']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,2,3']),float(0.0079)))
         if('x5,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,2,4']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,2,4']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,2,4']),float(0.0079)))
         if('x5,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,2,5']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,2,5']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,2,5']),float(0.0079)))
         if('x5,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,2,6']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,2,6']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,2,6']),float(0.0079)))
         if('x5,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,2,7']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,2,7']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,2,7']),float(0.0079)))
         if('x5,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,3,1']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,3,1']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,3,1']),float(0.0059)))
         if('x5,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,3,2']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,3,2']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,3,2']),float(0.0059)))
         if('x5,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,3,3']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,3,3']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,3,3']),float(0.0059)))
         if('x5,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,3,4']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,3,4']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,3,4']),float(0.0059)))
         if('x5,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,3,5']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,3,5']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,3,5']),float(0.0059)))
         if('x5,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,3,6']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,3,6']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,3,6']),float(0.0059)))
         if('x5,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,3,7']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,3,7']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,3,7']),float(0.0059)))
         if('x5,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,4,1']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,4,1']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,4,1']),float(0.0004)))
         if('x5,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,4,2']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,4,2']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,4,2']),float(0.0004)))
         if('x5,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,4,3']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,4,3']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,4,3']),float(0.0004)))
         if('x5,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,4,4']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,4,4']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,4,4']),float(0.0004)))
         if('x5,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,4,5']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,4,5']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,4,5']),float(0.0004)))
         if('x5,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,4,6']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,4,6']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,4,6']),float(0.0004)))
         if('x5,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x5,4,7']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,4,7']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x5,4,7']),float(0.0004)))
         if('x6,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,1,1']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,1,1']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,1,1']),float(0.0089)))
         if('x6,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,1,2']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,1,2']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,1,2']),float(0.0089)))
         if('x6,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,1,3']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,1,3']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,1,3']),float(0.0089)))
         if('x6,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,1,4']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,1,4']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,1,4']),float(0.0089)))
         if('x6,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,1,5']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,1,5']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,1,5']),float(0.0089)))
         if('x6,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,1,6']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,1,6']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,1,6']),float(0.0089)))
         if('x6,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,1,7']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,1,7']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,1,7']),float(0.0089)))
         if('x6,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,2,1']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,2,1']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,2,1']),float(0.0609)))
         if('x6,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,2,2']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,2,2']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,2,2']),float(0.0609)))
         if('x6,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,2,3']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,2,3']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,2,3']),float(0.0609)))
         if('x6,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,2,4']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,2,4']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,2,4']),float(0.0609)))
         if('x6,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,2,5']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,2,5']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,2,5']),float(0.0609)))
         if('x6,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,2,6']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,2,6']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,2,6']),float(0.0609)))
         if('x6,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,2,7']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,2,7']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,2,7']),float(0.0609)))
         if('x6,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,3,1']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,3,1']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,3,1']),float(0.0677)))
         if('x6,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,3,2']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,3,2']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,3,2']),float(0.0677)))
         if('x6,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,3,3']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,3,3']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,3,3']),float(0.0677)))
         if('x6,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,3,4']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,3,4']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,3,4']),float(0.0677)))
         if('x6,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,3,5']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,3,5']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,3,5']),float(0.0677)))
         if('x6,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,3,6']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,3,6']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,3,6']),float(0.0677)))
         if('x6,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,3,7']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,3,7']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,3,7']),float(0.0677)))
         if('x6,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,4,1']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,4,1']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,4,1']),float(0.0054)))
         if('x6,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,4,2']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,4,2']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,4,2']),float(0.0054)))
         if('x6,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,4,3']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,4,3']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,4,3']),float(0.0054)))
         if('x6,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,4,4']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,4,4']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,4,4']),float(0.0054)))
         if('x6,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,4,5']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,4,5']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,4,5']),float(0.0054)))
         if('x6,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,4,6']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,4,6']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,4,6']),float(0.0054)))
         if('x6,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x6,4,7']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,4,7']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x6,4,7']),float(0.0054)))
         if('x7,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,1,1']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,1,1']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,1,1']),float(0.1286)))
         if('x7,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,1,2']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,1,2']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,1,2']),float(0.1286)))
         if('x7,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,1,3']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,1,3']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,1,3']),float(0.1286)))
         if('x7,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,1,4']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,1,4']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,1,4']),float(0.1286)))
         if('x7,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,1,5']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,1,5']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,1,5']),float(0.1286)))
         if('x7,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,1,6']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,1,6']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,1,6']),float(0.1286)))
         if('x7,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,1,7']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,1,7']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,1,7']),float(0.1286)))
         if('x7,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,2,1']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,2,1']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,2,1']),float(0.0079)))
         if('x7,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,2,2']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,2,2']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,2,2']),float(0.0079)))
         if('x7,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,2,3']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,2,3']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,2,3']),float(0.0079)))
         if('x7,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,2,4']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,2,4']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,2,4']),float(0.0079)))
         if('x7,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,2,5']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,2,5']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,2,5']),float(0.0079)))
         if('x7,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,2,6']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,2,6']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,2,6']),float(0.0079)))
         if('x7,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,2,7']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,2,7']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,2,7']),float(0.0079)))
         if('x7,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,3,1']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,3,1']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,3,1']),float(0.0059)))
         if('x7,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,3,2']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,3,2']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,3,2']),float(0.0059)))
         if('x7,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,3,3']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,3,3']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,3,3']),float(0.0059)))
         if('x7,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,3,4']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,3,4']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,3,4']),float(0.0059)))
         if('x7,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,3,5']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,3,5']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,3,5']),float(0.0059)))
         if('x7,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,3,6']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,3,6']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,3,6']),float(0.0059)))
         if('x7,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,3,7']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,3,7']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,3,7']),float(0.0059)))
         if('x7,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,4,1']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,4,1']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,4,1']),float(0.0004)))
         if('x7,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,4,2']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,4,2']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,4,2']),float(0.0004)))
         if('x7,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,4,3']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,4,3']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,4,3']),float(0.0004)))
         if('x7,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,4,4']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,4,4']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,4,4']),float(0.0004)))
         if('x7,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,4,5']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,4,5']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,4,5']),float(0.0004)))
         if('x7,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,4,6']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,4,6']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,4,6']),float(0.0004)))
         if('x7,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x7,4,7']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,4,7']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x7,4,7']),float(0.0004)))
         if('x8,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,1,1']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,1,1']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,1,1']),float(0.0632)))
         if('x8,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,1,2']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,1,2']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,1,2']),float(0.0632)))
         if('x8,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,1,3']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,1,3']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,1,3']),float(0.0632)))
         if('x8,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,1,4']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,1,4']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,1,4']),float(0.0632)))
         if('x8,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,1,5']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,1,5']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,1,5']),float(0.0632)))
         if('x8,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,1,6']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,1,6']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,1,6']),float(0.0632)))
         if('x8,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,1,7']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,1,7']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,1,7']),float(0.0632)))
         if('x8,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,2,1']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,2,1']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,2,1']),float(0.0293)))
         if('x8,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,2,2']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,2,2']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,2,2']),float(0.0293)))
         if('x8,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,2,3']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,2,3']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,2,3']),float(0.0293)))
         if('x8,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,2,4']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,2,4']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,2,4']),float(0.0293)))
         if('x8,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,2,5']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,2,5']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,2,5']),float(0.0293)))
         if('x8,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,2,6']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,2,6']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,2,6']),float(0.0293)))
         if('x8,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,2,7']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,2,7']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,2,7']),float(0.0293)))
         if('x8,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,3,1']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,3,1']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,3,1']),float(0.0361)))
         if('x8,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,3,2']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,3,2']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,3,2']),float(0.0361)))
         if('x8,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,3,3']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,3,3']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,3,3']),float(0.0361)))
         if('x8,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,3,4']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,3,4']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,3,4']),float(0.0361)))
         if('x8,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,3,5']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,3,5']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,3,5']),float(0.0361)))
         if('x8,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,3,6']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,3,6']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,3,6']),float(0.0361)))
         if('x8,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,3,7']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,3,7']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,3,7']),float(0.0361)))
         if('x8,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,4,1']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,4,1']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,4,1']),float(0.0143)))
         if('x8,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,4,2']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,4,2']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,4,2']),float(0.0143)))
         if('x8,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,4,3']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,4,3']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,4,3']),float(0.0143)))
         if('x8,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,4,4']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,4,4']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,4,4']),float(0.0143)))
         if('x8,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,4,5']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,4,5']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,4,5']),float(0.0143)))
         if('x8,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,4,6']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,4,6']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,4,6']),float(0.0143)))
         if('x8,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x8,4,7']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,4,7']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x8,4,7']),float(0.0143)))
         if('x9,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,1,1']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,1,1']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,1,1']),float(0.0028)))
         if('x9,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,1,2']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,1,2']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,1,2']),float(0.0028)))
         if('x9,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,1,3']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,1,3']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,1,3']),float(0.0028)))
         if('x9,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,1,4']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,1,4']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,1,4']),float(0.0028)))
         if('x9,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,1,5']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,1,5']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,1,5']),float(0.0028)))
         if('x9,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,1,6']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,1,6']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,1,6']),float(0.0028)))
         if('x9,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,1,7']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,1,7']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,1,7']),float(0.0028)))
         if('x9,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,2,1']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,2,1']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,2,1']),float(0.0068)))
         if('x9,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,2,2']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,2,2']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,2,2']),float(0.0068)))
         if('x9,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,2,3']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,2,3']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,2,3']),float(0.0068)))
         if('x9,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,2,4']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,2,4']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,2,4']),float(0.0068)))
         if('x9,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,2,5']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,2,5']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,2,5']),float(0.0068)))
         if('x9,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,2,6']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,2,6']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,2,6']),float(0.0068)))
         if('x9,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,2,7']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,2,7']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,2,7']),float(0.0068)))
         if('x9,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,3,1']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,3,1']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,3,1']),float(0.0047)))
         if('x9,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,3,2']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,3,2']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,3,2']),float(0.0047)))
         if('x9,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,3,3']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,3,3']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,3,3']),float(0.0047)))
         if('x9,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,3,4']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,3,4']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,3,4']),float(0.0047)))
         if('x9,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,3,5']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,3,5']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,3,5']),float(0.0047)))
         if('x9,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,3,6']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,3,6']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,3,6']),float(0.0047)))
         if('x9,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,3,7']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,3,7']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,3,7']),float(0.0047)))
         if('x9,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,4,1']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,4,1']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,4,1']),float(0.1286)))
         if('x9,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,4,2']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,4,2']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,4,2']),float(0.1286)))
         if('x9,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,4,3']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,4,3']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,4,3']),float(0.1286)))
         if('x9,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,4,4']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,4,4']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,4,4']),float(0.1286)))
         if('x9,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,4,5']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,4,5']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,4,5']),float(0.1286)))
         if('x9,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,4,6']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,4,6']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,4,6']),float(0.1286)))
         if('x9,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x9,4,7']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,4,7']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x9,4,7']),float(0.1286)))
         if('x11,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,1,1']]), float(0.0053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,1,1']),float(0.0053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,1,1']),float(0.0053)))
         if('x11,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,1,2']]), float(0.0053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,1,2']),float(0.0053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,1,2']),float(0.0053)))
         if('x11,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,1,3']]), float(0.0053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,1,3']),float(0.0053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,1,3']),float(0.0053)))
         if('x11,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,1,4']]), float(0.0053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,1,4']),float(0.0053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,1,4']),float(0.0053)))
         if('x11,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,1,5']]), float(0.0053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,1,5']),float(0.0053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,1,5']),float(0.0053)))
         if('x11,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,1,6']]), float(0.0053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,1,6']),float(0.0053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,1,6']),float(0.0053)))
         if('x11,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,1,7']]), float(0.0053))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,1,7']),float(0.0053)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,1,7']),float(0.0053)))
         if('x11,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,2,1']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,2,1']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,2,1']),float(0.1286)))
         if('x11,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,2,2']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,2,2']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,2,2']),float(0.1286)))
         if('x11,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,2,3']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,2,3']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,2,3']),float(0.1286)))
         if('x11,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,2,4']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,2,4']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,2,4']),float(0.1286)))
         if('x11,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,2,5']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,2,5']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,2,5']),float(0.1286)))
         if('x11,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,2,6']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,2,6']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,2,6']),float(0.1286)))
         if('x11,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,2,7']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,2,7']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,2,7']),float(0.1286)))
         if('x11,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,3,1']]), float(0.0072))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,3,1']),float(0.0072)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,3,1']),float(0.0072)))
         if('x11,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,3,2']]), float(0.0072))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,3,2']),float(0.0072)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,3,2']),float(0.0072)))
         if('x11,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,3,3']]), float(0.0072))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,3,3']),float(0.0072)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,3,3']),float(0.0072)))
         if('x11,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,3,4']]), float(0.0072))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,3,4']),float(0.0072)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,3,4']),float(0.0072)))
         if('x11,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,3,5']]), float(0.0072))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,3,5']),float(0.0072)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,3,5']),float(0.0072)))
         if('x11,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,3,6']]), float(0.0072))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,3,6']),float(0.0072)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,3,6']),float(0.0072)))
         if('x11,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,3,7']]), float(0.0072))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,3,7']),float(0.0072)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,3,7']),float(0.0072)))
         if('x11,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,4,1']]), float(0.0018))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,4,1']),float(0.0018)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,4,1']),float(0.0018)))
         if('x11,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,4,2']]), float(0.0018))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,4,2']),float(0.0018)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,4,2']),float(0.0018)))
         if('x11,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,4,3']]), float(0.0018))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,4,3']),float(0.0018)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,4,3']),float(0.0018)))
         if('x11,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,4,4']]), float(0.0018))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,4,4']),float(0.0018)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,4,4']),float(0.0018)))
         if('x11,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,4,5']]), float(0.0018))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,4,5']),float(0.0018)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,4,5']),float(0.0018)))
         if('x11,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,4,6']]), float(0.0018))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,4,6']),float(0.0018)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,4,6']),float(0.0018)))
         if('x11,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x11,4,7']]), float(0.0018))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,4,7']),float(0.0018)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x11,4,7']),float(0.0018)))
         if('x12,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,1,1']]), float(0.0046))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,1,1']),float(0.0046)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,1,1']),float(0.0046)))
         if('x12,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,1,2']]), float(0.0046))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,1,2']),float(0.0046)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,1,2']),float(0.0046)))
         if('x12,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,1,3']]), float(0.0046))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,1,3']),float(0.0046)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,1,3']),float(0.0046)))
         if('x12,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,1,4']]), float(0.0046))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,1,4']),float(0.0046)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,1,4']),float(0.0046)))
         if('x12,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,1,5']]), float(0.0046))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,1,5']),float(0.0046)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,1,5']),float(0.0046)))
         if('x12,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,1,6']]), float(0.0046))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,1,6']),float(0.0046)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,1,6']),float(0.0046)))
         if('x12,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,1,7']]), float(0.0046))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,1,7']),float(0.0046)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,1,7']),float(0.0046)))
         if('x12,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,2,1']]), float(0.0086))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,2,1']),float(0.0086)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,2,1']),float(0.0086)))
         if('x12,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,2,2']]), float(0.0086))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,2,2']),float(0.0086)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,2,2']),float(0.0086)))
         if('x12,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,2,3']]), float(0.0086))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,2,3']),float(0.0086)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,2,3']),float(0.0086)))
         if('x12,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,2,4']]), float(0.0086))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,2,4']),float(0.0086)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,2,4']),float(0.0086)))
         if('x12,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,2,5']]), float(0.0086))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,2,5']),float(0.0086)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,2,5']),float(0.0086)))
         if('x12,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,2,6']]), float(0.0086))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,2,6']),float(0.0086)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,2,6']),float(0.0086)))
         if('x12,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,2,7']]), float(0.0086))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,2,7']),float(0.0086)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,2,7']),float(0.0086)))
         if('x12,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,3,1']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,3,1']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,3,1']),float(0.1286)))
         if('x12,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,3,2']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,3,2']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,3,2']),float(0.1286)))
         if('x12,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,3,3']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,3,3']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,3,3']),float(0.1286)))
         if('x12,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,3,4']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,3,4']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,3,4']),float(0.1286)))
         if('x12,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,3,5']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,3,5']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,3,5']),float(0.1286)))
         if('x12,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,3,6']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,3,6']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,3,6']),float(0.1286)))
         if('x12,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,3,7']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,3,7']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,3,7']),float(0.1286)))
         if('x12,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,4,1']]), float(0.0011))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,4,1']),float(0.0011)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,4,1']),float(0.0011)))
         if('x12,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,4,2']]), float(0.0011))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,4,2']),float(0.0011)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,4,2']),float(0.0011)))
         if('x12,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,4,3']]), float(0.0011))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,4,3']),float(0.0011)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,4,3']),float(0.0011)))
         if('x12,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,4,4']]), float(0.0011))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,4,4']),float(0.0011)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,4,4']),float(0.0011)))
         if('x12,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,4,5']]), float(0.0011))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,4,5']),float(0.0011)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,4,5']),float(0.0011)))
         if('x12,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,4,6']]), float(0.0011))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,4,6']),float(0.0011)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,4,6']),float(0.0011)))
         if('x12,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x12,4,7']]), float(0.0011))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,4,7']),float(0.0011)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x12,4,7']),float(0.0011)))
         if('x13,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,1,1']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,1,1']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,1,1']),float(0.0089)))
         if('x13,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,1,2']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,1,2']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,1,2']),float(0.0089)))
         if('x13,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,1,3']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,1,3']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,1,3']),float(0.0089)))
         if('x13,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,1,4']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,1,4']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,1,4']),float(0.0089)))
         if('x13,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,1,5']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,1,5']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,1,5']),float(0.0089)))
         if('x13,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,1,6']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,1,6']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,1,6']),float(0.0089)))
         if('x13,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,1,7']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,1,7']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,1,7']),float(0.0089)))
         if('x13,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,2,1']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,2,1']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,2,1']),float(0.0609)))
         if('x13,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,2,2']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,2,2']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,2,2']),float(0.0609)))
         if('x13,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,2,3']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,2,3']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,2,3']),float(0.0609)))
         if('x13,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,2,4']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,2,4']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,2,4']),float(0.0609)))
         if('x13,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,2,5']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,2,5']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,2,5']),float(0.0609)))
         if('x13,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,2,6']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,2,6']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,2,6']),float(0.0609)))
         if('x13,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,2,7']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,2,7']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,2,7']),float(0.0609)))
         if('x13,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,3,1']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,3,1']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,3,1']),float(0.0677)))
         if('x13,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,3,2']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,3,2']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,3,2']),float(0.0677)))
         if('x13,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,3,3']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,3,3']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,3,3']),float(0.0677)))
         if('x13,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,3,4']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,3,4']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,3,4']),float(0.0677)))
         if('x13,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,3,5']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,3,5']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,3,5']),float(0.0677)))
         if('x13,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,3,6']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,3,6']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,3,6']),float(0.0677)))
         if('x13,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,3,7']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,3,7']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,3,7']),float(0.0677)))
         if('x13,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,4,1']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,4,1']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,4,1']),float(0.0054)))
         if('x13,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,4,2']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,4,2']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,4,2']),float(0.0054)))
         if('x13,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,4,3']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,4,3']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,4,3']),float(0.0054)))
         if('x13,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,4,4']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,4,4']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,4,4']),float(0.0054)))
         if('x13,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,4,5']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,4,5']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,4,5']),float(0.0054)))
         if('x13,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,4,6']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,4,6']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,4,6']),float(0.0054)))
         if('x13,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x13,4,7']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,4,7']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x13,4,7']),float(0.0054)))
         if('x14,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,1,1']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,1,1']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,1,1']),float(0.0632)))
         if('x14,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,1,2']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,1,2']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,1,2']),float(0.0632)))
         if('x14,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,1,3']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,1,3']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,1,3']),float(0.0632)))
         if('x14,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,1,4']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,1,4']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,1,4']),float(0.0632)))
         if('x14,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,1,5']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,1,5']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,1,5']),float(0.0632)))
         if('x14,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,1,6']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,1,6']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,1,6']),float(0.0632)))
         if('x14,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,1,7']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,1,7']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,1,7']),float(0.0632)))
         if('x14,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,2,1']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,2,1']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,2,1']),float(0.0293)))
         if('x14,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,2,2']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,2,2']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,2,2']),float(0.0293)))
         if('x14,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,2,3']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,2,3']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,2,3']),float(0.0293)))
         if('x14,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,2,4']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,2,4']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,2,4']),float(0.0293)))
         if('x14,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,2,5']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,2,5']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,2,5']),float(0.0293)))
         if('x14,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,2,6']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,2,6']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,2,6']),float(0.0293)))
         if('x14,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,2,7']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,2,7']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,2,7']),float(0.0293)))
         if('x14,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,3,1']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,3,1']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,3,1']),float(0.0361)))
         if('x14,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,3,2']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,3,2']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,3,2']),float(0.0361)))
         if('x14,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,3,3']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,3,3']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,3,3']),float(0.0361)))
         if('x14,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,3,4']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,3,4']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,3,4']),float(0.0361)))
         if('x14,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,3,5']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,3,5']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,3,5']),float(0.0361)))
         if('x14,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,3,6']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,3,6']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,3,6']),float(0.0361)))
         if('x14,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,3,7']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,3,7']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,3,7']),float(0.0361)))
         if('x14,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,4,1']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,4,1']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,4,1']),float(0.0143)))
         if('x14,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,4,2']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,4,2']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,4,2']),float(0.0143)))
         if('x14,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,4,3']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,4,3']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,4,3']),float(0.0143)))
         if('x14,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,4,4']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,4,4']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,4,4']),float(0.0143)))
         if('x14,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,4,5']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,4,5']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,4,5']),float(0.0143)))
         if('x14,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,4,6']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,4,6']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,4,6']),float(0.0143)))
         if('x14,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x14,4,7']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,4,7']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x14,4,7']),float(0.0143)))
         if('x15,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,1,1']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,1,1']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,1,1']),float(0.0812)))
         if('x15,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,1,2']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,1,2']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,1,2']),float(0.0812)))
         if('x15,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,1,3']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,1,3']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,1,3']),float(0.0812)))
         if('x15,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,1,4']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,1,4']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,1,4']),float(0.0812)))
         if('x15,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,1,5']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,1,5']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,1,5']),float(0.0812)))
         if('x15,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,1,6']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,1,6']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,1,6']),float(0.0812)))
         if('x15,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,1,7']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,1,7']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,1,7']),float(0.0812)))
         if('x15,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,2,1']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,2,1']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,2,1']),float(0.0474)))
         if('x15,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,2,2']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,2,2']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,2,2']),float(0.0474)))
         if('x15,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,2,3']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,2,3']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,2,3']),float(0.0474)))
         if('x15,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,2,4']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,2,4']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,2,4']),float(0.0474)))
         if('x15,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,2,5']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,2,5']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,2,5']),float(0.0474)))
         if('x15,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,2,6']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,2,6']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,2,6']),float(0.0474)))
         if('x15,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,2,7']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,2,7']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,2,7']),float(0.0474)))
         if('x15,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,3,1']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,3,1']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,3,1']),float(0.0099)))
         if('x15,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,3,2']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,3,2']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,3,2']),float(0.0099)))
         if('x15,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,3,3']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,3,3']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,3,3']),float(0.0099)))
         if('x15,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,3,4']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,3,4']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,3,4']),float(0.0099)))
         if('x15,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,3,5']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,3,5']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,3,5']),float(0.0099)))
         if('x15,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,3,6']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,3,6']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,3,6']),float(0.0099)))
         if('x15,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,3,7']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,3,7']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,3,7']),float(0.0099)))
         if('x15,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,4,1']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,4,1']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,4,1']),float(0.0044)))
         if('x15,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,4,2']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,4,2']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,4,2']),float(0.0044)))
         if('x15,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,4,3']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,4,3']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,4,3']),float(0.0044)))
         if('x15,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,4,4']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,4,4']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,4,4']),float(0.0044)))
         if('x15,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,4,5']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,4,5']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,4,5']),float(0.0044)))
         if('x15,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,4,6']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,4,6']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,4,6']),float(0.0044)))
         if('x15,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x15,4,7']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,4,7']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x15,4,7']),float(0.0044)))
         if('x16,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,1,1']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,1,1']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,1,1']),float(0.0051)))
         if('x16,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,1,2']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,1,2']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,1,2']),float(0.0051)))
         if('x16,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,1,3']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,1,3']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,1,3']),float(0.0051)))
         if('x16,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,1,4']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,1,4']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,1,4']),float(0.0051)))
         if('x16,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,1,5']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,1,5']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,1,5']),float(0.0051)))
         if('x16,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,1,6']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,1,6']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,1,6']),float(0.0051)))
         if('x16,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,1,7']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,1,7']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,1,7']),float(0.0051)))
         if('x16,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,2,1']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,2,1']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,2,1']),float(0.0091)))
         if('x16,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,2,2']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,2,2']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,2,2']),float(0.0091)))
         if('x16,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,2,3']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,2,3']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,2,3']),float(0.0091)))
         if('x16,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,2,4']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,2,4']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,2,4']),float(0.0091)))
         if('x16,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,2,5']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,2,5']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,2,5']),float(0.0091)))
         if('x16,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,2,6']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,2,6']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,2,6']),float(0.0091)))
         if('x16,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,2,7']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,2,7']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,2,7']),float(0.0091)))
         if('x16,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,3,1']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,3,1']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,3,1']),float(0.0643)))
         if('x16,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,3,2']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,3,2']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,3,2']),float(0.0643)))
         if('x16,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,3,3']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,3,3']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,3,3']),float(0.0643)))
         if('x16,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,3,4']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,3,4']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,3,4']),float(0.0643)))
         if('x16,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,3,5']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,3,5']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,3,5']),float(0.0643)))
         if('x16,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,3,6']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,3,6']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,3,6']),float(0.0643)))
         if('x16,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,3,7']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,3,7']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,3,7']),float(0.0643)))
         if('x16,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,4,1']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,4,1']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,4,1']),float(0.0643)))
         if('x16,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,4,2']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,4,2']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,4,2']),float(0.0643)))
         if('x16,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,4,3']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,4,3']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,4,3']),float(0.0643)))
         if('x16,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,4,4']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,4,4']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,4,4']),float(0.0643)))
         if('x16,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,4,5']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,4,5']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,4,5']),float(0.0643)))
         if('x16,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,4,6']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,4,6']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,4,6']),float(0.0643)))
         if('x16,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x16,4,7']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,4,7']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x16,4,7']),float(0.0643)))
         if('x17,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,1,1']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,1,1']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,1,1']),float(0.0028)))
         if('x17,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,1,2']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,1,2']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,1,2']),float(0.0028)))
         if('x17,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,1,3']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,1,3']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,1,3']),float(0.0028)))
         if('x17,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,1,4']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,1,4']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,1,4']),float(0.0028)))
         if('x17,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,1,5']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,1,5']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,1,5']),float(0.0028)))
         if('x17,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,1,6']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,1,6']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,1,6']),float(0.0028)))
         if('x17,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,1,7']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,1,7']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,1,7']),float(0.0028)))
         if('x17,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,2,1']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,2,1']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,2,1']),float(0.0068)))
         if('x17,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,2,2']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,2,2']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,2,2']),float(0.0068)))
         if('x17,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,2,3']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,2,3']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,2,3']),float(0.0068)))
         if('x17,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,2,4']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,2,4']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,2,4']),float(0.0068)))
         if('x17,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,2,5']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,2,5']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,2,5']),float(0.0068)))
         if('x17,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,2,6']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,2,6']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,2,6']),float(0.0068)))
         if('x17,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,2,7']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,2,7']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,2,7']),float(0.0068)))
         if('x17,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,3,1']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,3,1']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,3,1']),float(0.0047)))
         if('x17,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,3,2']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,3,2']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,3,2']),float(0.0047)))
         if('x17,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,3,3']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,3,3']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,3,3']),float(0.0047)))
         if('x17,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,3,4']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,3,4']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,3,4']),float(0.0047)))
         if('x17,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,3,5']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,3,5']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,3,5']),float(0.0047)))
         if('x17,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,3,6']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,3,6']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,3,6']),float(0.0047)))
         if('x17,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,3,7']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,3,7']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,3,7']),float(0.0047)))
         if('x17,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,4,1']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,4,1']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,4,1']),float(0.1286)))
         if('x17,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,4,2']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,4,2']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,4,2']),float(0.1286)))
         if('x17,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,4,3']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,4,3']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,4,3']),float(0.1286)))
         if('x17,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,4,4']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,4,4']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,4,4']),float(0.1286)))
         if('x17,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,4,5']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,4,5']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,4,5']),float(0.1286)))
         if('x17,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,4,6']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,4,6']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,4,6']),float(0.1286)))
         if('x17,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x17,4,7']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,4,7']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x17,4,7']),float(0.1286)))
         if('x19,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,1,1']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,1,1']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,1,1']),float(0.0812)))
         if('x19,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,1,2']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,1,2']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,1,2']),float(0.0812)))
         if('x19,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,1,3']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,1,3']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,1,3']),float(0.0812)))
         if('x19,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,1,4']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,1,4']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,1,4']),float(0.0812)))
         if('x19,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,1,5']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,1,5']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,1,5']),float(0.0812)))
         if('x19,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,1,6']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,1,6']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,1,6']),float(0.0812)))
         if('x19,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,1,7']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,1,7']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,1,7']),float(0.0812)))
         if('x19,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,2,1']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,2,1']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,2,1']),float(0.0474)))
         if('x19,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,2,2']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,2,2']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,2,2']),float(0.0474)))
         if('x19,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,2,3']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,2,3']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,2,3']),float(0.0474)))
         if('x19,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,2,4']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,2,4']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,2,4']),float(0.0474)))
         if('x19,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,2,5']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,2,5']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,2,5']),float(0.0474)))
         if('x19,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,2,6']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,2,6']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,2,6']),float(0.0474)))
         if('x19,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,2,7']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,2,7']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,2,7']),float(0.0474)))
         if('x19,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,3,1']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,3,1']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,3,1']),float(0.0099)))
         if('x19,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,3,2']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,3,2']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,3,2']),float(0.0099)))
         if('x19,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,3,3']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,3,3']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,3,3']),float(0.0099)))
         if('x19,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,3,4']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,3,4']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,3,4']),float(0.0099)))
         if('x19,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,3,5']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,3,5']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,3,5']),float(0.0099)))
         if('x19,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,3,6']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,3,6']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,3,6']),float(0.0099)))
         if('x19,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,3,7']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,3,7']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,3,7']),float(0.0099)))
         if('x19,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,4,1']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,4,1']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,4,1']),float(0.0044)))
         if('x19,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,4,2']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,4,2']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,4,2']),float(0.0044)))
         if('x19,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,4,3']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,4,3']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,4,3']),float(0.0044)))
         if('x19,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,4,4']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,4,4']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,4,4']),float(0.0044)))
         if('x19,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,4,5']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,4,5']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,4,5']),float(0.0044)))
         if('x19,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,4,6']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,4,6']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,4,6']),float(0.0044)))
         if('x19,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x19,4,7']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,4,7']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x19,4,7']),float(0.0044)))
         if('x20,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,1,1']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,1,1']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,1,1']),float(0.0812)))
         if('x20,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,1,2']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,1,2']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,1,2']),float(0.0812)))
         if('x20,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,1,3']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,1,3']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,1,3']),float(0.0812)))
         if('x20,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,1,4']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,1,4']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,1,4']),float(0.0812)))
         if('x20,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,1,5']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,1,5']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,1,5']),float(0.0812)))
         if('x20,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,1,6']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,1,6']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,1,6']),float(0.0812)))
         if('x20,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,1,7']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,1,7']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,1,7']),float(0.0812)))
         if('x20,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,2,1']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,2,1']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,2,1']),float(0.0474)))
         if('x20,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,2,2']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,2,2']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,2,2']),float(0.0474)))
         if('x20,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,2,3']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,2,3']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,2,3']),float(0.0474)))
         if('x20,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,2,4']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,2,4']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,2,4']),float(0.0474)))
         if('x20,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,2,5']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,2,5']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,2,5']),float(0.0474)))
         if('x20,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,2,6']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,2,6']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,2,6']),float(0.0474)))
         if('x20,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,2,7']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,2,7']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,2,7']),float(0.0474)))
         if('x20,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,3,1']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,3,1']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,3,1']),float(0.0099)))
         if('x20,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,3,2']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,3,2']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,3,2']),float(0.0099)))
         if('x20,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,3,3']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,3,3']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,3,3']),float(0.0099)))
         if('x20,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,3,4']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,3,4']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,3,4']),float(0.0099)))
         if('x20,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,3,5']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,3,5']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,3,5']),float(0.0099)))
         if('x20,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,3,6']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,3,6']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,3,6']),float(0.0099)))
         if('x20,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,3,7']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,3,7']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,3,7']),float(0.0099)))
         if('x20,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,4,1']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,4,1']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,4,1']),float(0.0044)))
         if('x20,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,4,2']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,4,2']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,4,2']),float(0.0044)))
         if('x20,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,4,3']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,4,3']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,4,3']),float(0.0044)))
         if('x20,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,4,4']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,4,4']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,4,4']),float(0.0044)))
         if('x20,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,4,5']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,4,5']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,4,5']),float(0.0044)))
         if('x20,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,4,6']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,4,6']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,4,6']),float(0.0044)))
         if('x20,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x20,4,7']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,4,7']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x20,4,7']),float(0.0044)))
         if('x21,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,1,1']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,1,1']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,1,1']),float(0.0812)))
         if('x21,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,1,2']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,1,2']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,1,2']),float(0.0812)))
         if('x21,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,1,3']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,1,3']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,1,3']),float(0.0812)))
         if('x21,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,1,4']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,1,4']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,1,4']),float(0.0812)))
         if('x21,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,1,5']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,1,5']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,1,5']),float(0.0812)))
         if('x21,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,1,6']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,1,6']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,1,6']),float(0.0812)))
         if('x21,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,1,7']]), float(0.0812))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,1,7']),float(0.0812)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,1,7']),float(0.0812)))
         if('x21,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,2,1']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,2,1']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,2,1']),float(0.0474)))
         if('x21,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,2,2']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,2,2']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,2,2']),float(0.0474)))
         if('x21,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,2,3']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,2,3']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,2,3']),float(0.0474)))
         if('x21,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,2,4']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,2,4']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,2,4']),float(0.0474)))
         if('x21,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,2,5']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,2,5']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,2,5']),float(0.0474)))
         if('x21,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,2,6']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,2,6']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,2,6']),float(0.0474)))
         if('x21,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,2,7']]), float(0.0474))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,2,7']),float(0.0474)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,2,7']),float(0.0474)))
         if('x21,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,3,1']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,3,1']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,3,1']),float(0.0099)))
         if('x21,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,3,2']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,3,2']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,3,2']),float(0.0099)))
         if('x21,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,3,3']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,3,3']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,3,3']),float(0.0099)))
         if('x21,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,3,4']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,3,4']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,3,4']),float(0.0099)))
         if('x21,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,3,5']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,3,5']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,3,5']),float(0.0099)))
         if('x21,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,3,6']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,3,6']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,3,6']),float(0.0099)))
         if('x21,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,3,7']]), float(0.0099))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,3,7']),float(0.0099)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,3,7']),float(0.0099)))
         if('x21,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,4,1']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,4,1']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,4,1']),float(0.0044)))
         if('x21,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,4,2']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,4,2']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,4,2']),float(0.0044)))
         if('x21,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,4,3']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,4,3']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,4,3']),float(0.0044)))
         if('x21,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,4,4']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,4,4']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,4,4']),float(0.0044)))
         if('x21,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,4,5']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,4,5']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,4,5']),float(0.0044)))
         if('x21,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,4,6']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,4,6']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,4,6']),float(0.0044)))
         if('x21,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x21,4,7']]), float(0.0044))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,4,7']),float(0.0044)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x21,4,7']),float(0.0044)))
         if('x22,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,1,1']]), float(0.0046))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,1,1']),float(0.0046)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,1,1']),float(0.0046)))
         if('x22,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,1,2']]), float(0.0046))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,1,2']),float(0.0046)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,1,2']),float(0.0046)))
         if('x22,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,1,3']]), float(0.0046))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,1,3']),float(0.0046)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,1,3']),float(0.0046)))
         if('x22,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,1,4']]), float(0.0046))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,1,4']),float(0.0046)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,1,4']),float(0.0046)))
         if('x22,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,1,5']]), float(0.0046))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,1,5']),float(0.0046)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,1,5']),float(0.0046)))
         if('x22,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,1,6']]), float(0.0046))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,1,6']),float(0.0046)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,1,6']),float(0.0046)))
         if('x22,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,1,7']]), float(0.0046))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,1,7']),float(0.0046)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,1,7']),float(0.0046)))
         if('x22,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,2,1']]), float(0.0086))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,2,1']),float(0.0086)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,2,1']),float(0.0086)))
         if('x22,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,2,2']]), float(0.0086))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,2,2']),float(0.0086)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,2,2']),float(0.0086)))
         if('x22,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,2,3']]), float(0.0086))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,2,3']),float(0.0086)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,2,3']),float(0.0086)))
         if('x22,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,2,4']]), float(0.0086))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,2,4']),float(0.0086)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,2,4']),float(0.0086)))
         if('x22,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,2,5']]), float(0.0086))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,2,5']),float(0.0086)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,2,5']),float(0.0086)))
         if('x22,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,2,6']]), float(0.0086))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,2,6']),float(0.0086)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,2,6']),float(0.0086)))
         if('x22,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,2,7']]), float(0.0086))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,2,7']),float(0.0086)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,2,7']),float(0.0086)))
         if('x22,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,3,1']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,3,1']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,3,1']),float(0.1286)))
         if('x22,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,3,2']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,3,2']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,3,2']),float(0.1286)))
         if('x22,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,3,3']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,3,3']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,3,3']),float(0.1286)))
         if('x22,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,3,4']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,3,4']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,3,4']),float(0.1286)))
         if('x22,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,3,5']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,3,5']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,3,5']),float(0.1286)))
         if('x22,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,3,6']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,3,6']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,3,6']),float(0.1286)))
         if('x22,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,3,7']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,3,7']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,3,7']),float(0.1286)))
         if('x22,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,4,1']]), float(0.0011))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,4,1']),float(0.0011)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,4,1']),float(0.0011)))
         if('x22,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,4,2']]), float(0.0011))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,4,2']),float(0.0011)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,4,2']),float(0.0011)))
         if('x22,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,4,3']]), float(0.0011))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,4,3']),float(0.0011)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,4,3']),float(0.0011)))
         if('x22,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,4,4']]), float(0.0011))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,4,4']),float(0.0011)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,4,4']),float(0.0011)))
         if('x22,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,4,5']]), float(0.0011))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,4,5']),float(0.0011)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,4,5']),float(0.0011)))
         if('x22,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,4,6']]), float(0.0011))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,4,6']),float(0.0011)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,4,6']),float(0.0011)))
         if('x22,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x22,4,7']]), float(0.0011))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,4,7']),float(0.0011)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x22,4,7']),float(0.0011)))
         if('x23,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,1,1']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,1,1']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,1,1']),float(0.0028)))
         if('x23,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,1,2']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,1,2']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,1,2']),float(0.0028)))
         if('x23,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,1,3']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,1,3']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,1,3']),float(0.0028)))
         if('x23,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,1,4']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,1,4']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,1,4']),float(0.0028)))
         if('x23,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,1,5']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,1,5']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,1,5']),float(0.0028)))
         if('x23,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,1,6']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,1,6']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,1,6']),float(0.0028)))
         if('x23,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,1,7']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,1,7']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,1,7']),float(0.0028)))
         if('x23,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,2,1']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,2,1']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,2,1']),float(0.0068)))
         if('x23,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,2,2']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,2,2']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,2,2']),float(0.0068)))
         if('x23,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,2,3']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,2,3']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,2,3']),float(0.0068)))
         if('x23,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,2,4']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,2,4']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,2,4']),float(0.0068)))
         if('x23,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,2,5']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,2,5']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,2,5']),float(0.0068)))
         if('x23,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,2,6']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,2,6']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,2,6']),float(0.0068)))
         if('x23,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,2,7']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,2,7']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,2,7']),float(0.0068)))
         if('x23,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,3,1']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,3,1']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,3,1']),float(0.0047)))
         if('x23,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,3,2']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,3,2']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,3,2']),float(0.0047)))
         if('x23,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,3,3']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,3,3']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,3,3']),float(0.0047)))
         if('x23,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,3,4']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,3,4']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,3,4']),float(0.0047)))
         if('x23,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,3,5']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,3,5']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,3,5']),float(0.0047)))
         if('x23,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,3,6']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,3,6']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,3,6']),float(0.0047)))
         if('x23,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,3,7']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,3,7']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,3,7']),float(0.0047)))
         if('x23,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,4,1']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,4,1']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,4,1']),float(0.1286)))
         if('x23,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,4,2']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,4,2']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,4,2']),float(0.1286)))
         if('x23,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,4,3']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,4,3']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,4,3']),float(0.1286)))
         if('x23,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,4,4']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,4,4']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,4,4']),float(0.1286)))
         if('x23,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,4,5']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,4,5']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,4,5']),float(0.1286)))
         if('x23,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,4,6']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,4,6']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,4,6']),float(0.1286)))
         if('x23,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x23,4,7']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,4,7']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x23,4,7']),float(0.1286)))
         if('x25,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,1,1']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,1,1']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,1,1']),float(0.1286)))
         if('x25,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,1,2']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,1,2']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,1,2']),float(0.1286)))
         if('x25,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,1,3']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,1,3']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,1,3']),float(0.1286)))
         if('x25,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,1,4']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,1,4']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,1,4']),float(0.1286)))
         if('x25,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,1,5']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,1,5']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,1,5']),float(0.1286)))
         if('x25,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,1,6']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,1,6']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,1,6']),float(0.1286)))
         if('x25,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,1,7']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,1,7']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,1,7']),float(0.1286)))
         if('x25,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,2,1']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,2,1']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,2,1']),float(0.0079)))
         if('x25,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,2,2']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,2,2']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,2,2']),float(0.0079)))
         if('x25,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,2,3']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,2,3']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,2,3']),float(0.0079)))
         if('x25,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,2,4']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,2,4']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,2,4']),float(0.0079)))
         if('x25,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,2,5']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,2,5']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,2,5']),float(0.0079)))
         if('x25,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,2,6']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,2,6']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,2,6']),float(0.0079)))
         if('x25,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,2,7']]), float(0.0079))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,2,7']),float(0.0079)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,2,7']),float(0.0079)))
         if('x25,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,3,1']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,3,1']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,3,1']),float(0.0059)))
         if('x25,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,3,2']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,3,2']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,3,2']),float(0.0059)))
         if('x25,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,3,3']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,3,3']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,3,3']),float(0.0059)))
         if('x25,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,3,4']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,3,4']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,3,4']),float(0.0059)))
         if('x25,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,3,5']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,3,5']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,3,5']),float(0.0059)))
         if('x25,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,3,6']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,3,6']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,3,6']),float(0.0059)))
         if('x25,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,3,7']]), float(0.0059))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,3,7']),float(0.0059)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,3,7']),float(0.0059)))
         if('x25,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,4,1']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,4,1']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,4,1']),float(0.0004)))
         if('x25,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,4,2']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,4,2']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,4,2']),float(0.0004)))
         if('x25,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,4,3']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,4,3']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,4,3']),float(0.0004)))
         if('x25,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,4,4']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,4,4']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,4,4']),float(0.0004)))
         if('x25,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,4,5']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,4,5']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,4,5']),float(0.0004)))
         if('x25,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,4,6']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,4,6']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,4,6']),float(0.0004)))
         if('x25,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x25,4,7']]), float(0.0004))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,4,7']),float(0.0004)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x25,4,7']),float(0.0004)))
         if('x26,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,1,1']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,1,1']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,1,1']),float(0.0632)))
         if('x26,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,1,2']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,1,2']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,1,2']),float(0.0632)))
         if('x26,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,1,3']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,1,3']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,1,3']),float(0.0632)))
         if('x26,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,1,4']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,1,4']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,1,4']),float(0.0632)))
         if('x26,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,1,5']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,1,5']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,1,5']),float(0.0632)))
         if('x26,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,1,6']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,1,6']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,1,6']),float(0.0632)))
         if('x26,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,1,7']]), float(0.0632))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,1,7']),float(0.0632)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,1,7']),float(0.0632)))
         if('x26,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,2,1']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,2,1']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,2,1']),float(0.0293)))
         if('x26,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,2,2']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,2,2']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,2,2']),float(0.0293)))
         if('x26,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,2,3']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,2,3']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,2,3']),float(0.0293)))
         if('x26,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,2,4']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,2,4']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,2,4']),float(0.0293)))
         if('x26,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,2,5']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,2,5']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,2,5']),float(0.0293)))
         if('x26,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,2,6']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,2,6']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,2,6']),float(0.0293)))
         if('x26,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,2,7']]), float(0.0293))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,2,7']),float(0.0293)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,2,7']),float(0.0293)))
         if('x26,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,3,1']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,3,1']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,3,1']),float(0.0361)))
         if('x26,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,3,2']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,3,2']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,3,2']),float(0.0361)))
         if('x26,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,3,3']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,3,3']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,3,3']),float(0.0361)))
         if('x26,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,3,4']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,3,4']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,3,4']),float(0.0361)))
         if('x26,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,3,5']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,3,5']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,3,5']),float(0.0361)))
         if('x26,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,3,6']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,3,6']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,3,6']),float(0.0361)))
         if('x26,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,3,7']]), float(0.0361))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,3,7']),float(0.0361)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,3,7']),float(0.0361)))
         if('x26,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,4,1']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,4,1']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,4,1']),float(0.0143)))
         if('x26,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,4,2']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,4,2']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,4,2']),float(0.0143)))
         if('x26,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,4,3']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,4,3']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,4,3']),float(0.0143)))
         if('x26,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,4,4']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,4,4']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,4,4']),float(0.0143)))
         if('x26,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,4,5']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,4,5']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,4,5']),float(0.0143)))
         if('x26,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,4,6']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,4,6']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,4,6']),float(0.0143)))
         if('x26,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x26,4,7']]), float(0.0143))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,4,7']),float(0.0143)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x26,4,7']),float(0.0143)))
         if('x27,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,1,1']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,1,1']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,1,1']),float(0.0028)))
         if('x27,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,1,2']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,1,2']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,1,2']),float(0.0028)))
         if('x27,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,1,3']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,1,3']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,1,3']),float(0.0028)))
         if('x27,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,1,4']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,1,4']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,1,4']),float(0.0028)))
         if('x27,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,1,5']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,1,5']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,1,5']),float(0.0028)))
         if('x27,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,1,6']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,1,6']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,1,6']),float(0.0028)))
         if('x27,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,1,7']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,1,7']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,1,7']),float(0.0028)))
         if('x27,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,2,1']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,2,1']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,2,1']),float(0.0068)))
         if('x27,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,2,2']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,2,2']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,2,2']),float(0.0068)))
         if('x27,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,2,3']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,2,3']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,2,3']),float(0.0068)))
         if('x27,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,2,4']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,2,4']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,2,4']),float(0.0068)))
         if('x27,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,2,5']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,2,5']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,2,5']),float(0.0068)))
         if('x27,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,2,6']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,2,6']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,2,6']),float(0.0068)))
         if('x27,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,2,7']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,2,7']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,2,7']),float(0.0068)))
         if('x27,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,3,1']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,3,1']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,3,1']),float(0.0047)))
         if('x27,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,3,2']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,3,2']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,3,2']),float(0.0047)))
         if('x27,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,3,3']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,3,3']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,3,3']),float(0.0047)))
         if('x27,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,3,4']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,3,4']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,3,4']),float(0.0047)))
         if('x27,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,3,5']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,3,5']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,3,5']),float(0.0047)))
         if('x27,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,3,6']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,3,6']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,3,6']),float(0.0047)))
         if('x27,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,3,7']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,3,7']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,3,7']),float(0.0047)))
         if('x27,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,4,1']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,4,1']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,4,1']),float(0.1286)))
         if('x27,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,4,2']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,4,2']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,4,2']),float(0.1286)))
         if('x27,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,4,3']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,4,3']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,4,3']),float(0.1286)))
         if('x27,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,4,4']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,4,4']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,4,4']),float(0.1286)))
         if('x27,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,4,5']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,4,5']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,4,5']),float(0.1286)))
         if('x27,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,4,6']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,4,6']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,4,6']),float(0.1286)))
         if('x27,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x27,4,7']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,4,7']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x27,4,7']),float(0.1286)))
         if('x29,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,1,1']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,1,1']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,1,1']),float(0.0028)))
         if('x29,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,1,2']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,1,2']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,1,2']),float(0.0028)))
         if('x29,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,1,3']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,1,3']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,1,3']),float(0.0028)))
         if('x29,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,1,4']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,1,4']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,1,4']),float(0.0028)))
         if('x29,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,1,5']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,1,5']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,1,5']),float(0.0028)))
         if('x29,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,1,6']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,1,6']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,1,6']),float(0.0028)))
         if('x29,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,1,7']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,1,7']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,1,7']),float(0.0028)))
         if('x29,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,2,1']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,2,1']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,2,1']),float(0.0068)))
         if('x29,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,2,2']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,2,2']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,2,2']),float(0.0068)))
         if('x29,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,2,3']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,2,3']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,2,3']),float(0.0068)))
         if('x29,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,2,4']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,2,4']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,2,4']),float(0.0068)))
         if('x29,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,2,5']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,2,5']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,2,5']),float(0.0068)))
         if('x29,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,2,6']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,2,6']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,2,6']),float(0.0068)))
         if('x29,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,2,7']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,2,7']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,2,7']),float(0.0068)))
         if('x29,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,3,1']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,3,1']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,3,1']),float(0.0047)))
         if('x29,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,3,2']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,3,2']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,3,2']),float(0.0047)))
         if('x29,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,3,3']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,3,3']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,3,3']),float(0.0047)))
         if('x29,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,3,4']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,3,4']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,3,4']),float(0.0047)))
         if('x29,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,3,5']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,3,5']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,3,5']),float(0.0047)))
         if('x29,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,3,6']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,3,6']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,3,6']),float(0.0047)))
         if('x29,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,3,7']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,3,7']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,3,7']),float(0.0047)))
         if('x29,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,4,1']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,4,1']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,4,1']),float(0.1286)))
         if('x29,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,4,2']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,4,2']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,4,2']),float(0.1286)))
         if('x29,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,4,3']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,4,3']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,4,3']),float(0.1286)))
         if('x29,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,4,4']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,4,4']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,4,4']),float(0.1286)))
         if('x29,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,4,5']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,4,5']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,4,5']),float(0.1286)))
         if('x29,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,4,6']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,4,6']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,4,6']),float(0.1286)))
         if('x29,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x29,4,7']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,4,7']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x29,4,7']),float(0.1286)))
         if('x30,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,1,1']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,1,1']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,1,1']),float(0.0028)))
         if('x30,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,1,2']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,1,2']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,1,2']),float(0.0028)))
         if('x30,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,1,3']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,1,3']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,1,3']),float(0.0028)))
         if('x30,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,1,4']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,1,4']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,1,4']),float(0.0028)))
         if('x30,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,1,5']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,1,5']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,1,5']),float(0.0028)))
         if('x30,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,1,6']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,1,6']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,1,6']),float(0.0028)))
         if('x30,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,1,7']]), float(0.0028))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,1,7']),float(0.0028)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,1,7']),float(0.0028)))
         if('x30,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,2,1']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,2,1']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,2,1']),float(0.0068)))
         if('x30,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,2,2']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,2,2']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,2,2']),float(0.0068)))
         if('x30,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,2,3']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,2,3']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,2,3']),float(0.0068)))
         if('x30,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,2,4']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,2,4']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,2,4']),float(0.0068)))
         if('x30,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,2,5']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,2,5']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,2,5']),float(0.0068)))
         if('x30,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,2,6']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,2,6']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,2,6']),float(0.0068)))
         if('x30,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,2,7']]), float(0.0068))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,2,7']),float(0.0068)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,2,7']),float(0.0068)))
         if('x30,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,3,1']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,3,1']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,3,1']),float(0.0047)))
         if('x30,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,3,2']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,3,2']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,3,2']),float(0.0047)))
         if('x30,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,3,3']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,3,3']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,3,3']),float(0.0047)))
         if('x30,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,3,4']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,3,4']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,3,4']),float(0.0047)))
         if('x30,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,3,5']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,3,5']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,3,5']),float(0.0047)))
         if('x30,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,3,6']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,3,6']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,3,6']),float(0.0047)))
         if('x30,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,3,7']]), float(0.0047))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,3,7']),float(0.0047)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,3,7']),float(0.0047)))
         if('x30,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,4,1']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,4,1']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,4,1']),float(0.1286)))
         if('x30,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,4,2']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,4,2']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,4,2']),float(0.1286)))
         if('x30,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,4,3']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,4,3']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,4,3']),float(0.1286)))
         if('x30,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,4,4']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,4,4']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,4,4']),float(0.1286)))
         if('x30,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,4,5']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,4,5']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,4,5']),float(0.1286)))
         if('x30,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,4,6']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,4,6']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,4,6']),float(0.1286)))
         if('x30,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x30,4,7']]), float(0.1286))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,4,7']),float(0.1286)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x30,4,7']),float(0.1286)))
         if('x1,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,1,1']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,1,1']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,1,1']),float(0.0089)))
         if('x10,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,1,1']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,1,1']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,1,1']),float(0.0089)))
         if('x1,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,1,2']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,1,2']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,1,2']),float(0.0089)))
         if('x10,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,1,2']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,1,2']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,1,2']),float(0.0089)))
         if('x1,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,1,3']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,1,3']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,1,3']),float(0.0089)))
         if('x10,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,1,3']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,1,3']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,1,3']),float(0.0089)))
         if('x1,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,1,4']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,1,4']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,1,4']),float(0.0089)))
         if('x10,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,1,4']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,1,4']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,1,4']),float(0.0089)))
         if('x1,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,1,5']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,1,5']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,1,5']),float(0.0089)))
         if('x10,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,1,5']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,1,5']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,1,5']),float(0.0089)))
         if('x1,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,1,6']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,1,6']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,1,6']),float(0.0089)))
         if('x10,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,1,6']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,1,6']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,1,6']),float(0.0089)))
         if('x1,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,1,7']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,1,7']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,1,7']),float(0.0089)))
         if('x10,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,1,7']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,1,7']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,1,7']),float(0.0089)))
         if('x1,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,2,1']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,2,1']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,2,1']),float(0.0609)))
         if('x10,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,2,1']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,2,1']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,2,1']),float(0.0609)))
         if('x1,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,2,2']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,2,2']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,2,2']),float(0.0609)))
         if('x10,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,2,2']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,2,2']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,2,2']),float(0.0609)))
         if('x1,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,2,3']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,2,3']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,2,3']),float(0.0609)))
         if('x10,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,2,3']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,2,3']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,2,3']),float(0.0609)))
         if('x1,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,2,4']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,2,4']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,2,4']),float(0.0609)))
         if('x10,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,2,4']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,2,4']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,2,4']),float(0.0609)))
         if('x1,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,2,5']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,2,5']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,2,5']),float(0.0609)))
         if('x10,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,2,5']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,2,5']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,2,5']),float(0.0609)))
         if('x1,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,2,6']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,2,6']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,2,6']),float(0.0609)))
         if('x10,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,2,6']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,2,6']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,2,6']),float(0.0609)))
         if('x1,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,2,7']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,2,7']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,2,7']),float(0.0609)))
         if('x10,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,2,7']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,2,7']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,2,7']),float(0.0609)))
         if('x1,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,3,1']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,3,1']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,3,1']),float(0.0677)))
         if('x10,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,3,1']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,3,1']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,3,1']),float(0.0677)))
         if('x1,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,3,2']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,3,2']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,3,2']),float(0.0677)))
         if('x10,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,3,2']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,3,2']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,3,2']),float(0.0677)))
         if('x1,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,3,3']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,3,3']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,3,3']),float(0.0677)))
         if('x10,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,3,3']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,3,3']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,3,3']),float(0.0677)))
         if('x1,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,3,4']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,3,4']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,3,4']),float(0.0677)))
         if('x10,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,3,4']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,3,4']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,3,4']),float(0.0677)))
         if('x1,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,3,5']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,3,5']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,3,5']),float(0.0677)))
         if('x10,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,3,5']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,3,5']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,3,5']),float(0.0677)))
         if('x1,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,3,6']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,3,6']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,3,6']),float(0.0677)))
         if('x10,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,3,6']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,3,6']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,3,6']),float(0.0677)))
         if('x1,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,3,7']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,3,7']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,3,7']),float(0.0677)))
         if('x10,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,3,7']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,3,7']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,3,7']),float(0.0677)))
         if('x1,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,4,1']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,4,1']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,4,1']),float(0.0054)))
         if('x10,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,4,1']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,4,1']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,4,1']),float(0.0054)))
         if('x1,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,4,2']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,4,2']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,4,2']),float(0.0054)))
         if('x10,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,4,2']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,4,2']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,4,2']),float(0.0054)))
         if('x1,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,4,3']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,4,3']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,4,3']),float(0.0054)))
         if('x10,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,4,3']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,4,3']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,4,3']),float(0.0054)))
         if('x1,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,4,4']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,4,4']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,4,4']),float(0.0054)))
         if('x10,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,4,4']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,4,4']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,4,4']),float(0.0054)))
         if('x1,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,4,5']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,4,5']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,4,5']),float(0.0054)))
         if('x10,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,4,5']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,4,5']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,4,5']),float(0.0054)))
         if('x1,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,4,6']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,4,6']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,4,6']),float(0.0054)))
         if('x10,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,4,6']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,4,6']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,4,6']),float(0.0054)))
         if('x1,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x1,4,7']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,4,7']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x1,4,7']),float(0.0054)))
         if('x10,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x10,4,7']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,4,7']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x10,4,7']),float(0.0054)))
         if('x18,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,1,1']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,1,1']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,1,1']),float(0.0089)))
         if('x24,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,1,1']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,1,1']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,1,1']),float(0.0089)))
         if('x18,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,1,2']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,1,2']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,1,2']),float(0.0089)))
         if('x24,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,1,2']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,1,2']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,1,2']),float(0.0089)))
         if('x18,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,1,3']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,1,3']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,1,3']),float(0.0089)))
         if('x24,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,1,3']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,1,3']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,1,3']),float(0.0089)))
         if('x18,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,1,4']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,1,4']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,1,4']),float(0.0089)))
         if('x24,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,1,4']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,1,4']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,1,4']),float(0.0089)))
         if('x18,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,1,5']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,1,5']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,1,5']),float(0.0089)))
         if('x24,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,1,5']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,1,5']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,1,5']),float(0.0089)))
         if('x18,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,1,6']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,1,6']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,1,6']),float(0.0089)))
         if('x24,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,1,6']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,1,6']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,1,6']),float(0.0089)))
         if('x18,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,1,7']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,1,7']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,1,7']),float(0.0089)))
         if('x24,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,1,7']]), float(0.0089))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,1,7']),float(0.0089)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,1,7']),float(0.0089)))
         if('x18,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,2,1']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,2,1']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,2,1']),float(0.0609)))
         if('x24,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,2,1']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,2,1']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,2,1']),float(0.0609)))
         if('x18,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,2,2']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,2,2']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,2,2']),float(0.0609)))
         if('x24,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,2,2']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,2,2']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,2,2']),float(0.0609)))
         if('x18,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,2,3']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,2,3']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,2,3']),float(0.0609)))
         if('x24,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,2,3']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,2,3']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,2,3']),float(0.0609)))
         if('x18,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,2,4']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,2,4']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,2,4']),float(0.0609)))
         if('x24,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,2,4']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,2,4']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,2,4']),float(0.0609)))
         if('x18,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,2,5']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,2,5']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,2,5']),float(0.0609)))
         if('x24,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,2,5']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,2,5']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,2,5']),float(0.0609)))
         if('x18,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,2,6']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,2,6']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,2,6']),float(0.0609)))
         if('x24,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,2,6']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,2,6']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,2,6']),float(0.0609)))
         if('x18,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,2,7']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,2,7']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,2,7']),float(0.0609)))
         if('x24,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,2,7']]), float(0.0609))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,2,7']),float(0.0609)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,2,7']),float(0.0609)))
         if('x18,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,3,1']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,3,1']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,3,1']),float(0.0677)))
         if('x24,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,3,1']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,3,1']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,3,1']),float(0.0677)))
         if('x18,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,3,2']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,3,2']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,3,2']),float(0.0677)))
         if('x24,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,3,2']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,3,2']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,3,2']),float(0.0677)))
         if('x18,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,3,3']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,3,3']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,3,3']),float(0.0677)))
         if('x24,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,3,3']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,3,3']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,3,3']),float(0.0677)))
         if('x18,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,3,4']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,3,4']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,3,4']),float(0.0677)))
         if('x24,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,3,4']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,3,4']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,3,4']),float(0.0677)))
         if('x18,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,3,5']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,3,5']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,3,5']),float(0.0677)))
         if('x24,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,3,5']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,3,5']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,3,5']),float(0.0677)))
         if('x18,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,3,6']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,3,6']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,3,6']),float(0.0677)))
         if('x24,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,3,6']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,3,6']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,3,6']),float(0.0677)))
         if('x18,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,3,7']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,3,7']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,3,7']),float(0.0677)))
         if('x24,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,3,7']]), float(0.0677))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,3,7']),float(0.0677)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,3,7']),float(0.0677)))
         if('x18,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,4,1']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,4,1']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,4,1']),float(0.0054)))
         if('x24,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,4,1']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,4,1']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,4,1']),float(0.0054)))
         if('x18,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,4,2']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,4,2']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,4,2']),float(0.0054)))
         if('x24,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,4,2']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,4,2']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,4,2']),float(0.0054)))
         if('x18,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,4,3']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,4,3']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,4,3']),float(0.0054)))
         if('x24,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,4,3']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,4,3']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,4,3']),float(0.0054)))
         if('x18,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,4,4']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,4,4']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,4,4']),float(0.0054)))
         if('x24,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,4,4']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,4,4']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,4,4']),float(0.0054)))
         if('x18,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,4,5']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,4,5']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,4,5']),float(0.0054)))
         if('x24,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,4,5']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,4,5']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,4,5']),float(0.0054)))
         if('x18,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,4,6']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,4,6']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,4,6']),float(0.0054)))
         if('x24,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,4,6']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,4,6']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,4,6']),float(0.0054)))
         if('x18,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x18,4,7']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,4,7']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x18,4,7']),float(0.0054)))
         if('x24,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x24,4,7']]), float(0.0054))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,4,7']),float(0.0054)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x24,4,7']),float(0.0054)))
         if('x28,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,1,1']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,1,1']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,1,1']),float(0.0051)))
         if('x31,1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,1,1']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,1,1']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,1,1']),float(0.0051)))
         if('x28,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,1,2']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,1,2']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,1,2']),float(0.0051)))
         if('x31,1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,1,2']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,1,2']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,1,2']),float(0.0051)))
         if('x28,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,1,3']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,1,3']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,1,3']),float(0.0051)))
         if('x31,1,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,1,3']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,1,3']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,1,3']),float(0.0051)))
         if('x28,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,1,4']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,1,4']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,1,4']),float(0.0051)))
         if('x31,1,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,1,4']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,1,4']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,1,4']),float(0.0051)))
         if('x28,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,1,5']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,1,5']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,1,5']),float(0.0051)))
         if('x31,1,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,1,5']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,1,5']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,1,5']),float(0.0051)))
         if('x28,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,1,6']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,1,6']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,1,6']),float(0.0051)))
         if('x31,1,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,1,6']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,1,6']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,1,6']),float(0.0051)))
         if('x28,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,1,7']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,1,7']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,1,7']),float(0.0051)))
         if('x31,1,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,1,7']]), float(0.0051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,1,7']),float(0.0051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,1,7']),float(0.0051)))
         if('x28,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,2,1']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,2,1']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,2,1']),float(0.0091)))
         if('x31,2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,2,1']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,2,1']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,2,1']),float(0.0091)))
         if('x28,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,2,2']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,2,2']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,2,2']),float(0.0091)))
         if('x31,2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,2,2']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,2,2']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,2,2']),float(0.0091)))
         if('x28,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,2,3']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,2,3']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,2,3']),float(0.0091)))
         if('x31,2,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,2,3']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,2,3']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,2,3']),float(0.0091)))
         if('x28,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,2,4']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,2,4']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,2,4']),float(0.0091)))
         if('x31,2,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,2,4']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,2,4']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,2,4']),float(0.0091)))
         if('x28,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,2,5']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,2,5']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,2,5']),float(0.0091)))
         if('x31,2,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,2,5']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,2,5']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,2,5']),float(0.0091)))
         if('x28,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,2,6']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,2,6']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,2,6']),float(0.0091)))
         if('x31,2,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,2,6']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,2,6']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,2,6']),float(0.0091)))
         if('x28,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,2,7']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,2,7']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,2,7']),float(0.0091)))
         if('x31,2,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,2,7']]), float(0.0091))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,2,7']),float(0.0091)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,2,7']),float(0.0091)))
         if('x28,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,3,1']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,3,1']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,3,1']),float(0.0643)))
         if('x31,3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,3,1']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,3,1']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,3,1']),float(0.0643)))
         if('x28,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,3,2']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,3,2']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,3,2']),float(0.0643)))
         if('x31,3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,3,2']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,3,2']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,3,2']),float(0.0643)))
         if('x28,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,3,3']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,3,3']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,3,3']),float(0.0643)))
         if('x31,3,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,3,3']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,3,3']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,3,3']),float(0.0643)))
         if('x28,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,3,4']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,3,4']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,3,4']),float(0.0643)))
         if('x31,3,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,3,4']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,3,4']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,3,4']),float(0.0643)))
         if('x28,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,3,5']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,3,5']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,3,5']),float(0.0643)))
         if('x31,3,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,3,5']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,3,5']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,3,5']),float(0.0643)))
         if('x28,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,3,6']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,3,6']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,3,6']),float(0.0643)))
         if('x31,3,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,3,6']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,3,6']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,3,6']),float(0.0643)))
         if('x28,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,3,7']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,3,7']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,3,7']),float(0.0643)))
         if('x31,3,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,3,7']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,3,7']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,3,7']),float(0.0643)))
         if('x28,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,4,1']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,4,1']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,4,1']),float(0.0643)))
         if('x31,4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,4,1']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,4,1']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,4,1']),float(0.0643)))
         if('x28,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,4,2']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,4,2']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,4,2']),float(0.0643)))
         if('x31,4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,4,2']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,4,2']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,4,2']),float(0.0643)))
         if('x28,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,4,3']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,4,3']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,4,3']),float(0.0643)))
         if('x31,4,3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,4,3']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,4,3']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,4,3']),float(0.0643)))
         if('x28,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,4,4']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,4,4']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,4,4']),float(0.0643)))
         if('x31,4,4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,4,4']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,4,4']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,4,4']),float(0.0643)))
         if('x28,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,4,5']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,4,5']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,4,5']),float(0.0643)))
         if('x31,4,5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,4,5']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,4,5']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,4,5']),float(0.0643)))
         if('x28,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,4,6']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,4,6']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,4,6']),float(0.0643)))
         if('x31,4,6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,4,6']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,4,6']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,4,6']),float(0.0643)))
         if('x28,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x28,4,7']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,4,7']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x28,4,7']),float(0.0643)))
         if('x31,4,7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['x31,4,7']]), float(0.0643))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,4,7']),float(0.0643)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['x31,4,7']),float(0.0643)))
         if('epsilon' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['epsilon'], float(0.01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['epsilon']),float(0.01)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['epsilon']),float(0.01)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -7616,18 +6368,15 @@ class TWIRIMD1:
                 for m in range(int(v_['1']),int(v_['Ntra'])+1):
                     ig = ig_['Plac'+str(i)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['xa'+str(i)+','+str(j)+','+str(m)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['xa'+str(i)+','+str(j)+','+str(m)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-V'+str(j)]))
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['xb'+str(i)+','+str(j)+','+str(m)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['xb'+str(i)+','+str(j)+','+str(m)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-V'+str(j)]))
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['xc'+str(i)+','+str(j)+','+str(m)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['xc'+str(i)+','+str(j)+','+str(m)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-V'+str(j)]))
         #%%%%%%%% BUILD THE SPARSE MATRICES %%%%%%%%%%%%%%%
@@ -7640,8 +6389,7 @@ class TWIRIMD1:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLOI2-RN-1247-544"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -7657,7 +6405,7 @@ class TWIRIMD1:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -7685,7 +6433,7 @@ class TWIRIMD1:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]*EV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

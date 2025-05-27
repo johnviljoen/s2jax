@@ -186,7 +186,7 @@ class MISRA1ALS:
         E = jnp.exp(-EV_[1]*self.elpar[iel_][0])
         f_   = EV_[0]*E
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

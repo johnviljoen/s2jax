@@ -225,8 +225,7 @@ class UBH5:
             for I in range(int(v_['1']),int(v_['3'])+1):
                 ig = ig_['S'+str(int(v_['7']))+','+str(T)]
                 posel = len(self.grelt[ig])
-                self.grelt  = (
-                      jtu.loaset(self.grelt,ig,posel,ie_['E'+str(I)+','+str(int(v_['T-1']))]))
+                self.grelt  = (                       jtu.loaset(self.grelt,ig,posel,ie_['E'+str(I)+','+str(int(v_['T-1']))]))
                 nlc = jnp.union1d(nlc,jnp.array([ig]))
                 self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-K/2']))
                 posel = len(self.grelt[ig])
@@ -249,8 +248,7 @@ class UBH5:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLQR2-MN-V-V"
         self.x0        = jnp.zeros((self.n,1))
         self.objderlvl = 2
@@ -271,7 +269,7 @@ class UBH5:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

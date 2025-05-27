@@ -173,7 +173,7 @@ class POWELLBSLS:
         BIGV1 = BIG*EV_[0]
         f_   = BIGV1*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -204,7 +204,7 @@ class POWELLBSLS:
         EXPMV = jnp.exp(-EV_[0])
         f_   = EXPMV
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

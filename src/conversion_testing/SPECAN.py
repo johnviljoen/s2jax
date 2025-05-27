@@ -115,8 +115,7 @@ class SPECAN:
             v_['ERat'] = jnp.exp(v_['Ratio'])
             v_['Yi3'] = v_['SOLN3,1']*v_['ERat']
             for p in range(int(v_['1']),int(v_['K'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['OBJ'+str(p)+','+str(I)],float(v_['Yi'+str(p)])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['OBJ'+str(p)+','+str(I)],float(v_['Yi'+str(p)])))
         #%%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.zeros((self.n,1))
         self.xupper = jnp.full((self.n,1),float('inf'))
@@ -238,7 +237,7 @@ class SPECAN:
         E = jnp.exp(-R/S)
         f_   = EV_[0]*E
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

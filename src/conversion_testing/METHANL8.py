@@ -155,10 +155,8 @@ class METHANL8:
         v_['SMALLHF'] = 0.0e+0
         v_['BIGHF'] = 0.0e+0
         for J in range(int(v_['1']),int(v_['M'])+1):
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['2.2-'+str(int(v_['K']))+','+str(J)],float(v_['FL'+str(J)])))
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['2.2-'+str(int(v_['K+']))+','+str(J)],float(v_['FV'+str(J)])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['2.2-'+str(int(v_['K']))+','+str(J)],float(v_['FL'+str(J)])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['2.2-'+str(int(v_['K+']))+','+str(J)],float(v_['FV'+str(J)])))
             v_['TFTF'] = v_['TF']*v_['TF']
             v_['TEMP1'] = v_['TFTF']*v_['ALpp'+str(J)]
             v_['TEMP2'] = v_['TF']*v_['ALp'+str(J)]
@@ -175,10 +173,8 @@ class METHANL8:
         for I in range(int(v_['0']),int(v_['N-1'])+1):
             self.gconst = jtu.arrset(self.gconst,ig_['2.7-'+str(I)],float(1.0))
         self.gconst = jtu.arrset(self.gconst,ig_['2.8'],float(v_['Q']))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['2.9-'+str(int(v_['K']))],float(v_['SMALLHF'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['2.9-'+str(int(v_['K+']))],float(v_['BIGHF'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['2.9-'+str(int(v_['K']))],float(v_['SMALLHF'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['2.9-'+str(int(v_['K+']))],float(v_['BIGHF'])))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-float('Inf'))
         self.xupper = jnp.full((self.n,1),+float('Inf'))
@@ -188,158 +184,127 @@ class METHANL8:
         if('X0,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X0,1']]), float(0.09203))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X0,1']),float(0.09203)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X0,1']),float(0.09203)))
         if('X0,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X0,2']]), float(0.908))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X0,2']),float(0.908)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X0,2']),float(0.908)))
         if('X1,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X1,1']]), float(0.1819))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1,1']),float(0.1819)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1,1']),float(0.1819)))
         if('X1,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X1,2']]), float(0.8181))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1,2']),float(0.8181)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1,2']),float(0.8181)))
         if('X2,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X2,1']]), float(0.284))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X2,1']),float(0.284)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X2,1']),float(0.284)))
         if('X2,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X2,2']]), float(0.716))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X2,2']),float(0.716)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X2,2']),float(0.716)))
         if('X3,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X3,1']]), float(0.3051))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3,1']),float(0.3051)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3,1']),float(0.3051)))
         if('X3,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X3,2']]), float(0.6949))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3,2']),float(0.6949)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3,2']),float(0.6949)))
         if('X4,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X4,1']]), float(0.3566))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X4,1']),float(0.3566)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X4,1']),float(0.3566)))
         if('X4,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X4,2']]), float(0.6434))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X4,2']),float(0.6434)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X4,2']),float(0.6434)))
         if('X5,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X5,1']]), float(0.468))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5,1']),float(0.468)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5,1']),float(0.468)))
         if('X5,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X5,2']]), float(0.532))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5,2']),float(0.532)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5,2']),float(0.532)))
         if('X6,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X6,1']]), float(0.6579))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X6,1']),float(0.6579)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X6,1']),float(0.6579)))
         if('X6,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X6,2']]), float(0.3421))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X6,2']),float(0.3421)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X6,2']),float(0.3421)))
         if('X7,1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X7,1']]), float(0.8763))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X7,1']),float(0.8763)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X7,1']),float(0.8763)))
         if('X7,2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X7,2']]), float(0.1237))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X7,2']),float(0.1237)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X7,2']),float(0.1237)))
         if('T0' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['T0'], float(120.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T0']),float(120.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T0']),float(120.0)))
         if('T1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['T1'], float(110.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T1']),float(110.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T1']),float(110.0)))
         if('T2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['T2'], float(100.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T2']),float(100.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T2']),float(100.0)))
         if('T3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['T3'], float(88.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T3']),float(88.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T3']),float(88.0)))
         if('T4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['T4'], float(86.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T4']),float(86.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T4']),float(86.0)))
         if('T5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['T5'], float(84.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T5']),float(84.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T5']),float(84.0)))
         if('T6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['T6'], float(80.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T6']),float(80.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T6']),float(80.0)))
         if('T7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['T7'], float(76.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T7']),float(76.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['T7']),float(76.0)))
         if('V0' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['V0'], float(886.37))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V0']),float(886.37)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V0']),float(886.37)))
         if('V1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['V1'], float(910.01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V1']),float(910.01)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V1']),float(910.01)))
         if('V2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['V2'], float(922.52))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V2']),float(922.52)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V2']),float(922.52)))
         if('V3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['V3'], float(926.46))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V3']),float(926.46)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V3']),float(926.46)))
         if('V4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['V4'], float(935.56))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V4']),float(935.56)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V4']),float(935.56)))
         if('V5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['V5'], float(952.83))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V5']),float(952.83)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V5']),float(952.83)))
         if('V6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['V6'], float(975.73))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V6']),float(975.73)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V6']),float(975.73)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -437,8 +402,7 @@ class METHANL8:
             posep = jnp.where(elftp[ielftype[ie]]=='P1')[0]
             self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(1.0))
             posep = jnp.where(elftp[ielftype[ie]]=='P2')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['0']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['0']))])))
             posep = jnp.where(elftp[ielftype[ie]]=='P3')[0]
             self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(J)]))
             posep = jnp.where(elftp[ielftype[ie]]=='P4')[0]
@@ -481,8 +445,7 @@ class METHANL8:
                 posep = jnp.where(elftp[ielftype[ie]]=='P1')[0]
                 self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(-1.0))
                 posep = jnp.where(elftp[ielftype[ie]]=='P2')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['I-1']))])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['I-1']))])))
                 posep = jnp.where(elftp[ielftype[ie]]=='P3')[0]
                 self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(J)]))
                 posep = jnp.where(elftp[ielftype[ie]]=='P4')[0]
@@ -570,8 +533,7 @@ class METHANL8:
             posep = jnp.where(elftp[ielftype[ie]]=='P1')[0]
             self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(1.0))
             posep = jnp.where(elftp[ielftype[ie]]=='P2')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['N-2']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['N-2']))])))
             posep = jnp.where(elftp[ielftype[ie]]=='P3')[0]
             self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(J)]))
             posep = jnp.where(elftp[ielftype[ie]]=='P4')[0]
@@ -622,8 +584,7 @@ class METHANL8:
             posep = jnp.where(elftp[ielftype[ie]]=='P1')[0]
             self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(1.0))
             posep = jnp.where(elftp[ielftype[ie]]=='P2')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['0']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['0']))])))
             posep = jnp.where(elftp[ielftype[ie]]=='P3')[0]
             self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(J)]))
             posep = jnp.where(elftp[ielftype[ie]]=='P4')[0]
@@ -760,8 +721,7 @@ class METHANL8:
                 posep = jnp.where(elftp[ielftype[ie]]=='P1')[0]
                 self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(-1.0))
                 posep = jnp.where(elftp[ielftype[ie]]=='P2')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['I-1']))])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['I-1']))])))
                 posep = jnp.where(elftp[ielftype[ie]]=='P3')[0]
                 self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(J)]))
                 posep = jnp.where(elftp[ielftype[ie]]=='P4')[0]
@@ -908,8 +868,7 @@ class METHANL8:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-MN-31-31"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -929,7 +888,7 @@ class METHANL8:
         iel_ = args[1]
         f_   = self.elpar[iel_][0]*EV_[0]*(EV_[1]+self.elpar[iel_][1])
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -955,12 +914,11 @@ class METHANL8:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        POLY  = (
-              self.elpar[iel_][1]+self.elpar[iel_][2]*EV_[1]+self.elpar[iel_][3]*EV_[1]*EV_[1])
+        POLY  = (               self.elpar[iel_][1]+self.elpar[iel_][2]*EV_[1]+self.elpar[iel_][3]*EV_[1]*EV_[1])
         DPOLY = self.elpar[iel_][2]+2.0*self.elpar[iel_][3]*EV_[1]
         f_   = self.elpar[iel_][0]*EV_[0]*POLY
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -987,12 +945,11 @@ class METHANL8:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        POLY  = (
-              self.elpar[iel_][2]+self.elpar[iel_][3]*EV_[2]+self.elpar[iel_][4]*EV_[2]*EV_[2])
+        POLY  = (               self.elpar[iel_][2]+self.elpar[iel_][3]*EV_[2]+self.elpar[iel_][4]*EV_[2]*EV_[2])
         DPOLY = self.elpar[iel_][3]+2.0*self.elpar[iel_][4]*EV_[2]
         f_   = self.elpar[iel_][0]*EV_[0]*(self.elpar[iel_][1]+EV_[1])*POLY
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1010,8 +967,7 @@ class METHANL8:
                 H_ = jtu.np_like_set(H_, jnp.array([2,0]), H_[0,2])
                 H_ = jtu.np_like_set(H_, jnp.array([1,2]), self.elpar[iel_][0]*EV_[0]*DPOLY)
                 H_ = jtu.np_like_set(H_, jnp.array([2,1]), H_[1,2])
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), ()
-                      self.elpar[iel_][0]*EV_[0]*(self.elpar[iel_][1]+EV_[1])*2.0e+0*self.elpar[iel_][4])
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (                       self.elpar[iel_][0]*EV_[0]*(self.elpar[iel_][1]+EV_[1])*2.0e+0*self.elpar[iel_][4]))
         if nargout == 1:
             return f_
         elif nargout == 2:
@@ -1025,12 +981,11 @@ class METHANL8:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        EXPROD  = (
-              self.elpar[iel_][0]*self.elpar[iel_][1]*jnp.exp(self.elpar[iel_][2]+(self.elpar[iel_][3]/(EV_[1]+self.elpar[iel_][4]))))
+        EXPROD  = (               self.elpar[iel_][0]*self.elpar[iel_][1]*jnp.exp(self.elpar[iel_][2]+(self.elpar[iel_][3]/(EV_[1]+self.elpar[iel_][4]))))
         F = EV_[0]*EXPROD
         f_   = F
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1043,8 +998,7 @@ class METHANL8:
                 H_ = jnp.zeros((2,2))
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), -EXPROD*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[1])**2)
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
-                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (F*(self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[1])**2)**2+)
-                     2.0e+0*F*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[1])**3)
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (F*(self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[1])**2)**2+                      2.0e+0*F*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[1])**3))
         if nargout == 1:
             return f_
         elif nargout == 2:
@@ -1058,13 +1012,12 @@ class METHANL8:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        EXPROD  = (
-              self.elpar[iel_][0]*self.elpar[iel_][1]*jnp.exp(self.elpar[iel_][2]+(self.elpar[iel_][3]/(EV_[2]+self.elpar[iel_][4]))))
+        EXPROD  = (               self.elpar[iel_][0]*self.elpar[iel_][1]*jnp.exp(self.elpar[iel_][2]+(self.elpar[iel_][3]/(EV_[2]+self.elpar[iel_][4]))))
         F = EV_[0]*EV_[1]*EXPROD
         TERM = -self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**2
         f_   = F
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1082,8 +1035,7 @@ class METHANL8:
                 H_ = jtu.np_like_set(H_, jnp.array([2,0]), H_[0,2])
                 H_ = jtu.np_like_set(H_, jnp.array([1,2]), EV_[0]*EXPROD*TERM)
                 H_ = jtu.np_like_set(H_, jnp.array([2,1]), H_[1,2])
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), ()
-                      F*(TERM*TERM+2.0e+0*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**3))
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (                       F*(TERM*TERM+2.0e+0*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**3)))
         if nargout == 1:
             return f_
         elif nargout == 2:
@@ -1097,16 +1049,14 @@ class METHANL8:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        EXPROD  = (
-              self.elpar[iel_][0]*self.elpar[iel_][1]*jnp.exp(self.elpar[iel_][2]+(self.elpar[iel_][3]/(EV_[2]+self.elpar[iel_][4]))))
+        EXPROD  = (               self.elpar[iel_][0]*self.elpar[iel_][1]*jnp.exp(self.elpar[iel_][2]+(self.elpar[iel_][3]/(EV_[2]+self.elpar[iel_][4]))))
         F = EV_[0]*EV_[1]*EXPROD
-        POLY  = (
-              self.elpar[iel_][5]+self.elpar[iel_][6]*EV_[2]+self.elpar[iel_][7]*EV_[2]*EV_[2])
+        POLY  = (               self.elpar[iel_][5]+self.elpar[iel_][6]*EV_[2]+self.elpar[iel_][7]*EV_[2]*EV_[2])
         DPOLY = self.elpar[iel_][6]+2.0*self.elpar[iel_][7]*EV_[2]
         TERM = DPOLY-POLY*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**2
         f_   = F*POLY
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1124,8 +1074,7 @@ class METHANL8:
                 H_ = jtu.np_like_set(H_, jnp.array([2,0]), H_[0,2])
                 H_ = jtu.np_like_set(H_, jnp.array([1,2]), EV_[0]*EXPROD*TERM)
                 H_ = jtu.np_like_set(H_, jnp.array([2,1]), H_[1,2])
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), ()
-                      F*(-(self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**2)*TERM+2.0*self.elpar[iel_][7]-DPOLY*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**2+2.0e+0*POLY*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**3))
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (                       F*(-(self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**2)*TERM+2.0*self.elpar[iel_][7]-DPOLY*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**2+2.0e+0*POLY*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**3)))
         if nargout == 1:
             return f_
         elif nargout == 2:

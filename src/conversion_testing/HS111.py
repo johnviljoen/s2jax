@@ -151,71 +151,61 @@ class HS111:
             v_['R'] = v_['RI'+str(int(v_['1']))]
             v_['J'] = int(jnp.fix(v_['R']))
             vname = 'X'+str(int(v_['J']))
-            [iv,ix_]  = (
-                  jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
+            [iv,ix_]  = (                   jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
             posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
             self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
             v_['R'] = v_['RI'+str(int(v_['2']))]
             v_['J'] = int(jnp.fix(v_['R']))
             vname = 'X'+str(int(v_['J']))
-            [iv,ix_]  = (
-                  jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
+            [iv,ix_]  = (                   jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
             posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
             self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
             v_['R'] = v_['RI'+str(int(v_['3']))]
             v_['J'] = int(jnp.fix(v_['R']))
             vname = 'X'+str(int(v_['J']))
-            [iv,ix_]  = (
-                  jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
+            [iv,ix_]  = (                   jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
             posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
             self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
             v_['R'] = v_['RI'+str(int(v_['4']))]
             v_['J'] = int(jnp.fix(v_['R']))
             vname = 'X'+str(int(v_['J']))
-            [iv,ix_]  = (
-                  jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
+            [iv,ix_]  = (                   jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
             posev = jnp.where(elftv[ielftype[ie]]=='V4')[0]
             self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
             v_['R'] = v_['RI'+str(int(v_['5']))]
             v_['J'] = int(jnp.fix(v_['R']))
             vname = 'X'+str(int(v_['J']))
-            [iv,ix_]  = (
-                  jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
+            [iv,ix_]  = (                   jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
             posev = jnp.where(elftv[ielftype[ie]]=='V5')[0]
             self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
             v_['R'] = v_['RI'+str(int(v_['6']))]
             v_['J'] = int(jnp.fix(v_['R']))
             vname = 'X'+str(int(v_['J']))
-            [iv,ix_]  = (
-                  jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
+            [iv,ix_]  = (                   jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
             posev = jnp.where(elftv[ielftype[ie]]=='V6')[0]
             self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
             v_['R'] = v_['RI'+str(int(v_['7']))]
             v_['J'] = int(jnp.fix(v_['R']))
             vname = 'X'+str(int(v_['J']))
-            [iv,ix_]  = (
-                  jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
+            [iv,ix_]  = (                   jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
             posev = jnp.where(elftv[ielftype[ie]]=='V7')[0]
             self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
             v_['R'] = v_['RI'+str(int(v_['8']))]
             v_['J'] = int(jnp.fix(v_['R']))
             vname = 'X'+str(int(v_['J']))
-            [iv,ix_]  = (
-                  jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
+            [iv,ix_]  = (                   jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
             posev = jnp.where(elftv[ielftype[ie]]=='V8')[0]
             self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
             v_['R'] = v_['RI'+str(int(v_['9']))]
             v_['J'] = int(jnp.fix(v_['R']))
             vname = 'X'+str(int(v_['J']))
-            [iv,ix_]  = (
-                  jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
+            [iv,ix_]  = (                   jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
             posev = jnp.where(elftv[ielftype[ie]]=='V9')[0]
             self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
             v_['R'] = v_['RI'+str(int(v_['10']))]
             v_['J'] = int(jnp.fix(v_['R']))
             vname = 'X'+str(int(v_['J']))
-            [iv,ix_]  = (
-                  jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
+            [iv,ix_]  = (                   jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
             posev = jnp.where(elftv[ielftype[ie]]=='V10')[0]
             self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
             posep = jnp.where(elftp[ielftype[ie]]=='C')[0]
@@ -225,8 +215,7 @@ class HS111:
             self.elftype = jtu.arrset(self.elftype,ie,'eEXP')
             ielftype = jtu.arrset(ielftype,ie,iet_["eEXP"])
             vname = 'X'+str(I)
-            [iv,ix_]  = (
-                  jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
+            [iv,ix_]  = (                   jtu.s2mpj_nlx(self,vname,ix_,1,float(-100.0),float(100.0),float(-2.3)))
             posev = jnp.where(elftv[ielftype[ie]]=='X')[0]
             self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         #%%%%%%%%%%%%%%%%%%% GROUP USES %%%%%%%%%%%%%%%%%%%
@@ -305,8 +294,7 @@ class HS111:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COOR2-AN-10-3"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -327,7 +315,7 @@ class HS111:
         EX = jnp.exp(EV_[0])
         f_   = EX
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -364,7 +352,7 @@ class HS111:
         SUM = E1+E2+E3+E4+E5+E6+E7+E8+E9+E10
         f_   = E1*(self.elpar[iel_][0]+EV_[0]-jnp.log(SUM))
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -383,8 +371,7 @@ class HS111:
             g_ = jtu.np_like_set(g_, 9, -E1*E10/SUM)
             if nargout>2:
                 H_ = jnp.zeros((10,10))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (E1*(self.elpar[iel_][0]+EV_[0]-jnp.log(SUM))+E1*(1.0e+0-E1/SUM)+)
-                     E1*(1.0e+0-E1/SUM)+E1*(-E1/SUM)+E1*(E1**2/SUM**2))
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (E1*(self.elpar[iel_][0]+EV_[0]-jnp.log(SUM))+E1*(1.0e+0-E1/SUM)+                      E1*(1.0e+0-E1/SUM)+E1*(-E1/SUM)+E1*(E1**2/SUM**2)))
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), (-1.0e+0+E1/SUM)*E1*E2/SUM)
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
                 H_ = jtu.np_like_set(H_, jnp.array([1,1]), (-1.0e+0+E2/SUM)*E1*E2/SUM)

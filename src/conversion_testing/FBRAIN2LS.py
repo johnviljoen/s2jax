@@ -11177,11 +11177,9 @@ class FBRAIN2LS:
                 posev = jnp.where(elftv[ielftype[ie]]=='C0')[0]
                 self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
                 posep = jnp.where(elftp[ielftype[ie]]=='COEFF')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['AC'+str(I)+','+str(J)])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['AC'+str(I)+','+str(J)])))
                 posep = jnp.where(elftp[ielftype[ie]]=='LAMBDA')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['AL'+str(I)+','+str(J)])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['AL'+str(I)+','+str(J)])))
                 ename = 'B'+str(I)+','+str(J)
                 [ie,ie_,newelt] = jtu.s2mpj_ii(ename,ie_)
                 if newelt:
@@ -11196,11 +11194,9 @@ class FBRAIN2LS:
                 posev = jnp.where(elftv[ielftype[ie]]=='C0')[0]
                 self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
                 posep = jnp.where(elftp[ielftype[ie]]=='COEFF')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['BC'+str(I)+','+str(J)])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['BC'+str(I)+','+str(J)])))
                 posep = jnp.where(elftp[ielftype[ie]]=='LAMBDA')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['BL'+str(I)+','+str(J)])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['BL'+str(I)+','+str(J)])))
                 ename = 'C'+str(I)+','+str(J)
                 [ie,ie_,newelt] = jtu.s2mpj_ii(ename,ie_)
                 if newelt:
@@ -11215,11 +11211,9 @@ class FBRAIN2LS:
                 posev = jnp.where(elftv[ielftype[ie]]=='C0')[0]
                 self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
                 posep = jnp.where(elftp[ielftype[ie]]=='COEFF')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['AC'+str(I)+','+str(J)])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['AC'+str(I)+','+str(J)])))
                 posep = jnp.where(elftp[ielftype[ie]]=='LAMBDA')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['AL'+str(I)+','+str(J)])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['AL'+str(I)+','+str(J)])))
                 ename = 'D'+str(I)+','+str(J)
                 [ie,ie_,newelt] = jtu.s2mpj_ii(ename,ie_)
                 if newelt:
@@ -11234,11 +11228,9 @@ class FBRAIN2LS:
                 posev = jnp.where(elftv[ielftype[ie]]=='C0')[0]
                 self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
                 posep = jnp.where(elftp[ielftype[ie]]=='COEFF')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['BC'+str(I)+','+str(J)])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['BC'+str(I)+','+str(J)])))
                 posep = jnp.where(elftp[ielftype[ie]]=='LAMBDA')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['BL'+str(I)+','+str(J)])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['BL'+str(I)+','+str(J)])))
         #%%%%%%%%%%%%%%%%%%%%% GRFTYPE %%%%%%%%%%%%%%%%%%%%
         igt_ = {}
         [it,igt_,_] = jtu.s2mpj_ii('gL2',igt_)
@@ -11293,7 +11285,7 @@ class FBRAIN2LS:
         LAMBET = self.elpar[iel_][0]*(self.elpar[iel_][1]**BETA)
         f_   = EV_[1]*LAMBET
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

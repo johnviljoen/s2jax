@@ -363,8 +363,7 @@ class SYNTHES2:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COOR2-AN-11-14"
         self.x0        = jnp.zeros((self.n,1))
         self.objderlvl = 2
@@ -385,7 +384,7 @@ class SYNTHES2:
         iel_ = args[1]
         f_   = jnp.log(EV_[0]+EV_[1]+1.0)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         DX = 1.0/(EV_[0]+EV_[1]+1.0)
         DXDX = -1.0/(EV_[0]+EV_[1]+1.0)**2
         if nargout>1:
@@ -418,7 +417,7 @@ class SYNTHES2:
         EXPXA = jnp.exp(EV_[0]/self.elpar[iel_][0])
         f_   = EXPXA
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

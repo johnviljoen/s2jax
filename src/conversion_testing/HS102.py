@@ -845,8 +845,7 @@ class HS102:
         self.clower = jtu.np_like_set(self.clower, jnp.arange(self.nle), grange[legrps])
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nle), jnp.zeros((self.nle,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COOR2-AN-7-5"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -864,11 +863,10 @@ class HS102:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        FVALUE  = (
-              (EV_[0]**self.elpar[iel_][0])*(EV_[1]**self.elpar[iel_][1])*(EV_[2]**self.elpar[iel_][2]))
+        FVALUE  = (               (EV_[0]**self.elpar[iel_][0])*(EV_[1]**self.elpar[iel_][1])*(EV_[2]**self.elpar[iel_][2]))
         f_   = FVALUE
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -880,12 +878,9 @@ class HS102:
             g_ = jtu.np_like_set(g_, 2, FVALUE*(self.elpar[iel_][2]/EV_[2]))
             if nargout>2:
                 H_ = jnp.zeros((3,3))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), ()
-                      FVALUE*(self.elpar[iel_][0]/EV_[0])*((self.elpar[iel_][0]-1.0)/EV_[0]))
-                H_ = jtu.np_like_set(H_, jnp.array([1,1]), ()
-                      FVALUE*(self.elpar[iel_][1]/EV_[1])*((self.elpar[iel_][1]-1.0)/EV_[1]))
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), ()
-                      FVALUE*(self.elpar[iel_][2]/EV_[2])*((self.elpar[iel_][2]-1.0)/EV_[2]))
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (                       FVALUE*(self.elpar[iel_][0]/EV_[0])*((self.elpar[iel_][0]-1.0)/EV_[0])))
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (                       FVALUE*(self.elpar[iel_][1]/EV_[1])*((self.elpar[iel_][1]-1.0)/EV_[1])))
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (                       FVALUE*(self.elpar[iel_][2]/EV_[2])*((self.elpar[iel_][2]-1.0)/EV_[2])))
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), FVALUE*(self.elpar[iel_][0]/EV_[0])*(self.elpar[iel_][1]/EV_[1]))
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
                 H_ = jtu.np_like_set(H_, jnp.array([0,2]), FVALUE*(self.elpar[iel_][0]/EV_[0])*(self.elpar[iel_][2]/EV_[2]))
@@ -905,11 +900,10 @@ class HS102:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        FVALUE  = (
-              (EV_[0]**self.elpar[iel_][0])*(EV_[1]**self.elpar[iel_][1])*(EV_[2]**self.elpar[iel_][2])*(EV_[3]**self.elpar[iel_][3]))
+        FVALUE  = (               (EV_[0]**self.elpar[iel_][0])*(EV_[1]**self.elpar[iel_][1])*(EV_[2]**self.elpar[iel_][2])*(EV_[3]**self.elpar[iel_][3]))
         f_   = FVALUE
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -922,14 +916,10 @@ class HS102:
             g_ = jtu.np_like_set(g_, 3, FVALUE*(self.elpar[iel_][3]/EV_[3]))
             if nargout>2:
                 H_ = jnp.zeros((4,4))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), ()
-                      FVALUE*(self.elpar[iel_][0]/EV_[0])*((self.elpar[iel_][0]-1.0)/EV_[0]))
-                H_ = jtu.np_like_set(H_, jnp.array([1,1]), ()
-                      FVALUE*(self.elpar[iel_][1]/EV_[1])*((self.elpar[iel_][1]-1.0)/EV_[1]))
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), ()
-                      FVALUE*(self.elpar[iel_][2]/EV_[2])*((self.elpar[iel_][2]-1.0)/EV_[2]))
-                H_ = jtu.np_like_set(H_, jnp.array([3,3]), ()
-                      FVALUE*(self.elpar[iel_][3]/EV_[3])*((self.elpar[iel_][3]-1.0)/EV_[3]))
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (                       FVALUE*(self.elpar[iel_][0]/EV_[0])*((self.elpar[iel_][0]-1.0)/EV_[0])))
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (                       FVALUE*(self.elpar[iel_][1]/EV_[1])*((self.elpar[iel_][1]-1.0)/EV_[1])))
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (                       FVALUE*(self.elpar[iel_][2]/EV_[2])*((self.elpar[iel_][2]-1.0)/EV_[2])))
+                H_ = jtu.np_like_set(H_, jnp.array([3,3]), (                       FVALUE*(self.elpar[iel_][3]/EV_[3])*((self.elpar[iel_][3]-1.0)/EV_[3])))
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), FVALUE*(self.elpar[iel_][0]/EV_[0])*(self.elpar[iel_][1]/EV_[1]))
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
                 H_ = jtu.np_like_set(H_, jnp.array([0,2]), FVALUE*(self.elpar[iel_][0]/EV_[0])*(self.elpar[iel_][2]/EV_[2]))
@@ -955,11 +945,10 @@ class HS102:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        FVALUE  = (
-              (EV_[0]**self.elpar[iel_][0])*(EV_[1]**self.elpar[iel_][1])*(EV_[2]**self.elpar[iel_][2])*(EV_[3]**self.elpar[iel_][3])*(EV_[4]**self.elpar[iel_][4]))
+        FVALUE  = (               (EV_[0]**self.elpar[iel_][0])*(EV_[1]**self.elpar[iel_][1])*(EV_[2]**self.elpar[iel_][2])*(EV_[3]**self.elpar[iel_][3])*(EV_[4]**self.elpar[iel_][4]))
         f_   = FVALUE
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -973,16 +962,11 @@ class HS102:
             g_ = jtu.np_like_set(g_, 4, FVALUE*(self.elpar[iel_][4]/EV_[4]))
             if nargout>2:
                 H_ = jnp.zeros((5,5))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), ()
-                      FVALUE*(self.elpar[iel_][0]/EV_[0])*((self.elpar[iel_][0]-1.0)/EV_[0]))
-                H_ = jtu.np_like_set(H_, jnp.array([1,1]), ()
-                      FVALUE*(self.elpar[iel_][1]/EV_[1])*((self.elpar[iel_][1]-1.0)/EV_[1]))
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), ()
-                      FVALUE*(self.elpar[iel_][2]/EV_[2])*((self.elpar[iel_][2]-1.0)/EV_[2]))
-                H_ = jtu.np_like_set(H_, jnp.array([3,3]), ()
-                      FVALUE*(self.elpar[iel_][3]/EV_[3])*((self.elpar[iel_][3]-1.0)/EV_[3]))
-                H_ = jtu.np_like_set(H_, jnp.array([4,4]), ()
-                      FVALUE*(self.elpar[iel_][4]/EV_[4])*((self.elpar[iel_][4]-1.0)/EV_[4]))
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (                       FVALUE*(self.elpar[iel_][0]/EV_[0])*((self.elpar[iel_][0]-1.0)/EV_[0])))
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (                       FVALUE*(self.elpar[iel_][1]/EV_[1])*((self.elpar[iel_][1]-1.0)/EV_[1])))
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (                       FVALUE*(self.elpar[iel_][2]/EV_[2])*((self.elpar[iel_][2]-1.0)/EV_[2])))
+                H_ = jtu.np_like_set(H_, jnp.array([3,3]), (                       FVALUE*(self.elpar[iel_][3]/EV_[3])*((self.elpar[iel_][3]-1.0)/EV_[3])))
+                H_ = jtu.np_like_set(H_, jnp.array([4,4]), (                       FVALUE*(self.elpar[iel_][4]/EV_[4])*((self.elpar[iel_][4]-1.0)/EV_[4])))
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), FVALUE*(self.elpar[iel_][0]/EV_[0])*(self.elpar[iel_][1]/EV_[1]))
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
                 H_ = jtu.np_like_set(H_, jnp.array([0,2]), FVALUE*(self.elpar[iel_][0]/EV_[0])*(self.elpar[iel_][2]/EV_[2]))
@@ -1016,11 +1000,10 @@ class HS102:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        FVALUE  = (
-              (EV_[0]**self.elpar[iel_][0])*(EV_[1]**self.elpar[iel_][2])*(EV_[2]**self.elpar[iel_][3])*(EV_[3]**self.elpar[iel_][4])*(EV_[4]**self.elpar[iel_][5])*(EV_[5]**self.elpar[iel_][1]))
+        FVALUE  = (               (EV_[0]**self.elpar[iel_][0])*(EV_[1]**self.elpar[iel_][2])*(EV_[2]**self.elpar[iel_][3])*(EV_[3]**self.elpar[iel_][4])*(EV_[4]**self.elpar[iel_][5])*(EV_[5]**self.elpar[iel_][1]))
         f_   = FVALUE
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1035,18 +1018,12 @@ class HS102:
             g_ = jtu.np_like_set(g_, 5, FVALUE*(self.elpar[iel_][1]/EV_[5]))
             if nargout>2:
                 H_ = jnp.zeros((6,6))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), ()
-                      FVALUE*(self.elpar[iel_][0]/EV_[0])*((self.elpar[iel_][0]-1.0)/EV_[0]))
-                H_ = jtu.np_like_set(H_, jnp.array([1,1]), ()
-                      FVALUE*(self.elpar[iel_][2]/EV_[1])*((self.elpar[iel_][2]-1.0)/EV_[1]))
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), ()
-                      FVALUE*(self.elpar[iel_][3]/EV_[2])*((self.elpar[iel_][3]-1.0)/EV_[2]))
-                H_ = jtu.np_like_set(H_, jnp.array([3,3]), ()
-                      FVALUE*(self.elpar[iel_][4]/EV_[3])*((self.elpar[iel_][4]-1.0)/EV_[3]))
-                H_ = jtu.np_like_set(H_, jnp.array([4,4]), ()
-                      FVALUE*(self.elpar[iel_][5]/EV_[4])*((self.elpar[iel_][5]-1.0)/EV_[4]))
-                H_ = jtu.np_like_set(H_, jnp.array([5,5]), ()
-                      FVALUE*(self.elpar[iel_][1]/EV_[5])*((self.elpar[iel_][1]-1.0)/EV_[5]))
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (                       FVALUE*(self.elpar[iel_][0]/EV_[0])*((self.elpar[iel_][0]-1.0)/EV_[0])))
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (                       FVALUE*(self.elpar[iel_][2]/EV_[1])*((self.elpar[iel_][2]-1.0)/EV_[1])))
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (                       FVALUE*(self.elpar[iel_][3]/EV_[2])*((self.elpar[iel_][3]-1.0)/EV_[2])))
+                H_ = jtu.np_like_set(H_, jnp.array([3,3]), (                       FVALUE*(self.elpar[iel_][4]/EV_[3])*((self.elpar[iel_][4]-1.0)/EV_[3])))
+                H_ = jtu.np_like_set(H_, jnp.array([4,4]), (                       FVALUE*(self.elpar[iel_][5]/EV_[4])*((self.elpar[iel_][5]-1.0)/EV_[4])))
+                H_ = jtu.np_like_set(H_, jnp.array([5,5]), (                       FVALUE*(self.elpar[iel_][1]/EV_[5])*((self.elpar[iel_][1]-1.0)/EV_[5])))
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), FVALUE*(self.elpar[iel_][0]/EV_[0])*(self.elpar[iel_][2]/EV_[1]))
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
                 H_ = jtu.np_like_set(H_, jnp.array([0,2]), FVALUE*(self.elpar[iel_][0]/EV_[0])*(self.elpar[iel_][3]/EV_[2]))

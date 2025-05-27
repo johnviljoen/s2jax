@@ -479,7 +479,7 @@ class MAXLIKA:
         D2BDW2 = DBDW*DADW+B*D2ADW2
         f_   = B/EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -545,7 +545,7 @@ class MAXLIKA:
         D2BDW2 = DBDW*DADW+B*D2ADW2
         f_   = B/IV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

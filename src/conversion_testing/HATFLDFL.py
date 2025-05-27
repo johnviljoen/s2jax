@@ -155,7 +155,7 @@ class HATFLDFL:
         EX = EV_[1]**IT
         f_   = EV_[0]*EX
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -168,8 +168,7 @@ class HATFLDFL:
                 H_ = jnp.zeros((2,2))
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), self.elpar[iel_][0]*EV_[1]**(IT-1))
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
-                H_ = jtu.np_like_set(H_, jnp.array([1,1]), ()
-                      self.elpar[iel_][0]*(self.elpar[iel_][0]-1.0)*EV_[0]*EV_[1]**(IT-2))
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (                       self.elpar[iel_][0]*(self.elpar[iel_][0]-1.0)*EV_[0]*EV_[1]**(IT-2)))
         if nargout == 1:
             return f_
         elif nargout == 2:

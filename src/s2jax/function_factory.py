@@ -9,6 +9,12 @@ isnt very pythonic. We aim to partially correct that here.
 import numpy as np
 
 def preprocess_1(p):
+    # Extract the values of the global element's and group's parameters, if any.
+    # Effectively a __post_init__().
+    try: p.e_globs(p)
+    except: pass
+    try: p.g_globs(p)
+    except: pass
     c = {
         "has_conderlvl": hasattr(p, "conderlvl"), # constraint derivative level
         "has_objderlvl": hasattr(p, "objderlvl"), # objective derivative level
@@ -297,30 +303,24 @@ if __name__ == "__main__":
     jax.config.update("jax_persistent_cache_min_compile_time_secs", 0)
     jax.config.update("jax_persistent_cache_enable_xla_caches", "xla_gpu_per_fusion_autotune_cache_dir")
 
-
     import jax.numpy as jnp
-
     if jax.config.jax_enable_x64 is True: dtype = jnp.int64
     else: dtype = jnp.int32
-
     from jax.experimental.sparse import BCOO, BCSR
+    import importlib
+    from pathlib import Path
+    from tqdm import tqdm
 
     import s2jax.sparse_utils as spu
     # from python_problems.DIAMON2D import DIAMON2D as PROBLEM
     # from python_problems.ACOPP14 import ACOPP14 as PROBLEM
     # from python_problems.test_ACOPP14_jax import ACOPP14 as PROBLEM
-    from conversion_testing.HS107 import HS107 as PROBLEM
+    # from conversion_testing.HS107 import HS107 as PROBLEM
     # from conversion_testing.ACOPP14 import ACOPP14 as PROBLEM
-
+    from conversion_testing.ALJAZZAF import ALJAZZAF as PROBLEM
+    from conversion_testing.SSEBNLN import SSEBNLN as PROBLEM
     problem = PROBLEM()
 
-    # Extract the values of the global element's and group's parameters, if any.
-    # Effectively a __post_init__().
-    try: problem.e_globs(problem)
-    except: pass
-    try: problem.g_globs(problem)
-    except: pass
-    
 
     _fx = make_fx(problem)
     fx = lambda x: _fx(x)[0].flatten() # reshape(-1)  # ensure output is a 1-D array
@@ -330,6 +330,43 @@ if __name__ == "__main__":
     objective_grad = jax.jacobian(fx)(x)
 
     # objective_value = jax.jit(fx)(x)
+
+    PKG1_DIR = "/home/john/Documents/s2jax/src/conversion_testing"
+    PKG2_DIR = "/home/john/Documents/s2jax/src/python_problems_for_reference"
+
+    # --------------------------------------------------------------------
+    # 2.  Generic loader
+    # --------------------------------------------------------------------
+
+    def _load_package_classes(pkg_dir, pkg_name: str):
+        """
+        Return {class_name: class_object} for every *.py file in *pkg_dir*.
+        Accepts either a Path or a str.
+        """
+        pkg_dir = Path(pkg_dir)          # ← ensure it’s a Path
+        classes = {}
+        for file in tqdm(pkg_dir.glob("*.py")):
+            if file.name == "__init__.py":
+                continue
+            mod_name = file.stem          # e.g. 'ALJAZZAF'
+            try:
+                module = importlib.import_module(f"{pkg_name}.{mod_name}")
+            except:
+                print(f"failed: {pkg_name}.{mod_name}")
+                continue
+            try:
+                cls = getattr(module, mod_name)
+            except AttributeError:
+                continue                  # skip if naming convention is broken
+            classes[mod_name] = cls
+        return classes
+
+    # --------------------------------------------------------------------
+    # 3.  Load everything
+    # --------------------------------------------------------------------
+    PROBLEM1 = _load_package_classes(PKG1_DIR, "conversion_testing")
+    # PROBLEM2 = _load_package_classes(PKG2_DIR, "python_problems")
+
 
 
     pass

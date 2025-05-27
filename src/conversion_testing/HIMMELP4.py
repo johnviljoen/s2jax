@@ -217,8 +217,7 @@ class HIMMELP4:
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nle), jnp.zeros((self.nle,1)))
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COQR2-AN-2-3"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -281,7 +280,7 @@ class HIMMELP4:
         D2EDYY = 0.0005*EV_[0]*DEDY
         f_   = C+EV_[1]*A+F+B14/(1.0+EV_[1])+B*EV_[1]**2+G*EV_[1]**3+B20*E
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -311,7 +310,7 @@ class HIMMELP4:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -339,7 +338,7 @@ class HIMMELP4:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

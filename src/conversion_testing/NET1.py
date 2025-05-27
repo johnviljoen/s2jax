@@ -1126,8 +1126,7 @@ class NET1:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COOI2-RN-48-57"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -1144,15 +1143,12 @@ class NET1:
         A0FLEX = 1.8539e0
         A0FGT0 = EV_[2]>=0.0e0
         if A0FGT0!=0:
-            A0HFLO  = (
-              -self.elpar[iel_][0]*A0FLEX*(A0FLEX-1.0e0)*EV_[2]**(A0FLEX-2.0e0))
+            A0HFLO  = (               -self.elpar[iel_][0]*A0FLEX*(A0FLEX-1.0e0)*EV_[2]**(A0FLEX-2.0e0))
         if A0FGT0==0:
-            A0HFLO  = (
-              A0FLEX*(A0FLEX-1.0e0)*self.elpar[iel_][0]*jnp.absolute(EV_[2])**(A0FLEX-2.0e0))
-        f_    = (
-              EV_[0]*EV_[0]-EV_[1]*EV_[1]-self.elpar[iel_][0]*EV_[2]*jnp.absolute(EV_[2])**(A0FLEX-1.0e0))
+            A0HFLO  = (               A0FLEX*(A0FLEX-1.0e0)*self.elpar[iel_][0]*jnp.absolute(EV_[2])**(A0FLEX-2.0e0))
+        f_    = (               EV_[0]*EV_[0]-EV_[1]*EV_[1]-self.elpar[iel_][0]*EV_[2]*jnp.absolute(EV_[2])**(A0FLEX-1.0e0))
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1197,7 +1193,7 @@ class NET1:
         A1HOC = -self.elpar[iel_][0]*A1HIO+self.elpar[iel_][1]*A1HOO
         f_   = EV_[2]*A1GFLO
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1255,7 +1251,7 @@ class NET1:
         A2HOC = -self.elpar[iel_][0]*A2HIO+self.elpar[iel_][1]*A2HOO
         f_   = EV_[2]*A2GFLO
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

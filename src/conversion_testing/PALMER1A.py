@@ -255,7 +255,7 @@ class PALMER1A:
         DENOM = 1.0/(EV_[1]+self.elpar[iel_][0])
         f_   = EV_[0]*DENOM
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -661,7 +661,7 @@ class HEART6LS:
         ZERO = 0.0
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -692,7 +692,7 @@ class HEART6LS:
         ZERO = 0.0
         f_   = EV_[0]*EV_[1]*EV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -730,7 +730,7 @@ class HEART6LS:
         DIFF = self.elpar[iel_][0]-EV_[1]
         f_   = EV_[0]*DIFF
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -764,7 +764,7 @@ class HEART6LS:
         TWOX = TWO*EV_[0]
         f_   = EV_[0]*DFSQ
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -806,7 +806,7 @@ class HEART6LS:
         TWOD = TWO*DIFF
         f_   = DIFF*DFSQ
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -845,7 +845,7 @@ class HEART6LS:
         DIFF = self.elpar[iel_][0]-EV_[0]
         f_   = DIFF*EV_[1]*EV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -886,7 +886,7 @@ class HEART6LS:
         DIFF = EV_[1]**2-THREE*EV_[2]**2
         f_   = EV_[0]*EV_[1]*DIFF
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -928,7 +928,7 @@ class HEART6LS:
         DIFF = self.elpar[iel_][0]-EV_[0]
         f_   = DIFF*EV_[1]*DFSQ
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

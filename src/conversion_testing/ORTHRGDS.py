@@ -160,40 +160,33 @@ class ORTHRGDS:
         if('Z1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Z1'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Z1']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Z1']),float(1.0)))
         if('Z2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Z2'], float(0.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Z2']),float(0.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Z2']),float(0.0)))
         if('Z3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Z3'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Z3']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Z3']),float(1.0)))
         for I in range(int(v_['1']),int(v_['NPTS'])+1):
             if('X'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['X'+str(I)], float(v_['XD'+str(I)]))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(v_['XD'+str(I)])))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(v_['XD'+str(I)])))
             if('Y'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['Y'+str(I)], float(v_['YD'+str(I)]))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Y'+str(I)]),float(v_['YD'+str(I)])))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Y'+str(I)]),float(v_['YD'+str(I)])))
         for I in range(int(v_['TDPulo']),int(v_['TDPuhi'])+1):
             if('X'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['X'+str(I)], float(1.8))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(1.8)))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(1.8)))
             if('Y'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['Y'+str(I)], float(1.0))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Y'+str(I)]),float(1.0)))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Y'+str(I)]),float(1.0)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -299,8 +292,7 @@ class ORTHRGDS:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CQOR2-AY-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -329,7 +321,7 @@ class ORTHRGDS:
         T = IV_[0]*IV_[0]+IV_[1]*IV_[1]
         f_   = T*T
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -375,7 +367,7 @@ class ORTHRGDS:
         T1SQ = T1*T1
         f_   = T*T1SQ
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

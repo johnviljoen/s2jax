@@ -295,8 +295,7 @@ class WATSONNE:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-AN-V-31"
         self.x0        = jnp.zeros((self.n,1))
         self.objderlvl = 2
@@ -317,7 +316,7 @@ class WATSONNE:
         iel_ = args[1]
         f_   = -EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -341,8 +340,7 @@ class WATSONNE:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        U  = (
-              self.elpar[iel_][0]*EV_[0]+self.elpar[iel_][1]*EV_[1]+self.elpar[iel_][2]*EV_[2]+self.elpar[iel_][3]*EV_[3]+self.elpar[iel_][4]*EV_[4]+self.elpar[iel_][5]*EV_[5]+self.elpar[iel_][6]*EV_[6]+self.elpar[iel_][7]*EV_[7]+self.elpar[iel_][8]*EV_[8]+self.elpar[iel_][9]*EV_[9]+self.elpar[iel_][10]*EV_[10]+self.elpar[iel_][11]*EV_[11])
+        U  = (               self.elpar[iel_][0]*EV_[0]+self.elpar[iel_][1]*EV_[1]+self.elpar[iel_][2]*EV_[2]+self.elpar[iel_][3]*EV_[3]+self.elpar[iel_][4]*EV_[4]+self.elpar[iel_][5]*EV_[5]+self.elpar[iel_][6]*EV_[6]+self.elpar[iel_][7]*EV_[7]+self.elpar[iel_][8]*EV_[8]+self.elpar[iel_][9]*EV_[9]+self.elpar[iel_][10]*EV_[10]+self.elpar[iel_][11]*EV_[11])
         TWOT1 = self.elpar[iel_][0]+self.elpar[iel_][0]
         TWOT2 = self.elpar[iel_][1]+self.elpar[iel_][1]
         TWOT3 = self.elpar[iel_][2]+self.elpar[iel_][2]
@@ -357,7 +355,7 @@ class WATSONNE:
         TWOT12 = self.elpar[iel_][11]+self.elpar[iel_][11]
         f_   = -U*U
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -204,7 +204,7 @@ class NONCVXU2:
         IV_ = jtu.np_like_set(IV_, 0, U_[0:1,:].dot(EV_))
         f_   = IV_[0]*IV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -239,7 +239,7 @@ class NONCVXU2:
         COSV = 4.0*jnp.cos(IV_[0])
         f_   = COSV
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

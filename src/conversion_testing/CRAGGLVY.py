@@ -226,7 +226,7 @@ class CRAGGLVY:
         FVAL = jnp.exp(EV_[0])
         f_   = FVAL
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -260,7 +260,7 @@ class CRAGGLVY:
         SECUSQ = SECU*SECU
         f_   = TANU
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

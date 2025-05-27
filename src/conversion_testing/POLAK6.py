@@ -353,8 +353,7 @@ class POLAK6:
         self.cupper = jnp.full((self.m,1),+float('Inf'))
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nle), jnp.zeros((self.nle,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLOR2-AN-5-4"
         self.x0        = jnp.zeros((self.n,1))
         self.objderlvl = 2
@@ -377,7 +376,7 @@ class POLAK6:
         A = EV_[0]-B**4
         f_   = A*A
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -417,7 +416,7 @@ class POLAK6:
         D2ADZZ = D2ADYZ*DCDZ+DADY*D2CDZZ
         f_   = A*A
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -454,7 +453,7 @@ class POLAK6:
         B = EV_[0]+1.0
         f_   = B**4
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -482,7 +481,7 @@ class POLAK6:
         A = EV_[0]-B**4
         f_   = A**4
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -512,7 +511,7 @@ class POLAK6:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

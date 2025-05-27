@@ -126,12 +126,10 @@ class HANGING:
         self.gconst = jnp.zeros((ngrp,1))
         for I in range(int(v_['1']),int(v_['NX'])+1):
             for J in range(int(v_['1']),int(v_['NY-1'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['RC'+str(I)+','+str(J)],float(v_['LX2'])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['RC'+str(I)+','+str(J)],float(v_['LX2'])))
         for I in range(int(v_['1']),int(v_['NX-1'])+1):
             for J in range(int(v_['1']),int(v_['NY'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['DC'+str(I)+','+str(J)],float(v_['LY2'])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['DC'+str(I)+','+str(J)],float(v_['LY2'])))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-float('Inf'))
         self.xupper = jnp.full((self.n,1),+float('Inf'))
@@ -314,8 +312,7 @@ class HANGING:
         self.cupper = jnp.full((self.m,1),+float('Inf'))
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nle), jnp.zeros((self.nle,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLQR2-AY-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -340,7 +337,7 @@ class HANGING:
         IV_ = jtu.np_like_set(IV_, 0, U_[0:1,:].dot(EV_))
         f_   = IV_[0]*IV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

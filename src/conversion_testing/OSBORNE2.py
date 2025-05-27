@@ -159,58 +159,47 @@ class OSBORNE2:
         if('X1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X1'], float(1.3))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(1.3)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(1.3)))
         if('X2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X2'], float(0.65))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X2']),float(0.65)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X2']),float(0.65)))
         if('X3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X3'], float(0.65))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3']),float(0.65)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3']),float(0.65)))
         if('X4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X4'], float(0.7))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X4']),float(0.7)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X4']),float(0.7)))
         if('X5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X5'], float(0.6))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5']),float(0.6)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5']),float(0.6)))
         if('X6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X6'], float(3.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X6']),float(3.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X6']),float(3.0)))
         if('X7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X7'], float(5.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X7']),float(5.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X7']),float(5.0)))
         if('X8' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X8'], float(7.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X8']),float(7.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X8']),float(7.0)))
         if('X9' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X9'], float(2.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X9']),float(2.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X9']),float(2.0)))
         if('X10' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X10'], float(4.5))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X10']),float(4.5)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X10']),float(4.5)))
         if('X11' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X11'], float(5.5))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X11']),float(5.5)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X11']),float(5.5)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -337,8 +326,7 @@ class OSBORNE2:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-MN-11-65"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -360,7 +348,7 @@ class OSBORNE2:
         FVAL = EV_[0]*EXPA
         f_   = FVAL
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -394,7 +382,7 @@ class OSBORNE2:
         A = 2.0*TMV2*EV_[2]
         f_   = FVAL
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

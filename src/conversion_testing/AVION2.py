@@ -1029,8 +1029,7 @@ class AVION2:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COLR2-RN-49-15"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -1049,7 +1048,7 @@ class AVION2:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1081,7 +1080,7 @@ class AVION2:
         QDOSQ = QD/SQ
         f_   = QDOSQ
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1116,7 +1115,7 @@ class AVION2:
         iel_ = args[1]
         f_   = EV_[0]/EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1147,7 +1146,7 @@ class AVION2:
         YSQ = EV_[1]**2
         f_   = (EV_[0]*YSQ)/EV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1182,7 +1181,7 @@ class AVION2:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1208,7 +1207,7 @@ class AVION2:
         iel_ = args[1]
         f_   = EV_[0]/EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1238,7 +1237,7 @@ class AVION2:
         LIN = EV_[1]+20.0e0
         f_   = EV_[0]/LIN
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1268,7 +1267,7 @@ class AVION2:
         RTZ = jnp.sqrt(EV_[0])
         f_   = RTZ
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1298,7 +1297,7 @@ class AVION2:
         ZRTZ = EV_[2]*jnp.sqrt(EV_[2])
         f_   = XRTX*EV_[1]/RTZ
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1333,7 +1332,7 @@ class AVION2:
         iel_ = args[1]
         f_   = EV_[0]**2*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1367,7 +1366,7 @@ class AVION2:
         DYSQQD = 3.0e0*EV_[2]*(2.0e0-EV_[3]*EV_[2])
         f_   = CB/SQQD
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1388,10 +1387,8 @@ class AVION2:
                 H_ = jtu.np_like_set(H_, jnp.array([2,1]), H_[1,2])
                 H_ = jtu.np_like_set(H_, jnp.array([1,3]), -(YCB**2*CB)/SQQD**2)
                 H_ = jtu.np_like_set(H_, jnp.array([3,1]), H_[1,3])
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (-6.0e0*EV_[1]*EV_[2]/SQQD+(3.0e0*EV_[1]*EV_[2]**2*DYSQQD)/)
-                     SQQD**2+(2.0e0*CB*DYSQQD**2)/SQQD**3-(6.0e0*CB*(1.0-EV_[3]*EV_[2]))/SQQD**2)
-                H_ = jtu.np_like_set(H_, jnp.array([2,3]), (-(3.0e0*EV_[1]*EV_[2])/TMZY**2-(6.0e0*EV_[2]**4*(TMZY-1.0e0)*CB)/)
-                     SQQD**3+3.0e0*CB*EV_[2]**2/SQQD**2)
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (-6.0e0*EV_[1]*EV_[2]/SQQD+(3.0e0*EV_[1]*EV_[2]**2*DYSQQD)/                      SQQD**2+(2.0e0*CB*DYSQQD**2)/SQQD**3-(6.0e0*CB*(1.0-EV_[3]*EV_[2]))/SQQD**2))
+                H_ = jtu.np_like_set(H_, jnp.array([2,3]), (-(3.0e0*EV_[1]*EV_[2])/TMZY**2-(6.0e0*EV_[2]**4*(TMZY-1.0e0)*CB)/                      SQQD**3+3.0e0*CB*EV_[2]**2/SQQD**2))
                 H_ = jtu.np_like_set(H_, jnp.array([3,2]), H_[2,3])
                 H_ = jtu.np_like_set(H_, jnp.array([3,3]), 2.0e0*(YCB**2*CB)/SQQD**3)
         if nargout == 1:
@@ -1416,7 +1413,7 @@ class AVION2:
         SRVLN = EV_[0]*SRLIN
         f_   = EV_[0]*SRLIN*(SRQT*SRRT+8.0e0)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

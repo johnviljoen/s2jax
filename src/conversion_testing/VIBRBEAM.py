@@ -303,15 +303,14 @@ class VIBRBEAM:
         y4 = y2*y2
         y5 = y2*y3
         y6 = y3*y3
-        phi  = (
-              EV_[0]+self.elpar[iel_][0]*(EV_[1]+self.elpar[iel_][0]*(EV_[2]+self.elpar[iel_][0]*EV_[3]))-self.elpar[iel_][1])
+        phi  = (               EV_[0]+self.elpar[iel_][0]*(EV_[1]+self.elpar[iel_][0]*(EV_[2]+self.elpar[iel_][0]*EV_[3]))-self.elpar[iel_][1])
         cosphi = jnp.cos(phi)
         sinphi = jnp.sin(phi)
         bcos = EV_[4]*cosphi
         bsin = EV_[4]*sinphi
         f_   = bcos
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

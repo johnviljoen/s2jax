@@ -606,7 +606,7 @@ class TOINTGOR:
     @staticmethod
     def g_globs(self):
 
-        self.gfpar = jnp.array([]);
+        self.gfpar = jnp.array([])
         self.gfpar = jtu.arrset(self.gfpar,0,1.0e0)     # this is ONE
         self.gfpar = jtu.arrset(self.gfpar,1,0.0e0)     # this is ZERO
         return pbm

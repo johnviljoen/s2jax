@@ -233,53 +233,43 @@ class HS114:
         if('X1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X1'], float(1745.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(1745.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(1745.0)))
         if('X2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X2'], float(12000.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X2']),float(12000.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X2']),float(12000.0)))
         if('X3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X3'], float(110.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3']),float(110.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3']),float(110.0)))
         if('X4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X4'], float(3048.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X4']),float(3048.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X4']),float(3048.0)))
         if('X5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X5'], float(1974.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5']),float(1974.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5']),float(1974.0)))
         if('X6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X6'], float(89.2))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X6']),float(89.2)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X6']),float(89.2)))
         if('X7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X7'], float(92.8))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X7']),float(92.8)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X7']),float(92.8)))
         if('X8' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X8'], float(8.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X8']),float(8.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X8']),float(8.0)))
         if('X9' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X9'], float(3.6))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X9']),float(3.6)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X9']),float(3.6)))
         if('X10' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X10'], float(145.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X10']),float(145.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X10']),float(145.0)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -500,8 +490,7 @@ class HS114:
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CQOR2-MY-10-11"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -521,7 +510,7 @@ class HS114:
         iel_ = args[1]
         f_   = self.elpar[iel_][0]*EV_[0]**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -547,7 +536,7 @@ class HS114:
         iel_ = args[1]
         f_   = self.elpar[iel_][0]*EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -575,7 +564,7 @@ class HS114:
         iel_ = args[1]
         f_   = self.elpar[iel_][0]*EV_[0]*EV_[1]**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -606,7 +595,7 @@ class HS114:
         DENOM = EV_[1]*EV_[2]+1000.0*EV_[3]
         f_   = WX/DENOM
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -656,7 +645,7 @@ class HS114:
         IV_ = jtu.np_like_set(IV_, 1, U_[1:2,:].dot(EV_))
         f_   = IV_[0]/IV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

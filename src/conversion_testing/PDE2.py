@@ -247,8 +247,7 @@ class PDE2:
         self.gconst = jnp.zeros((ngrp,1))
         for I in range(int(v_['1']),int(v_['N'])+1):
             for J in range(int(v_['1']),int(v_['N'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['P'+str(I)+','+str(J)],float(v_['GH2'])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['P'+str(I)+','+str(J)],float(v_['GH2'])))
         for I in range(int(v_['1']),int(v_['N'])+1):
             v_['RI'] = float(I)
             v_['IH'] = v_['RI']*v_['H']
@@ -265,8 +264,7 @@ class PDE2:
                 v_['YD'] = v_['YD']*v_['H']
                 v_['-YD'] = -1.0*v_['YD']
                 self.gconst = jtu.arrset(self.gconst,ig_['A'+str(I)+','+str(J)],float(v_['YD']))
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['B'+str(I)+','+str(J)],float(v_['-YD'])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['B'+str(I)+','+str(J)],float(v_['-YD'])))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),0.0)
         self.xupper = jnp.full((self.n,1),3.5)

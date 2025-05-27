@@ -220,8 +220,7 @@ class HS68:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COOR2-MN-4-2"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -237,7 +236,7 @@ class HS68:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,3.9894228040143270e-01)
         return pbm
 
@@ -249,7 +248,7 @@ class HS68:
         iel_ = args[1]
         f_   = 1.0e+0/EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -292,7 +291,7 @@ class HS68:
         F18 = -2.0e+0*EV_[2]*R/(EV_[0]*S*S*S)
         f_   = EV_[2]*R/(S*EV_[0])
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -304,12 +303,10 @@ class HS68:
             g_ = jtu.np_like_set(g_, 2, -F2-F4)
             if nargout>2:
                 H_ = jnp.zeros((3,3))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (-F11-(2.0e+0*self.elpar[iel_][0]*E*F13)-(2.0e+0*E*F16)-)
-                     (2.0e+0*self.elpar[iel_][0]*E*E*F17)-(E*E*F18))
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (-F11-(2.0e+0*self.elpar[iel_][0]*E*F13)-(2.0e+0*E*F16)-                      (2.0e+0*self.elpar[iel_][0]*E*E*F17)-(E*E*F18)))
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), F13+(E*F17))
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), H_[1,0])
-                H_ = jtu.np_like_set(H_, jnp.array([2,0]), (-(E*F14)-(self.elpar[iel_][0]*E*F15)-F16-(self.elpar[iel_][0]*E*F17)-)
-                     (E*F18)-F12)
+                H_ = jtu.np_like_set(H_, jnp.array([2,0]), (-(E*F14)-(self.elpar[iel_][0]*E*F15)-F16-(self.elpar[iel_][0]*E*F17)-                      (E*F18)-F12))
                 H_ = jtu.np_like_set(H_, jnp.array([0,2]), H_[2,0])
                 H_ = jtu.np_like_set(H_, jnp.array([2,1]), F15+F17)
                 H_ = jtu.np_like_set(H_, jnp.array([1,2]), H_[2,1])
@@ -336,7 +333,7 @@ class HS68:
         else:
             f_ =  0.5 - 0.5 * special.erf( arg )
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             dim  = len(x2)
             g_    = jnp.zeros(dim)

@@ -446,8 +446,7 @@ class DNIEPER:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CQOR2-MN-61-24"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -475,20 +474,17 @@ class DNIEPER:
         A8 = 0.00267
         A9 = 0.000281
         A10 = 0.0000032
-        f_   = (A1+A2*EV_[0]+A3*EV_[1]+A4*EV_[0]**2+A5*EV_[0]*EV_[1]+A6*EV_[1]**2+
-             A7*EV_[0]**3+A8*EV_[0]**2*EV_[1]+A9*EV_[0]*EV_[1]**2+A10*EV_[1]**3)
+        f_   = (A1+A2*EV_[0]+A3*EV_[1]+A4*EV_[0]**2+A5*EV_[0]*EV_[1]+A6*EV_[1]**2+              A7*EV_[0]**3+A8*EV_[0]**2*EV_[1]+A9*EV_[0]*EV_[1]**2+A10*EV_[1]**3)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
             except:
                 dim = len(EV_)
             g_ = jnp.zeros(dim)
-            g_ = jtu.np_like_set(g_, 0, (A2+2.0*A4*EV_[0]+A5*EV_[1]+3.0*A7*EV_[0]**2+2.0*A8*EV_[0]*EV_[1]+)
-                 A9*EV_[1]**2)
-            g_ = jtu.np_like_set(g_, 1, (A3+A5*EV_[0]+2.0*A6*EV_[1]+A8*EV_[0]**2+2.0*A9*EV_[0]*EV_[1]+)
-                 3.0*A10*EV_[1]**2)
+            g_ = jtu.np_like_set(g_, 0, (A2+2.0*A4*EV_[0]+A5*EV_[1]+3.0*A7*EV_[0]**2+2.0*A8*EV_[0]*EV_[1]+                  A9*EV_[1]**2))
+            g_ = jtu.np_like_set(g_, 1, (A3+A5*EV_[0]+2.0*A6*EV_[1]+A8*EV_[0]**2+2.0*A9*EV_[0]*EV_[1]+                  3.0*A10*EV_[1]**2))
             if nargout>2:
                 H_ = jnp.zeros((2,2))
                 H_ = jtu.np_like_set(H_, jnp.array([0,0]), 2.0*A4+6.0*A7*EV_[0]+2.0*A8*EV_[1])
@@ -517,18 +513,16 @@ class DNIEPER:
         A8 = 0.00404
         A9 = 0.000168
         A10 = -0.000038
-        f_   = (A1+A2*EV_[0]+A3*EV_[1]+A4*EV_[0]**2+A5*EV_[0]*EV_[1]+A7*EV_[0]**3+
-             A8*EV_[0]**2*EV_[1]+A9*EV_[0]*EV_[1]**2+A10*EV_[1]**3)
+        f_   = (A1+A2*EV_[0]+A3*EV_[1]+A4*EV_[0]**2+A5*EV_[0]*EV_[1]+A7*EV_[0]**3+              A8*EV_[0]**2*EV_[1]+A9*EV_[0]*EV_[1]**2+A10*EV_[1]**3)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
             except:
                 dim = len(EV_)
             g_ = jnp.zeros(dim)
-            g_ = jtu.np_like_set(g_, 0, (A2+2.0*A4*EV_[0]+A5*EV_[1]+3.0*A7*EV_[0]**2+2.0*A8*EV_[0]*EV_[1]+)
-                 A9*EV_[1]**2)
+            g_ = jtu.np_like_set(g_, 0, (A2+2.0*A4*EV_[0]+A5*EV_[1]+3.0*A7*EV_[0]**2+2.0*A8*EV_[0]*EV_[1]+                  A9*EV_[1]**2))
             g_ = jtu.np_like_set(g_, 1, A3+A5*EV_[0]+A8*EV_[0]**2+2.0*A9*EV_[0]*EV_[1]+3.0*A10*EV_[1]**2)
             if nargout>2:
                 H_ = jnp.zeros((2,2))
@@ -551,7 +545,7 @@ class DNIEPER:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -579,7 +573,7 @@ class DNIEPER:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

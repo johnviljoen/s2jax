@@ -298,7 +298,7 @@ class MANCINO:
         DBDX = DSUMAL+self.elpar[iel_][2]*(DSCIJ*SAL+SCIJ*DSAL)
         f_   = VIJ*SUMAL
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

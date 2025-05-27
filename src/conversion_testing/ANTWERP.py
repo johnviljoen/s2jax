@@ -517,138 +517,111 @@ class ANTWERP:
         if('P1F' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P1F'], float(v_['SP1F']))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P1F']),float(v_['SP1F'])))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P1F']),float(v_['SP1F'])))
         if('P2F' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P2F'], float(v_['SP2F']))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P2F']),float(v_['SP2F'])))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P2F']),float(v_['SP2F'])))
         if('P3F' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P3F'], float(0.15))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P3F']),float(0.15)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P3F']),float(0.15)))
         if('P4F' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P4F'], float(0.10))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P4F']),float(0.10)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P4F']),float(0.10)))
         if('P5F' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P5F'], float(0.05))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P5F']),float(0.05)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P5F']),float(0.05)))
         if('P1W' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P1W'], float(v_['SP1W']))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P1W']),float(v_['SP1W'])))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P1W']),float(v_['SP1W'])))
         if('P2W' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P2W'], float(v_['SP2W']))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P2W']),float(v_['SP2W'])))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P2W']),float(v_['SP2W'])))
         if('P3W' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P3W'], float(v_['SP3W']))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P3W']),float(v_['SP3W'])))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P3W']),float(v_['SP3W'])))
         if('P1M' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P1M'], float(v_['SP1M']))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P1M']),float(v_['SP1M'])))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P1M']),float(v_['SP1M'])))
         if('P2M' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P2M'], float(v_['SP2M']))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P2M']),float(v_['SP2M'])))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P2M']),float(v_['SP2M'])))
         if('P3M' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P3M'], float(v_['SP3M']))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P3M']),float(v_['SP3M'])))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P3M']),float(v_['SP3M'])))
         if('Q0F' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Q0F'], float(0.6))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q0F']),float(0.6)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q0F']),float(0.6)))
         if('Q1F' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Q1F'], float(0.3))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q1F']),float(0.3)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q1F']),float(0.3)))
         if('Q2F' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Q2F'], float(0.1))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q2F']),float(0.1)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q2F']),float(0.1)))
         if('Q0M' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Q0M'], float(0.6))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q0M']),float(0.6)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q0M']),float(0.6)))
         if('Q1M' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Q1M'], float(0.3))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q1M']),float(0.3)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q1M']),float(0.3)))
         if('Q2M' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Q2M'], float(0.1))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q2M']),float(0.1)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q2M']),float(0.1)))
         if('Q0W' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Q0W'], float(0.6))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q0W']),float(0.6)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q0W']),float(0.6)))
         if('Q1W' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Q1W'], float(0.3))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q1W']),float(0.3)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q1W']),float(0.3)))
         if('Q2W' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Q2W'], float(0.1))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q2W']),float(0.1)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q2W']),float(0.1)))
         if('NF' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['NF'], float(v_['SNF']))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['NF']),float(v_['SNF'])))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['NF']),float(v_['SNF'])))
         if('NW' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['NW'], float(v_['SNW']))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['NW']),float(v_['SNW'])))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['NW']),float(v_['SNW'])))
         if('NM' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['NM'], float(v_['SNM']))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['NM']),float(v_['SNM'])))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['NM']),float(v_['SNM'])))
         if('NC2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['NC2'], float(0.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['NC2']),float(0.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['NC2']),float(0.0)))
         if('NC3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['NC3'], float(0.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['NC3']),float(0.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['NC3']),float(0.0)))
         if('NA2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['NA2'], float(v_['N2']))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['NA2']),float(v_['N2'])))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['NA2']),float(v_['N2'])))
         if('NA3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['NA3'], float(v_['N3']))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['NA3']),float(v_['N3'])))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['NA3']),float(v_['N3'])))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -1738,8 +1711,7 @@ class ANTWERP:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CSLR2-RN-27-8-0-3-24-0-2-0-8-0-0-0"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -1759,7 +1731,7 @@ class ANTWERP:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1787,7 +1759,7 @@ class ANTWERP:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]*EV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -220,8 +220,7 @@ class MRIBASIS:
             gtype = jtu.arrset(gtype,ig,'==')
             cnames = jtu.arrset(cnames,ig,'c2const'+str(i))
             irA  = jtu.append(irA,[ig])
-            icA   = (
-                  jtu.append(icA,[ix_['L'+str(i)+','+str(int(v_['2']))+','+str(int(v_['Lm']))]]))
+            icA   = (                   jtu.append(icA,[ix_['L'+str(i)+','+str(int(v_['2']))+','+str(int(v_['Lm']))]]))
             valA = jtu.append(valA,float(v_['k10']))
         [ig,ig_,_] = jtu.s2mpj_ii('c3con1',ig_)
         gtype = jtu.arrset(gtype,ig,'>=')
@@ -260,8 +259,7 @@ class MRIBASIS:
         v_['Opmr2'] = v_['k3']*v_['S2,2']
         v_['Opmr3'] = v_['k3']*v_['S2,3']
         for i in range(int(v_['1']),int(v_['3'])+1):
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['c2const'+str(i)],float(v_['Opmr'+str(i)])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['c2const'+str(i)],float(v_['Opmr'+str(i)])))
         self.gconst = jtu.arrset(self.gconst,ig_['c3con1'],float(v_['k4-']))
         self.gconst = jtu.arrset(self.gconst,ig_['c3con2'],float(v_['k13']))
         self.gconst = jtu.arrset(self.gconst,ig_['c5con1'],float(v_['k13']))
@@ -285,18 +283,12 @@ class MRIBASIS:
                 for k in range(int(v_['2']),int(v_['Lm-'])+1):
                     self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['L'+str(i)+','+str(j)+','+str(k)]]), v_['-k2'])
                     self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['L'+str(i)+','+str(j)+','+str(k)]]), v_['k2'])
-                self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['L'+str(i)+','+str(j)+','+str(int(v_['1']))]]), (v_['Llo'+)
-                     str(j)+','+str(i)])
-                self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['L'+str(i)+','+str(j)+','+str(int(v_['1']))]]), (v_['Llo'+)
-                     str(j)+','+str(i)])
-            self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['L'+str(i)+','+str(int(v_['1']))+','+str(int(v_['Lm']))]]), ()
-                  v_['Lup'+str(int(v_['1']))+','+str(i)])
-            self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['L'+str(i)+','+str(int(v_['1']))+','+str(int(v_['Lm']))]]), ()
-                  v_['Lup'+str(int(v_['1']))+','+str(i)])
-            self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['L'+str(i)+','+str(int(v_['2']))+','+str(int(v_['Lm']))]]), ()
-                  v_['-k2'])
-            self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['L'+str(i)+','+str(int(v_['2']))+','+str(int(v_['Lm']))]]), ()
-                  v_['k2'])
+                self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['L'+str(i)+','+str(j)+','+str(int(v_['1']))]]), (v_['Llo'+                      str(j)+','+str(i)]))
+                self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['L'+str(i)+','+str(j)+','+str(int(v_['1']))]]), (v_['Llo'+                      str(j)+','+str(i)]))
+            self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['L'+str(i)+','+str(int(v_['1']))+','+str(int(v_['Lm']))]]), (                   v_['Lup'+str(int(v_['1']))+','+str(i)]))
+            self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['L'+str(i)+','+str(int(v_['1']))+','+str(int(v_['Lm']))]]), (                   v_['Lup'+str(int(v_['1']))+','+str(i)]))
+            self.xlower = jtu.np_like_set(self.xlower, jnp.array([ix_['L'+str(i)+','+str(int(v_['2']))+','+str(int(v_['Lm']))]]), (                   v_['-k2']))
+            self.xupper = jtu.np_like_set(self.xupper, jnp.array([ix_['L'+str(i)+','+str(int(v_['2']))+','+str(int(v_['Lm']))]]), (                   v_['k2']))
         #%%%%%%%%%%%%%%%%%%% START POINT %%%%%%%%%%%%%%%%%%
         self.x0 = jnp.zeros((self.n,1))
         self.y0 = jnp.zeros((self.m,1))
@@ -312,10 +304,8 @@ class MRIBASIS:
             v_['dist2'] = v_['dx2']*v_['Rk']
             v_['strtv2'] = v_['xlo2']+v_['dist2']
             v_['k+'] = 1+k
-            self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X'+str(int(v_['1']))+','+str(int(v_['k+']))]]), ()
-                  float(v_['strtv1']))
-            self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X'+str(int(v_['2']))+','+str(int(v_['k+']))]]), ()
-                  float(v_['strtv2']))
+            self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X'+str(int(v_['1']))+','+str(int(v_['k+']))]]), (                   float(v_['strtv1'])))
+            self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X'+str(int(v_['2']))+','+str(int(v_['k+']))]]), (                   float(v_['strtv2'])))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -474,60 +464,48 @@ class MRIBASIS:
                 for k in range(int(v_['1']),int(v_['Lm-'])+1):
                     ig = ig_['c3con'+str(j)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['e1'+str(i)+','+str(int(v_['2']))+','+str(k)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['e1'+str(i)+','+str(int(v_['2']))+','+str(k)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
-                    self.grelw  = (
-                          jtu.loaset(self.grelw,ig,posel,float(v_['S'+str(int(v_['1']))+','+str(i)])))
+                    self.grelw  = (                           jtu.loaset(self.grelw,ig,posel,float(v_['S'+str(int(v_['1']))+','+str(i)])))
                 for k in range(int(v_['1']),int(v_['Lm-2'])+1):
                     ig = ig_['c3con'+str(j)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['e2'+str(i)+','+str(int(v_['2']))+','+str(k)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['e2'+str(i)+','+str(int(v_['2']))+','+str(k)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
-                    self.grelw  = (
-                          jtu.loaset(self.grelw,ig,posel,float(v_['S'+str(int(v_['1']))+','+str(i)])))
+                    self.grelw  = (                           jtu.loaset(self.grelw,ig,posel,float(v_['S'+str(int(v_['1']))+','+str(i)])))
         for i in range(int(v_['1']),int(v_['3'])+1):
             for k in range(int(v_['1']),int(v_['Lm-'])+1):
                 ig = ig_['c4const']
                 posel = len(self.grelt[ig])
-                self.grelt  = (
-                      jtu.loaset(self.grelt,ig,posel,ie_['e1'+str(i)+','+str(int(v_['2']))+','+str(k)]))
+                self.grelt  = (                       jtu.loaset(self.grelt,ig,posel,ie_['e1'+str(i)+','+str(int(v_['2']))+','+str(k)]))
                 nlc = jnp.union1d(nlc,jnp.array([ig]))
-                self.grelw  = (
-                      jtu.loaset(self.grelw,ig,posel,float(v_['S'+str(int(v_['2']))+','+str(i)])))
+                self.grelw  = (                       jtu.loaset(self.grelw,ig,posel,float(v_['S'+str(int(v_['2']))+','+str(i)])))
             for k in range(int(v_['1']),int(v_['Lm-2'])+1):
                 ig = ig_['c4const']
                 posel = len(self.grelt[ig])
-                self.grelt  = (
-                      jtu.loaset(self.grelt,ig,posel,ie_['e2'+str(i)+','+str(int(v_['2']))+','+str(k)]))
+                self.grelt  = (                       jtu.loaset(self.grelt,ig,posel,ie_['e2'+str(i)+','+str(int(v_['2']))+','+str(k)]))
                 nlc = jnp.union1d(nlc,jnp.array([ig]))
-                self.grelw  = (
-                      jtu.loaset(self.grelw,ig,posel,float(v_['S'+str(int(v_['2']))+','+str(i)])))
+                self.grelw  = (                       jtu.loaset(self.grelw,ig,posel,float(v_['S'+str(int(v_['2']))+','+str(i)])))
         for j in range(int(v_['1']),int(v_['3'])+1):
             for i in range(int(v_['1']),int(v_['3'])+1):
                 for k in range(int(v_['1']),int(v_['Lm-'])+1):
                     ig = ig_['c5con'+str(j)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['e1'+str(i)+','+str(int(v_['1']))+','+str(k)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['e1'+str(i)+','+str(int(v_['1']))+','+str(k)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-S'+str(j)+','+str(i)]))
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['e1'+str(i)+','+str(int(v_['2']))+','+str(k)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['e1'+str(i)+','+str(int(v_['2']))+','+str(k)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['S'+str(j)+','+str(i)]))
                 for k in range(int(v_['1']),int(v_['Lm-2'])+1):
                     ig = ig_['c5con'+str(j)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['e2'+str(i)+','+str(int(v_['1']))+','+str(k)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['e2'+str(i)+','+str(int(v_['1']))+','+str(k)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-S'+str(j)+','+str(i)]))
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['e2'+str(i)+','+str(int(v_['2']))+','+str(k)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['e2'+str(i)+','+str(int(v_['2']))+','+str(k)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['S'+str(j)+','+str(i)]))
         for j in range(int(v_['1']),int(v_['2'])+1):
@@ -535,35 +513,29 @@ class MRIBASIS:
                 for k in range(int(v_['1']),int(v_['Lm-'])+1):
                     ig = ig_['c6cn'+str(j)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['e3'+str(i)+','+str(int(v_['1']))+','+str(k)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['e3'+str(i)+','+str(int(v_['1']))+','+str(k)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['S'+str(j)+','+str(i)]))
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['e5'+str(i)+','+str(int(v_['1']))+','+str(k)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['e5'+str(i)+','+str(int(v_['1']))+','+str(k)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['S'+str(j)+','+str(i)]))
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['e3'+str(i)+','+str(int(v_['2']))+','+str(k)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['e3'+str(i)+','+str(int(v_['2']))+','+str(k)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-S'+str(j)+','+str(i)]))
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['e5'+str(i)+','+str(int(v_['2']))+','+str(k)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['e5'+str(i)+','+str(int(v_['2']))+','+str(k)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-S'+str(j)+','+str(i)]))
                 for k in range(int(v_['1']),int(v_['Lm-2'])+1):
                     ig = ig_['c6cn'+str(j)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['e4'+str(i)+','+str(int(v_['1']))+','+str(k)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['e4'+str(i)+','+str(int(v_['1']))+','+str(k)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['2S'+str(j)+','+str(i)]))
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['e4'+str(i)+','+str(int(v_['2']))+','+str(k)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['e4'+str(i)+','+str(int(v_['2']))+','+str(k)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-2S'+str(j)+','+str(i)]))
         #%%%%%%%%%%%%%%%%%% OBJECT BOUNDS %%%%%%%%%%%%%%%%%
@@ -580,8 +552,7 @@ class MRIBASIS:
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLOR2-MY-36-55"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -609,7 +580,7 @@ class MRIBASIS:
         IV_ = jtu.np_like_set(IV_, 1, U_[1:2,:].dot(EV_))
         f_   = 0.5e0*IV_[0]*IV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -646,7 +617,7 @@ class MRIBASIS:
         IV_ = jtu.np_like_set(IV_, 1, U_[1:2,:].dot(EV_))
         f_   = IV_[0]*IV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -675,29 +646,23 @@ class MRIBASIS:
         EV_  = args[0]
         iel_ = args[1]
         d14 = 0.25e0
-        f_    = (
-              EV_[0]*(EV_[1]-EV_[2])*((d14+self.elpar[iel_][0])*EV_[1]+(d14-self.elpar[iel_][0])*EV_[2]))
+        f_    = (               EV_[0]*(EV_[1]-EV_[2])*((d14+self.elpar[iel_][0])*EV_[1]+(d14-self.elpar[iel_][0])*EV_[2]))
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
             except:
                 dim = len(EV_)
             g_ = jnp.zeros(dim)
-            g_ = jtu.np_like_set(g_, 0, ()
-                  (EV_[1]-EV_[2])*((d14+self.elpar[iel_][0])*EV_[1]+(d14-self.elpar[iel_][0])*EV_[2]))
-            g_ = jtu.np_like_set(g_, 1, ()
-                  EV_[0]*2.0e0*(EV_[1]*(d14+self.elpar[iel_][0])-self.elpar[iel_][0]*EV_[2]))
-            g_ = jtu.np_like_set(g_, 2, ()
-                  EV_[0]*2.0e0*(-EV_[2]*(d14-self.elpar[iel_][0])-self.elpar[iel_][0]*EV_[1]))
+            g_ = jtu.np_like_set(g_, 0, (                   (EV_[1]-EV_[2])*((d14+self.elpar[iel_][0])*EV_[1]+(d14-self.elpar[iel_][0])*EV_[2])))
+            g_ = jtu.np_like_set(g_, 1, (                   EV_[0]*2.0e0*(EV_[1]*(d14+self.elpar[iel_][0])-self.elpar[iel_][0]*EV_[2])))
+            g_ = jtu.np_like_set(g_, 2, (                   EV_[0]*2.0e0*(-EV_[2]*(d14-self.elpar[iel_][0])-self.elpar[iel_][0]*EV_[1])))
             if nargout>2:
                 H_ = jnp.zeros((3,3))
-                H_ = jtu.np_like_set(H_, jnp.array([0,1]), ()
-                      2.0e0*(EV_[1]*(d14+self.elpar[iel_][0])-self.elpar[iel_][0]*EV_[2]))
+                H_ = jtu.np_like_set(H_, jnp.array([0,1]), (                       2.0e0*(EV_[1]*(d14+self.elpar[iel_][0])-self.elpar[iel_][0]*EV_[2])))
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
-                H_ = jtu.np_like_set(H_, jnp.array([0,2]), ()
-                      2.0e0*(-EV_[2]*(d14-self.elpar[iel_][0])-self.elpar[iel_][0]*EV_[1]))
+                H_ = jtu.np_like_set(H_, jnp.array([0,2]), (                       2.0e0*(-EV_[2]*(d14-self.elpar[iel_][0])-self.elpar[iel_][0]*EV_[1])))
                 H_ = jtu.np_like_set(H_, jnp.array([2,0]), H_[0,2])
                 H_ = jtu.np_like_set(H_, jnp.array([1,1]), EV_[0]*2.0e0*(d14+self.elpar[iel_][0]))
                 H_ = jtu.np_like_set(H_, jnp.array([1,2]), -EV_[0]*2.0e0*self.elpar[iel_][0])
@@ -718,7 +683,7 @@ class MRIBASIS:
         iel_ = args[1]
         f_   = -EV_[1]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

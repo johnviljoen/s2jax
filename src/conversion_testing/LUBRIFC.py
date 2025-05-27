@@ -250,8 +250,7 @@ class LUBRIFC:
             if('P'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['P'+str(I)], float(v_['PI0']))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P'+str(I)]),float(v_['PI0'])))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P'+str(I)]),float(v_['PI0'])))
         v_['4NN+2'] = 2+v_['4NN']
         v_['8NN'] = 8*v_['NN']
         for I in range(int(v_['4NN+2']),int(v_['8NN'])+1,int(v_['2'])):
@@ -265,15 +264,13 @@ class LUBRIFC:
             if('P'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['P'+str(I)], float(v_['PI0']))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P'+str(I)]),float(v_['PI0'])))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P'+str(I)]),float(v_['PI0'])))
         v_['8NN+2'] = 2+v_['8NN']
         for I in range(int(v_['8NN+2']),int(v_['2N'])+1,int(v_['2'])):
             if('P'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['P'+str(I)], float(0.0))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P'+str(I)]),float(0.0)))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P'+str(I)]),float(0.0)))
         for J in range(int(v_['1']),int(v_['2N-1'])+1,int(v_['2'])):
             v_['RJ'] = float(J)
             v_['JDX'] = v_['RJ']*v_['DX/2']
@@ -282,8 +279,7 @@ class LUBRIFC:
             if('H'+str(J) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['H'+str(J)], float(v_['XJSQ']))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['H'+str(J)]),float(v_['XJSQ'])))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['H'+str(J)]),float(v_['XJSQ'])))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -374,8 +370,7 @@ class LUBRIFC:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CQOR2-MN-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -395,7 +390,7 @@ class LUBRIFC:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -431,7 +426,7 @@ class LUBRIFC:
         HCB = HSQ*EV_[2]
         f_   = PAMPB*HCB*E
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

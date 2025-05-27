@@ -210,7 +210,7 @@ class RAT43LS:
         V42EP3 = EP14P1*EV_[3]**3
         f_   = EV_[0]/EP14
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

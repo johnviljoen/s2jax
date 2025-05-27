@@ -601,11 +601,9 @@ class YORKNET:
         self.gconst = jnp.zeros((ngrp,1))
         for I in range(int(v_['ONE']),int(v_['NSTEP'])+1):
             for J in range(int(v_['ONE']),int(v_['NND'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['ND'+str(J)+','+str(I)],float(v_['D'+str(J)])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['ND'+str(J)+','+str(I)],float(v_['D'+str(J)])))
         for J in range(int(v_['SuRES']),int(v_['EuRES'])+1):
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['RD'+str(J)+','+str(int(v_['1']))],float(v_['MSTVOL'+str(J)])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['RD'+str(J)+','+str(int(v_['1']))],float(v_['MSTVOL'+str(J)])))
         #%%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.zeros((self.n,1))
         self.xupper = jnp.full((self.n,1),float('inf'))
@@ -851,20 +849,17 @@ class YORKNET:
         for J in range(int(v_['SuPMP']),int(v_['EuPMP'])+1):
             ig = ig_['PC'+str(J)+','+str(int(v_['2']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['PPW'+str(J)+','+str(int(v_['2']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['PPW'+str(J)+','+str(int(v_['2']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(100.0))
             ig = ig_['PC'+str(J)+','+str(int(v_['3']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['PPW'+str(J)+','+str(int(v_['3']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['PPW'+str(J)+','+str(int(v_['3']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(100.0))
             ig = ig_['PC'+str(J)+','+str(int(v_['4']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['PPW'+str(J)+','+str(int(v_['4']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['PPW'+str(J)+','+str(int(v_['4']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(100.0))
         #%%%%%%%% BUILD THE SPARSE MATRICES %%%%%%%%%%%%%%%
@@ -876,8 +871,7 @@ class YORKNET:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CSOR2-AY-312-256"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -893,7 +887,7 @@ class YORKNET:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -919,7 +913,7 @@ class YORKNET:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -954,7 +948,7 @@ class YORKNET:
         IV_ = jtu.np_like_set(IV_, 1, U_[1:2,:].dot(EV_))
         f_   = IV_[0]*IV_[1]**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -992,7 +986,7 @@ class YORKNET:
             SGN = +1.0
         f_   = SGN*MODX**1.852
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1018,7 +1012,7 @@ class YORKNET:
         iel_ = args[1]
         f_   = 0.074*EV_[0]*EV_[0]+3.062*EV_[0]+50.357
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1044,7 +1038,7 @@ class YORKNET:
         iel_ = args[1]
         f_   = 0.747*EV_[0]*EV_[0]-10.287*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1070,7 +1064,7 @@ class YORKNET:
         iel_ = args[1]
         f_   = 0.034*EV_[0]*EV_[0]+0.220*EV_[0]+6.685
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1096,7 +1090,7 @@ class YORKNET:
         iel_ = args[1]
         f_   = 0.079*EV_[0]*EV_[0]-2.761*EV_[0]+35.014
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

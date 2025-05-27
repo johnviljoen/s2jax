@@ -168,7 +168,7 @@ class HELIX:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,0.15915494)
         return pbm
 
@@ -186,7 +186,7 @@ class HELIX:
         HD = 2.0*T4*EV_[0]*EV_[1]
         f_   = self.efpar[0]*jnp.arctan2(EV_[1],EV_[0])
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -221,7 +221,7 @@ class HELIX:
         R2SQT = R2*SQT
         f_   = SQT
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

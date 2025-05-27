@@ -157,12 +157,9 @@ class ORTHREGF:
         self.gconst = jnp.zeros((ngrp,1))
         for I in range(int(v_['1']),int(v_['NPTS'])+1):
             for J in range(int(v_['1']),int(v_['NPTS'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['OX'+str(I)+','+str(J)],float(v_['XD'+str(I)+','+str(J)])))
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['OY'+str(I)+','+str(J)],float(v_['YD'+str(I)+','+str(J)])))
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['OZ'+str(I)+','+str(J)],float(v_['ZD'+str(I)+','+str(J)])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['OX'+str(I)+','+str(J)],float(v_['XD'+str(I)+','+str(J)])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['OY'+str(I)+','+str(J)],float(v_['YD'+str(I)+','+str(J)])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['OZ'+str(I)+','+str(J)],float(v_['ZD'+str(I)+','+str(J)])))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-float('Inf'))
         self.xupper = jnp.full((self.n,1),+float('Inf'))
@@ -174,45 +171,37 @@ class ORTHREGF:
         if('P1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P1'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P1']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P1']),float(1.0)))
         if('P2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P2'], float(0.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P2']),float(0.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P2']),float(0.0)))
         if('P3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P3'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P3']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P3']),float(1.0)))
         if('P4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P4'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P4']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P4']),float(1.0)))
         if('P5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P5'], float(0.5))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P5']),float(0.5)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P5']),float(0.5)))
         for I in range(int(v_['1']),int(v_['NPTS'])+1):
             for J in range(int(v_['1']),int(v_['NPTS'])+1):
                 if('X'+str(I)+','+str(J) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X'+str(I)+','+str(J)]]), float(v_['XD'+str(I)+','+str(J)]))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)+','+str(J)]),float(v_['XD'+str(I)+','+str(J)])))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)+','+str(J)]),float(v_['XD'+str(I)+','+str(J)])))
                 if('Y'+str(I)+','+str(J) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['Y'+str(I)+','+str(J)]]), float(v_['YD'+str(I)+','+str(J)]))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Y'+str(I)+','+str(J)]),float(v_['YD'+str(I)+','+str(J)])))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Y'+str(I)+','+str(J)]),float(v_['YD'+str(I)+','+str(J)])))
                 if('Z'+str(I)+','+str(J) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['Z'+str(I)+','+str(J)]]), float(v_['ZD'+str(I)+','+str(J)]))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Z'+str(I)+','+str(J)]),float(v_['ZD'+str(I)+','+str(J)])))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Z'+str(I)+','+str(J)]),float(v_['ZD'+str(I)+','+str(J)])))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -325,8 +314,7 @@ class ORTHREGF:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CQOR2-AY-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -381,7 +369,7 @@ class ORTHREGF:
         SPS = SS+SS
         f_   = SS*SS
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -424,7 +412,7 @@ class ORTHREGF:
         IV_ = jtu.np_like_set(IV_, 0, U_[0:1,:].dot(EV_))
         f_   = IV_[0]*IV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -452,7 +440,7 @@ class ORTHREGF:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -113,28 +113,23 @@ class DEVGLA2NE:
         if('X1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X1'], float(20.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(20.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(20.0)))
         if('X2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X2'], float(2.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X2']),float(2.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X2']),float(2.0)))
         if('X3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X3'], float(2.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3']),float(2.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3']),float(2.0)))
         if('X4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X4'], float(2.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X4']),float(2.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X4']),float(2.0)))
         if('X5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X5'], float(0.2))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5']),float(0.2)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5']),float(0.2)))
         pass
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
@@ -205,8 +200,7 @@ class DEVGLA2NE:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-MN-5-16"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -227,8 +221,7 @@ class DEVGLA2NE:
         X2T = EV_[1]**self.elpar[iel_][0]
         F2 = X2T
         F2X2 = self.elpar[iel_][0]*EV_[1]**(self.elpar[iel_][0]-1.0e0)
-        F2X2X2  = (
-              self.elpar[iel_][0]*(self.elpar[iel_][0]-1.0e0)*EV_[1]**(self.elpar[iel_][0]-2.0e0))
+        F2X2X2  = (               self.elpar[iel_][0]*(self.elpar[iel_][0]-1.0e0)*EV_[1]**(self.elpar[iel_][0]-2.0e0))
         X3T = EV_[2]*self.elpar[iel_][0]
         X4T = EV_[3]*self.elpar[iel_][0]
         SINX4T = jnp.sin(X4T)
@@ -255,7 +248,7 @@ class DEVGLA2NE:
         F4X5X5 = -STEX5*TEX5-CTEX5*TEX5*TEX5
         f_   = EV_[0]*F2*F3*F4
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

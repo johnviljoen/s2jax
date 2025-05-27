@@ -196,7 +196,7 @@ class MGH09LS:
         V1XT = V1X*T
         f_   = V1T/B
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

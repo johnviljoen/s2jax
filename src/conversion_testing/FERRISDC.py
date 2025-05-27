@@ -188,8 +188,7 @@ class FERRISDC:
             v_['arg'] = -2.5*v_['arg']
             v_['P'+str(j)+','+str(int(v_['3']))] = jnp.exp(v_['arg'])
             v_['arg'] = v_['1']-v_['P'+str(j)+','+str(int(v_['1']))]
-            v_['P'+str(j)+','+str(int(v_['2']))] = (v_['arg']-v_['P'+str(j)+','+
-                 str(int(v_['3']))])
+            v_['P'+str(j)+','+str(int(v_['2']))] = (v_['arg']-v_['P'+str(j)+','+                  str(int(v_['3']))])
         for j in range(int(v_['1']),int(v_['n'])+1):
             v_['a'] = v_['P'+str(j)+','+str(int(v_['1']))]-v_['R'+str(j)]
             v_['a'] = -1.0*v_['a']

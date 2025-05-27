@@ -1213,8 +1213,7 @@ class LAUNCH:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nge), grange[gegrps])
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COOR2-MY-25-28"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -1235,7 +1234,7 @@ class LAUNCH:
         LG = jnp.log(EV_[3])
         f_   = (EV_[0]*EV_[1]*LG)/EV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1297,7 +1296,7 @@ class LAUNCH:
         VE2 = EE*(EE-1.0)*EV_[4]**(EE-2.0)
         f_   = VA0*VB0*VC0*VD0*VE0
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1367,7 +1366,7 @@ class LAUNCH:
         VD2 = ED*(ED-1.0)*EV_[3]**(ED-2.0)
         f_   = VA0*VB0*VC0*VD0
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1412,7 +1411,7 @@ class LAUNCH:
         SCPWR = self.elpar[iel_][0]/(self.elpar[iel_][1]**self.elpar[iel_][0])
         f_   = (EV_[0]/self.elpar[iel_][1])**self.elpar[iel_][0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1450,7 +1449,7 @@ class LAUNCH:
         IV_ = jtu.np_like_set(IV_, 1, U_[1:2,:].dot(EV_))
         f_   = IV_[0]*IV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1490,7 +1489,7 @@ class LAUNCH:
         IV_ = jtu.np_like_set(IV_, 1, U_[1:2,:].dot(EV_))
         f_   = IV_[0]*IV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1528,7 +1527,7 @@ class LAUNCH:
         IV_ = jtu.np_like_set(IV_, 1, U_[1:2,:].dot(EV_))
         f_   = IV_[0]*IV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1558,7 +1557,7 @@ class LAUNCH:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

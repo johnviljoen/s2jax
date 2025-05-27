@@ -11,7 +11,68 @@ def load_problem_file(file_path):
     with open(file_path, 'r') as file:
         return file.read()
 
+import io, tokenize
 
+import io, tokenize
+from typing import List
+
+
+def collapse_multiline(src: str) -> str:
+    """
+    Replace *physical* new‑lines that appear inside unmatched
+    (), [], {} with a single space, preserving all other spacing.
+    """
+
+    lines: List[str] = src.splitlines(keepends=True)   # raw source lines
+
+    def safe_slice(line_no: int, col: int = 0):
+        """Return an empty string if line_no is past EOF."""
+        if line_no < 1 or line_no > len(lines):
+            return ''
+        line = lines[line_no - 1]
+        return line[col:]
+
+    out: List[str] = []
+    depth = 0
+    prev_end = (1, 0)
+
+    for tok_type, tok_str, start, end, _ in tokenize.generate_tokens(
+            io.StringIO(src).readline):
+
+        (srow, scol), (erow, ecol) = start, end
+
+        # ── copy the *raw* text between the previous token and this one ──
+        if (srow, scol) > prev_end:
+            if prev_end[0] == srow:                     # same line
+                out.append(safe_slice(srow, prev_end[1])[:scol - prev_end[1]])
+            else:                                       # spans ≥ 2 lines
+                out.append(safe_slice(prev_end[0], prev_end[1:][0]))
+                for ln in range(prev_end[0] + 1, min(srow, len(lines) + 1)):
+                    out.append(lines[ln - 1])
+                if srow <= len(lines):
+                    out.append(lines[srow - 1][:scol])
+
+        # ── handle the current token itself ──
+        if tok_type in (tokenize.NEWLINE, tokenize.NL):
+            if depth > 0:
+                out.append(' ')            # collapse newline inside (...)
+            else:
+                out.append(tok_str)        # keep real line break
+        else:
+            out.append(tok_str)
+            if tok_type == tokenize.OP:
+                if tok_str in '([{':
+                    depth += 1
+                elif tok_str in ')]}':
+                    depth -= 1
+
+        prev_end = end                     # advance cursor
+
+    # copy any tail text that precedes the ENDMARK (if any)
+    if prev_end[0] <= len(lines):
+        out.append(safe_slice(prev_end[0], prev_end[1]))
+
+    return ''.join(out)
 
 def convert_file(code):
 
@@ -34,10 +95,6 @@ def convert_file(code):
     code = re.sub(r'\bs2mpj_nlx\b', 'jtu.s2mpj_nlx', code)
 
     # change import from s2mpjlib import * to from s2jax import *
-    # test = """
-
-    # from s2mpjlib import *
-    # """
     pattern = re.compile(r"^\s*from\s+s2mpjlib\s+import\s+\*\s*$", re.M)
     code = pattern.sub("from s2jax.utils import *", code, count=1)  # only first match
 
@@ -76,8 +133,13 @@ def convert_file(code):
     # )
     # code = pattern.sub(replacement, code)
 
+    # destroy end of line semicolons
+    code = re.sub(r';\s*$', '', code, flags=re.MULTILINE)
 
-    # ---------------------------------------------------------------------
+    # multi-lines caused a lot of problems, so we are destroying them before other adjustments
+    code = collapse_multiline(code)
+
+    # change variable[index] = value -> variable = jtu.np_like_set(arr, idx, val)
     # shared helper ─ add jnp.array[...] when the index contains a comma
     def _fix_idx(idx: str) -> str:
         idx = idx.strip()
@@ -85,8 +147,7 @@ def convert_file(code):
             return f"jnp.array([{idx}])"
         return idx
 
-    # ---------------------------------------------------------------------
-    # PASS 1 :  x[idx] = rhs  ->  np_like_set(...)
+    # x[idx] = rhs  ->  np_like_set(...)
     pattern1 = re.compile(
         r"""
         ^(?P<indent>[ \t]*)          # indentation
@@ -107,34 +168,8 @@ def convert_file(code):
         rhs    = m.group('rhs').strip()
         return f"{indent}{var} = jtu.np_like_set({var}, {idx}, {rhs})"
 
-    # ---------------------------------------------------------------------
-    # PASS 2 :  x = x.at[idx].set(rhs)  ->  np_like_set(...)
-    pattern2 = re.compile(
-        r"""
-        ^(?P<indent>[ \t]*)          # indentation
-        (?P<var>[^\s=]+)             # left‑hand variable
-        \s*=\s*
-        (?P=var)                     # same variable before .at
-        \.at\[
-            (?P<idx>.*?)             # index expression
-        \]\.set\(
-            (?P<rhs>.+?)             # right‑hand side
-        \)\s*$                       # EOL
-        """,
-        re.VERBOSE | re.MULTILINE,
-    )
-
-    def repl2(m):
-        indent = m.group('indent')
-        var    = m.group('var')
-        idx    = _fix_idx(m.group('idx'))
-        rhs    = m.group('rhs').strip()
-        return f"{indent}{var} = jtu.np_like_set({var}, {idx}, {rhs})"
-
-    # ---------------------------------------------------------------------
     # apply both passes to a source string `code`
     code = pattern1.sub(repl1, code)   # first: slice assignment lines
-    code = pattern2.sub(repl2, code)   # second: .at[...].set(...) lines
 
     # turn  csr_matrix((val,(ir,ic)),shape=(…))  →  BCSR.from_bcoo(BCOO((val,jnp.array((ir,ic)).T),shape=(…)))
     csr_pat = re.compile(r"""
@@ -159,20 +194,16 @@ def convert_file(code):
 
     return code
 
+def convert_file_for_reference(code):
+    code = re.sub(
+        r'^(\s*)from\s+s2mpjlib\s+import\s+\*\s*$',
+        r'\1from s2jax.reference import *',
+        code, flags=re.M,
+    )
+    return code
 
 
-if __name__ == "__main__":
-
-    # file = "/home/john/Documents/s2jax/src/python_problems_old/ACOPP14.py"
-    # code = load_problem_file(file)
-
-    # # write this to a new file
-    # output_file = "/home/john/Documents/s2jax/src/python_problems/test_ACOPP14_jax.py"
-    # with open(output_file, 'w') as file:
-    #     file.write(code)
-
-    from tqdm import tqdm
-
+def execute_conversion():
     problem_dir = "/home/john/Documents/s2jax/src/python_problems_old"
     output_dir = "/home/john/Documents/s2jax/src/conversion_testing"
     for filename in tqdm(os.listdir(problem_dir)):
@@ -185,3 +216,25 @@ if __name__ == "__main__":
             output_file = os.path.join(output_dir, f"{filename}")
             with open(output_file, 'w') as file:
                 file.write(code)
+
+def execute_conversion_for_reference():
+    problem_dir = "/home/john/Documents/s2jax/src/python_problems_old"
+    output_dir = "/home/john/Documents/s2jax/src/python_problems_for_reference"
+    for filename in tqdm(os.listdir(problem_dir)):
+        if filename.endswith(".py"):
+            file_path = os.path.join(problem_dir, filename)
+            code = load_problem_file(file_path)
+            code = convert_file_for_reference(code)
+
+            # write the converted code to a new file
+            output_file = os.path.join(output_dir, f"{filename}")
+            with open(output_file, 'w') as file:
+                file.write(code)
+
+if __name__ == "__main__":
+
+    from tqdm import tqdm
+
+    # execute_conversion_for_reference()
+
+    execute_conversion()

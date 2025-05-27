@@ -254,7 +254,7 @@ class DECONVB:
             SCAL = 1.0
         f_   = SCAL*EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

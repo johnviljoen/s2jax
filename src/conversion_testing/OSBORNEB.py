@@ -298,7 +298,7 @@ class OSBORNEB:
         FVAL = EV_[0]*EXPA
         f_   = FVAL
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -332,7 +332,7 @@ class OSBORNEB:
         A = 2.0*TMV2*EV_[2]
         f_   = FVAL
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

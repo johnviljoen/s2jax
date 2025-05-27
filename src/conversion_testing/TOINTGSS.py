@@ -178,7 +178,7 @@ class TOINTGSS:
         TMEXPA = 2.0-EXPA
         f_   = AU2SQ*TMEXPA
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

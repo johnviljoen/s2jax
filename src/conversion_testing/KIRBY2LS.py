@@ -479,7 +479,7 @@ class KIRBY2LS:
         B3 = B*B2
         f_   = T/B
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -1,6 +1,4 @@
-# from s2mpjlib import *
-from s2jaxlib import *
-
+from s2mpjlib import *
 class  ACOPP14(CUTEst_problem):
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

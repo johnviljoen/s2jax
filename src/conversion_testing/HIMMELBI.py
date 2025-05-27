@@ -292,26 +292,19 @@ class HIMMELBI:
         for J in range(int(v_['1']),int(v_['NT'])+1):
             self.gconst = jtu.arrset(self.gconst,ig_['P'+str(J)],float(1.0))
         v_['J'] = 1
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['CB'+str(int(v_['J']))],float(v_['B'+str(int(v_['J']))])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['CB'+str(int(v_['J']))],float(v_['B'+str(int(v_['J']))])))
         v_['J'] = 6
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['CB'+str(int(v_['J']))],float(v_['B'+str(int(v_['J']))])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['CB'+str(int(v_['J']))],float(v_['B'+str(int(v_['J']))])))
         v_['J'] = 10
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['CB'+str(int(v_['J']))],float(v_['B'+str(int(v_['J']))])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['CB'+str(int(v_['J']))],float(v_['B'+str(int(v_['J']))])))
         v_['J'] = 14
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['CB'+str(int(v_['J']))],float(v_['B'+str(int(v_['J']))])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['CB'+str(int(v_['J']))],float(v_['B'+str(int(v_['J']))])))
         v_['J'] = 15
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['CB'+str(int(v_['J']))],float(v_['B'+str(int(v_['J']))])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['CB'+str(int(v_['J']))],float(v_['B'+str(int(v_['J']))])))
         v_['J'] = 16
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['CB'+str(int(v_['J']))],float(v_['B'+str(int(v_['J']))])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['CB'+str(int(v_['J']))],float(v_['B'+str(int(v_['J']))])))
         v_['J'] = 20
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['CB'+str(int(v_['J']))],float(v_['B'+str(int(v_['J']))])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['CB'+str(int(v_['J']))],float(v_['B'+str(int(v_['J']))])))
         for I in range(int(v_['1']),int(v_['5'])+1):
             self.gconst = jtu.arrset(self.gconst,ig_['CC'+str(I)],float(v_['C'+str(I)]))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
@@ -365,20 +358,15 @@ class HIMMELBI:
             posev = jnp.where(elftv[ielftype[ie]]=='Y5')[0]
             self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
             posep = jnp.where(elftp[ielftype[ie]]=='A1')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(int(v_['1']))+','+str(J)])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(int(v_['1']))+','+str(J)])))
             posep = jnp.where(elftp[ielftype[ie]]=='A2')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(int(v_['2']))+','+str(J)])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(int(v_['2']))+','+str(J)])))
             posep = jnp.where(elftp[ielftype[ie]]=='A3')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(int(v_['3']))+','+str(J)])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(int(v_['3']))+','+str(J)])))
             posep = jnp.where(elftp[ielftype[ie]]=='A4')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(int(v_['4']))+','+str(J)])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(int(v_['4']))+','+str(J)])))
             posep = jnp.where(elftp[ielftype[ie]]=='A5')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(int(v_['5']))+','+str(J)])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(int(v_['5']))+','+str(J)])))
         #%%%%%%%%%%%%%%%%%%% GROUP USES %%%%%%%%%%%%%%%%%%%
         self.grelt   = []
         for ig in jnp.arange(0,ngrp):
@@ -404,8 +392,7 @@ class HIMMELBI:
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nle), jnp.zeros((self.nle,1)))
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COLR2-MN-100-12"
         self.x0        = jnp.zeros((self.n,1))
         self.objderlvl = 2
@@ -429,11 +416,10 @@ class HIMMELBI:
         LA3 = jnp.log(self.elpar[iel_][2])
         LA4 = jnp.log(self.elpar[iel_][3])
         LA5 = jnp.log(self.elpar[iel_][4])
-        FF  = (
-              self.elpar[iel_][0]**EV_[0]*self.elpar[iel_][1]**EV_[1]*self.elpar[iel_][2]**EV_[2]*self.elpar[iel_][3]**EV_[3]*self.elpar[iel_][4]**EV_[4])
+        FF  = (               self.elpar[iel_][0]**EV_[0]*self.elpar[iel_][1]**EV_[1]*self.elpar[iel_][2]**EV_[2]*self.elpar[iel_][3]**EV_[3]*self.elpar[iel_][4]**EV_[4])
         f_   = FF
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

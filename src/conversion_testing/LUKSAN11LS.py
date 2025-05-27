@@ -162,7 +162,7 @@ class LUKSAN11LS:
         D = 1.0e0+EV_[0]*EV_[0]
         f_   = 2.0e1*EV_[0]/D
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -472,7 +472,7 @@ class BENNETT5LS:
         V2PXP2 = V2PX**(V3INV+2.0)
         f_   = EV_[0]/V2PXP
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -491,8 +491,7 @@ class BENNETT5LS:
                 H_ = jtu.np_like_set(H_, jnp.array([1,1]), EV_[0]*(1.0/EV_[2]+1.0)/(EV_[2]*V2PXP2))
                 H_ = jtu.np_like_set(H_, jnp.array([1,2]), EV_[0]/(V2PX*V2PXP*EV_[2]**2)-EV_[0]*V2PXL/(V2PXP1*EV_[2]**3))
                 H_ = jtu.np_like_set(H_, jnp.array([2,1]), H_[1,2])
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), ()
-                      EV_[0]*V2PXL**2/(V2PXP*EV_[2]**4)-2.0*EV_[0]*V2PXL/(V2PXP*EV_[2]**3))
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (                       EV_[0]*V2PXL**2/(V2PXP*EV_[2]**4)-2.0*EV_[0]*V2PXL/(V2PXP*EV_[2]**3)))
         if nargout == 1:
             return f_
         elif nargout == 2:

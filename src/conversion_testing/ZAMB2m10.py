@@ -1589,13 +1589,10 @@ class ZAMB2m10:
             v_['kk'] = -1930+v_['YEAR']
             v_['kk'] = 12*v_['kk']
             v_['kk'] = v_['kk']+k
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['SE1'+str(k)],float(v_['IN1'+str(int(v_['kk']))])))
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['SE2'+str(k)],float(v_['IN2'+str(int(v_['kk']))])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['SE1'+str(k)],float(v_['IN1'+str(int(v_['kk']))])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['SE2'+str(k)],float(v_['IN2'+str(int(v_['kk']))])))
             self.gconst = jtu.arrset(self.gconst,ig_['SE3'+str(k)],float(v_['IN3']))
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['SE4'+str(k)],float(v_['IN4'+str(int(v_['kk']))])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['SE4'+str(k)],float(v_['IN4'+str(int(v_['kk']))])))
         for k in range(int(v_['0']),int(v_['N-1'])+1):
             self.gconst = jtu.arrset(self.gconst,ig_['F0Q1'+str(k)],float(v_['Q1REF']))
             self.gconst = jtu.arrset(self.gconst,ig_['F0F2'+str(k)],float(v_['F2REF']))
@@ -1986,8 +1983,7 @@ class ZAMB2m10:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COOR2-RN-270-96"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -2005,10 +2001,9 @@ class ZAMB2m10:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        f_   = (self.elpar[iel_][0]*EV_[0]*EV_[0]+self.elpar[iel_][1]*EV_[0]+
-             self.elpar[iel_][2])
+        f_   = (self.elpar[iel_][0]*EV_[0]*EV_[0]+self.elpar[iel_][1]*EV_[0]+              self.elpar[iel_][2])
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -2032,10 +2027,9 @@ class ZAMB2m10:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        f_   = (self.elpar[iel_][0]*EV_[0]*EV_[0]+self.elpar[iel_][1]*EV_[0]+
-             self.elpar[iel_][2])
+        f_   = (self.elpar[iel_][0]*EV_[0]*EV_[0]+self.elpar[iel_][1]*EV_[0]+              self.elpar[iel_][2])
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -2059,11 +2053,10 @@ class ZAMB2m10:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        TTT = (self.elpar[iel_][0]*EV_[1]*EV_[1]+self.elpar[iel_][1]*EV_[1]+
-             self.elpar[iel_][2]+self.elpar[iel_][0]*EV_[2]*EV_[2]+self.elpar[iel_][1]*EV_[2]+self.elpar[iel_][2])
+        TTT = (self.elpar[iel_][0]*EV_[1]*EV_[1]+self.elpar[iel_][1]*EV_[1]+              self.elpar[iel_][2]+self.elpar[iel_][0]*EV_[2]*EV_[2]+self.elpar[iel_][1]*EV_[2]+self.elpar[iel_][2])
         f_   = EV_[0]*TTT
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

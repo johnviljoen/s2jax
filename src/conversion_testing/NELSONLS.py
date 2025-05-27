@@ -550,7 +550,7 @@ class NELSONLS:
         V1X1E = EV_[0]*self.elpar[iel_][0]*E
         f_   = V1X1E
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

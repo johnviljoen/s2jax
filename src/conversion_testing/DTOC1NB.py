@@ -294,8 +294,7 @@ class DTOC1NB:
                 posev = jnp.where(elftv[ielftype[ie]]=='X')[0]
                 self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
                 posep = jnp.where(elftp[ielftype[ie]]=='MUC')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['C'+str(int(v_['I']))+','+str(int(v_['J']))])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['C'+str(int(v_['I']))+','+str(int(v_['J']))])))
         #%%%%%%%%%%%%%%%%%%%%% GRFTYPE %%%%%%%%%%%%%%%%%%%%
         igt_ = {}
         [it,igt_,_] = jtu.s2mpj_ii('gL4',igt_)
@@ -341,8 +340,7 @@ class DTOC1NB:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COQR2-AN-V-V"
         self.x0        = jnp.zeros((self.n,1))
         self.objderlvl = 2
@@ -363,7 +361,7 @@ class DTOC1NB:
         iel_ = args[1]
         f_   = self.elpar[iel_][0]*EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

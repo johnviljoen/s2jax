@@ -209,7 +209,7 @@ class ROSZMAN1LS:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,4.0*jnp.arctan(1.0e0))
         return pbm
 
@@ -229,7 +229,7 @@ class ROSZMAN1LS:
         PIR2 = PIR*R
         f_   = -jnp.arctan(EV_[0]/V2MX)/self.efpar[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -448,48 +448,39 @@ class ENSO:
         if('B1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B1'], float(11.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B1']),float(11.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B1']),float(11.0)))
         if('B2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B2'], float(3.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B2']),float(3.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B2']),float(3.0)))
         if('B3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B3'], float(0.5))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B3']),float(0.5)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B3']),float(0.5)))
         if('B4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B4'], float(40.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B4']),float(40.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B4']),float(40.0)))
         if('B5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B5'], float(-0.7))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B5']),float(-0.7)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B5']),float(-0.7)))
         if('B6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B6'], float(-1.3))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B6']),float(-1.3)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B6']),float(-1.3)))
         if('B7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B7'], float(25.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B7']),float(25.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B7']),float(25.0)))
         if('B8' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B8'], float(-0.3))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B8']),float(-0.3)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B8']),float(-0.3)))
         if('B9' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B9'], float(1.4))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B9']),float(1.4)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B9']),float(1.4)))
         pass
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
@@ -605,8 +596,7 @@ class ENSO:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-MN-9-168"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -622,7 +612,7 @@ class ENSO:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,8.0*jnp.arctan(1.0e0))
         return pbm
 
@@ -642,7 +632,7 @@ class ENSO:
         TPIXS = TPIX*S
         f_   = EV_[1]*C
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -653,8 +643,7 @@ class ENSO:
             g_ = jtu.np_like_set(g_, 1, C)
             if nargout>2:
                 H_ = jnp.zeros((2,2))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (-self.efpar[0]*self.efpar[0]*EV_[1]*C*self.elpar[iel_][0]**2/)
-                     V14-2.0*TPIX*EV_[1]*S/V13)
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (-self.efpar[0]*self.efpar[0]*EV_[1]*C*self.elpar[iel_][0]**2/                      V14-2.0*TPIX*EV_[1]*S/V13))
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), TPIXS/V12)
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
         if nargout == 1:
@@ -680,7 +669,7 @@ class ENSO:
         TPIXC = TPIX*C
         f_   = EV_[1]*S
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -691,8 +680,7 @@ class ENSO:
             g_ = jtu.np_like_set(g_, 1, S)
             if nargout>2:
                 H_ = jnp.zeros((2,2))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), ()
-                      2.0*TPIX*EV_[1]*C/V13-self.efpar[0]*self.efpar[0]*EV_[1]*S*self.elpar[iel_][0]**2/V14)
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (                       2.0*TPIX*EV_[1]*C/V13-self.efpar[0]*self.efpar[0]*EV_[1]*S*self.elpar[iel_][0]**2/V14))
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), -TPIXC/V12)
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
         if nargout == 1:

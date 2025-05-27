@@ -94,8 +94,7 @@ class TRUSPYR2:
             for I in range(int(v_['1']),int(v_['NDIM'])+1):
                 v_['RG'+str(I)+','+str(J)] = v_['GAMMA'+str(J)]*v_['R'+str(I)+','+str(J)]
                 for K in range(int(v_['1']),int(v_['NDIM'])+1):
-                    v_['RR'+str(I)+','+str(J)+','+str(K)] = (v_['RG'+str(I)+','+str(J)]*v_['R'+
-                         str(K)+','+str(J)])
+                    v_['RR'+str(I)+','+str(J)+','+str(K)] = (v_['RG'+str(I)+','+str(J)]*v_['R'+                          str(K)+','+str(J)])
         #%%%%%%%%%%%%%%%%%%%  VARIABLES %%%%%%%%%%%%%%%%%%%%
         self.xnames = jnp.array([])
         self.xscale = jnp.array([])
@@ -153,8 +152,7 @@ class TRUSPYR2:
         for K in range(int(v_['1']),int(v_['NDIM'])+1):
             self.gconst = jtu.arrset(self.gconst,ig_['EQUIL'+str(K)],float(v_['P'+str(K)]))
         for J in range(int(v_['1']),int(v_['NBAR'])+1):
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['STRES'+str(J)],float(v_['STRUP'+str(J)])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['STRES'+str(J)],float(v_['STRUP'+str(J)])))
         #%%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.zeros((self.n,1))
         self.xupper = jnp.full((self.n,1),float('inf'))
@@ -203,8 +201,7 @@ class TRUSPYR2:
                     posel = len(self.grelt[ig])
                     self.grelt = jtu.loaset(self.grelt,ig,posel,ie_['UX'+str(I)+','+str(J)])
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
-                    self.grelw  = (
-                          jtu.loaset(self.grelw,ig,posel,float(v_['RR'+str(I)+','+str(J)+','+str(K)])))
+                    self.grelw  = (                           jtu.loaset(self.grelw,ig,posel,float(v_['RR'+str(I)+','+str(J)+','+str(K)])))
         #%%%%%%%%%%%%%%%%%% OBJECT BOUNDS %%%%%%%%%%%%%%%%%
 #    Objective function value corresponding to the local minimizer above
         self.objlower = 1.2287408808
@@ -218,8 +215,7 @@ class TRUSPYR2:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLQR2-MN-11-11"
         self.x0        = jnp.zeros((self.n,1))
         self.objderlvl = 2
@@ -240,7 +236,7 @@ class TRUSPYR2:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -279,8 +279,7 @@ class VIBRBEAMNE:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-MN-8-30"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -303,15 +302,14 @@ class VIBRBEAMNE:
         y4 = y2*y2
         y5 = y2*y3
         y6 = y3*y3
-        phi  = (
-              EV_[0]+self.elpar[iel_][0]*(EV_[1]+self.elpar[iel_][0]*(EV_[2]+self.elpar[iel_][0]*EV_[3]))-self.elpar[iel_][1])
+        phi  = (               EV_[0]+self.elpar[iel_][0]*(EV_[1]+self.elpar[iel_][0]*(EV_[2]+self.elpar[iel_][0]*EV_[3]))-self.elpar[iel_][1])
         cosphi = jnp.cos(phi)
         sinphi = jnp.sin(phi)
         bcos = EV_[4]*cosphi
         bsin = EV_[4]*sinphi
         f_   = bcos
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -179,12 +179,11 @@ class DEVGLA1:
         COSA = jnp.cos(A)
         X2T = EV_[1]**self.elpar[iel_][0]
         DX2T = self.elpar[iel_][0]*EV_[1]**(self.elpar[iel_][0]-1.0e0)
-        D2X2T  = (
-              self.elpar[iel_][0]*(self.elpar[iel_][0]-1.0e0)*EV_[1]**(self.elpar[iel_][0]-2.0e0))
+        D2X2T  = (               self.elpar[iel_][0]*(self.elpar[iel_][0]-1.0e0)*EV_[1]**(self.elpar[iel_][0]-2.0e0))
         X1X2T = EV_[0]*X2T
         f_   = X1X2T*SINA
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

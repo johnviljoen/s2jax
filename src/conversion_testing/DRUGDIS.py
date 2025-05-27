@@ -292,8 +292,7 @@ class DRUGDIS:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLOR2-MN-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -309,7 +308,7 @@ class DRUGDIS:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,46.4)
         self.efpar = jtu.arrset( self.efpar,1,0.02)
         self.efpar = jtu.arrset( self.efpar,2,0.2)
@@ -357,7 +356,7 @@ class DRUGDIS:
         GWP = GPP-DD1-2.0*self.efpar[0]
         f_   = EV_[0]*F*G
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -430,7 +429,7 @@ class DRUGDIS:
         GPP = GWW-4.0*BP
         f_   = EV_[0]*F*G
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

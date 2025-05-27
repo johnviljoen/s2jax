@@ -225,11 +225,9 @@ class SSEBNLN:
         icA          = jnp.array([],dtype=int)
         valA         = jnp.array([],dtype=float)
         [iv,ix_,_] = jtu.s2mpj_ii('V'+str(int(v_['0']))+','+str(int(v_['HOURS'])),ix_)
-        self.xnames = (
-             jtu.arrset(self.xnames,iv,'V'+str(int(v_['0']))+','+str(int(v_['HOURS']))))
+        self.xnames = (              jtu.arrset(self.xnames,iv,'V'+str(int(v_['0']))+','+str(int(v_['HOURS']))))
         [iv,ix_,_] = jtu.s2mpj_ii('R'+str(int(v_['0']))+','+str(int(v_['HOURS'])),ix_)
-        self.xnames = (
-             jtu.arrset(self.xnames,iv,'R'+str(int(v_['0']))+','+str(int(v_['HOURS']))))
+        self.xnames = (              jtu.arrset(self.xnames,iv,'R'+str(int(v_['0']))+','+str(int(v_['HOURS']))))
         for ID in range(int(v_['1']),int(v_['DAYS'])+1):
             for IH in range(int(v_['1']),int(v_['HOURS'])+1):
                 [iv,ix_,_] = jtu.s2mpj_ii('P1'+str(ID)+','+str(IH),ix_)
@@ -395,17 +393,14 @@ class SSEBNLN:
         self.gconst = jnp.zeros((ngrp,1))
         for ID in range(int(v_['1']),int(v_['DAYS'])+1):
             for IH in range(int(v_['1']),int(v_['HOURS'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['H'+str(ID)+','+str(IH)],float(v_['Z'+str(ID)])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['H'+str(ID)+','+str(IH)],float(v_['Z'+str(ID)])))
         for ID in range(int(v_['1']),int(v_['DAYS'])+1):
             v_['0.01Z'] = 0.01*v_['Z'+str(ID)]
             for IH in range(int(v_['1']),int(v_['HOURS'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['R'+str(ID)+','+str(IH)],float(v_['0.01Z'])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['R'+str(ID)+','+str(IH)],float(v_['0.01Z'])))
         for ID in range(int(v_['1']),int(v_['DAYS'])+1):
             for IH in range(int(v_['1']),int(v_['HOURS'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['D'+str(ID)+','+str(IH)],float(v_['D'+str(ID)+','+str(IH)])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['D'+str(ID)+','+str(IH)],float(v_['D'+str(ID)+','+str(IH)])))
         #%%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.zeros((self.n,1))
         self.xupper = jnp.full((self.n,1),float('inf'))
@@ -430,49 +425,39 @@ class SSEBNLN:
         self.x0 = jnp.zeros((self.n,1))
         self.y0 = jnp.zeros((self.m,1))
         if('V'+str(int(v_['0']))+','+str(int(v_['HOURS'])) in ix_):
-            self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['V'+str(int(v_['0']))+','+str(int(v_['HOURS']))]]), ()
-                  float(240000.0))
+            self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['V'+str(int(v_['0']))+','+str(int(v_['HOURS']))]]), (                   float(240000.0)))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(int(v_['0']))+','+str(int(v_['HOURS']))]),float(240000.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(int(v_['0']))+','+str(int(v_['HOURS']))]),float(240000.0)))
         if('R'+str(int(v_['0']))+','+str(int(v_['HOURS'])) in ix_):
-            self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['R'+str(int(v_['0']))+','+str(int(v_['HOURS']))]]), ()
-                  float(3500.0))
+            self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['R'+str(int(v_['0']))+','+str(int(v_['HOURS']))]]), (                   float(3500.0)))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['R'+str(int(v_['0']))+','+str(int(v_['HOURS']))]),float(3500.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['R'+str(int(v_['0']))+','+str(int(v_['HOURS']))]),float(3500.0)))
         for ID in range(int(v_['1']),int(v_['DAYS'])+1):
             for IH in range(int(v_['1']),int(v_['HOURS'])+1):
                 if('P1'+str(ID)+','+str(IH) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['P1'+str(ID)+','+str(IH)]]), float(70.0))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P1'+str(ID)+','+str(IH)]),float(70.0)))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P1'+str(ID)+','+str(IH)]),float(70.0)))
                 if('P2'+str(ID)+','+str(IH) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['P2'+str(ID)+','+str(IH)]]), float(90.0))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P2'+str(ID)+','+str(IH)]),float(90.0)))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P2'+str(ID)+','+str(IH)]),float(90.0)))
                 if('QH'+str(ID)+','+str(IH) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['QH'+str(ID)+','+str(IH)]]), float(25.0))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['QH'+str(ID)+','+str(IH)]),float(25.0)))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['QH'+str(ID)+','+str(IH)]),float(25.0)))
                 if('QP'+str(ID)+','+str(IH) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['QP'+str(ID)+','+str(IH)]]), float(225.0))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['QP'+str(ID)+','+str(IH)]),float(225.0)))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['QP'+str(ID)+','+str(IH)]),float(225.0)))
                 if('V'+str(ID)+','+str(IH) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['V'+str(ID)+','+str(IH)]]), float(240000.0))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(ID)+','+str(IH)]),float(240000.0)))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(ID)+','+str(IH)]),float(240000.0)))
                 if('R'+str(ID)+','+str(IH) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['R'+str(ID)+','+str(IH)]]), float(3500))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['R'+str(ID)+','+str(IH)]),float(3500)))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['R'+str(ID)+','+str(IH)]),float(3500)))
         pass
         for ID in range(int(v_['1']),int(v_['DAYS'])+1):
             for IH in range(int(v_['1']),int(v_['HOURS'])+1):
@@ -529,8 +514,7 @@ class SSEBNLN:
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLQR2-RN-194-96"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -550,7 +534,7 @@ class SSEBNLN:
         iel_ = args[1]
         f_   = EV_[1]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

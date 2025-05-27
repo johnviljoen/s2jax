@@ -267,8 +267,7 @@ class CONCON:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLOI2-MN-15-11"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -284,7 +283,7 @@ class CONCON:
         iel_ = args[1]
         f_   = EV_[0]*jnp.absolute(EV_[0])
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         PO = EV_[0]>0.0
         if PO!=0:
             GO = 2*EV_[0]
@@ -319,7 +318,7 @@ class CONCON:
         iel_ = args[1]
         f_   = EV_[0]*jnp.absolute(EV_[0])**0.8539
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         POS = EV_[0]>0.0
         if POS!=0:
             GG = 1.8539*EV_[0]**0.8539

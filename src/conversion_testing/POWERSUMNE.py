@@ -115,8 +115,7 @@ class POWERSUMNE:
             if('X'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['X'+str(I)], float(2.0))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(2.0)))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(2.0)))
         pass
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
@@ -170,8 +169,7 @@ class POWERSUMNE:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-MN-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -191,7 +189,7 @@ class POWERSUMNE:
         iel_ = args[1]
         f_   = EV_[0]**self.elpar[iel_][0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -201,8 +199,7 @@ class POWERSUMNE:
             g_ = jtu.np_like_set(g_, 0, self.elpar[iel_][0]*EV_[0]**(self.elpar[iel_][0]-1.0))
             if nargout>2:
                 H_ = jnp.zeros((1,1))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), ()
-                      self.elpar[iel_][0]*(self.elpar[iel_][0]-1.0)*EV_[0]**(self.elpar[iel_][0]-2.0))
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (                       self.elpar[iel_][0]*(self.elpar[iel_][0]-1.0)*EV_[0]**(self.elpar[iel_][0]-2.0)))
         if nargout == 1:
             return f_
         elif nargout == 2:

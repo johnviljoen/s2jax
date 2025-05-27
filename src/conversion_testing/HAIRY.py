@@ -181,7 +181,7 @@ class HAIRY:
         STDV2 = jnp.sin(TDV2)
         f_   = S1SQ*C2SQ
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -220,7 +220,7 @@ class HAIRY:
         DEN = 1.0/SQARG
         f_   = SQARG
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -252,7 +252,7 @@ class HAIRY:
         DEN = 1.0/SQARG
         f_   = SQARG
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

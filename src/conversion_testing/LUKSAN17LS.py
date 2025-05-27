@@ -207,7 +207,7 @@ class LUKSAN17LS:
         ASINX = self.elpar[iel_][0]*jnp.sin(EV_[0])
         f_   = ASINX
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -234,7 +234,7 @@ class LUKSAN17LS:
         ACOSX = self.elpar[iel_][0]*jnp.cos(EV_[0])
         f_   = ACOSX
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

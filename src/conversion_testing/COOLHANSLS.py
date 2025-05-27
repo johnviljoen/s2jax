@@ -156,28 +156,22 @@ class COOLHANSLS:
                 for M in range(int(v_['1']),int(v_['N'])+1):
                     ig = ig_['G'+str(int(v_['1']))+','+str(L)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['E'+str(P)+','+str(M)+','+str(L)]))
-                    self.grelw  = (
-                          jtu.loaset(self.grelw,ig,posel,float(v_['A'+str(int(v_['1']))+','+str(P)])))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['E'+str(P)+','+str(M)+','+str(L)]))
+                    self.grelw  = (                           jtu.loaset(self.grelw,ig,posel,float(v_['A'+str(int(v_['1']))+','+str(P)])))
         for L in range(int(v_['1']),int(v_['N'])+1):
             for P in range(int(v_['1']),int(v_['N'])+1):
                 for M in range(int(v_['1']),int(v_['N'])+1):
                     ig = ig_['G'+str(int(v_['2']))+','+str(L)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['E'+str(P)+','+str(M)+','+str(L)]))
-                    self.grelw  = (
-                          jtu.loaset(self.grelw,ig,posel,float(v_['A'+str(int(v_['2']))+','+str(P)])))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['E'+str(P)+','+str(M)+','+str(L)]))
+                    self.grelw  = (                           jtu.loaset(self.grelw,ig,posel,float(v_['A'+str(int(v_['2']))+','+str(P)])))
         for L in range(int(v_['1']),int(v_['N'])+1):
             for P in range(int(v_['1']),int(v_['N'])+1):
                 for M in range(int(v_['1']),int(v_['N'])+1):
                     ig = ig_['G'+str(int(v_['3']))+','+str(L)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['E'+str(P)+','+str(M)+','+str(L)]))
-                    self.grelw  = (
-                          jtu.loaset(self.grelw,ig,posel,float(v_['A'+str(int(v_['3']))+','+str(P)])))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['E'+str(P)+','+str(M)+','+str(L)]))
+                    self.grelw  = (                           jtu.loaset(self.grelw,ig,posel,float(v_['A'+str(int(v_['3']))+','+str(P)])))
         #%%%%%%%%%%%%%%%%%% OBJECT BOUNDS %%%%%%%%%%%%%%%%%
         self.objlower = 0.0
 #    Solution
@@ -205,7 +199,7 @@ class COOLHANSLS:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

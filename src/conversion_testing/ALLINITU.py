@@ -310,7 +310,7 @@ class ALLINITU:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -341,7 +341,7 @@ class ALLINITU:
         IV_ = jtu.np_like_set(IV_, 0, U_[0:1,:].dot(EV_))
         f_   = IV_[0]*IV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -371,7 +371,7 @@ class ALLINITU:
         COSX = jnp.cos(EV_[0])
         f_   = SINX*SINX
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -399,7 +399,7 @@ class ALLINITU:
         YY = EV_[1]*EV_[1]
         f_   = XX*YY
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -215,7 +215,7 @@ class PALMER2:
         DENOM = 1.0/(EV_[1]+self.elpar[iel_][0]/EV_[2])
         f_   = EV_[0]*DENOM
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -234,8 +234,7 @@ class PALMER2:
                 H_ = jtu.np_like_set(H_, jnp.array([1,1]), 2.0*EV_[0]*DENOM**3)
                 H_ = jtu.np_like_set(H_, jnp.array([1,2]), -2.0*EV_[0]*self.elpar[iel_][0]*DENOM*(DENOM/EV_[2])**2)
                 H_ = jtu.np_like_set(H_, jnp.array([2,1]), H_[1,2])
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (2.0*EV_[0]*DENOM**3*(self.elpar[iel_][0]/EV_[2]**2)**2-)
-                     2.0*EV_[0]*DENOM**2*self.elpar[iel_][0]/EV_[2]**3)
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (2.0*EV_[0]*DENOM**3*(self.elpar[iel_][0]/EV_[2]**2)**2-                      2.0*EV_[0]*DENOM**2*self.elpar[iel_][0]/EV_[2]**3))
         if nargout == 1:
             return f_
         elif nargout == 2:

@@ -166,7 +166,7 @@ class SCOSINE:
         PP = self.elpar[iel_][0]*self.elpar[iel_][0]
         f_   = PP*EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

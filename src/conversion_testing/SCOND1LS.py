@@ -171,8 +171,7 @@ class SCOND1LS:
             self.elftype = jtu.arrset(self.elftype,ie,'eWE1')
             ielftype = jtu.arrset(ielftype,ie,iet_["eWE1"])
             vname = 'U'+str(I)
-            [iv,ix_]  = (
-                  jtu.s2mpj_nlx(self,vname,ix_,1,float(v_['ULW']),float(v_['UUP']),float(0.0)))
+            [iv,ix_]  = (                   jtu.s2mpj_nlx(self,vname,ix_,1,float(v_['ULW']),float(v_['UUP']),float(0.0)))
             posev = jnp.where(elftv[ielftype[ie]]=='X')[0]
             self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
             posep = jnp.where(elftp[ielftype[ie]]=='LAC')[0]
@@ -186,8 +185,7 @@ class SCOND1LS:
             self.elftype = jtu.arrset(self.elftype,ie,'eWE1')
             ielftype = jtu.arrset(ielftype,ie,iet_["eWE1"])
             vname = 'U'+str(I)
-            [iv,ix_]  = (
-                  jtu.s2mpj_nlx(self,vname,ix_,1,float(v_['ULW']),float(v_['UUP']),float(0.0)))
+            [iv,ix_]  = (                   jtu.s2mpj_nlx(self,vname,ix_,1,float(v_['ULW']),float(v_['UUP']),float(0.0)))
             posev = jnp.where(elftv[ielftype[ie]]=='X')[0]
             self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
             posep = jnp.where(elftp[ielftype[ie]]=='LAC')[0]
@@ -232,11 +230,10 @@ class SCOND1LS:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        FVAL  = (
-              self.elpar[iel_][0]*jnp.exp(self.elpar[iel_][1]*(EV_[0]-self.elpar[iel_][2])))
+        FVAL  = (               self.elpar[iel_][0]*jnp.exp(self.elpar[iel_][1]*(EV_[0]-self.elpar[iel_][2])))
         f_   = FVAL
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

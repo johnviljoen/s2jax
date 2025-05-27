@@ -182,7 +182,7 @@ class POWELLBC:
         NORM = 1.0/jnp.sqrt(IV_[0]*IV_[0]+IV_[1]*IV_[1])
         f_   = NORM
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

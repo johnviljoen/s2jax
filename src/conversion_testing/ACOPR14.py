@@ -456,8 +456,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F2'
@@ -465,8 +464,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F3'
@@ -474,8 +472,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F4'
@@ -483,8 +480,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F5'
@@ -492,13 +488,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F6'
@@ -506,13 +500,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F7'
@@ -520,13 +512,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F8'
@@ -534,13 +524,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F9'
@@ -548,13 +536,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F10'
@@ -562,13 +548,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F11'
@@ -576,13 +560,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F12'
@@ -590,13 +572,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F13'
@@ -604,13 +584,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F14'
@@ -618,13 +596,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F15'
@@ -632,13 +608,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F16'
@@ -646,13 +620,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F17'
@@ -660,13 +632,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F18'
@@ -674,13 +644,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F19'
@@ -688,13 +656,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F20'
@@ -702,13 +668,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F21'
@@ -716,13 +680,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F22'
@@ -730,13 +692,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F23'
@@ -744,13 +704,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F24'
@@ -758,13 +716,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F25'
@@ -772,13 +728,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F26'
@@ -786,13 +740,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F27'
@@ -800,13 +752,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F28'
@@ -814,13 +764,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F29'
@@ -828,8 +776,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F30'
@@ -837,8 +784,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F31'
@@ -846,8 +792,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F32'
@@ -855,8 +800,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F33'
@@ -864,13 +808,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F34'
@@ -878,13 +820,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F35'
@@ -892,13 +832,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F36'
@@ -906,13 +844,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F37'
@@ -920,13 +856,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F38'
@@ -934,13 +868,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F39'
@@ -948,13 +880,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F40'
@@ -962,13 +892,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F41'
@@ -976,13 +904,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F42'
@@ -990,13 +916,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F43'
@@ -1004,13 +928,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F44'
@@ -1018,13 +940,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F45'
@@ -1032,13 +952,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F46'
@@ -1046,13 +964,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F47'
@@ -1060,13 +976,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F48'
@@ -1074,13 +988,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F49'
@@ -1088,13 +1000,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F50'
@@ -1102,13 +1012,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F51'
@@ -1116,13 +1024,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F52'
@@ -1130,13 +1036,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F53'
@@ -1144,13 +1048,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F54'
@@ -1158,13 +1060,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F55'
@@ -1172,13 +1072,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F56'
@@ -1186,13 +1084,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F57'
@@ -1200,13 +1096,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F58'
@@ -1214,13 +1108,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F59'
@@ -1228,13 +1120,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F60'
@@ -1242,13 +1132,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F61'
@@ -1256,13 +1144,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F62'
@@ -1270,13 +1156,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F63'
@@ -1284,13 +1168,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F64'
@@ -1298,13 +1180,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F65'
@@ -1312,8 +1192,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F66'
@@ -1321,8 +1200,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F67'
@@ -1330,8 +1208,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F68'
@@ -1339,8 +1216,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F69'
@@ -1348,13 +1224,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F70'
@@ -1362,13 +1236,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F71'
@@ -1376,13 +1248,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F72'
@@ -1390,13 +1260,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F73'
@@ -1404,13 +1272,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F74'
@@ -1418,13 +1284,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F75'
@@ -1432,13 +1296,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F76'
@@ -1446,13 +1308,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F77'
@@ -1460,13 +1320,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F78'
@@ -1474,13 +1332,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F79'
@@ -1488,13 +1344,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F80'
@@ -1502,13 +1356,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F81'
@@ -1516,13 +1368,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F82'
@@ -1530,13 +1380,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F83'
@@ -1544,13 +1392,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F84'
@@ -1558,13 +1404,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F85'
@@ -1572,13 +1416,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F86'
@@ -1586,13 +1428,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F87'
@@ -1600,13 +1440,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F88'
@@ -1614,13 +1452,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F89'
@@ -1628,13 +1464,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F90'
@@ -1642,13 +1476,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F91'
@@ -1656,13 +1488,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F92'
@@ -1670,13 +1500,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F93'
@@ -1684,8 +1512,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F94'
@@ -1693,8 +1520,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F95'
@@ -1702,8 +1528,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F96'
@@ -1711,8 +1536,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F97'
@@ -1720,13 +1544,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F98'
@@ -1734,13 +1556,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F99'
@@ -1748,13 +1568,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F100'
@@ -1762,13 +1580,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F101'
@@ -1776,13 +1592,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F102'
@@ -1790,13 +1604,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F103'
@@ -1804,13 +1616,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F104'
@@ -1818,13 +1628,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F105'
@@ -1832,13 +1640,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F106'
@@ -1846,13 +1652,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F107'
@@ -1860,13 +1664,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F108'
@@ -1874,13 +1676,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F109'
@@ -1888,13 +1688,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F110'
@@ -1902,13 +1700,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F111'
@@ -1916,13 +1712,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F112'
@@ -1930,13 +1724,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F113'
@@ -1944,13 +1736,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F114'
@@ -1958,13 +1748,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F115'
@@ -1972,13 +1760,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F116'
@@ -1986,13 +1772,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F117'
@@ -2000,13 +1784,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F118'
@@ -2014,13 +1796,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F119'
@@ -2028,13 +1808,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F120'
@@ -2042,13 +1820,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F121'
@@ -2056,13 +1832,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F122'
@@ -2070,13 +1844,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F123'
@@ -2084,13 +1856,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F124'
@@ -2098,13 +1868,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F125'
@@ -2112,13 +1880,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F126'
@@ -2126,13 +1892,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F127'
@@ -2140,13 +1904,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F128'
@@ -2154,13 +1916,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F129'
@@ -2168,13 +1928,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F130'
@@ -2182,13 +1940,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F131'
@@ -2196,13 +1952,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F132'
@@ -2210,13 +1964,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F133'
@@ -2224,13 +1976,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F134'
@@ -2238,13 +1988,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F135'
@@ -2252,13 +2000,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F136'
@@ -2266,13 +2012,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F137'
@@ -2280,8 +2024,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F138'
@@ -2289,8 +2032,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F139'
@@ -2298,8 +2040,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F140'
@@ -2307,8 +2048,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F141'
@@ -2316,13 +2056,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F142'
@@ -2330,13 +2068,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F143'
@@ -2344,13 +2080,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F144'
@@ -2358,13 +2092,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F145'
@@ -2372,13 +2104,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F146'
@@ -2386,13 +2116,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F147'
@@ -2400,13 +2128,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F148'
@@ -2414,13 +2140,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F149'
@@ -2428,8 +2152,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F150'
@@ -2437,8 +2160,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F151'
@@ -2446,8 +2168,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F152'
@@ -2455,8 +2176,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F153'
@@ -2464,13 +2184,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F154'
@@ -2478,13 +2196,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F155'
@@ -2492,13 +2208,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F156'
@@ -2506,13 +2220,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F157'
@@ -2520,13 +2232,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F158'
@@ -2534,13 +2244,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F159'
@@ -2548,13 +2256,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F160'
@@ -2562,13 +2268,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F161'
@@ -2576,13 +2280,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F162'
@@ -2590,13 +2292,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F163'
@@ -2604,13 +2304,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F164'
@@ -2618,13 +2316,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F165'
@@ -2632,13 +2328,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F166'
@@ -2646,13 +2340,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F167'
@@ -2660,13 +2352,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F168'
@@ -2674,13 +2364,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F169'
@@ -2688,13 +2376,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F170'
@@ -2702,13 +2388,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F171'
@@ -2716,13 +2400,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F172'
@@ -2730,13 +2412,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F173'
@@ -2744,13 +2424,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F174'
@@ -2758,13 +2436,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F175'
@@ -2772,13 +2448,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F176'
@@ -2786,13 +2460,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F177'
@@ -2800,13 +2472,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F178'
@@ -2814,13 +2484,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F179'
@@ -2828,13 +2496,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F180'
@@ -2842,13 +2508,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F181'
@@ -2856,8 +2520,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F182'
@@ -2865,8 +2528,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F183'
@@ -2874,13 +2536,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F184'
@@ -2888,13 +2548,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F185'
@@ -2902,13 +2560,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F186'
@@ -2916,13 +2572,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F187'
@@ -2930,13 +2584,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F188'
@@ -2944,13 +2596,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F189'
@@ -2958,13 +2608,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F190'
@@ -2972,13 +2620,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F191'
@@ -2986,13 +2632,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F192'
@@ -3000,13 +2644,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F193'
@@ -3014,13 +2656,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F194'
@@ -3028,13 +2668,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F195'
@@ -3042,8 +2680,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F196'
@@ -3051,8 +2688,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F197'
@@ -3060,13 +2696,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F198'
@@ -3074,13 +2708,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F199'
@@ -3088,13 +2720,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F200'
@@ -3102,13 +2732,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F201'
@@ -3116,13 +2744,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F202'
@@ -3130,13 +2756,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F203'
@@ -3144,13 +2768,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F204'
@@ -3158,13 +2780,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F205'
@@ -3172,8 +2792,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F206'
@@ -3181,8 +2800,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F207'
@@ -3190,8 +2808,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F208'
@@ -3199,8 +2816,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F209'
@@ -3208,13 +2824,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F210'
@@ -3222,13 +2836,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F211'
@@ -3236,13 +2848,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F212'
@@ -3250,13 +2860,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F213'
@@ -3264,13 +2872,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F214'
@@ -3278,13 +2884,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F215'
@@ -3292,13 +2896,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F216'
@@ -3306,13 +2908,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F217'
@@ -3320,13 +2920,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F218'
@@ -3334,13 +2932,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F219'
@@ -3348,13 +2944,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F220'
@@ -3362,13 +2956,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F221'
@@ -3376,13 +2968,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F222'
@@ -3390,13 +2980,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F223'
@@ -3404,13 +2992,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F224'
@@ -3418,13 +3004,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F225'
@@ -3432,13 +3016,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F226'
@@ -3446,13 +3028,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F227'
@@ -3460,13 +3040,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F228'
@@ -3474,13 +3052,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F229'
@@ -3488,13 +3064,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F230'
@@ -3502,13 +3076,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F231'
@@ -3516,13 +3088,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F232'
@@ -3530,13 +3100,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F233'
@@ -3544,8 +3112,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F234'
@@ -3553,8 +3120,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F235'
@@ -3562,8 +3128,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F236'
@@ -3571,8 +3136,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F237'
@@ -3580,13 +3144,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F238'
@@ -3594,13 +3156,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F239'
@@ -3608,13 +3168,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F240'
@@ -3622,13 +3180,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F241'
@@ -3636,13 +3192,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F242'
@@ -3650,13 +3204,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F243'
@@ -3664,13 +3216,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F244'
@@ -3678,13 +3228,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F245'
@@ -3692,13 +3240,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F246'
@@ -3706,13 +3252,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F247'
@@ -3720,13 +3264,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F248'
@@ -3734,13 +3276,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F249'
@@ -3748,13 +3288,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F250'
@@ -3762,13 +3300,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F251'
@@ -3776,13 +3312,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F252'
@@ -3790,13 +3324,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F253'
@@ -3804,13 +3336,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F254'
@@ -3818,13 +3348,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F255'
@@ -3832,13 +3360,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F256'
@@ -3846,13 +3372,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F257'
@@ -3860,13 +3384,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F258'
@@ -3874,13 +3396,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F259'
@@ -3888,13 +3408,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F260'
@@ -3902,13 +3420,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F261'
@@ -3916,8 +3432,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F262'
@@ -3925,8 +3440,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F263'
@@ -3934,8 +3448,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F264'
@@ -3943,8 +3456,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F265'
@@ -3952,13 +3464,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F266'
@@ -3966,13 +3476,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F267'
@@ -3980,13 +3488,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F268'
@@ -3994,13 +3500,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F269'
@@ -4008,13 +3512,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F270'
@@ -4022,13 +3524,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F271'
@@ -4036,13 +3536,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F272'
@@ -4050,13 +3548,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F273'
@@ -4064,8 +3560,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F274'
@@ -4073,8 +3568,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F275'
@@ -4082,8 +3576,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F276'
@@ -4091,8 +3584,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F277'
@@ -4100,13 +3592,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F278'
@@ -4114,13 +3604,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F279'
@@ -4128,13 +3616,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F280'
@@ -4142,13 +3628,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F281'
@@ -4156,13 +3640,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F282'
@@ -4170,13 +3652,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F283'
@@ -4184,13 +3664,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F284'
@@ -4198,13 +3676,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F285'
@@ -4212,13 +3688,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F286'
@@ -4226,13 +3700,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F287'
@@ -4240,13 +3712,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F288'
@@ -4254,13 +3724,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F289'
@@ -4268,13 +3736,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F290'
@@ -4282,13 +3748,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F291'
@@ -4296,13 +3760,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F292'
@@ -4310,13 +3772,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F293'
@@ -4324,13 +3784,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F294'
@@ -4338,13 +3796,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F295'
@@ -4352,13 +3808,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F296'
@@ -4366,13 +3820,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F297'
@@ -4380,13 +3832,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F298'
@@ -4394,13 +3844,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F299'
@@ -4408,13 +3856,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F300'
@@ -4422,13 +3868,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F301'
@@ -4436,8 +3880,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F302'
@@ -4445,8 +3888,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F303'
@@ -4454,8 +3896,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F304'
@@ -4463,8 +3904,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F305'
@@ -4472,13 +3912,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F306'
@@ -4486,13 +3924,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F307'
@@ -4500,13 +3936,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F308'
@@ -4514,13 +3948,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F309'
@@ -4528,13 +3960,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F310'
@@ -4542,13 +3972,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F311'
@@ -4556,13 +3984,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F312'
@@ -4570,13 +3996,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F313'
@@ -4584,13 +4008,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F314'
@@ -4598,13 +4020,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F315'
@@ -4612,13 +4032,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F316'
@@ -4626,13 +4044,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F317'
@@ -4640,13 +4056,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F318'
@@ -4654,13 +4068,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F319'
@@ -4668,13 +4080,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F320'
@@ -4682,13 +4092,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F321'
@@ -4696,13 +4104,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F322'
@@ -4710,13 +4116,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F323'
@@ -4724,13 +4128,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F324'
@@ -4738,13 +4140,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F325'
@@ -4752,13 +4152,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F326'
@@ -4766,13 +4164,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F327'
@@ -4780,13 +4176,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F328'
@@ -4794,13 +4188,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP11')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP11"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F329'
@@ -4808,8 +4200,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F330'
@@ -4817,8 +4208,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F331'
@@ -4826,8 +4216,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'F332'
@@ -4835,8 +4224,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E1'
@@ -4844,8 +4232,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E2'
@@ -4853,8 +4240,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E3'
@@ -4862,13 +4248,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E4'
@@ -4876,13 +4260,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E5'
@@ -4890,18 +4272,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E6'
@@ -4909,18 +4288,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E7'
@@ -4928,13 +4304,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E8'
@@ -4942,18 +4316,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E9'
@@ -4961,13 +4332,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E10'
@@ -4975,13 +4344,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E11'
@@ -4989,18 +4356,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E12'
@@ -5008,13 +4372,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E13'
@@ -5022,13 +4384,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E14'
@@ -5036,13 +4396,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E15'
@@ -5050,13 +4408,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E16'
@@ -5064,8 +4420,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E17'
@@ -5073,8 +4428,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E18'
@@ -5082,13 +4436,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E19'
@@ -5096,13 +4448,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E20'
@@ -5110,18 +4460,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E21'
@@ -5129,18 +4476,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E22'
@@ -5148,13 +4492,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E23'
@@ -5162,18 +4504,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E24'
@@ -5181,13 +4520,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E25'
@@ -5195,13 +4532,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E26'
@@ -5209,18 +4544,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E27'
@@ -5228,13 +4560,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E28'
@@ -5242,13 +4572,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E29'
@@ -5256,13 +4584,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E30'
@@ -5270,13 +4596,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E31'
@@ -5284,8 +4608,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E32'
@@ -5293,8 +4616,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E33'
@@ -5302,13 +4624,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E34'
@@ -5316,13 +4636,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E35'
@@ -5330,18 +4648,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E36'
@@ -5349,18 +4664,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E37'
@@ -5368,13 +4680,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E38'
@@ -5382,18 +4692,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E39'
@@ -5401,13 +4708,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E40'
@@ -5415,13 +4720,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E41'
@@ -5429,18 +4732,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E42'
@@ -5448,13 +4748,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E43'
@@ -5462,13 +4760,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E44'
@@ -5476,13 +4772,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E45'
@@ -5490,13 +4784,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E46'
@@ -5504,8 +4796,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E47'
@@ -5513,8 +4804,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E48'
@@ -5522,13 +4812,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E49'
@@ -5536,13 +4824,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E50'
@@ -5550,18 +4836,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E51'
@@ -5569,18 +4852,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E52'
@@ -5588,13 +4868,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E53'
@@ -5602,18 +4880,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E54'
@@ -5621,13 +4896,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E55'
@@ -5635,13 +4908,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E56'
@@ -5649,18 +4920,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E57'
@@ -5668,13 +4936,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E58'
@@ -5682,13 +4948,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E59'
@@ -5696,13 +4960,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E60'
@@ -5710,13 +4972,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E61'
@@ -5724,8 +4984,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E62'
@@ -5733,8 +4992,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E63'
@@ -5742,13 +5000,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E64'
@@ -5756,13 +5012,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E65'
@@ -5770,18 +5024,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E66'
@@ -5789,18 +5040,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E67'
@@ -5808,13 +5056,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E68'
@@ -5822,18 +5068,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E69'
@@ -5841,13 +5084,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E70'
@@ -5855,13 +5096,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E71'
@@ -5869,18 +5108,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E72'
@@ -5888,13 +5124,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E73'
@@ -5902,13 +5136,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E74'
@@ -5916,13 +5148,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E75'
@@ -5930,13 +5160,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E76'
@@ -5944,8 +5172,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E77'
@@ -5953,8 +5180,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E78'
@@ -5962,13 +5188,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E79'
@@ -5976,13 +5200,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E80'
@@ -5990,18 +5212,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E81'
@@ -6009,18 +5228,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E82'
@@ -6028,13 +5244,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E83'
@@ -6042,18 +5256,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E84'
@@ -6061,13 +5272,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E85'
@@ -6075,13 +5284,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E86'
@@ -6089,18 +5296,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E87'
@@ -6108,13 +5312,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E88'
@@ -6122,13 +5324,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E89'
@@ -6136,13 +5336,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E90'
@@ -6150,13 +5348,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E91'
@@ -6164,8 +5360,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E92'
@@ -6173,8 +5368,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E93'
@@ -6182,13 +5376,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E94'
@@ -6196,13 +5388,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E95'
@@ -6210,18 +5400,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E96'
@@ -6229,18 +5416,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E97'
@@ -6248,13 +5432,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E98'
@@ -6262,13 +5444,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E99'
@@ -6276,13 +5456,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E100'
@@ -6290,13 +5468,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E101'
@@ -6304,13 +5480,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E102'
@@ -6318,8 +5492,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E103'
@@ -6327,8 +5500,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E104'
@@ -6336,13 +5508,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E105'
@@ -6350,13 +5520,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E106'
@@ -6364,18 +5532,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E107'
@@ -6383,18 +5548,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E108'
@@ -6402,13 +5564,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E109'
@@ -6416,13 +5576,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E110'
@@ -6430,13 +5588,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E111'
@@ -6444,13 +5600,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E112'
@@ -6458,13 +5612,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E113'
@@ -6472,8 +5624,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E114'
@@ -6481,8 +5632,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E115'
@@ -6490,13 +5640,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E116'
@@ -6504,13 +5652,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E117'
@@ -6518,18 +5664,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E118'
@@ -6537,18 +5680,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E119'
@@ -6556,13 +5696,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E120'
@@ -6570,13 +5708,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E121'
@@ -6584,13 +5720,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E122'
@@ -6598,13 +5732,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E123'
@@ -6612,13 +5744,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E124'
@@ -6626,8 +5756,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E125'
@@ -6635,8 +5764,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E126'
@@ -6644,13 +5772,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E127'
@@ -6658,13 +5784,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E128'
@@ -6672,18 +5796,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E129'
@@ -6691,18 +5812,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E130'
@@ -6710,13 +5828,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E131'
@@ -6724,13 +5840,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E132'
@@ -6738,13 +5852,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E133'
@@ -6752,13 +5864,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E134'
@@ -6766,13 +5876,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E135'
@@ -6780,8 +5888,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E136'
@@ -6789,8 +5896,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E137'
@@ -6798,13 +5904,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E138'
@@ -6812,13 +5916,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E139'
@@ -6826,18 +5928,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E140'
@@ -6845,18 +5944,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E141'
@@ -6864,13 +5960,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E142'
@@ -6878,13 +5972,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E143'
@@ -6892,13 +5984,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E144'
@@ -6906,13 +5996,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E145'
@@ -6920,13 +6008,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E146'
@@ -6934,8 +6020,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E147'
@@ -6943,8 +6028,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E148'
@@ -6952,13 +6036,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E149'
@@ -6966,13 +6048,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E150'
@@ -6980,18 +6060,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E151'
@@ -6999,18 +6076,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E152'
@@ -7018,13 +6092,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E153'
@@ -7032,13 +6104,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E154'
@@ -7046,13 +6116,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E155'
@@ -7060,13 +6128,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E156'
@@ -7074,13 +6140,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E157'
@@ -7088,8 +6152,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E158'
@@ -7097,8 +6160,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E159'
@@ -7106,13 +6168,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E160'
@@ -7120,13 +6180,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E161'
@@ -7134,18 +6192,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E162'
@@ -7153,18 +6208,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E163'
@@ -7172,13 +6224,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E164'
@@ -7186,13 +6236,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E165'
@@ -7200,13 +6248,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E166'
@@ -7214,13 +6260,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E167'
@@ -7228,13 +6272,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E168'
@@ -7242,8 +6284,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E169'
@@ -7251,8 +6292,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E170'
@@ -7260,13 +6300,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E171'
@@ -7274,13 +6312,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E172'
@@ -7288,18 +6324,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E173'
@@ -7307,18 +6340,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E174'
@@ -7326,13 +6356,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E175'
@@ -7340,13 +6368,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E176'
@@ -7354,13 +6380,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E177'
@@ -7368,13 +6392,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E178'
@@ -7382,13 +6404,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E179'
@@ -7396,8 +6416,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E180'
@@ -7405,8 +6424,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E181'
@@ -7414,13 +6432,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E182'
@@ -7428,13 +6444,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E183'
@@ -7442,18 +6456,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E184'
@@ -7461,18 +6472,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E185'
@@ -7480,13 +6488,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E186'
@@ -7494,13 +6500,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E187'
@@ -7508,13 +6512,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E188'
@@ -7522,13 +6524,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E189'
@@ -7536,13 +6536,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E190'
@@ -7550,8 +6548,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E191'
@@ -7559,8 +6556,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E192'
@@ -7568,13 +6564,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E193'
@@ -7582,13 +6576,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E194'
@@ -7596,18 +6588,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E195'
@@ -7615,18 +6604,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E196'
@@ -7634,13 +6620,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E197'
@@ -7648,13 +6632,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E198'
@@ -7662,13 +6644,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E199'
@@ -7676,13 +6656,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E200'
@@ -7690,13 +6668,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E201'
@@ -7704,8 +6680,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E202'
@@ -7713,8 +6688,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E203'
@@ -7722,13 +6696,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E204'
@@ -7736,13 +6708,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E205'
@@ -7750,18 +6720,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E206'
@@ -7769,18 +6736,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E207'
@@ -7788,13 +6752,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E208'
@@ -7802,13 +6764,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E209'
@@ -7816,13 +6776,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E210'
@@ -7830,13 +6788,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E211'
@@ -7844,13 +6800,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E212'
@@ -7858,8 +6812,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E213'
@@ -7867,8 +6820,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E214'
@@ -7876,13 +6828,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E215'
@@ -7890,13 +6840,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E216'
@@ -7904,18 +6852,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E217'
@@ -7923,18 +6868,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E218'
@@ -7942,13 +6884,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E219'
@@ -7956,13 +6896,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E220'
@@ -7970,13 +6908,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E221'
@@ -7984,13 +6920,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E222'
@@ -7998,13 +6932,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E223'
@@ -8012,8 +6944,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E224'
@@ -8021,8 +6952,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E225'
@@ -8030,13 +6960,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E226'
@@ -8044,13 +6972,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E227'
@@ -8058,18 +6984,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E228'
@@ -8077,18 +7000,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E229'
@@ -8096,13 +7016,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E230'
@@ -8110,13 +7028,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E231'
@@ -8124,13 +7040,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E232'
@@ -8138,13 +7052,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E233'
@@ -8152,13 +7064,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E234'
@@ -8166,8 +7076,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E235'
@@ -8175,8 +7084,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E236'
@@ -8184,13 +7092,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E237'
@@ -8198,13 +7104,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E238'
@@ -8212,18 +7116,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E239'
@@ -8231,18 +7132,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E240'
@@ -8250,13 +7148,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E241'
@@ -8264,13 +7160,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E242'
@@ -8278,13 +7172,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E243'
@@ -8292,13 +7184,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E244'
@@ -8306,13 +7196,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E245'
@@ -8320,13 +7208,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E246'
@@ -8334,13 +7220,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E247'
@@ -8348,13 +7232,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E248'
@@ -8362,13 +7244,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E249'
@@ -8376,13 +7256,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E250'
@@ -8390,18 +7268,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E251'
@@ -8409,18 +7284,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E252'
@@ -8428,13 +7300,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E253'
@@ -8442,13 +7312,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E254'
@@ -8456,18 +7324,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E255'
@@ -8475,18 +7340,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E256'
@@ -8494,13 +7356,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E257'
@@ -8508,8 +7368,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E258'
@@ -8517,8 +7376,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E259'
@@ -8526,13 +7384,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E260'
@@ -8540,13 +7396,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E261'
@@ -8554,13 +7408,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E262'
@@ -8568,13 +7420,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E263'
@@ -8582,13 +7432,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E264'
@@ -8596,13 +7444,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E265'
@@ -8610,18 +7456,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E266'
@@ -8629,18 +7472,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E267'
@@ -8648,13 +7488,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E268'
@@ -8662,13 +7500,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E269'
@@ -8676,18 +7512,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E270'
@@ -8695,18 +7528,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E271'
@@ -8714,13 +7544,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E272'
@@ -8728,8 +7556,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E273'
@@ -8737,8 +7564,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E274'
@@ -8746,13 +7572,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E275'
@@ -8760,13 +7584,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E276'
@@ -8774,13 +7596,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E277'
@@ -8788,13 +7608,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E278'
@@ -8802,13 +7620,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E279'
@@ -8816,13 +7632,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E280'
@@ -8830,18 +7644,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E281'
@@ -8849,18 +7660,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E282'
@@ -8868,13 +7676,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E283'
@@ -8882,13 +7688,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E284'
@@ -8896,18 +7700,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E285'
@@ -8915,18 +7716,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E286'
@@ -8934,13 +7732,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E287'
@@ -8948,8 +7744,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E288'
@@ -8957,8 +7752,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E289'
@@ -8966,13 +7760,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E290'
@@ -8980,13 +7772,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E291'
@@ -8994,13 +7784,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E292'
@@ -9008,13 +7796,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E293'
@@ -9022,13 +7808,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E294'
@@ -9036,13 +7820,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E295'
@@ -9050,18 +7832,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E296'
@@ -9069,18 +7848,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E297'
@@ -9088,13 +7864,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E298'
@@ -9102,13 +7876,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E299'
@@ -9116,18 +7888,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E300'
@@ -9135,18 +7904,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E301'
@@ -9154,13 +7920,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E302'
@@ -9168,8 +7932,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E303'
@@ -9177,8 +7940,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E304'
@@ -9186,13 +7948,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E305'
@@ -9200,13 +7960,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E306'
@@ -9214,13 +7972,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E307'
@@ -9228,13 +7984,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E308'
@@ -9242,13 +7996,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E309'
@@ -9256,13 +8008,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E310'
@@ -9270,18 +8020,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E311'
@@ -9289,18 +8036,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E312'
@@ -9308,13 +8052,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E313'
@@ -9322,13 +8064,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E314'
@@ -9336,18 +8076,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E315'
@@ -9355,18 +8092,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E316'
@@ -9374,13 +8108,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E317'
@@ -9388,8 +8120,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E318'
@@ -9397,8 +8128,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E319'
@@ -9406,13 +8136,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E320'
@@ -9420,13 +8148,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E321'
@@ -9434,13 +8160,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E322'
@@ -9448,13 +8172,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E323'
@@ -9462,13 +8184,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E324'
@@ -9476,13 +8196,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E325'
@@ -9490,18 +8208,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E326'
@@ -9509,18 +8224,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E327'
@@ -9528,13 +8240,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E328'
@@ -9542,13 +8252,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E329'
@@ -9556,18 +8264,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E330'
@@ -9575,18 +8280,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E331'
@@ -9594,13 +8296,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E332'
@@ -9608,8 +8308,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E333'
@@ -9617,8 +8316,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E334'
@@ -9626,13 +8324,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E335'
@@ -9640,13 +8336,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E336'
@@ -9654,13 +8348,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E337'
@@ -9668,13 +8360,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E338'
@@ -9682,13 +8372,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E339'
@@ -9696,13 +8384,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E340'
@@ -9710,18 +8396,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E341'
@@ -9729,18 +8412,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E342'
@@ -9748,13 +8428,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E343'
@@ -9762,8 +8440,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E344'
@@ -9771,8 +8448,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E345'
@@ -9780,13 +8456,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E346'
@@ -9794,13 +8468,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E347'
@@ -9808,13 +8480,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E348'
@@ -9822,13 +8492,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E349'
@@ -9836,13 +8504,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E350'
@@ -9850,13 +8516,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E351'
@@ -9864,18 +8528,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E352'
@@ -9883,18 +8544,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E353'
@@ -9902,13 +8560,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E354'
@@ -9916,8 +8572,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E355'
@@ -9925,8 +8580,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E356'
@@ -9934,13 +8588,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E357'
@@ -9948,13 +8600,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E358'
@@ -9962,13 +8612,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E359'
@@ -9976,13 +8624,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E360'
@@ -9990,13 +8636,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E361'
@@ -10004,13 +8648,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E362'
@@ -10018,18 +8660,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E363'
@@ -10037,18 +8676,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E364'
@@ -10056,13 +8692,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E365'
@@ -10070,8 +8704,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E366'
@@ -10079,8 +8712,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E367'
@@ -10088,13 +8720,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E368'
@@ -10102,13 +8732,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E369'
@@ -10116,13 +8744,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E370'
@@ -10130,13 +8756,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E371'
@@ -10144,13 +8768,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E372'
@@ -10158,13 +8780,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E373'
@@ -10172,18 +8792,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E374'
@@ -10191,18 +8808,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E375'
@@ -10210,13 +8824,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E376'
@@ -10224,8 +8836,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E377'
@@ -10233,8 +8844,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E378'
@@ -10242,13 +8852,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E379'
@@ -10256,13 +8864,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E380'
@@ -10270,13 +8876,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E381'
@@ -10284,13 +8888,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E382'
@@ -10298,13 +8900,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E383'
@@ -10312,13 +8912,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E384'
@@ -10326,18 +8924,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E385'
@@ -10345,18 +8940,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E386'
@@ -10364,13 +8956,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E387'
@@ -10378,8 +8968,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E388'
@@ -10387,8 +8976,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E389'
@@ -10396,13 +8984,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E390'
@@ -10410,13 +8996,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E391'
@@ -10424,13 +9008,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E392'
@@ -10438,13 +9020,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E393'
@@ -10452,13 +9032,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E394'
@@ -10466,13 +9044,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E395'
@@ -10480,18 +9056,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E396'
@@ -10499,18 +9072,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E397'
@@ -10518,13 +9088,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E398'
@@ -10532,8 +9100,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E399'
@@ -10541,8 +9108,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E400'
@@ -10550,13 +9116,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E401'
@@ -10564,13 +9128,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E402'
@@ -10578,13 +9140,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E403'
@@ -10592,13 +9152,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E404'
@@ -10606,13 +9164,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E405'
@@ -10620,13 +9176,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E406'
@@ -10634,18 +9188,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E407'
@@ -10653,18 +9204,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E408'
@@ -10672,13 +9220,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E409'
@@ -10686,8 +9232,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E410'
@@ -10695,8 +9240,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E411'
@@ -10704,13 +9248,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E412'
@@ -10718,13 +9260,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E413'
@@ -10732,13 +9272,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E414'
@@ -10746,13 +9284,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E415'
@@ -10760,13 +9296,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E416'
@@ -10774,13 +9308,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E417'
@@ -10788,18 +9320,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E418'
@@ -10807,18 +9336,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E419'
@@ -10826,13 +9352,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E420'
@@ -10840,8 +9364,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E421'
@@ -10849,8 +9372,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E422'
@@ -10858,13 +9380,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E423'
@@ -10872,13 +9392,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E424'
@@ -10886,13 +9404,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E425'
@@ -10900,13 +9416,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E426'
@@ -10914,13 +9428,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E427'
@@ -10928,13 +9440,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E428'
@@ -10942,18 +9452,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E429'
@@ -10961,18 +9468,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E430'
@@ -10980,13 +9484,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E431'
@@ -10994,8 +9496,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E432'
@@ -11003,8 +9504,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E433'
@@ -11012,13 +9512,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E434'
@@ -11026,13 +9524,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E435'
@@ -11040,13 +9536,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E436'
@@ -11054,13 +9548,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E437'
@@ -11068,13 +9560,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E438'
@@ -11082,13 +9572,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E439'
@@ -11096,18 +9584,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E440'
@@ -11115,18 +9600,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E441'
@@ -11134,13 +9616,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E442'
@@ -11148,8 +9628,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E443'
@@ -11157,8 +9636,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E444'
@@ -11166,13 +9644,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E445'
@@ -11180,13 +9656,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E446'
@@ -11194,13 +9668,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E447'
@@ -11208,13 +9680,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E448'
@@ -11222,13 +9692,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E449'
@@ -11236,13 +9704,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E450'
@@ -11250,18 +9716,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E451'
@@ -11269,18 +9732,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E452'
@@ -11288,13 +9748,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E453'
@@ -11302,8 +9760,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E454'
@@ -11311,8 +9768,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E455'
@@ -11320,13 +9776,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E456'
@@ -11334,13 +9788,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E457'
@@ -11348,13 +9800,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E458'
@@ -11362,13 +9812,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E459'
@@ -11376,13 +9824,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E460'
@@ -11390,13 +9836,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E461'
@@ -11404,18 +9848,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E462'
@@ -11423,18 +9864,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E463'
@@ -11442,13 +9880,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E464'
@@ -11456,8 +9892,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E465'
@@ -11465,8 +9900,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E466'
@@ -11474,13 +9908,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E467'
@@ -11488,13 +9920,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E468'
@@ -11502,13 +9932,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E469'
@@ -11516,13 +9944,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E470'
@@ -11530,13 +9956,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E471'
@@ -11544,13 +9968,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E472'
@@ -11558,18 +9980,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E473'
@@ -11577,18 +9996,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E474'
@@ -11596,13 +10012,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E475'
@@ -11610,8 +10024,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E476'
@@ -11619,8 +10032,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E477'
@@ -11628,13 +10040,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E478'
@@ -11642,13 +10052,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E479'
@@ -11656,13 +10064,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E480'
@@ -11670,13 +10076,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E481'
@@ -11684,13 +10088,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E482'
@@ -11698,13 +10100,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E483'
@@ -11712,18 +10112,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E484'
@@ -11731,18 +10128,15 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP211')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP211"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V3')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E485'
@@ -11750,13 +10144,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP31')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP31"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E486'
@@ -11764,8 +10156,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E487'
@@ -11773,8 +10164,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP4"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'E488'
@@ -11782,13 +10172,11 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP22')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP22"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V2')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'R1'
@@ -11796,8 +10184,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'I1'
@@ -11805,8 +10192,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'R2'
@@ -11814,8 +10200,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'I2'
@@ -11823,8 +10208,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'R3'
@@ -11832,8 +10216,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'I3'
@@ -11841,8 +10224,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'R4'
@@ -11850,8 +10232,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'I4'
@@ -11859,8 +10240,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'R5'
@@ -11868,8 +10248,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'I5'
@@ -11877,8 +10256,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'R6'
@@ -11886,8 +10264,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'I6'
@@ -11895,8 +10272,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'R7'
@@ -11904,8 +10280,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'I7'
@@ -11913,8 +10288,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'R8'
@@ -11922,8 +10296,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'I8'
@@ -11931,8 +10304,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'R9'
@@ -11940,8 +10312,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'I9'
@@ -11949,8 +10320,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'R10'
@@ -11958,8 +10328,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'I10'
@@ -11967,8 +10336,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'R11'
@@ -11976,8 +10344,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'I11'
@@ -11985,8 +10352,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'R12'
@@ -11994,8 +10360,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'I12'
@@ -12003,8 +10368,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'R13'
@@ -12012,8 +10376,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'I13'
@@ -12021,8 +10384,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'R14'
@@ -12030,8 +10392,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'R14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         ename = 'I14'
@@ -12039,8 +10400,7 @@ class ACOPR14:
         self.elftype = jtu.arrset(self.elftype,ie,'eP2')
         ielftype = jtu.arrset(ielftype,ie,iet_["eP2"])
         vname = 'I14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-1.0e+30),float(1.0e+30),float(0.0)))
         posev = jnp.where(elftv[ielftype[ie]]=='V1')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         #%%%%%%%%%%%%%%%%%%% GROUP USES %%%%%%%%%%%%%%%%%%%
@@ -15600,8 +13960,7 @@ class ACOPR14:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nge), grange[gegrps])
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CQOR2-AN-38-82"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -15617,7 +13976,7 @@ class ACOPR14:
         iel_ = args[1]
         f_   = EV_[0]**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -15643,7 +14002,7 @@ class ACOPR14:
         iel_ = args[1]
         f_   = EV_[0]**4
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -15669,7 +14028,7 @@ class ACOPR14:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -15697,7 +14056,7 @@ class ACOPR14:
         iel_ = args[1]
         f_   = EV_[1]*(EV_[0]**3)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -15726,7 +14085,7 @@ class ACOPR14:
         iel_ = args[1]
         f_   = (EV_[0]*EV_[1])**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -15756,7 +14115,7 @@ class ACOPR14:
         iel_ = args[1]
         f_   = (EV_[2]*EV_[1])*(EV_[0]**2)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

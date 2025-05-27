@@ -139,20 +139,16 @@ class TWOD:
                     icA  = jtu.append(icA,[ix_['Y'+str(K)+','+str(int(v_['I+']))+','+str(J)]])
                     valA = jtu.append(valA,float(v_['-.1/2H2']))
                     irA  = jtu.append(irA,[ig])
-                    icA   = (
-                          jtu.append(icA,[ix_['Y'+str(int(v_['K+']))+','+str(int(v_['I-']))+','+str(J)]]))
+                    icA   = (                           jtu.append(icA,[ix_['Y'+str(int(v_['K+']))+','+str(int(v_['I-']))+','+str(J)]]))
                     valA = jtu.append(valA,float(v_['-.1/2H2']))
                     irA  = jtu.append(irA,[ig])
-                    icA   = (
-                          jtu.append(icA,[ix_['Y'+str(int(v_['K+']))+','+str(int(v_['I+']))+','+str(J)]]))
+                    icA   = (                           jtu.append(icA,[ix_['Y'+str(int(v_['K+']))+','+str(int(v_['I+']))+','+str(J)]]))
                     valA = jtu.append(valA,float(v_['-.1/2H2']))
                     irA  = jtu.append(irA,[ig])
-                    icA   = (
-                          jtu.append(icA,[ix_['Y'+str(int(v_['K+']))+','+str(I)+','+str(int(v_['J-']))]]))
+                    icA   = (                           jtu.append(icA,[ix_['Y'+str(int(v_['K+']))+','+str(I)+','+str(int(v_['J-']))]]))
                     valA = jtu.append(valA,float(v_['-.1/2H2']))
                     irA  = jtu.append(irA,[ig])
-                    icA   = (
-                          jtu.append(icA,[ix_['Y'+str(int(v_['K+']))+','+str(I)+','+str(int(v_['J+']))]]))
+                    icA   = (                           jtu.append(icA,[ix_['Y'+str(int(v_['K+']))+','+str(I)+','+str(int(v_['J+']))]]))
                     valA = jtu.append(valA,float(v_['-.1/2H2']))
         for I in range(int(v_['1']),int(v_['N1'])+1):
             for K in range(int(v_['1']),int(v_['M'])+1):
@@ -247,8 +243,7 @@ class TWOD:
                 if('U'+str(I)+','+str(J) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['U'+str(I)+','+str(J)]]), float(v_['UA']))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['U'+str(I)+','+str(J)]),float(v_['UA'])))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['U'+str(I)+','+str(J)]),float(v_['UA'])))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -304,53 +299,44 @@ class TWOD:
         nlc         = jnp.array([])
         ig = ig_['OBJ']
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(int(v_['0']))+','+str(int(v_['0']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(int(v_['0']))+','+str(int(v_['0']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
         self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['.125DXDY']))
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(int(v_['0']))+','+str(int(v_['N']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(int(v_['0']))+','+str(int(v_['N']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
         self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['.125DXDY']))
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(int(v_['N']))+','+str(int(v_['0']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(int(v_['N']))+','+str(int(v_['0']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
         self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['.125DXDY']))
         posel = len(self.grelt[ig])
-        self.grelt  = (
-              jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(int(v_['N']))+','+str(int(v_['N']))]))
+        self.grelt  = (               jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(int(v_['N']))+','+str(int(v_['N']))]))
         nlc = jnp.union1d(nlc,jnp.array([ig]))
         self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['.125DXDY']))
         for J in range(int(v_['1']),int(v_['N1'])+1):
             ig = ig_['OBJ']
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(int(v_['0']))+','+str(J)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(int(v_['0']))+','+str(J)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['.25DXDY']))
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(int(v_['N']))+','+str(J)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(int(v_['N']))+','+str(J)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['.25DXDY']))
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(J)+','+str(int(v_['0']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(J)+','+str(int(v_['0']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['.25DXDY']))
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(int(v_['N']))+','+str(int(v_['N']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(int(v_['N']))+','+str(int(v_['N']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['.25DXDY']))
         for I in range(int(v_['1']),int(v_['N1'])+1):
             for J in range(int(v_['1']),int(v_['N1'])+1):
                 ig = ig_['OBJ']
                 posel = len(self.grelt[ig])
-                self.grelt  = (
-                      jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(I)+','+str(J)]))
+                self.grelt  = (                       jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(I)+','+str(J)]))
                 nlc = jnp.union1d(nlc,jnp.array([ig]))
                 self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['.5DXDY']))
         for K in range(int(v_['1']),int(v_['M1'])+1):
@@ -363,8 +349,7 @@ class TWOD:
         for I in range(int(v_['1']),int(v_['N1'])+1):
             ig = ig_['OBJ']
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(I)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['M']))+','+str(I)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['.25ADTDX']))
         #%%%%%%%% BUILD THE SPARSE MATRICES %%%%%%%%%%%%%%%
@@ -376,8 +361,7 @@ class TWOD:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CQLR2-AN-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -393,7 +377,7 @@ class TWOD:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -419,7 +403,7 @@ class TWOD:
         iel_ = args[1]
         f_   = (EV_[0]-self.elpar[iel_][0])**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

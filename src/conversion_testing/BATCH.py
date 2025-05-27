@@ -232,12 +232,10 @@ class BATCH:
         self.gconst = jnp.zeros((ngrp,1))
         for I in range(int(v_['1']),int(v_['N'])+1):
             for J in range(int(v_['1']),int(v_['M'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['VOL'+str(I)+','+str(J)],float(v_['S'+str(I)+','+str(J)])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['VOL'+str(I)+','+str(J)],float(v_['S'+str(I)+','+str(J)])))
         for I in range(int(v_['1']),int(v_['N'])+1):
             for J in range(int(v_['1']),int(v_['M'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['CYCL'+str(I)+','+str(J)],float(v_['T'+str(I)+','+str(J)])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['CYCL'+str(I)+','+str(J)],float(v_['T'+str(I)+','+str(J)])))
         self.gconst = jtu.arrset(self.gconst,ig_['HORIZON'],float(v_['H']))
         for J in range(int(v_['1']),int(v_['M'])+1):
             self.gconst = jtu.arrset(self.gconst,ig_['SOS1'+str(J)],float(1.0))
@@ -333,8 +331,7 @@ class BATCH:
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COOR2-AN-46-73"
         self.x0        = jnp.zeros((self.n,1))
         self.objderlvl = 2
@@ -357,7 +354,7 @@ class BATCH:
         GYVALU = self.elpar[iel_][0]*FVALUE
         f_   = FVALUE
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

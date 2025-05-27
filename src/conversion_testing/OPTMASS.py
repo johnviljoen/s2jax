@@ -171,11 +171,9 @@ class OPTMASS:
         #%%%%%%%%%%%%%%%%%% START POINT %%%%%%%%%%%%%%%%%%
         self.x0 = jnp.full((self.n,1),float(0.0))
         if('V'+str(int(v_['1']))+','+str(int(v_['0'])) in ix_):
-            self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['V'+str(int(v_['1']))+','+str(int(v_['0']))]]), ()
-                  float(v_['SPEED']))
+            self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['V'+str(int(v_['1']))+','+str(int(v_['0']))]]), (                   float(v_['SPEED'])))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(int(v_['1']))+','+str(int(v_['0']))]),float(v_['SPEED'])))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(int(v_['1']))+','+str(int(v_['0']))]),float(v_['SPEED'])))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -254,13 +252,11 @@ class OPTMASS:
         for I in range(int(v_['0']),int(v_['N'])+1):
             ig = ig_['C'+str(I)]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['D'+str(int(v_['1']))+','+str(I)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['D'+str(int(v_['1']))+','+str(I)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
             posel = posel+1
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['D'+str(int(v_['2']))+','+str(I)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['D'+str(int(v_['2']))+','+str(I)]))
             self.grelw = jtu.loaset(self.grelw,ig,posel, 1.)
         #%%%%%%%%%%%%%%%%%% OBJECT BOUNDS %%%%%%%%%%%%%%%%%
 #    Solution
@@ -278,8 +274,7 @@ class OPTMASS:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CQQR2-AN-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -299,7 +294,7 @@ class OPTMASS:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

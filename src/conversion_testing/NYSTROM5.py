@@ -216,13 +216,11 @@ class NYSTROM5:
         if('AL2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['AL2'], float(0.2))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['AL2']),float(0.2)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['AL2']),float(0.2)))
         if('AL4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['AL4'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['AL4']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['AL4']),float(1.0)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -1651,8 +1649,7 @@ class NYSTROM5:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-RY-18-20"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -1668,7 +1665,7 @@ class NYSTROM5:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1703,7 +1700,7 @@ class NYSTROM5:
         IV_ = jtu.np_like_set(IV_, 1, U_[1:2,:].dot(EV_))
         f_   = IV_[0]*IV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1741,7 +1738,7 @@ class NYSTROM5:
         IV_ = jtu.np_like_set(IV_, 1, U_[1:2,:].dot(EV_))
         f_   = IV_[0]*IV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1771,7 +1768,7 @@ class NYSTROM5:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]*EV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1813,7 +1810,7 @@ class NYSTROM5:
         IV_ = jtu.np_like_set(IV_, 2, U_[2:3,:].dot(EV_))
         f_   = IV_[0]*IV_[1]*IV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1858,7 +1855,7 @@ class NYSTROM5:
         IV_ = jtu.np_like_set(IV_, 2, U_[2:3,:].dot(EV_))
         f_   = IV_[0]*IV_[1]*IV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1893,7 +1890,7 @@ class NYSTROM5:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]*EV_[2]*EV_[3]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1933,7 +1930,7 @@ class NYSTROM5:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1969,7 +1966,7 @@ class NYSTROM5:
         IV_ = jtu.np_like_set(IV_, 1, U_[1:2,:].dot(EV_))
         f_   = IV_[0]*IV_[1]*IV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -2008,7 +2005,7 @@ class NYSTROM5:
         IV_ = jtu.np_like_set(IV_, 1, U_[1:2,:].dot(EV_))
         f_   = IV_[0]*IV_[1]*IV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -2039,7 +2036,7 @@ class NYSTROM5:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]**3
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -2068,7 +2065,7 @@ class NYSTROM5:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]**4
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -2097,7 +2094,7 @@ class NYSTROM5:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]*EV_[1]*EV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -2140,7 +2137,7 @@ class NYSTROM5:
         IV_ = jtu.np_like_set(IV_, 2, U_[2:3,:].dot(EV_))
         f_   = IV_[0]*IV_[1]*IV_[1]*IV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -2186,7 +2183,7 @@ class NYSTROM5:
         IV_ = jtu.np_like_set(IV_, 2, U_[2:3,:].dot(EV_))
         f_   = IV_[0]*IV_[1]*IV_[1]*IV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

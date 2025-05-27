@@ -185,7 +185,7 @@ class MISRA1DLS:
         V2X2R2 = EV_[1]*X2/R2
         f_   = EV_[0]*EV_[1]*XR
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

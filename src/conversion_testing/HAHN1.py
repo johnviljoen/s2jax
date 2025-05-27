@@ -566,38 +566,31 @@ class HAHN1:
         if('B1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B1'], float(10.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B1']),float(10.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B1']),float(10.0)))
         if('B2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B2'], float(-1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B2']),float(-1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B2']),float(-1.0)))
         if('B3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B3'], float(0.05))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B3']),float(0.05)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B3']),float(0.05)))
         if('B4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B4'], float(-0.00001))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B4']),float(-0.00001)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B4']),float(-0.00001)))
         if('B5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B5'], float(-0.05))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B5']),float(-0.05)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B5']),float(-0.05)))
         if('B6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B6'], float(0.001))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B6']),float(0.001)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B6']),float(0.001)))
         if('B7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B7'], float(-0.000001))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B7']),float(-0.000001)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B7']),float(-0.000001)))
         pass
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
@@ -678,8 +671,7 @@ class HAHN1:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-MN-7-37"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -708,7 +700,7 @@ class HAHN1:
         TD3 = 0.5e0*D2*D
         f_   = T/D
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

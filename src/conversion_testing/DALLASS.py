@@ -497,198 +497,159 @@ class DALLASS:
         if('X1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X1'], float(2.11673e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(2.11673e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(2.11673e+01)))
         if('X2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X2'], float(4.37635e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X2'])[0],float(4.37635e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X2'])[0],float(4.37635e+01)))
         if('X3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X3'], float(3.28255e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3']),float(3.28255e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3']),float(3.28255e+01)))
         if('X4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X4'], float(1.42109e-14))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X4'])[0],float(1.42109e-14)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X4'])[0],float(1.42109e-14)))
         if('X5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X5'], float(1.68826e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5']),float(1.68826e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5']),float(1.68826e+02)))
         if('X7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X7'], float(2.81745e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X7'])[0],float(2.81745e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X7'])[0],float(2.81745e+01)))
         if('X8' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X8'], float(8.75603e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X8']),float(8.75603e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X8']),float(8.75603e+01)))
         if('X9' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X9'], float(-5.93858e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X9'])[0],float(-5.93858e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X9'])[0],float(-5.93858e+01)))
         if('X10' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X10'], float(-5.97888e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X10']),float(-5.97888e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X10']),float(-5.97888e+01)))
         if('X11' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X11'], float(1.83383e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X11'])[0],float(1.83383e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X11'])[0],float(1.83383e+02)))
         if('X13' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X13'], float(-1.68331e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X13']),float(-1.68331e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X13']),float(-1.68331e+02)))
         if('X15' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X15'], float(2.00000e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X15'])[0],float(2.00000e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X15'])[0],float(2.00000e+02)))
         if('X16' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X16'], float(2.00000e-01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X16']),float(2.00000e-01)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X16']),float(2.00000e-01)))
         if('X17' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X17'], float(2.00000e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X17'])[0],float(2.00000e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X17'])[0],float(2.00000e+02)))
         if('X18' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X18'], float(-7.67574e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X18']),float(-7.67574e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X18']),float(-7.67574e+01)))
         if('X19' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X19'], float(2.20120e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X19'])[0],float(2.20120e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X19'])[0],float(2.20120e+01)))
         if('X20' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X20'], float(1.36703e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X20']),float(1.36703e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X20']),float(1.36703e+01)))
         if('X21' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X21'], float(1.36703e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X21'])[0],float(1.36703e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X21'])[0],float(1.36703e+01)))
         if('X22' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X22'], float(-1.98461e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X22']),float(-1.98461e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X22']),float(-1.98461e+02)))
         if('X23' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X23'], float(1.81531e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X23'])[0],float(1.81531e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X23'])[0],float(1.81531e+02)))
         if('X24' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X24'], float(-1.93133e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X24']),float(-1.93133e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X24']),float(-1.93133e+01)))
         if('X25' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X25'], float(2.00000e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X25'])[0],float(2.00000e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X25'])[0],float(2.00000e+02)))
         if('X26' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X26'], float(-1.98792e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X26']),float(-1.98792e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X26']),float(-1.98792e+02)))
         if('X27' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X27'], float(1.15500))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X27'])[0],float(1.15500)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X27'])[0],float(1.15500)))
         if('X28' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X28'], float(0.00000))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X28']),float(0.00000)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X28']),float(0.00000)))
         if('X29' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X29'], float(2.00000e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X29'])[0],float(2.00000e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X29'])[0],float(2.00000e+02)))
         if('X30' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X30'], float(2.72000e-01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X30']),float(2.72000e-01)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X30']),float(2.72000e-01)))
         if('X32' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X32'], float(-1.98843e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X32'])[0],float(-1.98843e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X32'])[0],float(-1.98843e+01)))
         if('X33' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X33'], float(1.78834e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X33']),float(1.78834e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X33']),float(1.78834e+02)))
         if('X34' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X34'], float(-1.79589e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X34'])[0],float(-1.79589e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X34'])[0],float(-1.79589e+02)))
         if('X35' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X35'], float(-1.98843e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X35']),float(-1.98843e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X35']),float(-1.98843e+01)))
         if('X37' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X37'], float(1.79589e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X37'])[0],float(1.79589e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X37'])[0],float(1.79589e+02)))
         if('X40' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X40'], float(2.00000e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X40']),float(2.00000e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X40']),float(2.00000e+02)))
         if('X41' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X41'], float(2.00000e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X41'])[0],float(2.00000e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X41'])[0],float(2.00000e+02)))
         if('X42' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X42'], float(9.87694e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X42']),float(9.87694e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X42']),float(9.87694e+01)))
         if('X43' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X43'], float(1.36703e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X43'])[0],float(1.36703e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X43'])[0],float(1.36703e+01)))
         if('X44' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X44'], float(3.28255e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X44']),float(3.28255e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X44']),float(3.28255e+01)))
         if('X45' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X45'], float(4.37635e+01))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X45'])[0],float(4.37635e+01)))
+            self.y0  = (                   jtu.arrset(self.y0,jnp.where(self.congrps==ig_['X45'])[0],float(4.37635e+01)))
         if('X46' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X46'], float(-1.78833e+02))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X46']),float(-1.78833e+02)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X46']),float(-1.78833e+02)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -713,8 +674,7 @@ class DALLASS:
         self.elftype = jtu.arrset(self.elftype,ie,'eT4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eT4"])
         vname = 'X1'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -726,8 +686,7 @@ class DALLASS:
         self.elftype = jtu.arrset(self.elftype,ie,'eT4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eT4"])
         vname = 'X2'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -739,8 +698,7 @@ class DALLASS:
         self.elftype = jtu.arrset(self.elftype,ie,'eT4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eT4"])
         vname = 'X3'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -753,8 +711,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X4'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -769,8 +726,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X5'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -785,8 +741,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X6'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -801,8 +756,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X7'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -817,8 +771,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X8'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -833,8 +786,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X9'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -849,8 +801,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X10'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -865,8 +816,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X11'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -881,8 +831,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X12'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -897,8 +846,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X13'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -913,8 +861,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X14'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -929,8 +876,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X15'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -945,8 +891,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X16'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -961,8 +906,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X17'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -977,8 +921,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X18'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -992,8 +935,7 @@ class DALLASS:
         self.elftype = jtu.arrset(self.elftype,ie,'eT4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eT4"])
         vname = 'X19'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1006,8 +948,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X20'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1021,8 +962,7 @@ class DALLASS:
         self.elftype = jtu.arrset(self.elftype,ie,'eT4')
         ielftype = jtu.arrset(ielftype,ie,iet_["eT4"])
         vname = 'X21'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1035,8 +975,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X22'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1051,8 +990,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X23'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1067,8 +1005,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X24'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1083,8 +1020,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X25'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1099,8 +1035,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X26'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1115,8 +1050,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X27'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1131,8 +1065,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X28'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1147,8 +1080,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X29'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1163,8 +1095,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X30'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1179,8 +1110,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X31'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1195,8 +1125,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X32'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1211,8 +1140,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X33'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1227,8 +1155,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X34'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1243,8 +1170,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X35'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1259,8 +1185,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X36'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1275,8 +1200,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X37'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1291,8 +1215,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X38'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1307,8 +1230,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X39'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1323,8 +1245,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X40'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1339,8 +1260,7 @@ class DALLASS:
             self.elftype = jtu.arrset(self.elftype,ie,'eT1')
             ielftype = jtu.arrset(ielftype,ie,iet_['eT1'])
         vname = 'X41'
-        [iv,ix_]  = (
-              jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
+        [iv,ix_]  = (               jtu.s2mpj_nlx(self,vname,ix_,1,float(-2.00000e+02),float(2.00000e+02),float(-2.00000e+02)))
         posev = jnp.where(elftv[ielftype[ie]]=='ARC')[0]
         self.elvar = jtu.loaset(self.elvar,ie,posev[0],iv)
         posep = jnp.where(elftp[ielftype[ie]]=='C1')[0]
@@ -1513,8 +1433,7 @@ class DALLASS:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CONR2-MN-46-31"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -1539,7 +1458,7 @@ class DALLASS:
         XEXP = X**0.85
         f_   = TMP*X**2*XEXP
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1571,7 +1490,7 @@ class DALLASS:
         TMP2 = jnp.sqrt(self.elpar[iel_][1])*jnp.arcsin(X/SQC1)
         f_   = 0.5*(-X*TMP-self.elpar[iel_][0]*TMP2)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -160,31 +160,25 @@ class COOLHANS:
                 for M in range(int(v_['1']),int(v_['N'])+1):
                     ig = ig_['G'+str(int(v_['1']))+','+str(L)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['E'+str(P)+','+str(M)+','+str(L)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['E'+str(P)+','+str(M)+','+str(L)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
-                    self.grelw  = (
-                          jtu.loaset(self.grelw,ig,posel,float(v_['A'+str(int(v_['1']))+','+str(P)])))
+                    self.grelw  = (                           jtu.loaset(self.grelw,ig,posel,float(v_['A'+str(int(v_['1']))+','+str(P)])))
         for L in range(int(v_['1']),int(v_['N'])+1):
             for P in range(int(v_['1']),int(v_['N'])+1):
                 for M in range(int(v_['1']),int(v_['N'])+1):
                     ig = ig_['G'+str(int(v_['2']))+','+str(L)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['E'+str(P)+','+str(M)+','+str(L)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['E'+str(P)+','+str(M)+','+str(L)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
-                    self.grelw  = (
-                          jtu.loaset(self.grelw,ig,posel,float(v_['A'+str(int(v_['2']))+','+str(P)])))
+                    self.grelw  = (                           jtu.loaset(self.grelw,ig,posel,float(v_['A'+str(int(v_['2']))+','+str(P)])))
         for L in range(int(v_['1']),int(v_['N'])+1):
             for P in range(int(v_['1']),int(v_['N'])+1):
                 for M in range(int(v_['1']),int(v_['N'])+1):
                     ig = ig_['G'+str(int(v_['3']))+','+str(L)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['E'+str(P)+','+str(M)+','+str(L)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['E'+str(P)+','+str(M)+','+str(L)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
-                    self.grelw  = (
-                          jtu.loaset(self.grelw,ig,posel,float(v_['A'+str(int(v_['3']))+','+str(P)])))
+                    self.grelw  = (                           jtu.loaset(self.grelw,ig,posel,float(v_['A'+str(int(v_['3']))+','+str(P)])))
         #%%%%%%%%%%%%%%%%%% OBJECT BOUNDS %%%%%%%%%%%%%%%%%
         self.objlower = 0.0
 #    Solution
@@ -198,8 +192,7 @@ class COOLHANS:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNQR2-RN-9-9"
         self.x0        = jnp.zeros((self.n,1))
         self.objderlvl = 2
@@ -220,7 +213,7 @@ class COOLHANS:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

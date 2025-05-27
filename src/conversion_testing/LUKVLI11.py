@@ -262,8 +262,7 @@ class LUKVLI11:
         self.cupper = jnp.full((self.m,1),+float('Inf'))
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nle), jnp.zeros((self.nle,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COOR2-AY-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -283,7 +282,7 @@ class LUKVLI11:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -318,7 +317,7 @@ class LUKVLI11:
         SIND = jnp.sin(IV_[0])
         f_   = SIND
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -346,7 +345,7 @@ class LUKVLI11:
         iel_ = args[1]
         f_   = EV_[0]**4*EV_[1]**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

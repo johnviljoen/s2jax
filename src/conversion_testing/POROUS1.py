@@ -110,8 +110,7 @@ class POROUS1:
         self.objgrps = jnp.where(gtype=='<>')[0]
         #%%%%%%%%%%%%%%%%%% CONSTANTS %%%%%%%%%%%%%%%%%%%%%
         self.gconst = jnp.zeros((ngrp,1))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['P-1']))+','+str(int(v_['P-1']))],float(-50.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['P-1']))+','+str(int(v_['P-1']))],float(-50.0)))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-float('Inf'))
         self.xupper = jnp.full((self.n,1),+float('Inf'))
@@ -185,23 +184,19 @@ class POROUS1:
                 v_['J+1'] = 1+J
                 ig = ig_['G'+str(I)+','+str(J)]
                 posel = len(self.grelt[ig])
-                self.grelt  = (
-                      jtu.loaset(self.grelt,ig,posel,ie_['US'+str(int(v_['I+1']))+','+str(J)]))
+                self.grelt  = (                       jtu.loaset(self.grelt,ig,posel,ie_['US'+str(int(v_['I+1']))+','+str(J)]))
                 nlc = jnp.union1d(nlc,jnp.array([ig]))
                 self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/H2']))
                 posel = len(self.grelt[ig])
-                self.grelt  = (
-                      jtu.loaset(self.grelt,ig,posel,ie_['US'+str(int(v_['I-1']))+','+str(J)]))
+                self.grelt  = (                       jtu.loaset(self.grelt,ig,posel,ie_['US'+str(int(v_['I-1']))+','+str(J)]))
                 nlc = jnp.union1d(nlc,jnp.array([ig]))
                 self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/H2']))
                 posel = len(self.grelt[ig])
-                self.grelt  = (
-                      jtu.loaset(self.grelt,ig,posel,ie_['US'+str(I)+','+str(int(v_['J-1']))]))
+                self.grelt  = (                       jtu.loaset(self.grelt,ig,posel,ie_['US'+str(I)+','+str(int(v_['J-1']))]))
                 nlc = jnp.union1d(nlc,jnp.array([ig]))
                 self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/H2']))
                 posel = len(self.grelt[ig])
-                self.grelt  = (
-                      jtu.loaset(self.grelt,ig,posel,ie_['US'+str(I)+','+str(int(v_['J+1']))]))
+                self.grelt  = (                       jtu.loaset(self.grelt,ig,posel,ie_['US'+str(I)+','+str(int(v_['J+1']))]))
                 nlc = jnp.union1d(nlc,jnp.array([ig]))
                 self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/H2']))
                 posel = len(self.grelt[ig])
@@ -209,13 +204,11 @@ class POROUS1:
                 nlc = jnp.union1d(nlc,jnp.array([ig]))
                 self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-4/H2']))
                 posel = len(self.grelt[ig])
-                self.grelt  = (
-                      jtu.loaset(self.grelt,ig,posel,ie_['UC'+str(int(v_['I+1']))+','+str(J)]))
+                self.grelt  = (                       jtu.loaset(self.grelt,ig,posel,ie_['UC'+str(int(v_['I+1']))+','+str(J)]))
                 nlc = jnp.union1d(nlc,jnp.array([ig]))
                 self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['D/2H']))
                 posel = len(self.grelt[ig])
-                self.grelt  = (
-                      jtu.loaset(self.grelt,ig,posel,ie_['UC'+str(int(v_['I-1']))+','+str(J)]))
+                self.grelt  = (                       jtu.loaset(self.grelt,ig,posel,ie_['UC'+str(int(v_['I-1']))+','+str(J)]))
                 nlc = jnp.union1d(nlc,jnp.array([ig]))
                 self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-D/2H']))
         #%%%%%%%%%%%%%%%%%% OBJECT BOUNDS %%%%%%%%%%%%%%%%%
@@ -229,8 +222,7 @@ class POROUS1:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-MN-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -250,7 +242,7 @@ class POROUS1:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -276,7 +268,7 @@ class POROUS1:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

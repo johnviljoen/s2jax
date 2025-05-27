@@ -179,8 +179,7 @@ class HIMMELBF:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        U  = (
-              EV_[0]*EV_[0]+self.elpar[iel_][0]*EV_[1]*EV_[1]+self.elpar[iel_][0]*self.elpar[iel_][0]*EV_[2]*EV_[2])
+        U  = (               EV_[0]*EV_[0]+self.elpar[iel_][0]*EV_[1]*EV_[1]+self.elpar[iel_][0]*self.elpar[iel_][0]*EV_[2]*EV_[2])
         V = self.elpar[iel_][1]*(1.0+self.elpar[iel_][0]*EV_[3]*EV_[3])
         V2 = V*V
         AB = self.elpar[iel_][0]*self.elpar[iel_][1]
@@ -188,7 +187,7 @@ class HIMMELBF:
         T = -4.0*AB/V2
         f_   = U/V
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

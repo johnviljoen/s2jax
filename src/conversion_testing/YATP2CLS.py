@@ -219,7 +219,7 @@ class YATP2CLS:
         S = jnp.sin(IV_[0])
         f_   = IV_[1]*C
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -252,7 +252,7 @@ class YATP2CLS:
         C = jnp.cos(EV_[0])
         f_   = S
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

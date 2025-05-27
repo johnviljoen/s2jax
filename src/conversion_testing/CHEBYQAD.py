@@ -190,7 +190,7 @@ class CHEBYQAD:
         SINAC = jnp.sin(ACOSX)
         f_   = COSAC
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -200,8 +200,7 @@ class CHEBYQAD:
             g_ = jtu.np_like_set(g_, 0, 2.0e+0*self.elpar[iel_][0]*SINAC/SQRTY)
             if nargout>2:
                 H_ = jnp.zeros((1,1))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), ()
-                      4.0e+0*self.elpar[iel_][0]*(SINAC*DIF/SQRTY-self.elpar[iel_][0]*COSAC)/Y)
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (                       4.0e+0*self.elpar[iel_][0]*(SINAC*DIF/SQRTY-self.elpar[iel_][0]*COSAC)/Y))
         if nargout == 1:
             return f_
         elif nargout == 2:

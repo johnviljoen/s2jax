@@ -174,7 +174,7 @@ class GULF:
         AEXPMA = A*EXPMA
         f_   = EXPMA
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -334,8 +334,7 @@ class GASOIL:
         self.gconst = jnp.zeros((ngrp,1))
         for J in range(int(v_['1']),int(v_['NM'])+1):
             for S in range(int(v_['1']),int(v_['NE'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['OBJ'+str(J)+','+str(S)],float(v_['Z'+str(J)+','+str(S)])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['OBJ'+str(J)+','+str(S)],float(v_['Z'+str(J)+','+str(S)])))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-float('Inf'))
         self.xupper = jnp.full((self.n,1),+float('Inf'))
@@ -351,15 +350,13 @@ class GASOIL:
             if('THETA'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['THETA'+str(I)], float(0.0))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['THETA'+str(I)]),float(0.0)))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['THETA'+str(I)]),float(0.0)))
         for I in range(int(v_['1']),int(v_['NH'])+1):
             for J in range(int(v_['1']),int(v_['NE'])+1):
                 if('V'+str(I)+','+str(J) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['V'+str(I)+','+str(J)]]), float(0.0))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(I)+','+str(J)]),float(0.0)))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(I)+','+str(J)]),float(0.0)))
         v_['I1'] = 1
         v_['RITAU'] = v_['ITAU'+str(int(v_['1']))]
         v_['I2'] = int(jnp.fix(v_['RITAU']))
@@ -368,24 +365,20 @@ class GASOIL:
                 if('V'+str(I)+','+str(S) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['V'+str(I)+','+str(S)]]), float(v_['BC'+str(S)]))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(I)+','+str(S)]),float(v_['BC'+str(S)])))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(I)+','+str(S)]),float(v_['BC'+str(S)])))
                 for J in range(int(v_['1']),int(v_['NC'])+1):
                     if('W'+str(I)+','+str(J)+','+str(S) in ix_):
                         self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['W'+str(I)+','+str(J)+','+str(S)]]), float(0.0))
                     else:
-                        self.y0  = (
-                              jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['W'+str(I)+','+str(J)+','+str(S)]),float(0.0)))
+                        self.y0  = (                               jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['W'+str(I)+','+str(J)+','+str(S)]),float(0.0)))
                     if('U'+str(I)+','+str(J)+','+str(S) in ix_):
                         self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['U'+str(I)+','+str(J)+','+str(S)]]), float(v_['BC'+str(S)]))
                     else:
-                        self.y0  = (
-                              jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['U'+str(I)+','+str(J)+','+str(S)]),float(v_['BC'+str(S)])))
+                        self.y0  = (                               jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['U'+str(I)+','+str(J)+','+str(S)]),float(v_['BC'+str(S)])))
                     if('DU'+str(I)+','+str(J)+','+str(S) in ix_):
                         self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['DU'+str(I)+','+str(J)+','+str(S)]]), float(0.0))
                     else:
-                        self.y0  = (
-                              jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['DU'+str(I)+','+str(J)+','+str(S)]),float(0.0)))
+                        self.y0  = (                               jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['DU'+str(I)+','+str(J)+','+str(S)]),float(0.0)))
         for K in range(int(v_['2']),int(v_['NM'])+1):
             v_['I1'] = 1+v_['I2']
             v_['RITAU'] = v_['ITAU'+str(K)]
@@ -393,79 +386,61 @@ class GASOIL:
             for I in range(int(v_['I1']),int(v_['I2'])+1):
                 v_['S'] = 1
                 if('V'+str(I)+','+str(int(v_['S'])) in ix_):
-                    self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['V'+str(I)+','+str(int(v_['S']))]]), ()
-                          float(v_['Z'+str(K)+','+str(int(v_['S']))]))
+                    self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['V'+str(I)+','+str(int(v_['S']))]]), (                           float(v_['Z'+str(K)+','+str(int(v_['S']))])))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(I)+','+str(int(v_['S']))]),float(v_['Z'+str(K)+','+str(int(v_['S']))])))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(I)+','+str(int(v_['S']))]),float(v_['Z'+str(K)+','+str(int(v_['S']))])))
                 for J in range(int(v_['1']),int(v_['NC'])+1):
                     if('W'+str(I)+','+str(J)+','+str(int(v_['S'])) in ix_):
                         self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['W'+str(I)+','+str(J)+','+str(int(v_['S']))]]), float(0.0))
                     else:
-                        self.y0  = (
-                              jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['W'+str(I)+','+str(J)+','+str(int(v_['S']))]),float(0.0)))
+                        self.y0  = (                               jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['W'+str(I)+','+str(J)+','+str(int(v_['S']))]),float(0.0)))
                     if('U'+str(I)+','+str(J)+','+str(int(v_['S'])) in ix_):
-                        self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['U'+str(I)+','+str(J)+','+str(int(v_['S']))]]), ()
-                              float(v_['Z'+str(K)+','+str(int(v_['S']))]))
+                        self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['U'+str(I)+','+str(J)+','+str(int(v_['S']))]]), (                               float(v_['Z'+str(K)+','+str(int(v_['S']))])))
                     else:
-                        self.y0  = (
-                              jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['U'+str(I)+','+str(J)+','+str(int(v_['S']))]),float(v_['Z'+str(K)+','+str(int(v_['S']))])))
+                        self.y0  = (                               jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['U'+str(I)+','+str(J)+','+str(int(v_['S']))]),float(v_['Z'+str(K)+','+str(int(v_['S']))])))
                     if('DU'+str(I)+','+str(J)+','+str(int(v_['S'])) in ix_):
                         self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['DU'+str(I)+','+str(J)+','+str(int(v_['S']))]]), float(0.0))
                     else:
-                        self.y0  = (
-                              jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['DU'+str(I)+','+str(J)+','+str(int(v_['S']))]),float(0.0)))
+                        self.y0  = (                               jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['DU'+str(I)+','+str(J)+','+str(int(v_['S']))]),float(0.0)))
                 v_['S'] = 2
                 if('V'+str(I)+','+str(int(v_['S'])) in ix_):
-                    self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['V'+str(I)+','+str(int(v_['S']))]]), ()
-                          float(v_['Z'+str(K)+','+str(int(v_['S']))]))
+                    self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['V'+str(I)+','+str(int(v_['S']))]]), (                           float(v_['Z'+str(K)+','+str(int(v_['S']))])))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(I)+','+str(int(v_['S']))]),float(v_['Z'+str(K)+','+str(int(v_['S']))])))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(I)+','+str(int(v_['S']))]),float(v_['Z'+str(K)+','+str(int(v_['S']))])))
                 for J in range(int(v_['1']),int(v_['NC'])+1):
                     if('W'+str(I)+','+str(J)+','+str(int(v_['S'])) in ix_):
                         self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['W'+str(I)+','+str(J)+','+str(int(v_['S']))]]), float(0.0))
                     else:
-                        self.y0  = (
-                              jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['W'+str(I)+','+str(J)+','+str(int(v_['S']))]),float(0.0)))
+                        self.y0  = (                               jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['W'+str(I)+','+str(J)+','+str(int(v_['S']))]),float(0.0)))
                     if('U'+str(I)+','+str(J)+','+str(int(v_['S'])) in ix_):
-                        self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['U'+str(I)+','+str(J)+','+str(int(v_['S']))]]), ()
-                              float(v_['Z'+str(K)+','+str(int(v_['S']))]))
+                        self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['U'+str(I)+','+str(J)+','+str(int(v_['S']))]]), (                               float(v_['Z'+str(K)+','+str(int(v_['S']))])))
                     else:
-                        self.y0  = (
-                              jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['U'+str(I)+','+str(J)+','+str(int(v_['S']))]),float(v_['Z'+str(K)+','+str(int(v_['S']))])))
+                        self.y0  = (                               jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['U'+str(I)+','+str(J)+','+str(int(v_['S']))]),float(v_['Z'+str(K)+','+str(int(v_['S']))])))
                     if('DU'+str(I)+','+str(J)+','+str(int(v_['S'])) in ix_):
                         self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['DU'+str(I)+','+str(J)+','+str(int(v_['S']))]]), float(0.0))
                     else:
-                        self.y0  = (
-                              jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['DU'+str(I)+','+str(J)+','+str(int(v_['S']))]),float(0.0)))
+                        self.y0  = (                               jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['DU'+str(I)+','+str(J)+','+str(int(v_['S']))]),float(0.0)))
         v_['I1'] = 1+v_['I2']
         v_['I2'] = v_['NH']
         for I in range(int(v_['I1']),int(v_['I2'])+1):
             for S in range(int(v_['1']),int(v_['NE'])+1):
                 if('V'+str(I)+','+str(S) in ix_):
-                    self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['V'+str(I)+','+str(S)]]), ()
-                          float(v_['Z'+str(int(v_['NM']))+','+str(S)]))
+                    self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['V'+str(I)+','+str(S)]]), (                           float(v_['Z'+str(int(v_['NM']))+','+str(S)])))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(I)+','+str(S)]),float(v_['Z'+str(int(v_['NM']))+','+str(S)])))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['V'+str(I)+','+str(S)]),float(v_['Z'+str(int(v_['NM']))+','+str(S)])))
                 for J in range(int(v_['1']),int(v_['NC'])+1):
                     if('W'+str(I)+','+str(J)+','+str(S) in ix_):
                         self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['W'+str(I)+','+str(J)+','+str(S)]]), float(0.0))
                     else:
-                        self.y0  = (
-                              jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['W'+str(I)+','+str(J)+','+str(S)]),float(0.0)))
+                        self.y0  = (                               jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['W'+str(I)+','+str(J)+','+str(S)]),float(0.0)))
                     if('U'+str(I)+','+str(J)+','+str(S) in ix_):
-                        self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['U'+str(I)+','+str(J)+','+str(S)]]), ()
-                              float(v_['Z'+str(int(v_['NM']))+','+str(S)]))
+                        self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['U'+str(I)+','+str(J)+','+str(S)]]), (                               float(v_['Z'+str(int(v_['NM']))+','+str(S)])))
                     else:
-                        self.y0  = (
-                              jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['U'+str(I)+','+str(J)+','+str(S)]),float(v_['Z'+str(int(v_['NM']))+','+str(S)])))
+                        self.y0  = (                               jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['U'+str(I)+','+str(J)+','+str(S)]),float(v_['Z'+str(int(v_['NM']))+','+str(S)])))
                     if('DU'+str(I)+','+str(J)+','+str(S) in ix_):
                         self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['DU'+str(I)+','+str(J)+','+str(S)]]), float(0.0))
                     else:
-                        self.y0  = (
-                              jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['DU'+str(I)+','+str(J)+','+str(S)]),float(0.0)))
+                        self.y0  = (                               jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['DU'+str(I)+','+str(J)+','+str(S)]),float(0.0)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -570,8 +545,7 @@ class GASOIL:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COOR2-AN-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -598,7 +572,7 @@ class GASOIL:
         IV_ = jtu.np_like_set(IV_, 1, U_[1:2,:].dot(EV_))
         f_   = IV_[0]*IV_[1]**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -629,7 +603,7 @@ class GASOIL:
         iel_ = args[1]
         f_   = -EV_[0]*EV_[1]**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -658,7 +632,7 @@ class GASOIL:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

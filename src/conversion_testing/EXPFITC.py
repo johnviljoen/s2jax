@@ -140,28 +140,23 @@ class EXPFITC:
         if('P0' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P0'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P0']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P0']),float(1.0)))
         if('P1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P1'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P1']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P1']),float(1.0)))
         if('P2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['P2'], float(6.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P2']),float(6.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['P2']),float(6.0)))
         if('Q1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Q1'], float(0.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q1']),float(0.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q1']),float(0.0)))
         if('Q2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['Q2'], float(0.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q2']),float(0.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['Q2']),float(0.0)))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -231,8 +226,7 @@ class EXPFITC:
         self.cupper = jnp.full((self.m,1),+float('Inf'))
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COLR2-AN-5-502"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -277,7 +271,7 @@ class EXPFITC:
         D2Q2Q2 = 2.0*PT*TM5SQ*TM5SQ/ETQT3
         f_   = F*F
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

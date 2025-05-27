@@ -254,8 +254,7 @@ class HS99:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COOR2-AN-7-2"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -271,7 +270,7 @@ class HS99:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,50.0)
         self.efpar = jtu.arrset( self.efpar,1,50.0)
         self.efpar = jtu.arrset( self.efpar,2,75.0)
@@ -303,7 +302,7 @@ class HS99:
         R7 = self.efpar[5]*self.efpar[12]*jnp.cos(EV_[5])+R6
         f_   = self.efpar[6]*self.efpar[13]*jnp.cos(EV_[6])+R7
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -347,7 +346,7 @@ class HS99:
         S7 = self.efpar[12]*(self.efpar[5]*jnp.sin(EV_[5])-self.efpar[14])+S6
         f_   = self.efpar[13]*(self.efpar[6]*jnp.sin(EV_[6])-self.efpar[14])+S7
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -403,55 +402,36 @@ class HS99:
         D2SD5 = -self.efpar[4]*self.efpar[11]*jnp.sin(EV_[4])
         D2SD6 = -self.efpar[5]*self.efpar[12]*jnp.sin(EV_[5])
         D2SD7 = -self.efpar[6]*self.efpar[13]*jnp.sin(EV_[6])
-        Q2  = (
-              0.5*self.efpar[7]*self.efpar[7]*(self.efpar[0]*jnp.sin(EV_[0])-self.efpar[14]))
-        Q3  = (
-              0.5*self.efpar[8]*self.efpar[8]*(self.efpar[1]*jnp.sin(EV_[1])-self.efpar[14])+self.efpar[8]*S2+Q2)
-        Q4  = (
-              0.5*self.efpar[9]*self.efpar[9]*(self.efpar[2]*jnp.sin(EV_[2])-self.efpar[14])+self.efpar[9]*S3+Q3)
-        Q5  = (
-              0.5*self.efpar[10]*self.efpar[10]*(self.efpar[3]*jnp.sin(EV_[3])-self.efpar[14])+self.efpar[10]*S4+Q4)
-        Q6  = (
-              0.5*self.efpar[11]*self.efpar[11]*(self.efpar[4]*jnp.sin(EV_[4])-self.efpar[14])+self.efpar[11]*S5+Q5)
-        Q7  = (
-              0.5*self.efpar[12]*self.efpar[12]*(self.efpar[5]*jnp.sin(EV_[5])-self.efpar[14])+self.efpar[12]*S6+Q6)
-        f_    = (
-              0.5*self.efpar[13]*self.efpar[13]*(self.efpar[6]*jnp.sin(EV_[6])-self.efpar[14])+self.efpar[13]*S7+Q7)
+        Q2  = (               0.5*self.efpar[7]*self.efpar[7]*(self.efpar[0]*jnp.sin(EV_[0])-self.efpar[14]))
+        Q3  = (               0.5*self.efpar[8]*self.efpar[8]*(self.efpar[1]*jnp.sin(EV_[1])-self.efpar[14])+self.efpar[8]*S2+Q2)
+        Q4  = (               0.5*self.efpar[9]*self.efpar[9]*(self.efpar[2]*jnp.sin(EV_[2])-self.efpar[14])+self.efpar[9]*S3+Q3)
+        Q5  = (               0.5*self.efpar[10]*self.efpar[10]*(self.efpar[3]*jnp.sin(EV_[3])-self.efpar[14])+self.efpar[10]*S4+Q4)
+        Q6  = (               0.5*self.efpar[11]*self.efpar[11]*(self.efpar[4]*jnp.sin(EV_[4])-self.efpar[14])+self.efpar[11]*S5+Q5)
+        Q7  = (               0.5*self.efpar[12]*self.efpar[12]*(self.efpar[5]*jnp.sin(EV_[5])-self.efpar[14])+self.efpar[12]*S6+Q6)
+        f_    = (               0.5*self.efpar[13]*self.efpar[13]*(self.efpar[6]*jnp.sin(EV_[6])-self.efpar[14])+self.efpar[13]*S7+Q7)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
             except:
                 dim = len(EV_)
             g_ = jnp.zeros(dim)
-            g_ = jtu.np_like_set(g_, 0, (0.5*self.efpar[7]*self.efpar[7]*self.efpar[0]*jnp.cos(EV_[0])+)
-                 (self.efpar[13]+self.efpar[12]+self.efpar[11]+self.efpar[10]+self.efpar[9]+self.efpar[8])*DSD1)
-            g_ = jtu.np_like_set(g_, 1, (0.5*self.efpar[8]*self.efpar[8]*self.efpar[1]*jnp.cos(EV_[1])+)
-                 (self.efpar[13]+self.efpar[12]+self.efpar[11]+self.efpar[10]+self.efpar[9])*DSD2)
-            g_ = jtu.np_like_set(g_, 2, (0.5*self.efpar[9]*self.efpar[9]*self.efpar[2]*jnp.cos(EV_[2])+)
-                 (self.efpar[13]+self.efpar[12]+self.efpar[11]+self.efpar[10])*DSD3)
-            g_ = jtu.np_like_set(g_, 3, (0.5*self.efpar[10]*self.efpar[10]*self.efpar[3]*jnp.cos(EV_[3])+)
-                 (self.efpar[13]+self.efpar[12]+self.efpar[11])*DSD4)
-            g_ = jtu.np_like_set(g_, 4, (0.5*self.efpar[11]*self.efpar[11]*self.efpar[4]*jnp.cos(EV_[4])+)
-                 (self.efpar[13]+self.efpar[12])*DSD5)
-            g_ = jtu.np_like_set(g_, 5, (0.5*self.efpar[12]*self.efpar[12]*self.efpar[5]*jnp.cos(EV_[5])+)
-                 self.efpar[13]*DSD6)
+            g_ = jtu.np_like_set(g_, 0, (0.5*self.efpar[7]*self.efpar[7]*self.efpar[0]*jnp.cos(EV_[0])+                  (self.efpar[13]+self.efpar[12]+self.efpar[11]+self.efpar[10]+self.efpar[9]+self.efpar[8])*DSD1))
+            g_ = jtu.np_like_set(g_, 1, (0.5*self.efpar[8]*self.efpar[8]*self.efpar[1]*jnp.cos(EV_[1])+                  (self.efpar[13]+self.efpar[12]+self.efpar[11]+self.efpar[10]+self.efpar[9])*DSD2))
+            g_ = jtu.np_like_set(g_, 2, (0.5*self.efpar[9]*self.efpar[9]*self.efpar[2]*jnp.cos(EV_[2])+                  (self.efpar[13]+self.efpar[12]+self.efpar[11]+self.efpar[10])*DSD3))
+            g_ = jtu.np_like_set(g_, 3, (0.5*self.efpar[10]*self.efpar[10]*self.efpar[3]*jnp.cos(EV_[3])+                  (self.efpar[13]+self.efpar[12]+self.efpar[11])*DSD4))
+            g_ = jtu.np_like_set(g_, 4, (0.5*self.efpar[11]*self.efpar[11]*self.efpar[4]*jnp.cos(EV_[4])+                  (self.efpar[13]+self.efpar[12])*DSD5))
+            g_ = jtu.np_like_set(g_, 5, (0.5*self.efpar[12]*self.efpar[12]*self.efpar[5]*jnp.cos(EV_[5])+                  self.efpar[13]*DSD6))
             g_ = jtu.np_like_set(g_, 6, 0.5*self.efpar[13]*self.efpar[13]*self.efpar[6]*jnp.cos(EV_[6]))
             if nargout>2:
                 H_ = jnp.zeros((7,7))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (-0.5*self.efpar[7]*self.efpar[7]*self.efpar[0]*jnp.sin(EV_[0])+)
-                     (self.efpar[13]+self.efpar[12]+self.efpar[11]+self.efpar[10]+self.efpar[9]+self.efpar[8])*D2SD1)
-                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (-0.5*self.efpar[8]*self.efpar[8]*self.efpar[1]*jnp.sin(EV_[1])+)
-                     (self.efpar[13]+self.efpar[12]+self.efpar[11]+self.efpar[10]+self.efpar[9])*D2SD2)
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (-0.5*self.efpar[9]*self.efpar[9]*self.efpar[2]*jnp.sin(EV_[2])+)
-                     (self.efpar[13]+self.efpar[12]+self.efpar[11]+self.efpar[10])*D2SD3)
-                H_ = jtu.np_like_set(H_, jnp.array([3,3]), (-0.5*self.efpar[10]*self.efpar[10]*self.efpar[3]*jnp.sin(EV_[3])+)
-                     (self.efpar[13]+self.efpar[12]+self.efpar[11])*D2SD4)
-                H_ = jtu.np_like_set(H_, jnp.array([4,4]), (-0.5*self.efpar[11]*self.efpar[11]*self.efpar[4]*jnp.sin(EV_[4])+)
-                     (self.efpar[13]+self.efpar[12])*D2SD5)
-                H_ = jtu.np_like_set(H_, jnp.array([5,5]), (-0.5*self.efpar[12]*self.efpar[12]*self.efpar[5]*jnp.sin(EV_[5])+)
-                     self.efpar[13]*D2SD6)
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (-0.5*self.efpar[7]*self.efpar[7]*self.efpar[0]*jnp.sin(EV_[0])+                      (self.efpar[13]+self.efpar[12]+self.efpar[11]+self.efpar[10]+self.efpar[9]+self.efpar[8])*D2SD1))
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (-0.5*self.efpar[8]*self.efpar[8]*self.efpar[1]*jnp.sin(EV_[1])+                      (self.efpar[13]+self.efpar[12]+self.efpar[11]+self.efpar[10]+self.efpar[9])*D2SD2))
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (-0.5*self.efpar[9]*self.efpar[9]*self.efpar[2]*jnp.sin(EV_[2])+                      (self.efpar[13]+self.efpar[12]+self.efpar[11]+self.efpar[10])*D2SD3))
+                H_ = jtu.np_like_set(H_, jnp.array([3,3]), (-0.5*self.efpar[10]*self.efpar[10]*self.efpar[3]*jnp.sin(EV_[3])+                      (self.efpar[13]+self.efpar[12]+self.efpar[11])*D2SD4))
+                H_ = jtu.np_like_set(H_, jnp.array([4,4]), (-0.5*self.efpar[11]*self.efpar[11]*self.efpar[4]*jnp.sin(EV_[4])+                      (self.efpar[13]+self.efpar[12])*D2SD5))
+                H_ = jtu.np_like_set(H_, jnp.array([5,5]), (-0.5*self.efpar[12]*self.efpar[12]*self.efpar[5]*jnp.sin(EV_[5])+                      self.efpar[13]*D2SD6))
                 H_ = jtu.np_like_set(H_, jnp.array([6,6]), -0.5*self.efpar[13]*self.efpar[13]*self.efpar[6]*jnp.sin(EV_[6]))
         if nargout == 1:
             return f_

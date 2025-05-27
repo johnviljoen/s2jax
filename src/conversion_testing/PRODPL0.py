@@ -819,8 +819,7 @@ class PRODPL0:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLQR2-RY-60-29"
         self.x0        = jnp.zeros((self.n,1))
         self.objderlvl = 2
@@ -837,7 +836,7 @@ class PRODPL0:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,2.0)
         self.efpar = jtu.arrset( self.efpar,1,0.1)
         self.efpar = jtu.arrset( self.efpar,2,self.efpar[1]*self.efpar[1])
@@ -864,7 +863,7 @@ class PRODPL0:
         U1MU2 = IV_[0]-IV_[1]
         f_   = U1MU2**2-self.efpar[2]*IV_[1]**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

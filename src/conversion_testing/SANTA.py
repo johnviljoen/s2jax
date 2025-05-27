@@ -224,13 +224,11 @@ class SANTA:
             v_['I2'] = -2+I
             v_['D/RAD'] = v_['D'+str(int(v_['I2']))+','+str(I)]/v_['RADIUS']
             v_['CD/RAD'] = jnp.cos(v_['D/RAD'])
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['R'+str(int(v_['I2']))+','+str(I)],float(v_['CD/RAD'])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['R'+str(int(v_['I2']))+','+str(I)],float(v_['CD/RAD'])))
             v_['I1'] = -1+I
             v_['D/RAD'] = v_['D'+str(int(v_['I1']))+','+str(I)]/v_['RADIUS']
             v_['CD/RAD'] = jnp.cos(v_['D/RAD'])
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['R'+str(int(v_['I1']))+','+str(I)],float(v_['CD/RAD'])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['R'+str(int(v_['I1']))+','+str(I)],float(v_['CD/RAD'])))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-1000.0)
         self.xupper = jnp.full((self.n,1),1000.0)
@@ -491,15 +489,13 @@ class SANTA:
             v_['I2'] = -2+I
             ig = ig_['R'+str(int(v_['I2']))+','+str(I)]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['I2']))+','+str(I)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['I2']))+','+str(I)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
             v_['I1'] = -1+I
             ig = ig_['R'+str(int(v_['I1']))+','+str(I)]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['I1']))+','+str(I)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['E'+str(int(v_['I1']))+','+str(I)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
         #%%%%%%%%%%%%%%%%%% OBJECT BOUNDS %%%%%%%%%%%%%%%%%
@@ -512,8 +508,7 @@ class SANTA:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-AN-21-23"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -543,7 +538,7 @@ class SANTA:
         S1C2S = S1*C2*S
         f_   = S1*S2+C1*C2*C
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -593,7 +588,7 @@ class SANTA:
         S = jnp.sin(EV_[2]-self.elpar[iel_][0])
         f_   = S1*S2+C1*C2*C
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -635,7 +630,7 @@ class SANTA:
         S = jnp.sin(EV_[1]-self.elpar[iel_][1])
         f_   = S1*SF+C1*CF*C
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -671,7 +666,7 @@ class SANTA:
         S = jnp.sin(self.elpar[iel_][2]-self.elpar[iel_][1])
         f_   = S1*SF+C1*CF*C
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

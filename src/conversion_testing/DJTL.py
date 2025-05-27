@@ -302,7 +302,7 @@ class DJTL:
         DIF = EV_[0]-10.0
         f_   = DIF**3
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -329,7 +329,7 @@ class DJTL:
         DIF = EV_[0]-20.0
         f_   = DIF**3
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -356,7 +356,7 @@ class DJTL:
         DIF = EV_[0]-5.0
         f_   = DIF**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -383,7 +383,7 @@ class DJTL:
         DIF = EV_[0]-6.0
         f_   = DIF**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

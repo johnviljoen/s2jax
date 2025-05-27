@@ -240,7 +240,7 @@ class ECKERLE4LS:
         DIFF = V3MX2/V24-1.0/V22
         f_   = EV_[0]*E/EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

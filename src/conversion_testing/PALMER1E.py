@@ -273,7 +273,7 @@ class PALMER1E:
         EXPON = jnp.exp(-EV_[0]*self.elpar[iel_][0])
         f_   = EV_[1]*EXPON
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -194,7 +194,7 @@ class HIMMELP1:
         D2EDYY = 0.0005*EV_[0]*DEDY
         f_   = C+EV_[1]*A+F+B14/(1.0+EV_[1])+B*EV_[1]**2+G*EV_[1]**3+B20*E
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

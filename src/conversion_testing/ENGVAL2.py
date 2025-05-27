@@ -245,7 +245,7 @@ class ENGVAL2:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -271,7 +271,7 @@ class ENGVAL2:
         iel_ = args[1]
         f_   = (EV_[0]-self.elpar[iel_][0])**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -298,7 +298,7 @@ class ENGVAL2:
         TWOW = 5.0*EV_[1]-EV_[0]+1.0
         f_   = EV_[0]**3+TWOW*TWOW
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -205,7 +205,7 @@ class BARD:
         WU = self.elpar[iel_][2]*self.elpar[iel_][0]
         f_   = self.elpar[iel_][0]/Z
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

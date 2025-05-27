@@ -298,7 +298,7 @@ class LUKSAN12LS:
         iel_ = args[1]
         f_   = 10.0e0*EV_[0]**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -324,7 +324,7 @@ class LUKSAN12LS:
         iel_ = args[1]
         f_   = (EV_[0]-1.0e0)**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -350,7 +350,7 @@ class LUKSAN12LS:
         iel_ = args[1]
         f_   = (EV_[0]-1.0e0)**3
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -376,7 +376,7 @@ class LUKSAN12LS:
         iel_ = args[1]
         f_   = EV_[1]*EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -410,7 +410,7 @@ class LUKSAN12LS:
         IV_ = jtu.np_like_set(IV_, 0, U_[0:1,:].dot(EV_))
         f_   = jnp.sin(IV_[0])
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -438,7 +438,7 @@ class LUKSAN12LS:
         iel_ = args[1]
         f_   = (EV_[0]**4)*(EV_[1]**2)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

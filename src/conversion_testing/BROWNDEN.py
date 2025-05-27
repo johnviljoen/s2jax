@@ -182,7 +182,7 @@ class BROWNDEN:
         A = EV_[0]+self.elpar[iel_][0]*EV_[1]-self.elpar[iel_][1]
         f_   = A*A
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

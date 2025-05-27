@@ -183,7 +183,7 @@ class STRTCHDV:
         B = S+1.0
         f_   = A*B
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -358,197 +358,102 @@ class LAKES:
         self.objgrps = jnp.where(gtype=='<>')[0]
         #%%%%%%%%%%%%%%%%%% CONSTANTS %%%%%%%%%%%%%%%%%%%%%
         self.gconst = jnp.zeros((ngrp,1))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['1']))+','+str(int(v_['1']))],float(v_['S1s1'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['1']))+','+str(int(v_['2']))],float(v_['S1s2'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['1']))+','+str(int(v_['3']))],float(v_['S1s3'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['1']))+','+str(int(v_['4']))],float(v_['S1s4'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['1']))+','+str(int(v_['5']))],float(v_['S1s5'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['2']))+','+str(int(v_['1']))],float(v_['S2s1'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['2']))+','+str(int(v_['2']))],float(v_['S2s2'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['2']))+','+str(int(v_['3']))],float(v_['S2s3'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['2']))+','+str(int(v_['4']))],float(v_['S2s4'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['2']))+','+str(int(v_['5']))],float(v_['S2s5'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['3']))+','+str(int(v_['1']))],float(v_['S3s1'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['3']))+','+str(int(v_['2']))],float(v_['S3s2'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['3']))+','+str(int(v_['3']))],float(v_['S3s3'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['3']))+','+str(int(v_['4']))],float(v_['S3s4'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['3']))+','+str(int(v_['5']))],float(v_['S3s5'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['4']))+','+str(int(v_['1']))],float(v_['S4s1'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['4']))+','+str(int(v_['2']))],float(v_['S4s2'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['4']))+','+str(int(v_['3']))],float(v_['S4s3'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['4']))+','+str(int(v_['4']))],float(v_['S4s4'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['4']))+','+str(int(v_['5']))],float(v_['S4s5'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['5']))+','+str(int(v_['1']))],float(v_['S5s1'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['5']))+','+str(int(v_['2']))],float(v_['S5s2'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['5']))+','+str(int(v_['3']))],float(v_['S5s3'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['5']))+','+str(int(v_['4']))],float(v_['S5s4'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['5']))+','+str(int(v_['5']))],float(v_['S5s5'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['6']))+','+str(int(v_['1']))],float(v_['S6s1'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['6']))+','+str(int(v_['2']))],float(v_['S6s2'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['6']))+','+str(int(v_['3']))],float(v_['S6s3'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['6']))+','+str(int(v_['4']))],float(v_['S6s4'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['6']))+','+str(int(v_['5']))],float(v_['S6s5'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['7']))+','+str(int(v_['1']))],float(v_['O1o5'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['7']))+','+str(int(v_['2']))],float(v_['O1o2'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['7']))+','+str(int(v_['3']))],float(v_['O1o3'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['7']))+','+str(int(v_['4']))],float(v_['O1o4'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['7']))+','+str(int(v_['5']))],float(v_['O1o5'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['8']))+','+str(int(v_['1']))],float(v_['O2o1'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['8']))+','+str(int(v_['2']))],float(v_['O2o2'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['8']))+','+str(int(v_['3']))],float(v_['O2o3'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['8']))+','+str(int(v_['4']))],float(v_['O2o4'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['8']))+','+str(int(v_['5']))],float(v_['O2o5'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['9']))+','+str(int(v_['1']))],float(v_['O3o1'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['9']))+','+str(int(v_['2']))],float(v_['O3o2'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['9']))+','+str(int(v_['3']))],float(v_['O3o3'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['9']))+','+str(int(v_['4']))],float(v_['O3o4'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['9']))+','+str(int(v_['5']))],float(v_['O3o5'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['10']))+','+str(int(v_['1']))],float(v_['O4o1'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['10']))+','+str(int(v_['2']))],float(v_['O4o2'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['10']))+','+str(int(v_['3']))],float(v_['O4o3'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['10']))+','+str(int(v_['4']))],float(v_['O4o4'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['10']))+','+str(int(v_['5']))],float(v_['O4o5'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['11']))+','+str(int(v_['1']))],float(v_['O5o1'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['11']))+','+str(int(v_['2']))],float(v_['O5o2'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['11']))+','+str(int(v_['3']))],float(v_['O5o3'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['11']))+','+str(int(v_['4']))],float(v_['O5o4'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['11']))+','+str(int(v_['5']))],float(v_['O5o5'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['12']))+','+str(int(v_['1']))],float(v_['O6o1'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['12']))+','+str(int(v_['2']))],float(v_['O6o2'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['12']))+','+str(int(v_['3']))],float(v_['O6o3'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['12']))+','+str(int(v_['4']))],float(v_['O6o4'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['R'+str(int(v_['12']))+','+str(int(v_['5']))],float(v_['O6o5'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['1']))+','+str(int(v_['1']))],float(-22.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['1']))+','+str(int(v_['2']))],float(-1.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['1']))+','+str(int(v_['3']))],float(3.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['1']))+','+str(int(v_['4']))],float(-27.2)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['1']))+','+str(int(v_['5']))],float(51.5)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['2']))+','+str(int(v_['1']))],float(44.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['2']))+','+str(int(v_['2']))],float(162.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['2']))+','+str(int(v_['3']))],float(8.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['2']))+','+str(int(v_['4']))],float(12.5)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['2']))+','+str(int(v_['5']))],float(53.5)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['3']))+','+str(int(v_['1']))],float(-11.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['3']))+','+str(int(v_['2']))],float(60.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['3']))+','+str(int(v_['3']))],float(10.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['3']))+','+str(int(v_['4']))],float(18.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['3']))+','+str(int(v_['5']))],float(39.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['4']))+','+str(int(v_['1']))],float(124.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['4']))+','+str(int(v_['2']))],float(246.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['4']))+','+str(int(v_['3']))],float(6.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['4']))+','+str(int(v_['4']))],float(9.7)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['4']))+','+str(int(v_['5']))],float(17.2)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['5']))+','+str(int(v_['1']))],float(127.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['5']))+','+str(int(v_['2']))],float(175.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['5']))+','+str(int(v_['3']))],float(3.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['5']))+','+str(int(v_['4']))],float(10.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['5']))+','+str(int(v_['5']))],float(30.2)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['6']))+','+str(int(v_['1']))],float(78.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['6']))+','+str(int(v_['2']))],float(156.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['6']))+','+str(int(v_['3']))],float(3.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['6']))+','+str(int(v_['4']))],float(14.0)))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['6']))+','+str(int(v_['5']))],float(23.2)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['1']))+','+str(int(v_['1']))],float(v_['S1s1'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['1']))+','+str(int(v_['2']))],float(v_['S1s2'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['1']))+','+str(int(v_['3']))],float(v_['S1s3'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['1']))+','+str(int(v_['4']))],float(v_['S1s4'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['1']))+','+str(int(v_['5']))],float(v_['S1s5'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['2']))+','+str(int(v_['1']))],float(v_['S2s1'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['2']))+','+str(int(v_['2']))],float(v_['S2s2'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['2']))+','+str(int(v_['3']))],float(v_['S2s3'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['2']))+','+str(int(v_['4']))],float(v_['S2s4'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['2']))+','+str(int(v_['5']))],float(v_['S2s5'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['3']))+','+str(int(v_['1']))],float(v_['S3s1'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['3']))+','+str(int(v_['2']))],float(v_['S3s2'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['3']))+','+str(int(v_['3']))],float(v_['S3s3'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['3']))+','+str(int(v_['4']))],float(v_['S3s4'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['3']))+','+str(int(v_['5']))],float(v_['S3s5'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['4']))+','+str(int(v_['1']))],float(v_['S4s1'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['4']))+','+str(int(v_['2']))],float(v_['S4s2'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['4']))+','+str(int(v_['3']))],float(v_['S4s3'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['4']))+','+str(int(v_['4']))],float(v_['S4s4'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['4']))+','+str(int(v_['5']))],float(v_['S4s5'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['5']))+','+str(int(v_['1']))],float(v_['S5s1'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['5']))+','+str(int(v_['2']))],float(v_['S5s2'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['5']))+','+str(int(v_['3']))],float(v_['S5s3'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['5']))+','+str(int(v_['4']))],float(v_['S5s4'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['5']))+','+str(int(v_['5']))],float(v_['S5s5'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['6']))+','+str(int(v_['1']))],float(v_['S6s1'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['6']))+','+str(int(v_['2']))],float(v_['S6s2'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['6']))+','+str(int(v_['3']))],float(v_['S6s3'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['6']))+','+str(int(v_['4']))],float(v_['S6s4'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['6']))+','+str(int(v_['5']))],float(v_['S6s5'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['7']))+','+str(int(v_['1']))],float(v_['O1o5'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['7']))+','+str(int(v_['2']))],float(v_['O1o2'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['7']))+','+str(int(v_['3']))],float(v_['O1o3'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['7']))+','+str(int(v_['4']))],float(v_['O1o4'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['7']))+','+str(int(v_['5']))],float(v_['O1o5'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['8']))+','+str(int(v_['1']))],float(v_['O2o1'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['8']))+','+str(int(v_['2']))],float(v_['O2o2'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['8']))+','+str(int(v_['3']))],float(v_['O2o3'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['8']))+','+str(int(v_['4']))],float(v_['O2o4'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['8']))+','+str(int(v_['5']))],float(v_['O2o5'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['9']))+','+str(int(v_['1']))],float(v_['O3o1'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['9']))+','+str(int(v_['2']))],float(v_['O3o2'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['9']))+','+str(int(v_['3']))],float(v_['O3o3'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['9']))+','+str(int(v_['4']))],float(v_['O3o4'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['9']))+','+str(int(v_['5']))],float(v_['O3o5'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['10']))+','+str(int(v_['1']))],float(v_['O4o1'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['10']))+','+str(int(v_['2']))],float(v_['O4o2'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['10']))+','+str(int(v_['3']))],float(v_['O4o3'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['10']))+','+str(int(v_['4']))],float(v_['O4o4'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['10']))+','+str(int(v_['5']))],float(v_['O4o5'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['11']))+','+str(int(v_['1']))],float(v_['O5o1'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['11']))+','+str(int(v_['2']))],float(v_['O5o2'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['11']))+','+str(int(v_['3']))],float(v_['O5o3'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['11']))+','+str(int(v_['4']))],float(v_['O5o4'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['11']))+','+str(int(v_['5']))],float(v_['O5o5'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['12']))+','+str(int(v_['1']))],float(v_['O6o1'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['12']))+','+str(int(v_['2']))],float(v_['O6o2'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['12']))+','+str(int(v_['3']))],float(v_['O6o3'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['12']))+','+str(int(v_['4']))],float(v_['O6o4'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['R'+str(int(v_['12']))+','+str(int(v_['5']))],float(v_['O6o5'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['1']))+','+str(int(v_['1']))],float(-22.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['1']))+','+str(int(v_['2']))],float(-1.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['1']))+','+str(int(v_['3']))],float(3.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['1']))+','+str(int(v_['4']))],float(-27.2)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['1']))+','+str(int(v_['5']))],float(51.5)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['2']))+','+str(int(v_['1']))],float(44.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['2']))+','+str(int(v_['2']))],float(162.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['2']))+','+str(int(v_['3']))],float(8.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['2']))+','+str(int(v_['4']))],float(12.5)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['2']))+','+str(int(v_['5']))],float(53.5)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['3']))+','+str(int(v_['1']))],float(-11.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['3']))+','+str(int(v_['2']))],float(60.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['3']))+','+str(int(v_['3']))],float(10.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['3']))+','+str(int(v_['4']))],float(18.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['3']))+','+str(int(v_['5']))],float(39.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['4']))+','+str(int(v_['1']))],float(124.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['4']))+','+str(int(v_['2']))],float(246.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['4']))+','+str(int(v_['3']))],float(6.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['4']))+','+str(int(v_['4']))],float(9.7)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['4']))+','+str(int(v_['5']))],float(17.2)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['5']))+','+str(int(v_['1']))],float(127.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['5']))+','+str(int(v_['2']))],float(175.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['5']))+','+str(int(v_['3']))],float(3.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['5']))+','+str(int(v_['4']))],float(10.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['5']))+','+str(int(v_['5']))],float(30.2)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['6']))+','+str(int(v_['1']))],float(78.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['6']))+','+str(int(v_['2']))],float(156.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['6']))+','+str(int(v_['3']))],float(3.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['6']))+','+str(int(v_['4']))],float(14.0)))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['6']))+','+str(int(v_['5']))],float(23.2)))
         for i in range(int(v_['1']),int(v_['N'])+1):
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['V'+str(i)+','+str(int(v_['2']))],float(543.4)))
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['W'+str(i)+','+str(int(v_['2']))],float(0.0)))
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['V'+str(i)+','+str(int(v_['3']))],float(543.4)))
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['W'+str(i)+','+str(int(v_['3']))],float(0.0)))
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['V'+str(i)+','+str(int(v_['4']))],float(550.11)))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['V'+str(i)+','+str(int(v_['2']))],float(543.4)))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['W'+str(i)+','+str(int(v_['2']))],float(0.0)))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['V'+str(i)+','+str(int(v_['3']))],float(543.4)))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['W'+str(i)+','+str(int(v_['3']))],float(0.0)))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['V'+str(i)+','+str(int(v_['4']))],float(550.11)))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-float('Inf'))
         self.xupper = jnp.full((self.n,1),+float('Inf'))
@@ -644,20 +549,17 @@ class LAKES:
         for i in range(int(v_['1']),int(v_['N'])+1):
             ig = ig_['A'+str(i)+','+str(int(v_['1']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['B'+str(i)+','+str(int(v_['1']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['B'+str(i)+','+str(int(v_['1']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
             ig = ig_['A'+str(i)+','+str(int(v_['2']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['B'+str(i)+','+str(int(v_['2']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['B'+str(i)+','+str(int(v_['2']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
             ig = ig_['A'+str(i)+','+str(int(v_['3']))]
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['B'+str(i)+','+str(int(v_['3']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['B'+str(i)+','+str(int(v_['3']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
         for i in range(int(v_['1']),int(v_['N'])+1):
@@ -676,8 +578,7 @@ class LAKES:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CQOR2-RN-90-78"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -693,7 +594,7 @@ class LAKES:
         iel_ = args[1]
         f_   = self.elpar[iel_][0]*EV_[0]**2.2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -719,7 +620,7 @@ class LAKES:
         iel_ = args[1]
         f_   = self.elpar[iel_][0]*EV_[0]**2*EV_[1]**0.5
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

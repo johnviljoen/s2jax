@@ -567,7 +567,7 @@ class ENSOLS:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,8.0*jnp.arctan(1.0e0))
         return pbm
 
@@ -587,7 +587,7 @@ class ENSOLS:
         TPIXS = TPIX*S
         f_   = EV_[1]*C
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -598,8 +598,7 @@ class ENSOLS:
             g_ = jtu.np_like_set(g_, 1, C)
             if nargout>2:
                 H_ = jnp.zeros((2,2))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (-self.efpar[0]*self.efpar[0]*EV_[1]*C*self.elpar[iel_][0]**2/)
-                     V14-2.0*TPIX*EV_[1]*S/V13)
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (-self.efpar[0]*self.efpar[0]*EV_[1]*C*self.elpar[iel_][0]**2/                      V14-2.0*TPIX*EV_[1]*S/V13))
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), TPIXS/V12)
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
         if nargout == 1:
@@ -625,7 +624,7 @@ class ENSOLS:
         TPIXC = TPIX*C
         f_   = EV_[1]*S
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -636,8 +635,7 @@ class ENSOLS:
             g_ = jtu.np_like_set(g_, 1, S)
             if nargout>2:
                 H_ = jnp.zeros((2,2))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), ()
-                      2.0*TPIX*EV_[1]*C/V13-self.efpar[0]*self.efpar[0]*EV_[1]*S*self.elpar[iel_][0]**2/V14)
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (                       2.0*TPIX*EV_[1]*C/V13-self.efpar[0]*self.efpar[0]*EV_[1]*S*self.elpar[iel_][0]**2/V14))
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), -TPIXC/V12)
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
         if nargout == 1:

@@ -98,8 +98,7 @@ class MSQRTBLS:
         self.gconst = jnp.zeros((ngrp,1))
         for I in range(int(v_['1']),int(v_['P'])+1):
             for J in range(int(v_['1']),int(v_['P'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['G'+str(I)+','+str(J)],float(v_['A'+str(I)+','+str(J)])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['G'+str(I)+','+str(J)],float(v_['A'+str(I)+','+str(J)])))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-float('Inf'))
         self.xupper = jnp.full((self.n,1),+float('Inf'))
@@ -157,8 +156,7 @@ class MSQRTBLS:
                 for T in range(int(v_['1']),int(v_['P'])+1):
                     ig = ig_['G'+str(I)+','+str(J)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['E'+str(I)+','+str(J)+','+str(T)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['E'+str(I)+','+str(J)+','+str(T)]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
         #%%%%%%%% DEFAULT FOR MISSING SECTION(S) %%%%%%%%%%
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
@@ -176,7 +174,7 @@ class MSQRTBLS:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

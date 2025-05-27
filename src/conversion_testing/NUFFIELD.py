@@ -497,8 +497,7 @@ class NUFFIELD:
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nle), jnp.zeros((self.nle,1)))
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLQR2-AN-V-V"
         self.x0        = jnp.zeros((self.n,1))
         self.objderlvl = 2
@@ -534,7 +533,7 @@ class NUFFIELD:
         IV_ = jtu.np_like_set(IV_, 2, U_[2:3,:].dot(EV_))
         f_   = IV_[0]*IV_[1]-IV_[2]*IV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -197,7 +197,7 @@ class LEVYMONT5:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,4.0*jnp.arctan(1.0e0))
         return pbm
 
@@ -213,7 +213,7 @@ class LEVYMONT5:
         COSV = jnp.cos(V)
         f_   = SINV
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -244,7 +244,7 @@ class LEVYMONT5:
         COSV = jnp.cos(V)
         f_   = U*SINV
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

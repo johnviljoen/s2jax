@@ -224,10 +224,8 @@ class CHEMRCTA:
         self.objgrps = jnp.where(gtype=='<>')[0]
         #%%%%%%%%%%%%%%%%%% CONSTANTS %%%%%%%%%%%%%%%%%%%%%
         self.gconst = jnp.zeros((ngrp,1))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['GU'+str(int(v_['1']))],float(v_['-HPEM'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['GT'+str(int(v_['1']))],float(v_['-HPEH'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['GU'+str(int(v_['1']))],float(v_['-HPEM'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['GT'+str(int(v_['1']))],float(v_['-HPEH'])))
         #%%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.zeros((self.n,1))
         self.xupper = jnp.full((self.n,1),float('inf'))
@@ -310,8 +308,7 @@ class CHEMRCTA:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-MN-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -335,7 +332,7 @@ class CHEMRCTA:
         UEX = EX*EV_[0]
         f_   = UEX
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

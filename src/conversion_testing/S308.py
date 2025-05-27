@@ -161,7 +161,7 @@ class S308:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]+EV_[0]*EV_[1]+EV_[1]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -192,7 +192,7 @@ class S308:
         SINX = jnp.sin(EV_[0])
         f_   = SINX
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -219,7 +219,7 @@ class S308:
         COSX = jnp.cos(EV_[0])
         f_   = COSX
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

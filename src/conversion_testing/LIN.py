@@ -112,8 +112,7 @@ class LIN:
             v_['G'+str(I)+','+str(I)] = v_['ONE']
         for I in range(int(v_['1']),int(v_['C'])+1):
             for J in range(int(v_['1']),int(v_['C'])+1):
-                v_['M'+str(I)+','+str(J)] = (v_['G'+str(I)+','+str(J)]*v_['TAU'+str(I)+
-                     ','+str(J)])
+                v_['M'+str(I)+','+str(J)] = (v_['G'+str(I)+','+str(J)]*v_['TAU'+str(I)+                      ','+str(J)])
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),1.e-12)
         self.xupper = jnp.full((self.n,1),+float('inf'))
@@ -186,43 +185,35 @@ class LIN:
             ename = 'A'+str(int(v_['1']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='G11')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['1']))+','+str(int(v_['1']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['1']))+','+str(int(v_['1']))])))
             ename = 'A'+str(int(v_['1']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='G12')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['1']))+','+str(int(v_['2']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['1']))+','+str(int(v_['2']))])))
             ename = 'A'+str(int(v_['1']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='G21')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['2']))+','+str(int(v_['1']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['2']))+','+str(int(v_['1']))])))
             ename = 'A'+str(int(v_['1']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='G22')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['2']))+','+str(int(v_['2']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['2']))+','+str(int(v_['2']))])))
             ename = 'A'+str(int(v_['1']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='M11')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['1']))+','+str(int(v_['1']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['1']))+','+str(int(v_['1']))])))
             ename = 'A'+str(int(v_['1']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='M12')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['1']))+','+str(int(v_['2']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['1']))+','+str(int(v_['2']))])))
             ename = 'A'+str(int(v_['1']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='M21')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['2']))+','+str(int(v_['1']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['2']))+','+str(int(v_['1']))])))
             ename = 'A'+str(int(v_['1']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='M22')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['2']))+','+str(int(v_['2']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['2']))+','+str(int(v_['2']))])))
             ename = 'A'+str(int(v_['2']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             self.elftype = jtu.arrset(self.elftype,ie,'eXTAUG2')
@@ -242,43 +233,35 @@ class LIN:
             ename = 'A'+str(int(v_['2']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='G11')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['1']))+','+str(int(v_['1']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['1']))+','+str(int(v_['1']))])))
             ename = 'A'+str(int(v_['2']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='G12')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['1']))+','+str(int(v_['2']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['1']))+','+str(int(v_['2']))])))
             ename = 'A'+str(int(v_['2']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='G21')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['2']))+','+str(int(v_['1']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['2']))+','+str(int(v_['1']))])))
             ename = 'A'+str(int(v_['2']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='G22')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['2']))+','+str(int(v_['2']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['G'+str(int(v_['2']))+','+str(int(v_['2']))])))
             ename = 'A'+str(int(v_['2']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='M11')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['1']))+','+str(int(v_['1']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['1']))+','+str(int(v_['1']))])))
             ename = 'A'+str(int(v_['2']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='M12')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['1']))+','+str(int(v_['2']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['1']))+','+str(int(v_['2']))])))
             ename = 'A'+str(int(v_['2']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='M21')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['2']))+','+str(int(v_['1']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['2']))+','+str(int(v_['1']))])))
             ename = 'A'+str(int(v_['2']))+','+str(K)
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='M22')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['2']))+','+str(int(v_['2']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['M'+str(int(v_['2']))+','+str(int(v_['2']))])))
         for K in range(int(v_['1']),int(v_['P'])+1):
             for I in range(int(v_['1']),int(v_['C'])+1):
                 ename = 'B'+str(I)+','+str(K)
@@ -317,13 +300,11 @@ class LIN:
         for K in range(int(v_['1']),int(v_['P'])+1):
             ig = ig_['OBJ']
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['A'+str(int(v_['1']))+','+str(K)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['A'+str(int(v_['1']))+','+str(K)]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
             posel = posel+1
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['A'+str(int(v_['2']))+','+str(K)]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['A'+str(int(v_['2']))+','+str(K)]))
             self.grelw = jtu.loaset(self.grelw,ig,posel, 1.)
             for I in range(int(v_['1']),int(v_['C'])+1):
                 ig = ig_['OBJ']
@@ -362,8 +343,7 @@ class LIN:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COLR2-AY-4-2"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -411,7 +391,7 @@ class LIN:
         H5 = SQ2*self.elpar[iel_][3]**2/INSUM2
         f_   = EV_[0]*SUM
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -469,7 +449,7 @@ class LIN:
         H5 = SQ2*self.elpar[iel_][1]**2/INSUM2
         f_   = EV_[1]*SUM
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -500,7 +480,7 @@ class LIN:
         LOGX = jnp.log(EV_[0])
         f_   = EV_[0]*LOGX
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -534,7 +514,7 @@ class LIN:
         LOGX = jnp.log(IV_[1])
         f_   = IV_[0]*LOGX
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

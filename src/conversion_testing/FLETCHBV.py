@@ -211,7 +211,7 @@ class FLETCHBV:
         iel_ = args[1]
         f_   = jnp.cos(EV_[0])
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -241,43 +241,35 @@ class RK23:
         if('C2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['C2'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['C2']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['C2']),float(1.0)))
         if('A21' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['A21'], float(1.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A21']),float(1.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A21']),float(1.0)))
         if('C3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['C3'], float(0.5))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['C3']),float(0.5)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['C3']),float(0.5)))
         if('A31' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['A31'], float(0.25))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A31']),float(0.25)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A31']),float(0.25)))
         if('A32' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['A32'], float(0.25))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A32']),float(0.25)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['A32']),float(0.25)))
         if('B1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B1'], float(0.5))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B1']),float(0.5)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B1']),float(0.5)))
         if('B2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B2'], float(0.5))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B2']),float(0.5)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B2']),float(0.5)))
         if('B3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B3'], float(0.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B3']),float(0.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B3']),float(0.0)))
         self.x0 = jtu.np_like_set(self.x0, ix_['BB1'], float(v_['ONESIXTH']))
         self.x0 = jtu.np_like_set(self.x0, ix_['BB2'], float(v_['ONESIXTH']))
         self.x0 = jtu.np_like_set(self.x0, ix_['BB3'], float(v_['FOURSIXTH']))
@@ -522,8 +514,7 @@ class RK23:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLOR2-RN-17-11"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -539,7 +530,7 @@ class RK23:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -567,7 +558,7 @@ class RK23:
         iel_ = args[1]
         f_   = EV_[0]*(EV_[1]**2.0)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -596,7 +587,7 @@ class RK23:
         iel_ = args[1]
         f_   = EV_[0]*(EV_[1]**3.0)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -625,7 +616,7 @@ class RK23:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]*EV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -658,7 +649,7 @@ class RK23:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]*EV_[2]*EV_[3]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -698,7 +689,7 @@ class RK23:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]*(EV_[2]**2.0)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

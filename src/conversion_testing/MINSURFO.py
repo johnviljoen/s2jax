@@ -243,12 +243,10 @@ class MINSURFO:
                 ig = ig_['B'+str(I)+','+str(J)]
                 self.grftype = jtu.arrset(self.grftype,ig,'gROOT')
                 posel = len(self.grelt[ig])
-                self.grelt  = (
-                      jtu.loaset(self.grelt,ig,posel,ie_['I'+str(int(v_['I-1']))+','+str(J)]))
+                self.grelt  = (                       jtu.loaset(self.grelt,ig,posel,ie_['I'+str(int(v_['I-1']))+','+str(J)]))
                 self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/HX2']))
                 posel = len(self.grelt[ig])
-                self.grelt  = (
-                      jtu.loaset(self.grelt,ig,posel,ie_['J'+str(I)+','+str(int(v_['J-1']))]))
+                self.grelt  = (                       jtu.loaset(self.grelt,ig,posel,ie_['J'+str(I)+','+str(int(v_['J-1']))]))
                 self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['1/HY2']))
         #%%%%%%%%%%%%%%%%%% OBJECT BOUNDS %%%%%%%%%%%%%%%%%
 #    Solution
@@ -281,7 +279,7 @@ class MINSURFO:
         IV_ = jtu.np_like_set(IV_, 0, U_[0:1,:].dot(EV_))
         f_   = IV_[0]*IV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

@@ -170,7 +170,7 @@ class DANIWOODLS:
         LOGX = jnp.log(self.elpar[iel_][0])
         f_   = EV_[0]*XV2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

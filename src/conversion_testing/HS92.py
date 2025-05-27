@@ -92,14 +92,12 @@ class HS92:
             if('X'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['X'+str(I)], float(0.5))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(0.5)))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(0.5)))
         for I in range(int(v_['2']),int(v_['N'])+1,int(v_['2'])):
             if('X'+str(I) in ix_):
                 self.x0 = jtu.np_like_set(self.x0, ix_['X'+str(I)], float(-0.5))
             else:
-                self.y0  = (
-                      jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(-0.5)))
+                self.y0  = (                       jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)]),float(-0.5)))
         pass
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
@@ -180,8 +178,7 @@ class HS92:
         self.cupper = jnp.full((self.m,1),+float('Inf'))
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CQOR2-MN-5-1"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -208,14 +205,7 @@ class HS92:
         D2RHO = jnp.zeros((30,n,n))
         P     = jnp.zeros((n+1,1))
         
-        mu = jnp.array([ 8.6033358901938017e-01, 3.4256184594817283e+00, 6.4372981791719468e+00, 9.5293344053619631e+00,
-                        1.2645287223856643e+01, 1.5771284874815882e+01, 1.8902409956860023e+01, 2.2036496727938566e+01, 
-                        2.5172446326646664e+01, 2.8309642854452012e+01, 3.1447714637546234e+01, 3.4586424215288922e+01, 
-                        3.7725612827776501e+01, 4.0865170330488070e+01, 4.4005017920830845e+01, 4.7145097736761031e+01, 
-                        5.0285366337773652e+01, 5.3425790477394663e+01, 5.6566344279821521e+01, 5.9707007305335459e+01, 
-                        6.2847763194454451e+01, 6.5988598698490392e+01, 6.9129502973895256e+01, 7.2270467060308960e+01, 
-                        7.5411483488848148e+01, 7.8552545984242926e+01, 8.1693649235601683e+01, 8.4834788718042290e+01, 
-                        8.7975960552493220e+01, 9.1117161394464745e+01 ] )
+        mu = jnp.array([ 8.6033358901938017e-01, 3.4256184594817283e+00, 6.4372981791719468e+00, 9.5293344053619631e+00,                         1.2645287223856643e+01, 1.5771284874815882e+01, 1.8902409956860023e+01, 2.2036496727938566e+01,                          2.5172446326646664e+01, 2.8309642854452012e+01, 3.1447714637546234e+01, 3.4586424215288922e+01,                          3.7725612827776501e+01, 4.0865170330488070e+01, 4.4005017920830845e+01, 4.7145097736761031e+01,                          5.0285366337773652e+01, 5.3425790477394663e+01, 5.6566344279821521e+01, 5.9707007305335459e+01,                          6.2847763194454451e+01, 6.5988598698490392e+01, 6.9129502973895256e+01, 7.2270467060308960e+01,                          7.5411483488848148e+01, 7.8552545984242926e+01, 8.1693649235601683e+01, 8.4834788718042290e+01,                          8.7975960552493220e+01, 9.1117161394464745e+01 ] )
 
         T = 2.0 / 15.0
         for i in jnp.arange(0,30):
@@ -268,7 +258,7 @@ class HS92:
             
         #  Evaluate the function and derivatives.
 
-        f = T;
+        f = T
         for i in jnp.arange(30):
             SI   = S[i]
             RHOI = RHO[i]
@@ -302,7 +292,7 @@ class HS92:
         iel_ = args[1]
         f_   = EV_[0]*EV_[0]
         if not isinstance( f_, float ):
-            f_ = f_.item();
+            f_ = f_.item()
         if nargout>1:
             dim = len(EV_)
             g_ = jnp.zeros(dim)
@@ -325,7 +315,7 @@ class HS92:
         iel_ = args[1]
         f_, g_, H_ = self.extfunc(self, EV_ )
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout == 1:
             return f_
         elif nargout == 2:

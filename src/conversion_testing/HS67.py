@@ -124,8 +124,7 @@ class HS67:
         for I in range(int(v_['1']),int(v_['7'])+1):
             v_['I+7'] = 7+I
             self.gconst = jtu.arrset(self.gconst,ig_['AG'+str(I)],float(v_['A'+str(I)]))
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['AL'+str(I)],float(v_['A'+str(int(v_['I+7']))])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['AL'+str(I)],float(v_['A'+str(int(v_['I+7']))])))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),0.00001)
         self.xupper = jnp.full((self.n,1),+float('inf'))
@@ -400,8 +399,7 @@ class HS67:
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nle), jnp.zeros((self.nle,1)))
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-COOI2-AN-3-14"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -413,7 +411,7 @@ class HS67:
 #    def e_globs(self):
 
 #        import numpy as jnp
-#        self.efpar = jnp.array([]);
+#        self.efpar = jnp.array([])
 #        self.efpar = jtu.arrset( self.efpar,0,.FALSE.0)
 #        return pbm
 
@@ -459,24 +457,18 @@ class HS67:
             H = jtu.np_like_set(H, jnp.array([5,3]), H[2,3] / X1)
             H = jtu.np_like_set(H, jnp.array([5,4]), H[2,4] / X1)
             H = jtu.np_like_set(H, jnp.array([5,5]), H[2,5] / X1)
-            Y1C    = 0.01 * X1 * ( 112.0 + 13.167 * Y[5] - 0.6667 * Y[5]**2 );
-   
+            Y1C    = 0.01 * X1 * ( 112.0 + 13.167 * Y[5] - 0.6667 * Y[5]**2 )
             #  Y1.
 
             if jnp.abs( Y1C - Y[1] ) > 0.001 :
    
-                Y = jtu.np_like_set(Y, 1, Y1C;)
-                G = jtu.np_like_set(G, jnp.array([1,0]), ( 0.01 * ( 112.0 + 13.167 * Y[5] - 0.6667 * Y[5]**2 ))
-                         +  X1 * 0.13167 * G[5,0] -  X1 * 0.013334 * Y[5] * G[5,0] )
+                Y = jtu.np_like_set(Y, 1, Y1C)
+                G = jtu.np_like_set(G, jnp.array([1,0]), ( 0.01 * ( 112.0 + 13.167 * Y[5] - 0.6667 * Y[5]**2 )                          +  X1 * 0.13167 * G[5,0] -  X1 * 0.013334 * Y[5] * G[5,0] ))
                 G = jtu.np_like_set(G, jnp.array([1,1]), X1 * ( 0.13167 * G[5,1] - 0.013334 * Y[5] * G[5,1] ))
                 G = jtu.np_like_set(G, jnp.array([1,2]), X1 * ( 0.13167 * G[5,2] - 0.013334 * Y[5] * G[5,2] ))
-                H = jtu.np_like_set(H, jnp.array([1,0]), (  0.13167 * G[5,0] - 0.013334 * Y[5] * G[5,0] + 0.13167 * G[5,0])
-                           - 0.013334 * Y[5] * G[5,0] + X1 * 0.13167 * H[5,0] - X1 * 0.013334 * G[5,0]**2 
-                           - X1 * 0.013334 * Y[5] * H[5,0] )
-                H = jtu.np_like_set(H, jnp.array([1,1]), (  0.13167 * G[5,1] - 0.013334 * Y[5] * G[5,1]         + X1 * 0.13167 * H[5,1])
-                           - X1 * 0.013334 * G[5,1] * G[5,0]                     - X1 * 0.013334 * Y[5] * H[5,1] )
-                H = jtu.np_like_set(H, jnp.array([1,2]), ( 0.13167 * G[5,2] - 0.013334 * Y[5] *  G[5,2]          + X1 * 0.13167 * H[5,2])
-                           - X1 * 0.013334 * G[5,2] * G[5,0]                     - X1 * 0.013334 * Y[5] * H[5,2] )
+                H = jtu.np_like_set(H, jnp.array([1,0]), (  0.13167 * G[5,0] - 0.013334 * Y[5] * G[5,0] + 0.13167 * G[5,0]                            - 0.013334 * Y[5] * G[5,0] + X1 * 0.13167 * H[5,0] - X1 * 0.013334 * G[5,0]**2                             - X1 * 0.013334 * Y[5] * H[5,0] ))
+                H = jtu.np_like_set(H, jnp.array([1,1]), (  0.13167 * G[5,1] - 0.013334 * Y[5] * G[5,1]         + X1 * 0.13167 * H[5,1]                            - X1 * 0.013334 * G[5,1] * G[5,0]                     - X1 * 0.013334 * Y[5] * H[5,1] ))
+                H = jtu.np_like_set(H, jnp.array([1,2]), ( 0.13167 * G[5,2] - 0.013334 * Y[5] *  G[5,2]          + X1 * 0.13167 * H[5,2]                             - X1 * 0.013334 * G[5,2] * G[5,0]                     - X1 * 0.013334 * Y[5] * H[5,2] ))
                 H = jtu.np_like_set(H, jnp.array([1,3]), X1 * ( 0.13167 * H[5,3] - 0.013334 * G[5,1]**2         - 0.013334 * Y[5] * H[5,3]))
                 H = jtu.np_like_set(H, jnp.array([1,4]), X1 * ( 0.13167 * H[5,4] - 0.013334 * G[5,2] * G[5,1]  - 0.013334 * Y[5] * H[5,4]))
                 H = jtu.np_like_set(H, jnp.array([1,5]), X1 * ( 0.13167 * H[5,5] - 0.013334 * G[5,2]**2         - 0.013334 * Y[5] * H[5,5]))
@@ -548,25 +540,14 @@ class HS67:
             if jnp.abs( Y3C - Y[3] ) > 0.001 :
                 Y = jtu.np_like_set(Y, 3, Y3C)
                 G = jtu.np_like_set(G, jnp.array([3,0]), -  98000.0 * X3 * ( G[1,0] * Y[6] + Y[1] * G[6,0] ) / Y1Y6X3**2)
-                G = jtu.np_like_set(G, jnp.array([3,1]), -  98000.0 * X3 * ( G[1,1] * Y[6] + Y[1] * G[6,1] ) / Y1Y6X3**2;)
+                G = jtu.np_like_set(G, jnp.array([3,1]), -  98000.0 * X3 * ( G[1,1] * Y[6] + Y[1] * G[6,1] ) / Y1Y6X3**2)
                 G = jtu.np_like_set(G, jnp.array([3,2]), 98000.0 / Y1Y6X3  - 98000.0 * X3 * ( G[1,2] * Y[6] + Y[1] * G[6,2] + 1000.0 ) / Y1Y6X3**2)
-                H = jtu.np_like_set(H, jnp.array([3,0]), ( -  98000.0 * X3 * ( H[1,0] * Y[6] + 2.0 * G[1,0] * G[6,0] + Y[1] * H[6,0] ) / Y1Y6X3**2)
-                           + 196000.0 * X3 * ( G[1,0] * Y[6] + Y[1] * G[6,0] )**2 / Y1Y6X3**3 )
-                H = jtu.np_like_set(H, jnp.array([3,1]), ( -  98000.0 * X3 * ( H[1,1] * Y[6] + G[1,1] * G[6,0] + G[1,0] * G[6,1]  + Y[1] * H[6,1] ) / Y1Y6X3**2)
-                           + 196000.0 * X3 * ( G[1,1] * Y[6] + Y[1] * G[6,1] ) * ( G[1,0] * Y[6]  + Y[1] * G[6,0] ) / Y1Y6X3**3 )
-                H = jtu.np_like_set(H, jnp.array([3,2]), ( -  98000.0 * ( Y[1] * G[6,0] + Y[6] *  G[1,0] ) / Y1Y6X3**2)
-                           -  98000.0 * X3 * ( G[1,2] * G[6,0] + Y[1] * H[6,2] + G[1,0] * G[6,2]
-                           + H[1,2] * Y[6] ) / Y1Y6X3**2 + 196000.0 * X3 * ( Y[1] * G[6,0]
-                           + Y[6] * G[1,0] ) * ( G[1,2] * Y[6] + Y[1] * G[6,2] + 1000.0 ) / Y1Y6X3**3 )
-                H = jtu.np_like_set(H, jnp.array([3,3]), ( - 98000.0 * X3 * ( H[1,3] * Y[6] + 2.0 * G[1,1] * G[6,1] + Y[1] * H[6,3]) / Y1Y6X3**2)
-                           + 196000.0 * X3 * ( G[1,1] * Y[6] + Y[1] * G[6,1] )**2 / Y1Y6X3**3 )
-                H = jtu.np_like_set(H, jnp.array([3,4]), ( -  98000.0 * ( Y[1] * G[6,1] + Y[6] *  G[1,1]) / Y1Y6X3**2)
-                           -  98000.0 * X3 * ( G[1,2] * G[6,1] + Y[1] * H[6,4]
-                          + G[1,1] * G[6,2] + H[1,4] * Y[6] ) / Y1Y6X3**2  + 196000.0 * X3 * ( Y[1] * G[6,1]
-                          + Y[6] * G[1,1] ) * ( G[1,2] * Y[6] + Y[1] *  G[6,2] + 1000.0 ) / Y1Y6X3**3 )
-                H = jtu.np_like_set(H, jnp.array([3,5]), ( - 196000.0 * ( Y[1] * G[6,2] + Y[6] * G[1,2] + 1000.0 ) / Y1Y6X3**2)
-                           -  98000.0 * X3 * ( H[1,5] * Y[6] + 2.0 * G[1,2] * G[6,2] + Y[1] * H[6,5] ) / Y1Y6X3**2 
-                           + 196000.0 * X3 * ( G[1,2] * Y[6] + Y[1] * G[6,2] + 1000.0 )**2 / Y1Y6X3**3 )
+                H = jtu.np_like_set(H, jnp.array([3,0]), ( -  98000.0 * X3 * ( H[1,0] * Y[6] + 2.0 * G[1,0] * G[6,0] + Y[1] * H[6,0] ) / Y1Y6X3**2                             + 196000.0 * X3 * ( G[1,0] * Y[6] + Y[1] * G[6,0] )**2 / Y1Y6X3**3 ))
+                H = jtu.np_like_set(H, jnp.array([3,1]), ( -  98000.0 * X3 * ( H[1,1] * Y[6] + G[1,1] * G[6,0] + G[1,0] * G[6,1]  + Y[1] * H[6,1] ) / Y1Y6X3**2                            + 196000.0 * X3 * ( G[1,1] * Y[6] + Y[1] * G[6,1] ) * ( G[1,0] * Y[6]  + Y[1] * G[6,0] ) / Y1Y6X3**3 ))
+                H = jtu.np_like_set(H, jnp.array([3,2]), ( -  98000.0 * ( Y[1] * G[6,0] + Y[6] *  G[1,0] ) / Y1Y6X3**2                            -  98000.0 * X3 * ( G[1,2] * G[6,0] + Y[1] * H[6,2] + G[1,0] * G[6,2]                            + H[1,2] * Y[6] ) / Y1Y6X3**2 + 196000.0 * X3 * ( Y[1] * G[6,0]                            + Y[6] * G[1,0] ) * ( G[1,2] * Y[6] + Y[1] * G[6,2] + 1000.0 ) / Y1Y6X3**3 ))
+                H = jtu.np_like_set(H, jnp.array([3,3]), ( - 98000.0 * X3 * ( H[1,3] * Y[6] + 2.0 * G[1,1] * G[6,1] + Y[1] * H[6,3]) / Y1Y6X3**2                             + 196000.0 * X3 * ( G[1,1] * Y[6] + Y[1] * G[6,1] )**2 / Y1Y6X3**3 ))
+                H = jtu.np_like_set(H, jnp.array([3,4]), ( -  98000.0 * ( Y[1] * G[6,1] + Y[6] *  G[1,1]) / Y1Y6X3**2                            -  98000.0 * X3 * ( G[1,2] * G[6,1] + Y[1] * H[6,4]                           + G[1,1] * G[6,2] + H[1,4] * Y[6] ) / Y1Y6X3**2  + 196000.0 * X3 * ( Y[1] * G[6,1]                           + Y[6] * G[1,1] ) * ( G[1,2] * Y[6] + Y[1] *  G[6,2] + 1000.0 ) / Y1Y6X3**3 ))
+                H = jtu.np_like_set(H, jnp.array([3,5]), ( - 196000.0 * ( Y[1] * G[6,2] + Y[6] * G[1,2] + 1000.0 ) / Y1Y6X3**2                             -  98000.0 * X3 * ( H[1,5] * Y[6] + 2.0 * G[1,2] * G[6,2] + Y[1] * H[6,5] ) / Y1Y6X3**2                             + 196000.0 * X3 * ( G[1,2] * Y[6] + Y[1] * G[6,2] + 1000.0 )**2 / Y1Y6X3**3 ))
             else:
                 break
 
@@ -586,7 +567,7 @@ class HS67:
         YY, GG, HH = self.extfunc(self,EV_[0],EV_[1],EV_[2])
         f_   = YY[1]*YY[4]
         if not isinstance( f_, float ):
-            f_ = f_.item();
+            f_ = f_.item()
         if nargout>1:
             dim = len(EV_)
             g_ = jnp.zeros(dim)
@@ -620,7 +601,7 @@ class HS67:
         YY, GG, HH = self.extfunc( self, EV_[0], EV_[1], EV_[2] )
         f_   = YY[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             dim = len(EV_)
             g_ = jnp.zeros(dim)
@@ -649,7 +630,7 @@ class HS67:
         YY, GG, HH = self.extfunc( self, EV_[0], EV_[1], EV_[2] )
         f_   = YY[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             dim = len(EV_)
             g_ = jnp.zeros(dim)
@@ -678,7 +659,7 @@ class HS67:
         YY, GG, HH = self.extfunc( self, EV_[0], EV_[1], EV_[2] )
         f_   = YY[3]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             dim = len(EV_)
             g_ = jnp.zeros(dim)
@@ -712,7 +693,7 @@ class HS67:
         YY, GG, HH = self.extfunc( self, EV_[0], EV_[1], EV_[2] )
         f_   = YY[4]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             dim = len(EV_)
             g_ = jnp.zeros(dim)
@@ -746,7 +727,7 @@ class HS67:
         YY, GG, HH = self.extfunc( self, EV_[0], EV_[1], EV_[2] )
         f_   = YY[5]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             dim = len(EV_)
             g_ = jnp.zeros(dim)
@@ -775,7 +756,7 @@ class HS67:
         YY, GG, HH = self.extfunc( self, EV_[0], EV_[1], EV_[2] )
         f_   = YY[6]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             dim = len(EV_)
             g_  = jnp.zeros(dim)
@@ -809,7 +790,7 @@ class HS67:
         YY, GG, HH = self.extfunc( self, EV_[0], EV_[1], EV_[2] )
         f_   = YY[7]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             dim = len(EV_)
             g_ = jnp.zeros(dim)

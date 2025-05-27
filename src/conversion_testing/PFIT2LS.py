@@ -251,7 +251,7 @@ class PFIT2LS:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]*EV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -297,7 +297,7 @@ class PFIT2LS:
         ARX = EV_[0]*EV_[1]*EV_[2]
         f_   = ARX*B
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -332,7 +332,7 @@ class PFIT2LS:
         iel_ = args[1]
         f_   = EV_[0]*(EV_[0]+1.0)*EV_[1]*EV_[2]*EV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -378,7 +378,7 @@ class PFIT2LS:
         BXX = -EV_[0]*(EV_[0]+1.0)*CCC
         f_   = EV_[1]*B
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -434,7 +434,7 @@ class PFIT2LS:
         DXX = 2.0*EV_[0]*(EV_[0]+1.0)*EV_[1]
         f_   = D*B
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

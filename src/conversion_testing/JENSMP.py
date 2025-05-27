@@ -166,7 +166,7 @@ class JENSMP:
         T1 = self.elpar[iel_][0]*T
         f_   = T
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

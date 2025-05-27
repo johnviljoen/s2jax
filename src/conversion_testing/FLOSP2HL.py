@@ -383,14 +383,10 @@ class FLOSP2HL:
         #%%%%%%%%%%%%%%%%%% CONSTANTS %%%%%%%%%%%%%%%%%%%%%
         self.gconst = jnp.zeros((ngrp,1))
         for K in range(int(v_['-M']),int(v_['M'])+1):
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['T'+str(K)+','+str(int(v_['M']))],float(v_['A3'])))
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['T'+str(K)+','+str(int(v_['-M']))],float(v_['B3'])))
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['T'+str(int(v_['M']))+','+str(K)],float(v_['F3'])))
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['T'+str(int(v_['-M']))+','+str(K)],float(v_['G3'])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['T'+str(K)+','+str(int(v_['M']))],float(v_['A3'])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['T'+str(K)+','+str(int(v_['-M']))],float(v_['B3'])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['T'+str(int(v_['M']))+','+str(K)],float(v_['F3'])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['T'+str(int(v_['-M']))+','+str(K)],float(v_['G3'])))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-float('Inf'))
         self.xupper = jnp.full((self.n,1),+float('Inf'))
@@ -490,8 +486,7 @@ class FLOSP2HL:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNQR2-MY-V-V"
         self.x0        = jnp.zeros((self.n,1))
         self.objderlvl = 2
@@ -516,7 +511,7 @@ class FLOSP2HL:
         IV_ = jtu.np_like_set(IV_, 1, U_[1:2,:].dot(EV_))
         f_   = IV_[0]*IV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

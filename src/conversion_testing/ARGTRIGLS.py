@@ -168,7 +168,7 @@ class ARGTRIGLS:
         CX = jnp.cos(EV_[0])
         f_   = CX
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -196,7 +196,7 @@ class ARGTRIGLS:
         SX = jnp.sin(EV_[0])
         f_   = CX+SX
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

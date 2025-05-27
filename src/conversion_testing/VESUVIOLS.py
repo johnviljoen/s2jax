@@ -3289,7 +3289,7 @@ class VESUVIOLS:
         D2ADS2 = -(DRDS**2+R*D2RDS2)
         f_   = F
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

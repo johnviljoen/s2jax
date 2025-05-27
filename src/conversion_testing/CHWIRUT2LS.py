@@ -272,7 +272,7 @@ class CHWIRUT2LS:
         V2PV33 = V2PV3X*V2PV32
         f_   = E/V2PV3X
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

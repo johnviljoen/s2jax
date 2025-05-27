@@ -155,7 +155,7 @@ class CLUSTERLS:
         DF2DY = -CY
         f_   = F1*F2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -193,7 +193,7 @@ class CLUSTERLS:
         DF2DX = SX
         f_   = F1*F2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

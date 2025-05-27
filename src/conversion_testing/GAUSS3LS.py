@@ -707,7 +707,7 @@ class GAUSS3LS:
         V1E = EV_[0]*E
         f_   = V1E
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -749,7 +749,7 @@ class GAUSS3LS:
         TV2MXW = TV2MX2/V32
         f_   = V1E
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

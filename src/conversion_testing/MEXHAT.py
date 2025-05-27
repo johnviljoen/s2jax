@@ -177,7 +177,7 @@ class MEXHAT:
         XMS = EV_[0]-self.elpar[iel_][0]
         f_   = XMS*XMS
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -204,7 +204,7 @@ class MEXHAT:
         XX = EV_[0]-EV_[1]*EV_[1]
         f_   = XX*XX
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

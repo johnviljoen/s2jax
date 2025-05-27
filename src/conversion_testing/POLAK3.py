@@ -153,8 +153,7 @@ class POLAK3:
         self.cupper = jnp.full((self.m,1),+float('Inf'))
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nle), jnp.zeros((self.nle,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CLOR2-AN-12-10"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -172,12 +171,11 @@ class POLAK3:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        V  = (
-              EV_[0]-jnp.sin(self.elpar[iel_][0]+self.elpar[iel_][1]+self.elpar[iel_][1]))
+        V  = (               EV_[0]-jnp.sin(self.elpar[iel_][0]+self.elpar[iel_][1]+self.elpar[iel_][1]))
         EV = jnp.exp(V*V)
         f_   = EV
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

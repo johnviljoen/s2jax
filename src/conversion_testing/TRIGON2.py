@@ -189,7 +189,7 @@ class TRIGON2:
         C = jnp.cos(self.elpar[iel_][0]*Y)
         f_   = S
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -199,8 +199,7 @@ class TRIGON2:
             g_ = jtu.np_like_set(g_, 0, self.elpar[iel_][0]*C*YX)
             if nargout>2:
                 H_ = jnp.zeros((1,1))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), ()
-                      -self.elpar[iel_][0]*self.elpar[iel_][0]*S*YX*YX+self.elpar[iel_][0]*C*YXX)
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (                       -self.elpar[iel_][0]*self.elpar[iel_][0]*S*YX*YX+self.elpar[iel_][0]*C*YXX))
         if nargout == 1:
             return f_
         elif nargout == 2:

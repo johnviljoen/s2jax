@@ -185,7 +185,7 @@ class BROYDN3DLS:
         TEMP2 = 3.0+TEMP1
         f_   = TEMP2*EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

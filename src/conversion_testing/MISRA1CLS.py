@@ -188,7 +188,7 @@ class MISRA1CLS:
         R3 = ROOTR**3
         f_   = -EV_[0]/ROOTR
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

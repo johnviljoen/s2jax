@@ -141,10 +141,8 @@ class METHANB8LS:
         v_['SMALLHF'] = 0.0e+0
         v_['BIGHF'] = 0.0e+0
         for J in range(int(v_['1']),int(v_['M'])+1):
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['2.2-'+str(int(v_['K']))+','+str(J)],float(v_['FL'+str(J)])))
-            self.gconst  = (
-                  jtu.arrset(self.gconst,ig_['2.2-'+str(int(v_['K+']))+','+str(J)],float(v_['FV'+str(J)])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['2.2-'+str(int(v_['K']))+','+str(J)],float(v_['FL'+str(J)])))
+            self.gconst  = (                   jtu.arrset(self.gconst,ig_['2.2-'+str(int(v_['K+']))+','+str(J)],float(v_['FV'+str(J)])))
             v_['TFTF'] = v_['TF']*v_['TF']
             v_['TEMP1'] = v_['TFTF']*v_['ALpp'+str(J)]
             v_['TEMP2'] = v_['TF']*v_['ALp'+str(J)]
@@ -161,10 +159,8 @@ class METHANB8LS:
         for I in range(int(v_['0']),int(v_['N-1'])+1):
             self.gconst = jtu.arrset(self.gconst,ig_['2.7-'+str(I)],float(1.0))
         self.gconst = jtu.arrset(self.gconst,ig_['2.8'],float(v_['Q']))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['2.9-'+str(int(v_['K']))],float(v_['SMALLHF'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['2.9-'+str(int(v_['K+']))],float(v_['BIGHF'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['2.9-'+str(int(v_['K']))],float(v_['SMALLHF'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['2.9-'+str(int(v_['K+']))],float(v_['BIGHF'])))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-float('Inf'))
         self.xupper = jnp.full((self.n,1),+float('Inf'))
@@ -298,8 +294,7 @@ class METHANB8LS:
             posep = jnp.where(elftp[ielftype[ie]]=='P1')[0]
             self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(1.0))
             posep = jnp.where(elftp[ielftype[ie]]=='P2')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['0']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['0']))])))
             posep = jnp.where(elftp[ielftype[ie]]=='P3')[0]
             self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(J)]))
             posep = jnp.where(elftp[ielftype[ie]]=='P4')[0]
@@ -342,8 +337,7 @@ class METHANB8LS:
                 posep = jnp.where(elftp[ielftype[ie]]=='P1')[0]
                 self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(-1.0))
                 posep = jnp.where(elftp[ielftype[ie]]=='P2')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['I-1']))])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['I-1']))])))
                 posep = jnp.where(elftp[ielftype[ie]]=='P3')[0]
                 self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(J)]))
                 posep = jnp.where(elftp[ielftype[ie]]=='P4')[0]
@@ -431,8 +425,7 @@ class METHANB8LS:
             posep = jnp.where(elftp[ielftype[ie]]=='P1')[0]
             self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(1.0))
             posep = jnp.where(elftp[ielftype[ie]]=='P2')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['N-2']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['N-2']))])))
             posep = jnp.where(elftp[ielftype[ie]]=='P3')[0]
             self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(J)]))
             posep = jnp.where(elftp[ielftype[ie]]=='P4')[0]
@@ -483,8 +476,7 @@ class METHANB8LS:
             posep = jnp.where(elftp[ielftype[ie]]=='P1')[0]
             self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(1.0))
             posep = jnp.where(elftp[ielftype[ie]]=='P2')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['0']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['0']))])))
             posep = jnp.where(elftp[ielftype[ie]]=='P3')[0]
             self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(J)]))
             posep = jnp.where(elftp[ielftype[ie]]=='P4')[0]
@@ -621,8 +613,7 @@ class METHANB8LS:
                 posep = jnp.where(elftp[ielftype[ie]]=='P1')[0]
                 self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(-1.0))
                 posep = jnp.where(elftp[ielftype[ie]]=='P2')[0]
-                self.elpar  = (
-                      jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['I-1']))])))
+                self.elpar  = (                       jtu.loaset(self.elpar,ie,posep[0],float(v_['INVPI'+str(int(v_['I-1']))])))
                 posep = jnp.where(elftp[ielftype[ie]]=='P3')[0]
                 self.elpar = jtu.loaset(self.elpar,ie,posep[0],float(v_['A'+str(J)]))
                 posep = jnp.where(elftp[ielftype[ie]]=='P4')[0]
@@ -778,7 +769,7 @@ class METHANB8LS:
         iel_ = args[1]
         f_   = self.elpar[iel_][0]*EV_[0]*(EV_[1]+self.elpar[iel_][1])
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -804,12 +795,11 @@ class METHANB8LS:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        POLY  = (
-              self.elpar[iel_][1]+self.elpar[iel_][2]*EV_[1]+self.elpar[iel_][3]*EV_[1]*EV_[1])
+        POLY  = (               self.elpar[iel_][1]+self.elpar[iel_][2]*EV_[1]+self.elpar[iel_][3]*EV_[1]*EV_[1])
         DPOLY = self.elpar[iel_][2]+2.0*self.elpar[iel_][3]*EV_[1]
         f_   = self.elpar[iel_][0]*EV_[0]*POLY
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -836,12 +826,11 @@ class METHANB8LS:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        POLY  = (
-              self.elpar[iel_][2]+self.elpar[iel_][3]*EV_[2]+self.elpar[iel_][4]*EV_[2]*EV_[2])
+        POLY  = (               self.elpar[iel_][2]+self.elpar[iel_][3]*EV_[2]+self.elpar[iel_][4]*EV_[2]*EV_[2])
         DPOLY = self.elpar[iel_][3]+2.0*self.elpar[iel_][4]*EV_[2]
         f_   = self.elpar[iel_][0]*EV_[0]*(self.elpar[iel_][1]+EV_[1])*POLY
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -859,8 +848,7 @@ class METHANB8LS:
                 H_ = jtu.np_like_set(H_, jnp.array([2,0]), H_[0,2])
                 H_ = jtu.np_like_set(H_, jnp.array([1,2]), self.elpar[iel_][0]*EV_[0]*DPOLY)
                 H_ = jtu.np_like_set(H_, jnp.array([2,1]), H_[1,2])
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), ()
-                      self.elpar[iel_][0]*EV_[0]*(self.elpar[iel_][1]+EV_[1])*2.0e+0*self.elpar[iel_][4])
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (                       self.elpar[iel_][0]*EV_[0]*(self.elpar[iel_][1]+EV_[1])*2.0e+0*self.elpar[iel_][4]))
         if nargout == 1:
             return f_
         elif nargout == 2:
@@ -874,12 +862,11 @@ class METHANB8LS:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        EXPROD  = (
-              self.elpar[iel_][0]*self.elpar[iel_][1]*jnp.exp(self.elpar[iel_][2]+(self.elpar[iel_][3]/(EV_[1]+self.elpar[iel_][4]))))
+        EXPROD  = (               self.elpar[iel_][0]*self.elpar[iel_][1]*jnp.exp(self.elpar[iel_][2]+(self.elpar[iel_][3]/(EV_[1]+self.elpar[iel_][4]))))
         F = EV_[0]*EXPROD
         f_   = F
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -892,8 +879,7 @@ class METHANB8LS:
                 H_ = jnp.zeros((2,2))
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), -EXPROD*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[1])**2)
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
-                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (F*(self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[1])**2)**2+)
-                     2.0e+0*F*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[1])**3)
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (F*(self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[1])**2)**2+                      2.0e+0*F*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[1])**3))
         if nargout == 1:
             return f_
         elif nargout == 2:
@@ -907,13 +893,12 @@ class METHANB8LS:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        EXPROD  = (
-              self.elpar[iel_][0]*self.elpar[iel_][1]*jnp.exp(self.elpar[iel_][2]+(self.elpar[iel_][3]/(EV_[2]+self.elpar[iel_][4]))))
+        EXPROD  = (               self.elpar[iel_][0]*self.elpar[iel_][1]*jnp.exp(self.elpar[iel_][2]+(self.elpar[iel_][3]/(EV_[2]+self.elpar[iel_][4]))))
         F = EV_[0]*EV_[1]*EXPROD
         TERM = -self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**2
         f_   = F
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -931,8 +916,7 @@ class METHANB8LS:
                 H_ = jtu.np_like_set(H_, jnp.array([2,0]), H_[0,2])
                 H_ = jtu.np_like_set(H_, jnp.array([1,2]), EV_[0]*EXPROD*TERM)
                 H_ = jtu.np_like_set(H_, jnp.array([2,1]), H_[1,2])
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), ()
-                      F*(TERM*TERM+2.0e+0*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**3))
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (                       F*(TERM*TERM+2.0e+0*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**3)))
         if nargout == 1:
             return f_
         elif nargout == 2:
@@ -946,16 +930,14 @@ class METHANB8LS:
         import jax.numpy as jnp
         EV_  = args[0]
         iel_ = args[1]
-        EXPROD  = (
-              self.elpar[iel_][0]*self.elpar[iel_][1]*jnp.exp(self.elpar[iel_][2]+(self.elpar[iel_][3]/(EV_[2]+self.elpar[iel_][4]))))
+        EXPROD  = (               self.elpar[iel_][0]*self.elpar[iel_][1]*jnp.exp(self.elpar[iel_][2]+(self.elpar[iel_][3]/(EV_[2]+self.elpar[iel_][4]))))
         F = EV_[0]*EV_[1]*EXPROD
-        POLY  = (
-              self.elpar[iel_][5]+self.elpar[iel_][6]*EV_[2]+self.elpar[iel_][7]*EV_[2]*EV_[2])
+        POLY  = (               self.elpar[iel_][5]+self.elpar[iel_][6]*EV_[2]+self.elpar[iel_][7]*EV_[2]*EV_[2])
         DPOLY = self.elpar[iel_][6]+2.0*self.elpar[iel_][7]*EV_[2]
         TERM = DPOLY-POLY*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**2
         f_   = F*POLY
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -973,8 +955,7 @@ class METHANB8LS:
                 H_ = jtu.np_like_set(H_, jnp.array([2,0]), H_[0,2])
                 H_ = jtu.np_like_set(H_, jnp.array([1,2]), EV_[0]*EXPROD*TERM)
                 H_ = jtu.np_like_set(H_, jnp.array([2,1]), H_[1,2])
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), ()
-                      F*(-(self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**2)*TERM+2.0*self.elpar[iel_][7]-DPOLY*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**2+2.0e+0*POLY*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**3))
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (                       F*(-(self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**2)*TERM+2.0*self.elpar[iel_][7]-DPOLY*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**2+2.0e+0*POLY*self.elpar[iel_][3]/(self.elpar[iel_][4]+EV_[2])**3)))
         if nargout == 1:
             return f_
         elif nargout == 2:

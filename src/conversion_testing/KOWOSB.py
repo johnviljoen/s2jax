@@ -228,7 +228,7 @@ class KOWOSB:
         T2 = 2.0/B2CB
         f_   = EV_[0]*B1/B2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

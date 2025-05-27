@@ -199,7 +199,7 @@ class LEVYM:
     def e_globs(pbm):
 
         import jax.numpy as jnp
-        pbm.efpar = jnp.array([]);
+        pbm.efpar = jnp.array([])
         pbm.efpar = jtu.arrset( pbm.efpar,0,4.0*jnp.arctan(1.0e0))
         return pbm
 
@@ -215,7 +215,7 @@ class LEVYM:
         COSV = jnp.cos(V)
         f_   = SINV
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -246,7 +246,7 @@ class LEVYM:
         COSV = jnp.cos(V)
         f_   = U*SINV
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

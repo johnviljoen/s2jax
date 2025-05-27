@@ -429,7 +429,7 @@ class RES:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,3.1415926535)
         return pbm
 
@@ -441,7 +441,7 @@ class RES:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -471,7 +471,7 @@ class RES:
         YZ4 = EV_[3]*EV_[4]**4
         f_   = V3WX/YZ4
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -525,7 +525,7 @@ class RES:
         Y3Z = EV_[2]**3*EV_[3]
         f_   = WX4/Y3Z
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -568,7 +568,7 @@ class RES:
         iel_ = args[1]
         f_   = (EV_[0]*EV_[1])/(self.efpar[0]*EV_[2]**3)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -602,7 +602,7 @@ class RES:
         iel_ = args[1]
         f_   = (EV_[0]*EV_[1]*EV_[2])/(self.efpar[0]*EV_[3]**2)
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

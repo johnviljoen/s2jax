@@ -401,18 +401,15 @@ class BENNETT5:
         if('B1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B1'], float(-2000.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B1']),float(-2000.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B1']),float(-2000.0)))
         if('B2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B2'], float(50.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B2']),float(50.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B2']),float(50.0)))
         if('B3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['B3'], float(0.8))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B3']),float(0.8)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['B3']),float(0.8)))
         pass
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
@@ -473,8 +470,7 @@ class BENNETT5:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-MN-3-154"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -500,7 +496,7 @@ class BENNETT5:
         V2PXP2 = V2PX**(V3INV+2.0)
         f_   = EV_[0]/V2PXP
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -519,8 +515,7 @@ class BENNETT5:
                 H_ = jtu.np_like_set(H_, jnp.array([1,1]), EV_[0]*(1.0/EV_[2]+1.0)/(EV_[2]*V2PXP2))
                 H_ = jtu.np_like_set(H_, jnp.array([1,2]), EV_[0]/(V2PX*V2PXP*EV_[2]**2)-EV_[0]*V2PXL/(V2PXP1*EV_[2]**3))
                 H_ = jtu.np_like_set(H_, jnp.array([2,1]), H_[1,2])
-                H_ = jtu.np_like_set(H_, jnp.array([2,2]), ()
-                      EV_[0]*V2PXL**2/(V2PXP*EV_[2]**4)-2.0*EV_[0]*V2PXL/(V2PXP*EV_[2]**3))
+                H_ = jtu.np_like_set(H_, jnp.array([2,2]), (                       EV_[0]*V2PXL**2/(V2PXP*EV_[2]**4)-2.0*EV_[0]*V2PXL/(V2PXP*EV_[2]**3)))
         if nargout == 1:
             return f_
         elif nargout == 2:

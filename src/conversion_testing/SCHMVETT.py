@@ -204,7 +204,7 @@ class SCHMVETT:
         T2 = T*T
         f_   = -1.0/T
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -239,7 +239,7 @@ class SCHMVETT:
         SHALFU = jnp.sin(HALFU)
         f_   = -SHALFU
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -286,7 +286,7 @@ class SCHMVETT:
         G = EXPE*DEDA
         f_   = -EXPE
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

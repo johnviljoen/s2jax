@@ -182,8 +182,7 @@ class HS43:
             ename = 'E'+str(int(v_['J']))
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='P')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['FAC'+str(int(v_['J']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['FAC'+str(int(v_['J']))])))
         for I in range(int(v_['1']),int(v_['N'])+1):
             v_['J'] = 8+I
             ename = 'E'+str(int(v_['J']))
@@ -199,8 +198,7 @@ class HS43:
             ename = 'E'+str(int(v_['J']))
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='P')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['FAC'+str(int(v_['J']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['FAC'+str(int(v_['J']))])))
         for I in range(int(v_['1']),int(v_['3'])+1):
             v_['J'] = 12+I
             ename = 'E'+str(int(v_['J']))
@@ -216,8 +214,7 @@ class HS43:
             ename = 'E'+str(int(v_['J']))
             [ie,ie_,_] = jtu.s2mpj_ii(ename,ie_)
             posep = jnp.where(elftp[ielftype[ie]]=='P')[0]
-            self.elpar  = (
-                  jtu.loaset(self.elpar,ie,posep[0],float(v_['FAC'+str(int(v_['J']))])))
+            self.elpar  = (                   jtu.loaset(self.elpar,ie,posep[0],float(v_['FAC'+str(int(v_['J']))])))
         #%%%%%%%%%%%%%%%%%%% GROUP USES %%%%%%%%%%%%%%%%%%%
         self.grelt   = []
         for ig in jnp.arange(0,ngrp):
@@ -293,8 +290,7 @@ class HS43:
         self.cupper = jnp.full((self.m,1),+float('Inf'))
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CQQR2-AN-4-3"
         self.x0        = jnp.zeros((self.n,1))
         self.objderlvl = 2
@@ -315,7 +311,7 @@ class HS43:
         iel_ = args[1]
         f_   = self.elpar[iel_][0]*EV_[0]**2
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

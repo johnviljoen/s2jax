@@ -9537,7 +9537,7 @@ class DIAMON2DLS:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,0.25e0/jnp.arctan(1.0e0))
         return pbm
 
@@ -9551,7 +9551,7 @@ class DIAMON2DLS:
         RATIO = EV_[1]/DENOM
         f_   = self.efpar[0]*EV_[0]*RATIO
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -9564,8 +9564,7 @@ class DIAMON2DLS:
                 H_ = jnp.zeros((2,2))
                 H_ = jtu.np_like_set(H_, jnp.array([0,1]), self.efpar[0]/DENOM-2.0e+0*self.efpar[0]*RATIO**2)
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
-                H_ = jtu.np_like_set(H_, jnp.array([1,1]), ()
-                      -6.0e+0*self.efpar[0]*EV_[0]*EV_[1]/DENOM**2+8.0e+0*self.efpar[0]*EV_[0]*RATIO**3)
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (                       -6.0e+0*self.efpar[0]*EV_[0]*EV_[1]/DENOM**2+8.0e+0*self.efpar[0]*EV_[0]*RATIO**3))
         if nargout == 1:
             return f_
         elif nargout == 2:

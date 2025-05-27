@@ -187,8 +187,7 @@ class BRATU3D:
                 for K in range(int(v_['2']),int(v_['P-1'])+1):
                     ig = ig_['G'+str(I)+','+str(J)+','+str(K)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['A'+str(I)+','+str(J)+','+str(K)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['A'+str(I)+','+str(J)+','+str(K)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,float(v_['-C']))
         #%%%%%%%%%%%%%%%%%% OBJECT BOUNDS %%%%%%%%%%%%%%%%%
@@ -204,8 +203,7 @@ class BRATU3D:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNOR2-MN-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -226,7 +224,7 @@ class BRATU3D:
         EXPU = jnp.exp(EV_[0])
         f_   = EXPU
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

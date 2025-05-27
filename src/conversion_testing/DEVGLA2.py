@@ -190,8 +190,7 @@ class DEVGLA2:
         X2T = EV_[1]**self.elpar[iel_][0]
         F2 = X2T
         F2X2 = self.elpar[iel_][0]*EV_[1]**(self.elpar[iel_][0]-1.0e0)
-        F2X2X2  = (
-              self.elpar[iel_][0]*(self.elpar[iel_][0]-1.0e0)*EV_[1]**(self.elpar[iel_][0]-2.0e0))
+        F2X2X2  = (               self.elpar[iel_][0]*(self.elpar[iel_][0]-1.0e0)*EV_[1]**(self.elpar[iel_][0]-2.0e0))
         X3T = EV_[2]*self.elpar[iel_][0]
         X4T = EV_[3]*self.elpar[iel_][0]
         SINX4T = jnp.sin(X4T)
@@ -218,7 +217,7 @@ class DEVGLA2:
         F4X5X5 = -STEX5*TEX5-CTEX5*TEX5*TEX5
         f_   = EV_[0]*F2*F3*F4
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

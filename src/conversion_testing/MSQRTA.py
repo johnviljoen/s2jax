@@ -106,8 +106,7 @@ class MSQRTA:
         self.gconst = jnp.zeros((ngrp,1))
         for I in range(int(v_['1']),int(v_['P'])+1):
             for J in range(int(v_['1']),int(v_['P'])+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['G'+str(I)+','+str(J)],float(v_['A'+str(I)+','+str(J)])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['G'+str(I)+','+str(J)],float(v_['A'+str(I)+','+str(J)])))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-float('Inf'))
         self.xupper = jnp.full((self.n,1),+float('Inf'))
@@ -125,8 +124,7 @@ class MSQRTA:
                 if('X'+str(I)+','+str(J) in ix_):
                     self.x0 = jtu.np_like_set(self.x0, jnp.array([ix_['X'+str(I)+','+str(J)]]), float(v_['XIJ']))
                 else:
-                    self.y0  = (
-                          jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)+','+str(J)]),float(v_['XIJ'])))
+                    self.y0  = (                           jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X'+str(I)+','+str(J)]),float(v_['XIJ'])))
         #%%%%%%%%%%%%%%%%%%%% ELFTYPE %%%%%%%%%%%%%%%%%%%%%
         iet_  = {}
         elftv = []
@@ -165,8 +163,7 @@ class MSQRTA:
                 for T in range(int(v_['1']),int(v_['P'])+1):
                     ig = ig_['G'+str(I)+','+str(J)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['E'+str(I)+','+str(J)+','+str(T)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['E'+str(I)+','+str(J)+','+str(T)]))
                     nlc = jnp.union1d(nlc,jnp.array([ig]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
         #%%%%%%%% DEFAULT FOR MISSING SECTION(S) %%%%%%%%%%
@@ -176,8 +173,7 @@ class MSQRTA:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.array([jnp.arange(self.nle,self.nle+self.neq)]), jnp.zeros((self.neq,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CNQR2-AN-V-V"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -193,7 +189,7 @@ class MSQRTA:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

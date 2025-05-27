@@ -138,8 +138,7 @@ class HS70:
         if('X1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X1'], float(2.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(2.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(2.0)))
         if('X2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X2'], float(4.0))
         else:
@@ -147,8 +146,7 @@ class HS70:
         if('X3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X3'], float(0.04))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3']),float(0.04)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3']),float(0.04)))
         if('X4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X4'], float(2.0))
         else:
@@ -255,13 +253,11 @@ class HS70:
             ig = ig_['OBJ'+str(I)]
             self.grftype = jtu.arrset(self.grftype,ig,'gSQR')
             posel = len(self.grelt[ig])
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['Y'+str(I)+','+str(int(v_['1']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['Y'+str(I)+','+str(int(v_['1']))]))
             nlc = jnp.union1d(nlc,jnp.array([ig]))
             self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
             posel = posel+1
-            self.grelt  = (
-                  jtu.loaset(self.grelt,ig,posel,ie_['Y'+str(I)+','+str(int(v_['2']))]))
+            self.grelt  = (                   jtu.loaset(self.grelt,ig,posel,ie_['Y'+str(I)+','+str(int(v_['2']))]))
             self.grelw = jtu.loaset(self.grelw,ig,posel, 1.)
         ig = ig_['C1']
         posel = len(self.grelt[ig])
@@ -279,8 +275,7 @@ class HS70:
         self.cupper = jnp.full((self.m,1),+float('Inf'))
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CSQR2-MN-4-1"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -296,7 +291,7 @@ class HS70:
     def e_globs(self):
 
         import jax.numpy as jnp
-        self.efpar = jnp.array([]);
+        self.efpar = jnp.array([])
         self.efpar = jtu.arrset( self.efpar,0,jnp.sqrt(1.0e+0/6.2832e+0))
         return pbm
 
@@ -324,8 +319,7 @@ class HS70:
         P3V1V2 = P3V2*LOGB+P3*(1.0e+0-EV_[2])/B
         P3V1V3 = P3V3*LOGB+P3*(1.0e+0-EV_[1])/B
         P3V2V2 = EV_[0]*(EV_[0]-1.0e+0)*(1.0e+0-EV_[2])**2*B**(EV_[0]-1.0e+0)
-        P3V2V3  = (
-              -EV_[0]*B**(EV_[0]-1.0e+0)+EV_[0]*(EV_[0]-1.0e+0)*(1.0e+0-EV_[1])*(1.0e+0-EV_[2])*B**(EV_[0]-2.0e+0))
+        P3V2V3  = (               -EV_[0]*B**(EV_[0]-1.0e+0)+EV_[0]*(EV_[0]-1.0e+0)*(1.0e+0-EV_[1])*(1.0e+0-EV_[2])*B**(EV_[0]-2.0e+0))
         P3V3V3 = EV_[0]*(EV_[0]-1.0e+0)*(1.0e+0-EV_[1])**2*B**(EV_[0]-2.0e+0)
         P4 = self.efpar[0]*jnp.sqrt(EV_[0])
         P4V1 = 5.0e-1*self.efpar[0]*jnp.sqrt(1.0e+0/EV_[0])
@@ -346,31 +340,25 @@ class HS70:
         P6V3V3 = -P6V3*EV_[0]*CI*(1.0e+0-EV_[1])
         f_   = P1*P2*P3*P4*P5*P6
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
             except:
                 dim = len(EV_)
             g_ = jnp.zeros(dim)
-            g_ = jtu.np_like_set(g_, 0, (P1V1*P2*P3*P4*P5*P6+P1*P2*P3V1*P4*P5*P6+P1*P2*P3*P4V1*P5*P6+)
-                 P1*P2*P3*P4*P5V1*P6+P1*P2*P3*P4*P5*P6V1)
+            g_ = jtu.np_like_set(g_, 0, (P1V1*P2*P3*P4*P5*P6+P1*P2*P3V1*P4*P5*P6+P1*P2*P3*P4V1*P5*P6+                  P1*P2*P3*P4*P5V1*P6+P1*P2*P3*P4*P5*P6V1))
             g_ = jtu.np_like_set(g_, 1, P1*P3*P4*P5*P6+P1*P2*P3V2*P4*P5*P6+P1*P2*P3*P4*P5*P6V2)
             g_ = jtu.np_like_set(g_, 2, P1*P2*P3V3*P4*P5*P6+P1*P2*P3*P4*P5*P6V3)
             if nargout>2:
                 H_ = jnp.zeros((3,3))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (P1V1V1*P2*P3*P4*P5*P6+P1*P2*P3V1V1*P4*P5*P6+P1*P2*P3*P4V1V1*P5*P6+)
-                     P1*P2*P3*P4*P5V1V1*P6+P1*P2*P3*P4*P5*P6V1V1+2.0e+0*(P1V1*P2*P3V1*P4*P5*P6+P1V1*P2*P3*P4V1*P5*P6+P1V1*P2*P3*P4*P5V1*P6+P1V1*P2*P3*P4*P5*P6V1+P1*P2*P3V1*P4V1*P5*P6+P1*P2*P3V1*P4*P5V1*P6+P1*P2*P3V1*P4*P5*P6V1+P1*P2*P3*P4V1*P5V1*P6+P1*P2*P3*P4V1*P5*P6V1+P1*P2*P3*P4*P5V1*P6V1))
-                H_ = jtu.np_like_set(H_, jnp.array([0,1]), ()
-                      P1V1*(P3*P4*P5*P6+P2*P3V2*P4*P5*P6+P2*P3*P4*P5*P6V2)+P1*(P3V1*P4*P5*P6+(P3*P4V1*P5*P6+P3*P4*P5V1*P6+P3*P4*P5*P6V1)+P2*(P3V1V2*P4*P5*P6+P3V1*P4*P5*P6V2+P3V2*P4V1*P5*P6+P3V2*P4*P5V1*P6+P3V2*P4*P5*P6V1+P3*(P4V1*P5*P6V2+P4*P5V1*P6V2+P4*P5*P6V1V2))))
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (P1V1V1*P2*P3*P4*P5*P6+P1*P2*P3V1V1*P4*P5*P6+P1*P2*P3*P4V1V1*P5*P6+                      P1*P2*P3*P4*P5V1V1*P6+P1*P2*P3*P4*P5*P6V1V1+2.0e+0*(P1V1*P2*P3V1*P4*P5*P6+P1V1*P2*P3*P4V1*P5*P6+P1V1*P2*P3*P4*P5V1*P6+P1V1*P2*P3*P4*P5*P6V1+P1*P2*P3V1*P4V1*P5*P6+P1*P2*P3V1*P4*P5V1*P6+P1*P2*P3V1*P4*P5*P6V1+P1*P2*P3*P4V1*P5V1*P6+P1*P2*P3*P4V1*P5*P6V1+P1*P2*P3*P4*P5V1*P6V1)))
+                H_ = jtu.np_like_set(H_, jnp.array([0,1]), (                       P1V1*(P3*P4*P5*P6+P2*P3V2*P4*P5*P6+P2*P3*P4*P5*P6V2)+P1*(P3V1*P4*P5*P6+(P3*P4V1*P5*P6+P3*P4*P5V1*P6+P3*P4*P5*P6V1)+P2*(P3V1V2*P4*P5*P6+P3V1*P4*P5*P6V2+P3V2*P4V1*P5*P6+P3V2*P4*P5V1*P6+P3V2*P4*P5*P6V1+P3*(P4V1*P5*P6V2+P4*P5V1*P6V2+P4*P5*P6V1V2)))))
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
-                H_ = jtu.np_like_set(H_, jnp.array([0,2]), ()
-                      P2*(P1V1*P3V3*P4*P5*P6+P1V1*P3*P4*P5*P6V3+P1*(P3V1V3*P4*P5*P6+P3V1*P4*P5*P6V3+P3V3*P4V1*P5*P6+P3V3*P4*P5V1*P6+P3V3*P4*P5*P6V1+P3*(P4*P5V1*P6V3+P4V1*P5*P6V3+P4*P5*P6V1V3))))
+                H_ = jtu.np_like_set(H_, jnp.array([0,2]), (                       P2*(P1V1*P3V3*P4*P5*P6+P1V1*P3*P4*P5*P6V3+P1*(P3V1V3*P4*P5*P6+P3V1*P4*P5*P6V3+P3V3*P4V1*P5*P6+P3V3*P4*P5V1*P6+P3V3*P4*P5*P6V1+P3*(P4*P5V1*P6V3+P4V1*P5*P6V3+P4*P5*P6V1V3)))))
                 H_ = jtu.np_like_set(H_, jnp.array([2,0]), H_[0,2])
-                H_ = jtu.np_like_set(H_, jnp.array([1,1]), ()
-                      P1*P4*P5*(P2*P3*P6V2V2+P2*P3V2V2*P6+2.0e+0*(P2*P3V2*P6V2+P3*P6V2+P3V2*P6)))
-                H_ = jtu.np_like_set(H_, jnp.array([1,2]), ()
-                      P1*P4*P5*(P2*P3V2V3*P6+P2*P3*P6V2V3+P3V3*P6+P3*P6V3+P2*P3V2*P6V3+P2*P3V3*P6V2))
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (                       P1*P4*P5*(P2*P3*P6V2V2+P2*P3V2V2*P6+2.0e+0*(P2*P3V2*P6V2+P3*P6V2+P3V2*P6))))
+                H_ = jtu.np_like_set(H_, jnp.array([1,2]), (                       P1*P4*P5*(P2*P3V2V3*P6+P2*P3*P6V2V3+P3V3*P6+P3*P6V3+P2*P3V2*P6V3+P2*P3V3*P6V2)))
                 H_ = jtu.np_like_set(H_, jnp.array([2,1]), H_[1,2])
                 H_ = jtu.np_like_set(H_, jnp.array([2,2]), P1*P2*P4*P5*(P3V3V3*P6+P3*P6V3V3+2.0e+0*P3V3*P6V3))
         if nargout == 1:
@@ -403,12 +391,9 @@ class HS70:
         P3V1V1 = P3V1*LOGB
         P3V1V2 = P3V2*LOGB+P3*EV_[2]*(-1.0e+0+1.0e+0/EV_[2])/B
         P3V1V3 = P3V3*LOGB-P3*EV_[1]/(B*EV_[2])
-        P3V2V2  = (
-              EV_[0]*(EV_[0]-1.0e+0)*(-1.0e+0+1.0e+0/EV_[2])**2*(B/EV_[2])**(EV_[0]-2.0e+0))
-        P3V2V3  = (
-              EV_[0]*(-1.0e+0/EV_[2]**2)*(B/EV_[2])**(EV_[0]-1.0e+0)+EV_[0]*(EV_[0]-1.0e+0)*(-1.0e+0+1.0e+0/EV_[2])*(-EV_[1]/EV_[2]**2)*(B/EV_[2])**(EV_[0]-2.0e+0))
-        P3V3V3 = (2.0e+0*EV_[0]*(EV_[1]/EV_[2]**3)*(B/EV_[2])**(EV_[0]-1.0e+0)+
-             EV_[0]*(EV_[0]-1.0e+0)*(EV_[1]/EV_[2]**2)**2*(B/EV_[2])**(EV_[0]-2.0e+0))
+        P3V2V2  = (               EV_[0]*(EV_[0]-1.0e+0)*(-1.0e+0+1.0e+0/EV_[2])**2*(B/EV_[2])**(EV_[0]-2.0e+0))
+        P3V2V3  = (               EV_[0]*(-1.0e+0/EV_[2]**2)*(B/EV_[2])**(EV_[0]-1.0e+0)+EV_[0]*(EV_[0]-1.0e+0)*(-1.0e+0+1.0e+0/EV_[2])*(-EV_[1]/EV_[2]**2)*(B/EV_[2])**(EV_[0]-2.0e+0))
+        P3V3V3 = (2.0e+0*EV_[0]*(EV_[1]/EV_[2]**3)*(B/EV_[2])**(EV_[0]-1.0e+0)+              EV_[0]*(EV_[0]-1.0e+0)*(EV_[1]/EV_[2]**2)**2*(B/EV_[2])**(EV_[0]-2.0e+0))
         P4 = self.efpar[0]*jnp.sqrt(EV_[0])
         P4V1 = 5.0e-1*self.efpar[0]*jnp.sqrt(1.0e+0/EV_[0])
         P4V1V1 = -2.5e-1*self.efpar[0]*jnp.sqrt(1.0e+0/EV_[0]**3)
@@ -425,35 +410,28 @@ class HS70:
         P6V1V3 = P6V3*(1.0e+0-CI*B/EV_[2])+P6*CI*EV_[1]/EV_[2]**2
         P6V2V2 = -P6V2*EV_[0]*CI*(1.0e+0-EV_[2])/EV_[2]
         P6V2V3 = -P6V3*EV_[0]*CI*(1.0e+0-EV_[2])/EV_[2]+P6*EV_[0]*CI/EV_[2]**2
-        P6V3V3 = (P6V3*EV_[0]*CI*EV_[1]/EV_[2]**2-2.0e+0*P6*EV_[0]*CI*EV_[1]/
-             EV_[2]**3)
+        P6V3V3 = (P6V3*EV_[0]*CI*EV_[1]/EV_[2]**2-2.0e+0*P6*EV_[0]*CI*EV_[1]/              EV_[2]**3)
         f_   = P1*P2*P3*P4*P5*P6
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
             except:
                 dim = len(EV_)
             g_ = jnp.zeros(dim)
-            g_ = jtu.np_like_set(g_, 0, (P1V1*P2*P3*P4*P5*P6+P1*P2*P3V1*P4*P5*P6+P1*P2*P3*P4V1*P5*P6+)
-                 P1*P2*P3*P4*P5V1*P6+P1*P2*P3*P4*P5*P6V1)
+            g_ = jtu.np_like_set(g_, 0, (P1V1*P2*P3*P4*P5*P6+P1*P2*P3V1*P4*P5*P6+P1*P2*P3*P4V1*P5*P6+                  P1*P2*P3*P4*P5V1*P6+P1*P2*P3*P4*P5*P6V1))
             g_ = jtu.np_like_set(g_, 1, -P1*P3*P4*P5*P6+P1*P2*P3V2*P4*P5*P6+P1*P2*P3*P4*P5*P6V2)
             g_ = jtu.np_like_set(g_, 2, P1*P2*P3V3*P4*P5*P6+P1*P2*P3*P4*P5*P6V3)
             if nargout>2:
                 H_ = jnp.zeros((3,3))
-                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (P1V1V1*P2*P3*P4*P5*P6+P1*P2*P3V1V1*P4*P5*P6+P1*P2*P3*P4V1V1*P5*P6+)
-                     P1*P2*P3*P4*P5V1V1*P6+P1*P2*P3*P4*P5*P6V1V1+2.0e+0*(P1V1*P2*P3V1*P4*P5*P6+P1V1*P2*P3*P4V1*P5*P6+P1V1*P2*P3*P4*P5V1*P6+P1V1*P2*P3*P4*P5*P6V1+P1*P2*P3V1*P4V1*P5*P6+P1*P2*P3V1*P4*P5V1*P6+P1*P2*P3V1*P4*P5*P6V1+P1*P2*P3*P4V1*P5V1*P6+P1*P2*P3*P4V1*P5*P6V1+P1*P2*P3*P4*P5V1*P6V1))
-                H_ = jtu.np_like_set(H_, jnp.array([0,1]), ()
-                      P1V1*(-P3*P4*P5*P6+P2*P3V2*P4*P5*P6+P2*P3*P4*P5*P6V2)+P1*(-P3V1*P4*P5*P6-(P3*P4V1*P5*P6+P3*P4*P5V1*P6+P3*P4*P5*P6V1)+P2*(P3V1V2*P4*P5*P6+P3V1*P4*P5*P6V2+P3V2*P4V1*P5*P6+P3V2*P4*P5V1*P6+P3V2*P4*P5*P6V1+P3*(P4V1*P5*P6V2+P4*P5V1*P6V2+P4*P5*P6V1V2))))
+                H_ = jtu.np_like_set(H_, jnp.array([0,0]), (P1V1V1*P2*P3*P4*P5*P6+P1*P2*P3V1V1*P4*P5*P6+P1*P2*P3*P4V1V1*P5*P6+                      P1*P2*P3*P4*P5V1V1*P6+P1*P2*P3*P4*P5*P6V1V1+2.0e+0*(P1V1*P2*P3V1*P4*P5*P6+P1V1*P2*P3*P4V1*P5*P6+P1V1*P2*P3*P4*P5V1*P6+P1V1*P2*P3*P4*P5*P6V1+P1*P2*P3V1*P4V1*P5*P6+P1*P2*P3V1*P4*P5V1*P6+P1*P2*P3V1*P4*P5*P6V1+P1*P2*P3*P4V1*P5V1*P6+P1*P2*P3*P4V1*P5*P6V1+P1*P2*P3*P4*P5V1*P6V1)))
+                H_ = jtu.np_like_set(H_, jnp.array([0,1]), (                       P1V1*(-P3*P4*P5*P6+P2*P3V2*P4*P5*P6+P2*P3*P4*P5*P6V2)+P1*(-P3V1*P4*P5*P6-(P3*P4V1*P5*P6+P3*P4*P5V1*P6+P3*P4*P5*P6V1)+P2*(P3V1V2*P4*P5*P6+P3V1*P4*P5*P6V2+P3V2*P4V1*P5*P6+P3V2*P4*P5V1*P6+P3V2*P4*P5*P6V1+P3*(P4V1*P5*P6V2+P4*P5V1*P6V2+P4*P5*P6V1V2)))))
                 H_ = jtu.np_like_set(H_, jnp.array([1,0]), H_[0,1])
-                H_ = jtu.np_like_set(H_, jnp.array([0,2]), ()
-                      P2*(P1V1*P3V3*P4*P5*P6+P1V1*P3*P4*P5*P6V3+P1*(P3V1V3*P4*P5*P6+P3V1*P4*P5*P6V3+P3V3*P4V1*P5*P6+P3V3*P4*P5V1*P6+P3V3*P4*P5*P6V1+P3*(P4*P5V1*P6V3+P4V1*P5*P6V3+P4*P5*P6V1V3))))
+                H_ = jtu.np_like_set(H_, jnp.array([0,2]), (                       P2*(P1V1*P3V3*P4*P5*P6+P1V1*P3*P4*P5*P6V3+P1*(P3V1V3*P4*P5*P6+P3V1*P4*P5*P6V3+P3V3*P4V1*P5*P6+P3V3*P4*P5V1*P6+P3V3*P4*P5*P6V1+P3*(P4*P5V1*P6V3+P4V1*P5*P6V3+P4*P5*P6V1V3)))))
                 H_ = jtu.np_like_set(H_, jnp.array([2,0]), H_[0,2])
-                H_ = jtu.np_like_set(H_, jnp.array([1,1]), ()
-                      P1*P4*P5*(P2*P3*P6V2V2+P2*P3V2V2*P6+2.0e+0*(P2*P3V2*P6V2-P3*P6V2-P3V2*P6)))
-                H_ = jtu.np_like_set(H_, jnp.array([1,2]), ()
-                      P1*P4*P5*(P2*P3V2V3*P6+P2*P3*P6V2V3-P3V3*P6-P3*P6V3+P2*P3V2*P6V3+P2*P3V3*P6V2))
+                H_ = jtu.np_like_set(H_, jnp.array([1,1]), (                       P1*P4*P5*(P2*P3*P6V2V2+P2*P3V2V2*P6+2.0e+0*(P2*P3V2*P6V2-P3*P6V2-P3V2*P6))))
+                H_ = jtu.np_like_set(H_, jnp.array([1,2]), (                       P1*P4*P5*(P2*P3V2V3*P6+P2*P3*P6V2V3-P3V3*P6-P3*P6V3+P2*P3V2*P6V3+P2*P3V3*P6V2)))
                 H_ = jtu.np_like_set(H_, jnp.array([2,1]), H_[1,2])
                 H_ = jtu.np_like_set(H_, jnp.array([2,2]), P1*P2*P4*P5*(P3V3V3*P6+P3*P6V3V3+2.0e+0*P3V3*P6V3))
         if nargout == 1:
@@ -471,7 +449,7 @@ class HS70:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

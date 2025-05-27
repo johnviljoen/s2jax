@@ -230,8 +230,7 @@ class DEMBO7:
         if('X1' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X1'], float(0.8))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(0.8)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X1']),float(0.8)))
         if('X2' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X2'], float(0.83))
         else:
@@ -239,8 +238,7 @@ class DEMBO7:
         if('X3' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X3'], float(0.85))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3']),float(0.85)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X3']),float(0.85)))
         if('X4' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X4'], float(0.87))
         else:
@@ -248,8 +246,7 @@ class DEMBO7:
         if('X5' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X5'], float(0.90))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5']),float(0.90)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X5']),float(0.90)))
         if('X6' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X6'], float(0.10))
         else:
@@ -257,8 +254,7 @@ class DEMBO7:
         if('X7' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X7'], float(0.12))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X7']),float(0.12)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X7']),float(0.12)))
         if('X8' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X8'], float(0.19))
         else:
@@ -266,8 +262,7 @@ class DEMBO7:
         if('X9' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X9'], float(0.25))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X9']),float(0.25)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X9']),float(0.25)))
         if('X10' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X10'], float(0.29))
         else:
@@ -275,8 +270,7 @@ class DEMBO7:
         if('X11' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X11'], float(512.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X11']),float(512.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X11']),float(512.0)))
         if('X12' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X12'], float(13.1))
         else:
@@ -284,8 +278,7 @@ class DEMBO7:
         if('X13' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X13'], float(71.8))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X13']),float(71.8)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X13']),float(71.8)))
         if('X14' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X14'], float(640.0))
         else:
@@ -293,8 +286,7 @@ class DEMBO7:
         if('X15' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X15'], float(650.0))
         else:
-            self.y0  = (
-                  jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X15']),float(650.0)))
+            self.y0  = (                   jtu.arrset(self.y0,findfirst(self.congrps,lambda x:x==ig_['X15']),float(650.0)))
         if('X16' in ix_):
             self.x0 = jtu.np_like_set(self.x0, ix_['X16'], float(5.7))
         else:
@@ -1153,8 +1145,7 @@ class DEMBO7:
         self.clower = jtu.np_like_set(self.clower, jnp.array([jnp.arange(self.nle+self.neq,self.m)]), jnp.zeros((self.nge,1)))
         self.cupper = jtu.np_like_set(self.cupper, jnp.arange(self.nge), grange[gegrps])
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
-        self.lincons  = (
-              jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
+        self.lincons  = (               jnp.where(jnp.isin(self.congrps,jnp.setdiff1d(self.congrps,nlc)))[0])
         self.pbclass   = "C-CQOR2-MN-16-20"
         self.objderlvl = 2
         self.conderlvl = [2]
@@ -1174,7 +1165,7 @@ class DEMBO7:
         iel_ = args[1]
         f_   = 1.0/EV_[0]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1200,7 +1191,7 @@ class DEMBO7:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1228,7 +1219,7 @@ class DEMBO7:
         iel_ = args[1]
         f_   = EV_[0]/EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1259,7 +1250,7 @@ class DEMBO7:
         YZ = EV_[1]*EV_[3]
         f_   = XW/YZ
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1301,7 +1292,7 @@ class DEMBO7:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]/EV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1336,7 +1327,7 @@ class DEMBO7:
         YZ = EV_[1]*EV_[2]
         f_   = EV_[0]/YZ
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -1371,7 +1362,7 @@ class DEMBO7:
         iel_ = args[1]
         f_   = EV_[0]**2/EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)

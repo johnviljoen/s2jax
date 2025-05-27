@@ -104,10 +104,8 @@ class VARDIM:
         self.gconst = jnp.zeros((ngrp,1))
         for I in range(int(v_['1']),int(v_['N'])+1):
             self.gconst = jtu.arrset(self.gconst,ig_['G'+str(I)],float(1.0))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['N+1']))],float(v_['SUMJ'])))
-        self.gconst  = (
-              jtu.arrset(self.gconst,ig_['G'+str(int(v_['N+2']))],float(v_['SUMJ'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['N+1']))],float(v_['SUMJ'])))
+        self.gconst  = (               jtu.arrset(self.gconst,ig_['G'+str(int(v_['N+2']))],float(v_['SUMJ'])))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-float('Inf'))
         self.xupper = jnp.full((self.n,1),+float('Inf'))

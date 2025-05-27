@@ -98,8 +98,7 @@ class EIGENBLS:
         for J in range(int(v_['1']),int(v_['N'])+1):
             self.gconst = jtu.arrset(self.gconst,ig_['O'+str(J)+','+str(J)],float(1.0))
             for I in range(int(v_['1']),int(J)+1):
-                self.gconst  = (
-                      jtu.arrset(self.gconst,ig_['E'+str(I)+','+str(J)],float(v_['A'+str(I)+','+str(J)])))
+                self.gconst  = (                       jtu.arrset(self.gconst,ig_['E'+str(I)+','+str(J)],float(v_['A'+str(I)+','+str(J)])))
         #%%%%%%%%%%%%%%%%%%%  BOUNDS %%%%%%%%%%%%%%%%%%%%%
         self.xlower = jnp.full((self.n,1),-float('Inf'))
         self.xupper = jnp.full((self.n,1),+float('Inf'))
@@ -171,13 +170,11 @@ class EIGENBLS:
                 for K in range(int(v_['1']),int(v_['N'])+1):
                     ig = ig_['E'+str(I)+','+str(J)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['E'+str(I)+','+str(J)+','+str(K)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['E'+str(I)+','+str(J)+','+str(K)]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
                     ig = ig_['O'+str(I)+','+str(J)]
                     posel = len(self.grelt[ig])
-                    self.grelt  = (
-                          jtu.loaset(self.grelt,ig,posel,ie_['O'+str(I)+','+str(J)+','+str(K)]))
+                    self.grelt  = (                           jtu.loaset(self.grelt,ig,posel,ie_['O'+str(I)+','+str(J)+','+str(K)]))
                     self.grelw = jtu.loaset(self.grelw,ig,posel,1.)
         #%%%%%%%% DEFAULT FOR MISSING SECTION(S) %%%%%%%%%%
         #%%%% RETURN VALUES FROM THE __INIT__ METHOD %%%%%%
@@ -195,7 +192,7 @@ class EIGENBLS:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
@@ -223,7 +220,7 @@ class EIGENBLS:
         iel_ = args[1]
         f_   = EV_[0]*EV_[1]*EV_[2]
         if not isinstance( f_, float ):
-            f_   = f_.item();
+            f_   = f_.item()
         if nargout>1:
             try:
                 dim = len(IV_)
