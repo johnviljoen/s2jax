@@ -42,6 +42,7 @@ if __name__ == "__main__":
     # from python_problems.ACOPP14 import ACOPP14 as PROBLEM
     # from python_problems.test_ACOPP14_jax import ACOPP14 as PROBLEM
     from conversion_testing.HS107 import HS107 as PROBLEM
+    # from conversion_testing.ACOPP14 import ACOPP14 as PROBLEM
 
     problem = PROBLEM()
 
@@ -62,7 +63,7 @@ if __name__ == "__main__":
             # conditionals
             c = {
                 "isobj": True,
-                "nargout": 2,
+                "nargout": 3,
                 "has_conderlvl": hasattr(p, "conderlvl"), # constraint derivative level
                 "has_objderlvl": hasattr(p, "objderlvl"), # objective derivative level
                 "has_A": hasattr(p, "A"), # check presence of linear term
@@ -164,7 +165,7 @@ if __name__ == "__main__":
                 fin           = fin + gin.T .dot(x)
             elif c["nargout"] >= 2: gin = jnp.zeros(( n, 1 ))
 
-            if c["nargout"] > 2: Hin = BCSR.from_bcoo(spu.bcoo_zeros([n, n])) # np.zeros((n, n)) # Sparse normally
+            if c["nargout"] > 2: Hin = BCSR.from_bcoo(spu.bcoo_zeros([n, n], dtype=dtype)) # np.zeros((n, n)) # Sparse normally
 
             if c["has_grelt"] and ig < len(p.grelt) and not p.grelt[ig] is None:
                 for iiel in range(len(p.grelt[ig])): # loop on elements
@@ -209,11 +210,14 @@ if __name__ == "__main__":
                             fin += wiel * fiel
                             for ir in range(len(irange)):
                                 ii = irange[ ir ]
-                                gin[ ii ] += wiel * giel[ ir ]
+                                gin = gin.at[ ii ].add(wiel * giel[ ir ])
                                 for jr in range(len( irange )):
                                     jj  = irange[ jr ]
-                                    Hin[ ii, jj ] += wiel * Hiel[ ir, jr ]
+                                    added_term =  BCOO((jnp.array([wiel * Hiel[ ir, jr ]]), jnp.array([[ii, jj]])), shape=Hin.shape)
+                                    Hin = BCSR.from_bcoo(spu.bcoo_add(Hin.to_bcoo(), added_term))
+
                         else:
+                            raise NotImplementedError()
                             fin = fin + fiel;
                             for ir in range(len(irange)):
                                 ii = irange[ ir ]
@@ -248,18 +252,21 @@ if __name__ == "__main__":
                             gx += gin / gsc
                         else:
                             gx = jnp.nan * jnp.ones(( n, 1 ))
-                    # if c["nargout"] == 3:
-                    #     fx += fin / gsc
-                    #     if derlvl >= 1:
-                    #         gx += gin / gsc
-                    #     else:
-                    #         gx = jnp.zeros(( n, 1 ))
-                    #         gx[0] = jnp.nan
-                    #     if derlvl >= 2:
-                    #         Hx += Hin / gsc
-                    #     else:
-                    #         Hx = BCSR.from_bcoo(spu.bcoo_zeros([n, n])) # np.zeros(( n, n )) # Sparse normally
-                    #         Hx[0,0] = jnp.nan
+                    if c["nargout"] == 3:
+                        fx += fin / gsc
+                        if derlvl >= 1:
+                            gx += gin / gsc
+                        else:
+                            gx = jnp.zeros(( n, 1 ))
+                            gx[0] = jnp.nan
+                        if derlvl >= 2:
+                            Hin.data = Hin.data / gsc
+                            Hx = BCSR.from_bcoo(spu.bcoo_add(Hx.to_bcoo(), Hin.to_bcoo()))
+                        else:
+                            Hx = BCSR.from_bcoo(spu.bcoo_zeros([n, n])) # np.zeros(( n, n )) # Sparse normally
+                            Hx[0,0] = jnp.nan
+                else:
+                    raise NotImplementedError()
                 # pass
 
             # pass

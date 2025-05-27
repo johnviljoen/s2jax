@@ -1208,5 +1208,6 @@ if __name__ == "__main__":
     p = PROBLEM()
     p.fx(p.x0)
     p.fgx(p.x0)
+    p.fgHx(p.x0)
 
     pass

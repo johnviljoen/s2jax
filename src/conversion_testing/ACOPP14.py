@@ -1,7 +1,6 @@
 from jax.experimental.sparse import BCOO, BCSR
 import s2jax.jax_utils as jtu
-# from s2mpjlib import *
-from s2jaxlib import *
+from s2jax.utils import *
 
 class ACOPP14:
 
