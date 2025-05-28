@@ -79,6 +79,8 @@ def convert_file(code):
     # add a couple imports at the top
     code = 'import s2jax.jax_utils as jtu\n' + code
     code = 'from jax.experimental.sparse import BCOO, BCSR\n' + code
+    code = 'import s2jax.sparse_utils as spu\n' + code
+    code = 'import jax.numpy as jnp\n' + code # just in case sometimes it isnt seen in static methods
 
     # a few ctrl-f replacements
     code = re.sub(
@@ -97,6 +99,13 @@ def convert_file(code):
     # change import from s2mpjlib import * to from s2jax import *
     pattern = re.compile(r"^\s*from\s+s2mpjlib\s+import\s+\*\s*$", re.M)
     code = pattern.sub("from s2jax.utils import *", code, count=1)  # only first match
+    
+    # LEVYM and LEVYMONT8C rely on a weird s2xlib not in the original repo, pretending like its the same as the normal lib
+    pattern = re.compile(r"^\s*from\s+s2xlib\s+import\s+\*\s*$", re.M)
+    code = pattern.sub("from s2jax.utils import *", code, count=1)  # only first match
+    code = re.sub(r'\bs2x_ii\b', 'jtu.s2mpj_ii', code)
+    code = re.sub(r'\bs2x_nlx\b', 'jtu.s2mpj_nlx', code)
+    code = re.sub(r'\bstructtype\b', 'jtu.structtype', code)
 
     # change class  ACOPP14(CUTEst_problem): -> class ACOPP14:
     # test = """
@@ -192,6 +201,47 @@ def convert_file(code):
 
     code = csr_pat.sub(csr_repl, code)
 
+    # turn  lil_matrix(shape=(…))  →  BCSR.from_bcoo(spu_bcoo_zeros((…)))
+    csr_pat = re.compile(r"""
+        csr_matrix\(                       # literal text
+            \s*\(                          #  (
+                (?P<val>[^,]+?)            #  valA
+                \s*,\s*                    #  ,
+                \(\s*(?P<ir>[^,]+?)\s*,\s* #  irA ,
+                    (?P<ic>[^\)]+?)\s*\)  #  icA )
+            \)\s*,\s*                      #  ),
+            (?P<shape>shape\s*=\s*\([^\)]*\)) # shape=(…)
+        \s*\)                              # )
+        """, re.VERBOSE)
+
+    csr_repl = (
+        r"BCSR.from_bcoo(BCOO((\g<val>, "
+        r"jnp.array((\g<ir>,\g<ic>)).T), "
+        r"\g<shape>))"
+    )
+
+    code = csr_pat.sub(csr_repl, code)
+
+    # turn  lil_matrix((m,n))  or  lil_matrix(shape=(m,n))
+    #   ──► spu.bcoo_zeros([m, n], dtype=jnp.int64)
+    lil_pat = re.compile(
+        r"""
+        lil_matrix              # the constructor we want to replace
+        \s* \( \s*              # opening parenthesis
+            (?:shape\s*=\s*)?   # optional keyword  shape=
+            \( \s*
+                (?P<rows>[^,]+?)\s* , \s*   # rows inside the tuple
+                (?P<cols>[^\)]+?)\s*        # cols inside the tuple
+            \)                              # close tuple
+        \s* \)                              # close call
+        """,
+        re.VERBOSE,
+    )
+
+    lil_repl = r"spu.bcoo_zeros([\g<rows>, \g<cols>], dtype=jnp.int64)"
+
+    code = lil_pat.sub(lil_repl, code)
+
     return code
 
 def convert_file_for_reference(code):
@@ -200,6 +250,13 @@ def convert_file_for_reference(code):
         r'\1from s2jax.reference import *',
         code, flags=re.M,
     )
+
+    # LEVYM and LEVYMONT8C rely on a weird s2xlib not in the original repo, pretending like its the same as the normal lib
+    pattern = re.compile(r"^\s*from\s+s2xlib\s+import\s+\*\s*$", re.M)
+    code = pattern.sub("from s2jax.reference import *", code, count=1)  # only first match
+    code = re.sub(r'\bs2x_ii\b', 's2mpj_ii', code)
+    code = re.sub(r'\bs2x_nlx\b', 's2mpj_nlx', code)
+
     return code
 
 
@@ -235,6 +292,6 @@ if __name__ == "__main__":
 
     from tqdm import tqdm
 
-    # execute_conversion_for_reference()
+    execute_conversion_for_reference()
 
     execute_conversion()

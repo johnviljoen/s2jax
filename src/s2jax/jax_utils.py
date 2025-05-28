@@ -1,6 +1,7 @@
 import jax
 import jax.numpy as jnp
 import numpy as np
+from pprint import pprint
 
 def append(arr: jnp.array, values: list):
     return jnp.append(arr, jnp.array(values))

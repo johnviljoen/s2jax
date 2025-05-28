@@ -31,6 +31,9 @@ def preprocess_1(p):
         # efnames
         "name2efunc": {
             name: getattr(p, name) for name in np.unique(p.elftype)
+        },
+        "name2gfunc": {
+            name: getattr(p, name) for name in np.unique(p.grftype)
         }
     }
 
@@ -221,7 +224,64 @@ def evalgrsum(p, x, c):
         else: egname = "TRIVIAL"
 
         if egname!='TRIVIAL' and egname is not None:
-            raise NotImplementedError()
+            # raise NotImplementedError()
+            if c["isobj"]:
+                if c["nargout"] == 1:
+                    fx += c["name2gfunc"][egname](p, 1, fin, ig) / gsc
+                    # fx += eval('self.'+egname+'( self, 1, fin, ig )') / gsc
+                elif c["nargout"] == 2:
+                    fa, grada = c["name2gfunc"][egname](p, 2, fin, ig)
+                    # [ fa, grada ] = eval('self.'+ egname+'( self, 2, fin, ig )')
+                    fx += fa / gsc
+                    if derlvl >= 1:
+                        gx += grada * gin / gsc
+                    else:
+                        gx = np.nan * np.ones(( n, 1 ))
+                elif c["nargout"] == 3:
+                    fa, grada, Hessa = c["name2gfunc"][egname](p, 3, fin, ig)
+                    # [ fa, grada, Hessa ] = eval('self.'+egname+'( self, 3, fin, ig )')
+                    fx   += fa / gsc
+                    if derlvl >= 1:
+                        gx += grada * gin / gsc
+                    else:
+                        gx = np.nan * np.ones(( n, 1 ))
+                    if derlvl >= 2:
+                        sgin  = BCOO.fromdense(gin, index_dtype=np.int64) # just sparsifies gin -> sgin
+                        Hin.data = grada * Hin.data
+                        Hx = BCSR.from_bcoo(BCOO.sum_duplicates(spu.bcoo_add(Hx.to_bcoo(), spu.bcoo_add(Hessa * sgin @ sgin.T, Hin.to_bcoo()) / gsc)))
+                        # Hx   += (Hessa * sgin.dot(sgin.transpose())+ grada * Hin) / gsc
+                    else:
+                        raise NotImplementedError()
+                        Hx      = spu.bcoo_zeros([n, n]) # lil_matrix(( n, n ))
+                        Hx[0,0] = np.nan
+            else:
+                raise NotImplementedError()
+                ic = ic + 1
+                if c["nargout"] == 1:
+                    fa = eval('self.'+egname+'( self, 1, fin, ig )')
+                    cx[ ic ] = fa / gsc
+                elif c["nargout"] == 2:
+                    fa, grada = eval('self.'+egname+'( self, 2, fin, ig )')
+                    cx[ ic ]  = fa / gsc
+                    if derlvl >= 1:
+                        sgin      = lil_matrix( gin )
+                        Jx[ic,:]  = grada * sgin.T / gsc
+                    else:
+                        Jx[ic,:]  = np.nan*np.ones(( 1, n ))
+                elif c["nargout"] == 3:
+                    fa, grada, Hessa = eval('self.'+egname+'( self, 3, fin, ig )') 
+                    cx[ ic ] = fa / gsc
+                    if derlvl >= 1:
+                        sgin      = lil_matrix( gin )
+                        Jx[ic,:]  = grada * sgin.T / gsc
+                    else:
+                        Jx[ic,:]  = np.nan*np.ones(( 1, n ))
+                    if derlvl >= 2:
+                        Hx.append( ( Hessa * sgin.dot( sgin.transpose() )+ grada * Hin ) / gsc )
+                    else:
+                        Hxi = lil_matrix(( n, n ))
+                        Hxi[0,0] = np.nan
+                        Hx.append( Hxi )
         
         #  2) the TRIVIAL case: the group function is the identity
         else:
@@ -319,15 +379,15 @@ if __name__ == "__main__":
     # from conversion_testing.ACOPP14 import ACOPP14 as PROBLEM
     from conversion_testing.ALJAZZAF import ALJAZZAF as PROBLEM
     from conversion_testing.SSEBNLN import SSEBNLN as PROBLEM
-    problem = PROBLEM()
+    # problem = PROBLEM()
 
 
-    _fx = make_fx(problem)
-    fx = lambda x: _fx(x)[0].flatten() # reshape(-1)  # ensure output is a 1-D array
-    x = jnp.array(problem.x0)
-    objective_value = fx(x)
+    # _fx = make_fx(problem)
+    # fx = lambda x: _fx(x)[0].flatten() # reshape(-1)  # ensure output is a 1-D array
+    # x = jnp.array(problem.x0)
+    # objective_value = fx(x)
 
-    objective_grad = jax.jacobian(fx)(x)
+    # objective_grad = jax.jacobian(fx)(x)
 
     # objective_value = jax.jit(fx)(x)
 
@@ -349,14 +409,11 @@ if __name__ == "__main__":
             if file.name == "__init__.py":
                 continue
             mod_name = file.stem          # e.g. 'ALJAZZAF'
-            try:
-                module = importlib.import_module(f"{pkg_name}.{mod_name}")
-            except:
-                print(f"failed: {pkg_name}.{mod_name}")
-                continue
+            module = importlib.import_module(f"{pkg_name}.{mod_name}")
             try:
                 cls = getattr(module, mod_name)
             except AttributeError:
+                print(f"FAILED: {pkg_name}.{mod_name}")
                 continue                  # skip if naming convention is broken
             classes[mod_name] = cls
         return classes
@@ -365,10 +422,26 @@ if __name__ == "__main__":
     # 3.  Load everything
     # --------------------------------------------------------------------
     PROBLEM1 = _load_package_classes(PKG1_DIR, "conversion_testing")
-    # PROBLEM2 = _load_package_classes(PKG2_DIR, "python_problems")
+    PROBLEM2 = _load_package_classes(PKG2_DIR, "python_problems_for_reference")
+
+    for key in tqdm(PROBLEM1):
+        assert key in PROBLEM2.keys() # otherwise there is an ISSUE
+        
+        # JAX side
+        p_jax = PROBLEM1[key]()
+        fgHx_jax = make_fgHx(p_jax)
+        obj_jax, obj_jac_jax, obj_hess_jax = fgHx_jax(p_jax.x0)
+
+        # s2mpj side
+        p_mpj = PROBLEM2[key]()
+        obj_mpj = p_mpj.fx(p_mpj.x0)
+        obj_jac_mpj = p_mpj.fgx(p_mpj.x0)
+        obj_hess_mpj = p_mpj.fgHx(p_mpj.x0)
+
+        # JOHN YOU ARE HERE - test if it matches across all problems with objectives.
 
 
 
-    pass
+        pass
 
 
