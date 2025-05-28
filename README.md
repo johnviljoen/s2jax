@@ -1,3 +1,11 @@
+# NOTICE: 
+
+This repo is incomplete and will likely stay that way. This is because I came to the
+conclusion that integrating PyCUTEst in a black box manner was sufficient for my purposes.
+I leave this here in case I (or anyone else) ever want to come back to transpiling the 1103 problems from
+s2mpj into JAX properly. Do be aware PyCUTEst has all ~1500 problems of CUTEst I believe.
+
+
 # S2JAX
 
 This repo recieves the Python created problems from s2mpj and then converts them
