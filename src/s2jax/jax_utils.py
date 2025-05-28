@@ -52,9 +52,9 @@ def s2mpj_ii( name, List ):
 # setting.
 def s2mpj_nlx( self, name, List, getxnames=None, xlowdef=None, xuppdef=None, x0def=None ):
 
-    iv, List, newvar = s2mpj_ii( name, List );
+    iv, List, newvar = s2mpj_ii( name, List )
     if( newvar ):
-        self.n = self.n + 1;
+        self.n = self.n + 1
         if getxnames:
             self.xnames = arrset( self.xnames, iv, name )
         if hasattr( self, "xlower" ):
@@ -91,6 +91,7 @@ def arrset( arr, index, value ):
         else:
             maxind = index
         if len(arr) <= maxind:
+            # JOHN YOU ARE HERE!!! figuring out how to handle the Nones added so we can add to the array
             arr= jnp.append( arr, jnp.full( maxind - len( arr ) + 1, None ) )
         arr = arr.at[index].set(jnp.array(value))
         return arr

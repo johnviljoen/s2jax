@@ -355,7 +355,7 @@ if __name__ == "__main__":
 
     import jax
     jax.config.update("jax_enable_x64", True)
-    jax.config.update("jax_debug_nans", True)
+    # jax.config.update("jax_debug_nans", True)
     # jax.config.update("jax_log_compiles", True) # will print out recompilations
     jax.config.update('jax_default_matmul_precision', "default")
     jax.config.update("jax_compilation_cache_dir", "/tmp/jax_cache")
@@ -435,13 +435,20 @@ if __name__ == "__main__":
         # s2mpj side
         p_mpj = PROBLEM2[key]()
         obj_mpj = p_mpj.fx(p_mpj.x0)
-        obj_jac_mpj = p_mpj.fgx(p_mpj.x0)
-        obj_hess_mpj = p_mpj.fgHx(p_mpj.x0)
+        obj_jac_mpj = p_mpj.fgx(p_mpj.x0)[1]
+        obj_hess_mpj = p_mpj.fgHx(p_mpj.x0)[2]
 
         # JOHN YOU ARE HERE - test if it matches across all problems with objectives.
+        obj_test  = obj_jax == obj_mpj
+        jac_test  = obj_jac_jax == obj_jac_mpj
+        hess_test = obj_hess_jax.todense() == obj_hess_mpj.todense()
+
+        assert obj_test.all()
+        assert jac_test.all()
+        assert hess_test.all()
 
 
 
-        pass
+    pass
 
 
