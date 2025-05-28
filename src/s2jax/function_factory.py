@@ -64,7 +64,9 @@ def preprocess_2(p, c):
 
         # group scaling
         if c["has_gscale"]:
-            if ig < len(p.gscale) and not p.gscale[ig] is None and abs(p.gscale[ig]) > 1.0e-15:
+            # if ig < len(p.gscale) and not p.gscale[ig] is None and abs(p.gscale[ig]) > 1.0e-15:
+            # as a result of sometimes needing to use jnp.nan instead of None in jax arrays in arrset
+            if ig < len(p.gscale) and not (jnp.isnan(p.gscale[ig]) or p.gscale[ig] is None) and abs(p.gscale[ig]) > 1.0e-15:
                 gsc = p.gscale[ig]
             else:
                 gsc = 1.0
@@ -159,12 +161,12 @@ def evalgrsum(p, x, c):
 
         if c["nargout"] > 2: Hin = BCSR.from_bcoo(spu.bcoo_zeros([n, n], dtype=dtype)) # np.zeros((n, n)) # Sparse normally
 
-        if c["has_grelt"] and ig < len(p.grelt) and not p.grelt[ig] is None:
+        if c["has_grelt"] and ig < len(p.grelt) and not (p.grelt[ig] is None or jnp.isnan(p.grelt[ig]).any()):
             for iiel in range(len(p.grelt[ig])): # loop on elements
-                iel    = p.grelt[ ig ][ iiel ]         #  the element's index
+                iel    = int(p.grelt[ ig ][ iiel ])         #  the element's index
                 efname = p.elftype[ iel ]              #  the element's ftype
                 irange = [iv for iv in p.elvar[ iel ]] #  the elemental variable's indeces 
-                xiel   = x[ np.array(irange) ]            #  the elemental variable's values
+                xiel   = x[ jnp.array(irange) ]            #  the elemental variable's values
 
                 if  c['has_grelw'] and ig <= len( p.grelw ) and not p.grelw[ig] is None :
                     has_weights = True
@@ -425,6 +427,7 @@ if __name__ == "__main__":
     PROBLEM2 = _load_package_classes(PKG2_DIR, "python_problems_for_reference")
 
     for key in tqdm(PROBLEM1):
+        key = "JNLBRNG1"
         assert key in PROBLEM2.keys() # otherwise there is an ISSUE
         
         # JAX side

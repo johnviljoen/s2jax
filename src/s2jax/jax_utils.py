@@ -12,13 +12,22 @@ def find( lst, condition ):
 
 # Set the (i,j)-th element of a list of arrays (loa) to value.
 def loaset( loa, i, j, value ):
-    if len(loa) <= i:
-       loa.extend( [None] * ( i - len( loa ) + 1 ) )
-    if loa[i] is None:
-       loa[i]= np.full( j + 1, None )
-    if len(loa[i]) <= j:
-       loa[i]= np.append(loa[i],np.full( j - len( loa[i] ) + 1, None ) )
-    loa[i][j] = value
+    if isinstance(value, float | int | jnp.ndarray):
+        if len(loa) <= i:
+            loa.extend( [None] * ( i - len( loa ) + 1 ) )
+        if loa[i] is None:
+            loa[i]= jnp.full( j + 1, jnp.nan )
+        if len(loa[i]) <= j:
+            loa[i]= jnp.append(loa[i],jnp.full( j - len( loa[i] ) + 1, jnp.nan ) )
+        loa[i] = loa[i].at[j].set(value)
+    else:
+        if len(loa) <= i:
+            loa.extend( [None] * ( i - len( loa ) + 1 ) )
+        if loa[i] is None:
+            loa[i]= np.full( j + 1, None )
+        if len(loa[i]) <= j:
+            loa[i]= np.append(loa[i],np.full( j - len( loa[i] ) + 1, None ) )
+        loa[i][j] = value
     return loa
 
 
@@ -92,10 +101,11 @@ def arrset( arr, index, value ):
             maxind = index
         if len(arr) <= maxind:
             # JOHN YOU ARE HERE!!! figuring out how to handle the Nones added so we can add to the array
-            arr= jnp.append( arr, jnp.full( maxind - len( arr ) + 1, None ) )
+            arr= jnp.append( arr, jnp.full( maxind - len( arr ) + 1, jnp.nan ) )
+            # arr= jnp.append( arr, jnp.full( maxind - len( arr ) + 1, None ) )
         arr = arr.at[index].set(jnp.array(value))
         return arr
-    else:
+    else: # should be the numpy route for certain things
         if isinstance( index, np.ndarray):
             maxind = np.max( index )
         else:
